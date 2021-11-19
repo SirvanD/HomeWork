@@ -2,10 +2,10 @@
 var pantry = [
     ['nutella', 'honey'],
     ['pasta', 'rice', ['flour', 'maple syrup']]
-  ]
+]
 
-  //write code to log maple syrup in the console using the the pantry array above
-  console.log(pantry[1][2][1]);
+//write code to log maple syrup in the console using the the pantry array above
+console.log(pantry[1][2][1]);
 
 // loops (5pt)
 // using a while loop print the following in the console:
@@ -28,7 +28,7 @@ while(i < days.length){
 var brain = {
     energyLevel: 10,
     favMovies: ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious']
-  }
+}
 
 console.log(brain.favMovies.pop());
 brain.energyLevel = 99;
