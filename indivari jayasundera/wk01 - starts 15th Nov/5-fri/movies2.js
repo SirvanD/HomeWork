@@ -24,3 +24,7 @@ var index = Math.floor(Math.random() * favMovies.length);
 
 var randomMovie = favMovies[index];
 console.log(randomMovie);
+
+if (randomMovie === "Jaws") {
+  console.log(randomMovie.toUpperCase());
+}
