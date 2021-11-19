@@ -22,3 +22,14 @@ while (counter < 5) {
         bands.pop();
         counter = counter + 1;
 }
+
+
+// SIMPLER SOLUTION
+
+// var bands =['Cog','Karnivool','Periphery','Chevelle','Sevendust'];
+// var index = 0;
+
+// while (index < bands.length) {
+//     console.log("My #" + (index + 1) +" fruit is " + bands[index])
+//     index + index + 1
+// }
