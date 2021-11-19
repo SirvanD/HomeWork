@@ -17,7 +17,7 @@ var counter = 0;
 
 while (counter <= 10){
     if (counter != 0) {
-    console.log("1 * 9 = " + counter * 9);
+    console.log(counter + " * 9 = " + counter * 9);
     }
     counter++;
 }
@@ -42,10 +42,3 @@ while (counter < myColors.length) {
     console.log("My " + (counter + 1) + colorSuffix[counter] + " choice is " + myColors[counter])
     counter++;
 }
-
-// bonus bonus 
-
-// function numberSuffix(num){
-//     if 
-
-// }
