@@ -17,6 +17,7 @@ while (i > 0){
 
 // loop through the days array using a while loop to print the following in the console
 var days = ['Thursday', 'Friday', 'Saturday', 'Sunday']
+i = 0;
 while(i < days.length){
     console.log(i,days[i]);
     i++;
@@ -44,5 +45,5 @@ if(randomMovie == 'Jaws'){
 //data types and return values (3pt)
 
 //prompt returns a string
-let userNumber = prompt('enter a number');
+let userNumber = '22';
 console.log(Number(userNumber)+5);
