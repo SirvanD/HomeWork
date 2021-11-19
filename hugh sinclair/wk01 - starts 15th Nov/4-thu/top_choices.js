@@ -8,7 +8,8 @@ var topChoices = ['Green', 'Blue', 'Yellow', 'Red', 'Aqua'];
 var suffix = ['st', 'nd', 'rd', 'th', 'th'];
 var iteration = 0;
 
-while (iteration <=4) {
+while (iteration <=4) { // instead of 4, you can have < topChoices.length and it'll do it to my array length
     console.log(`My ${iteration +1}${suffix[iteration]} choice is ${topChoices[iteration]}`);
     iteration++;
 }
+
