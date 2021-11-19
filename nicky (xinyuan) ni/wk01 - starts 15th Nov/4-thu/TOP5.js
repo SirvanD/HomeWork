@@ -1,4 +1,4 @@
-const topSnacks = ["Twix", "Snickers", "M&M", "Diam", "KitKat"]
+const topSnacks = ["Twix", "Snickers", "M&M", "Diam", "KitKat","奶茶"]
 
 var i = 0;
 
@@ -14,4 +14,6 @@ while (i + 1<= topSnacks.length) {
     }
     i++
 }
+
+
 

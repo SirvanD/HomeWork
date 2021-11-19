@@ -6,9 +6,9 @@ function isEven(counter){
 
 while (counter <= 20 ){
    if (isEven(counter)){
-    console.log(counter + "is even")
+    console.log(counter + " is even")
    } else {
-    console.log(counter + "is odd")  
+    console.log(counter + " is odd")  
    }
 
    counter ++;
@@ -27,3 +27,4 @@ while (counter <= 20 ){
 //     <script src="loopEvenOdd.js"></script>
 // </body>
 // </html>
+
