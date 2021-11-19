@@ -17,7 +17,7 @@ var counter = 0;
 
 while (counter <= 10){
     if (counter != 0) {
-    console.log(counter + " * 9 = " + counter * 9);
+        console.log(counter + " * 9 = " + counter * 9);
     }
     counter++;
 }
