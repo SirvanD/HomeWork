@@ -13,7 +13,7 @@
 // }
 
 let userChoice = ['firefigther', 'writer', 'coder', 'pilot', 'police'];
-let num = 0
+let num = 0;
 let rank = String(num + 1);
 
 
