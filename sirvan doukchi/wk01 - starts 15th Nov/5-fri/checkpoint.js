@@ -76,14 +76,19 @@ var favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 
 // 2.write code to print the movie in uppercase in the console if the randomly selected movie is Jaws
 
 let randomNum = Math.floor (Math.random() * favMovies.length );
-console.log (favMovies[randomNum].toUpperCase());
+let randomMovie = favMovies[randomNum];
+if (randomMovie == 'Jaws') {
+    console.log (randomMovie.toUpperCase());
+} else {
+    console.log (randomMovie);
+}
 //---------------------------------------------------------------------
 
 
 
 
 // data types and return values (3pt)
-prompt('enter a number');
+//prompt('enter a number');
 // 1.whats the data type of the return value of the above function call
 // 2.write code to add 5 to the number user entered and log it on the console
 
