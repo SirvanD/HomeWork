@@ -7,11 +7,10 @@
 var favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
 
 
+var movieSelection = favMovies[Math.floor(Math.random() * favMovies.length)];
 
-var movieSelection = console.log(Math.floor(Math.random() * (favMovies.length + 1)));
-
-if (movieSelection == [0]) {
-    console.log("JAWS");
+if (movieSelection == favMovies[0]) {
+console.log("JAWS");
 } else {
-    console.log("This is not the movie you are after");
+    console.log(movieSelection);
 }
