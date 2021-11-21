@@ -4,7 +4,7 @@ var pantry = [
     ['pasta', 'rice', ['flour', 'maple syrup']]
   ]  
 
-  console.log(pantry[0][0]);
+  console.log(pantry[1][2][1]);
 
 // Loops 1
 var counter = 18;
