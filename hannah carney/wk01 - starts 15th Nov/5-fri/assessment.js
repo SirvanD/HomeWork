@@ -56,7 +56,7 @@
 
 // assuming Jaws is the first movie, to print the last movie in the console log you'd write in the console log:
 
-// console.log(brain.favMovies["18"])
+// console.log(brain.favMovies[brain.favMovies.length-1])
 
 // wirte code to change energyLevel to 99
 
