@@ -55,33 +55,33 @@
 
 // // builtin Function(4pt)
 
-// var favMovies = [
-//   "Jaws",
-//   "The Fellowship of the Ring",
-//   "Howl's Moving Castle",
-//   "Django Unchained",
-//   "Cloud Atlas",
-//   "The Usual Suspects",
-//   "Toy Story",
-//   "Conan the Barbarian",
-//   "Titanic",
-//   "Harry Potter",
-//   "Fried Green Tomatoes",
-//   "Volver",
-//   "Oculus",
-//   "Seven",
-//   "Black Panther",
-//   "Harry Potter",
-//   "Imitation of Life",
-//   "Snatch",
-//   "Fast and Furious",
-// ];
+var favMovies = [
+  "Jaws",
+  "The Fellowship of the Ring",
+  "Howl's Moving Castle",
+  "Django Unchained",
+  "Cloud Atlas",
+  "The Usual Suspects",
+  "Toy Story",
+  "Conan the Barbarian",
+  "Titanic",
+  "Harry Potter",
+  "Fried Green Tomatoes",
+  "Volver",
+  "Oculus",
+  "Seven",
+  "Black Panther",
+  "Harry Potter",
+  "Imitation of Life",
+  "Snatch",
+  "Fast and Furious",
+];
 
 // var randomMovie = favMovies[Math.floor(Math.random() * favMovies.length)];
 // console.log(randomMovie);
 
-// var randomMovie = favMovies[Math.floor(Math.random() * favMovies.length)];
-// console.log(randomMovie.toUpperCase());
+var randomMovie = favMovies[0];
+console.log(randomMovie.toUpperCase());
 
 // Data types
 

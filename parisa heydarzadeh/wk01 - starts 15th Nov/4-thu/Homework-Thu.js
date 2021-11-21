@@ -1,13 +1,3 @@
-// for (var n = 0; n <= 20; n++) {
-//   if (n === 0) {
-//     console.log(n + "is even");
-//   } else if (n % 2 === 0) {
-//     console.log(n + "is even");
-//   } else {
-//     console.log(n + "is odd");
-//   }
-// }
-
 // Write a while loop that will iterate from 0 to 20. For each iteration,
 // it will check if the current number is even or odd, and report that to the screen..
 
@@ -26,12 +16,12 @@
 // Write a while loop that will iterate from 0 to 10. For each iteration of the for loop,
 // it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18").
 
-// let counter = 1;
-// while (counter <= 10) {
-//   let number = counter * 9;
-//   console.log(`${counter} * 9 = ${number}`);
-//   counter++;
-// }
+let n = 1;
+while (n <= 10) {
+  let number = n * 9;
+  console.log(`${n} * 9 = ${number}`);
+  n++;
+}
 
 // Create an array to hold your top 5 choices (colors, presidents, whatever).
 
@@ -41,31 +31,15 @@
 
 
 
-var fruits = [`apple, `bananna`, `mango`, `kiwi`];
-
+var favCities = ['London', 'sydney', 'paris', 'Barcelona' , 'Mebourne'];
 var index =0;
 
-while (index < fruit.length) {
-console.log(`my first fruit is ` + fruits[index])
+while (index < favCities.length) {
+console.log(`my first favCity is ` + favCities[index])
 index = index +1
 
 if(fruits length is 4)
 }else if()
 console
 }
-counter 
-
-
-
-s
-
-
-
-
-// In the browser prompt the user to provide a number 3 times separately and store each one in a separate variable
-// work out which one is the smallest number and print it in the console
-// var num1 = Number[prompt(`enter your first number`)];
-// var num2 = Number[prompt(`enter your first number`)];
-// var num3 = Number[prompt(`enter your first number`)];
-
-// console.log(Math.min(num1, num2, num3));
+counter
