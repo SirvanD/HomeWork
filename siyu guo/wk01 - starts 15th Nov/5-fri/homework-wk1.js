@@ -37,7 +37,7 @@ while (num > 0) {
 var days = ['Thursday', 'Friday', 'Saturday', 'Sunday']
 var index = 0
 while (index < days.length) {
-    console.log(days[index]);
+    console.log(index + " " + days[index]);
     index++
 }
 
