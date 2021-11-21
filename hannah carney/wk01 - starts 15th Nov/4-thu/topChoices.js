@@ -12,7 +12,8 @@ var favourites = [
     'JC',
     'Chris',
 ];
-var counter = 0;
+
+var number = 0;
 
 //test these in the console at each step
 
@@ -20,22 +21,8 @@ var counter = 0;
 
 // the goal is to log every item in order (my first choice is etc)
 
-while (counter < 5) {
-  if (favourites.length = 5) {
-    console.log('my #1 is ' + favourites[0])
+while (number < favourites.length) {
+    console.log("my # ", number, "is ", favourites[number]);
+    number = number + 1;
   }
-  else if (favourites.length = 4) {
-    console.log('my #2 is ' + [1])
-  }
-  else if (favourites.length = 3) {
-    console.log('my #2 is ' + [2])
-  }
-  else if (favourites.length = 1) {
-    console.log('my #2 is ' + [3])
-  }
-  else if (favourites.length = 2) {
-    console.log('my #2 is ' + [4])
-  }
- 
-}
 
