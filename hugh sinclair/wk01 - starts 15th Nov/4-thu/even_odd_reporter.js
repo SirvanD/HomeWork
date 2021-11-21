@@ -7,6 +7,9 @@ function isEven(num) {
 };
 
 while (counter <= 20) {
-    console.log(isEven(counter));
+    if (isEven(counter)) {
+        console.log(`${counter} is even`);
+    }else {console.log(`${counter} is odd`)
+    }
     counter++;
 };

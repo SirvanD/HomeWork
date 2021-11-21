@@ -53,8 +53,14 @@ brain.energyLevel = 99
 
 var favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
 
-var selectedMovieIndex = Math.floor(Math.random() * favMovies.length)
-console.log(favMovies[selectedMovieIndex].toUpperCase());
+var selectedMovieIndex = Math.floor(Math.random() * favMovies.length);
+if (favMovies[selectedMovieIndex] == 'Jaws') {
+    console.log(favMovies[selectedMovieIndex].toUpperCase());
+} else {
+    console.log(favMovies[selectedMovieIndex]);
+}
+
+
 
 
 // prompt('enter a number');
@@ -63,4 +69,4 @@ console.log(favMovies[selectedMovieIndex].toUpperCase());
 // whats the data type of the return value of the above function call - string
 // write code to add 5 to the number user entered and log it on the console
 
-console.log(Number(prompt('enter a number')) + 5);
+// console.log(Number(prompt('enter a number')) + 5);
