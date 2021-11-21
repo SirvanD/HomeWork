@@ -22,8 +22,9 @@ while (nines < 10) {
 
 // Question 3
 var colors = ["blue", "orange", "grey", "red", "green"];
-var count = 0;
+var choices = ["My #1 choice is ", "My #2 choice is ", "My #3 choice is ", "My #4 choice is ", "My #5 choice is "];
+var count = -1;
     while (count < 4) {
         count = count + 1;
-    console.log("My fav fruit is " + colors[count])
+        console.log(choices[count] + colors[count])
     }
