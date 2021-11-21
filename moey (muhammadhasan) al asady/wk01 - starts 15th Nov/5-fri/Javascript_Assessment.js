@@ -37,7 +37,7 @@ while( i  < days.length ) {
     favMovies: ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious']
   }
   brain.favMovies[brain.favMovies.length - 1] 
-  energyLevel = 99 ;
+  brain.energyLevel = 99 ;
 
 
 //   //builtin functions (4pt)
@@ -46,11 +46,13 @@ while( i  < days.length ) {
 var random = favMovies[Math.floor(Math.random()*favMovies.length)];
 
 ////FIXED 
-console.log(favMovies[0].toUpperCase())
+if {
+  favMovies[0].toUpperCase())
+}
 
 // //   data types and return values (3pt)
 
-// part 1 ANSWER = Number/input
+// part 1 ANSWER = 'String'
 
 var num1 = Number(prompt('enter a number'));
 num1 = num1 + Number(5);
