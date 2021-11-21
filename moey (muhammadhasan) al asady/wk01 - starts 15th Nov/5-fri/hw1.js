@@ -1,7 +1,9 @@
+var brain = {
+    energyLevel: 10,
+    favMovies: ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious']
+  }
 
-var pantry = [
-    ['nutella', 'honey'],
-    ['pasta', 'rice', ['flour', 'maple syrup']]
-  ]
+ brain.favMovies[brain.favMovies.length - 1]
 
-  pantry[1][2][1]
+  brain.favMovies.slice(-1);
+  brain.energyLevel = 99 ;

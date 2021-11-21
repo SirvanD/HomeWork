@@ -17,15 +17,15 @@ while (num1 >= 0) {
 num1 = num1 - 2;
 }
 
-// ////////THIS WORKS, BUT PROBABLY NOT THE RIGHT WAY TO DO IT ///////////////////////////////////////
+// ////////FIXED
 
- var days = ['Thursday', 'Friday', 'Saturday', 'Sunday']
- var i = -1;
+var days = ['Thursday', 'Friday', 'Saturday', 'Sunday']
+var i = -1;
 
- while( i  < days.length ) {
-   i++;
-   console.log(days[i]) 
-  }
+while( i  < days.length ) {
+  i++;
+  console.log(i , days[i]) 
+ }
 
 
 
@@ -36,8 +36,8 @@ num1 = num1 - 2;
     energyLevel: 10,
     favMovies: ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious']
   }
-  brain.favMovies.slice(-1);
-  brain.energyLevel = 99 ;
+  brain.favMovies[brain.favMovies.length - 1] 
+  energyLevel = 99 ;
 
 
 //   //builtin functions (4pt)
@@ -45,8 +45,12 @@ num1 = num1 - 2;
 // i found this online but it's not working. I've tried the Math.floor but couldnt get it to work. I'll work on this over the weekend. 
 var random = favMovies[Math.floor(Math.random()*favMovies.length)];
 
-console.log(random.toUpperCase())
+////FIXED 
+console.log(favMovies[0].toUpperCase())
+
 // //   data types and return values (3pt)
+
+// part 1 ANSWER = Number/input
 
 var num1 = Number(prompt('enter a number'));
 num1 = num1 + Number(5);

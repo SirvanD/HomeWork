@@ -2,9 +2,28 @@
 
 // For each iteration, it will check if the current number is even or odd, and report that to the screen
 
-var counter = 1;
+var num1 = -1;
 
-while (counter <= 20){
-    counter++
+
+while (19 >= num1) {
+  num1++;
+
+  if (num1 % 2 ==0) {
+    console.log(`${num1} is even`)
+} else {
+    console.log(`${num1} is odd`)
 }
 
+}
+
+
+var num2 = 0;
+
+while (num2 <= 9){
+    num2++;
+   var result = num2 * 9;
+    console.log(`${num2} * ${9} = ${result}`)
+
+}
+
+ 
