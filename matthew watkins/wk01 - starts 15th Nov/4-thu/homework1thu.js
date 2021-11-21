@@ -1,17 +1,13 @@
-function isEven(value) {
-    return (value%2 == 0);
-    }
-    if (true) {
-    console.log(true) 
-    } else {console.log (false)
-    }
+let starter = 20
+let ender = -1
+
+while (starter > ender) {
+    if (starter %2 == 0){
+console.log(`${starter} is even`)
+    }else
+    console.log(`${starter} is odd`)
+starter --
+}
+    
     //checks to see if value is even & returns true or false
 
-    var num = 0 
-
-    while (num < 20) {
-    if (isEven (num)) {
-        console.log(num)
-    }
-    num = num + 1
-}
