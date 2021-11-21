@@ -29,17 +29,12 @@ while (n <= 10) {
 
 // Bonus: Change it to log "My 1st choice, "My 2nd choice", "My 3rd choice", picking the right suffix for the number based on what it is.
 
-
-
-var favCities = ['London', 'sydney', 'paris', 'Barcelona' , 'Mebourne'];
-var index =0;
+var favCities = ["London", "sydney", "paris", "Barcelona", "Mebourne"];
+var number = ["1st", "2nd", "3rd", "4th", "5th"];
+var index = 0;
 
 while (index < favCities.length) {
-console.log(`my first favCity is ` + favCities[index])
-index = index +1
+  console.log(`My ${number[index]} choice is ${favCities[index]}`);
 
-if(fruits length is 4)
-}else if()
-console
+  index = index + 1;
 }
-counter
