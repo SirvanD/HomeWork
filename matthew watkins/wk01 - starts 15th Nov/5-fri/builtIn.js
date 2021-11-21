@@ -5,3 +5,6 @@ var favMovies = favMovies[Math.floor(Math.random() * favMovies.length)];
 //var randThisArray = thisArray[Math.floor(Math.random() * thisArray.length)];
 
 console.log(favMovies)
+if(favMovies === `Jaws`) {
+    console.log(favMovies.toUpperCase())
+}

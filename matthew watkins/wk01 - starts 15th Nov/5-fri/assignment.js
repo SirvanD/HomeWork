@@ -3,4 +3,5 @@ var pantry = [
     ['pasta', 'rice', ['flour', 'maple syrup']]
   ]
 
-  console.log(pantry[1] [1])
+  console.log(pantry [1] [2] [1])
+
