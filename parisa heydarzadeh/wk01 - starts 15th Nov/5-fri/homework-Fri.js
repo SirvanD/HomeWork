@@ -1,89 +1,94 @@
-var pantry = [
-  ["nutella", "honey"],
-  ["pasta", "rice", ["flour", "maple syrup"]],
-];
+// // var pantry = [
+//   ["nutella", "honey"],
+//   ["pasta", "rice", ["flour", "maple syrup"]],
+// ];
 
-console.log(pantry[1][2][1]);
+// console.log(pantry[1][2][1]);
 
-// loops Part1
+// // loops Part1
 
-let n = 17;
-while (n <= 17) {
-  n == n - 2;
-  console.log(n);
-  n--;
-}
+// let n = 17;
+// while (n <= 17 && n > 0) {
+//   console.log(n);
+//   n -= 2;
+// }
 
-// Loops Part2
+//  Loops Part2
 
-var days = ["Thursday", "Friday", "Saturday", "Sunday"];
-var n = 0;
+// var days = ["Thursday", "Friday", "Saturday", "Sunday"];
+// var n = 0;
 
-while (n <= days.length) {
-  console.log(days[n]);
-  n++;
-}
+// while (n < days.length) {
+//   console.log(`${n}  ${days[n]}`);
+//   n++;
+// }
 
-var brain = {
-  energyLevel: 10,
-  favMovies: [
-    "Jaws",
-    "The Fellowship of the Ring",
-    "Howl's Moving Castle",
-    "Django Unchained",
-    "Cloud Atlas",
-    "The Usual Suspects",
-    "Toy Story",
-    "Conan the Barbarian",
-    "Titanic",
-    "Harry Potter",
-    "Fried Green Tomatoes",
-    "Volver",
-    "Oculus",
-    "Seven",
-    "Black Panther",
-    "Harry Potter",
-    "Imitation of Life",
-    "Snatch",
-    "Fast and Furious",
-  ],
-};
+// var brain = {
+//   energyLevel: 10,
+//   favMovies: [
+//     "Jaws",
+//     "The Fellowship of the Ring",
+//     "Howl's Moving Castle",
+//     "Django Unchained",
+//     "Cloud Atlas",
+//     "The Usual Suspects",
+//     "Toy Story",
+//     "Conan the Barbarian",
+//     "Titanic",
+//     "Harry Potter",
+//     "Fried Green Tomatoes",
+//     "Volver",
+//     "Oculus",
+//     "Seven",
+//     "Black Panther",
+//     "Harry Potter",
+//     "Imitation of Life",
+//     "Snatch",
+//     "Fast and Furious",
+//   ],
+// };
 
-console.log(brain.favMovies[18]);
+// let lastMovie = brain.favMovies[brain.favMovies.length - 1];
+// console.log(lastMovie);
 
-Brain.energyLevel = 99;
+// console.log((brain.energyLevel = 99));
 
-// builtin Function(4pt)
+// // builtin Function(4pt)
 
-var favMovies = [
-  "Jaws",
-  "The Fellowship of the Ring",
-  "Howl's Moving Castle",
-  "Django Unchained",
-  "Cloud Atlas",
-  "The Usual Suspects",
-  "Toy Story",
-  "Conan the Barbarian",
-  "Titanic",
-  "Harry Potter",
-  "Fried Green Tomatoes",
-  "Volver",
-  "Oculus",
-  "Seven",
-  "Black Panther",
-  "Harry Potter",
-  "Imitation of Life",
-  "Snatch",
-  "Fast and Furious",
-];
+// var favMovies = [
+//   "Jaws",
+//   "The Fellowship of the Ring",
+//   "Howl's Moving Castle",
+//   "Django Unchained",
+//   "Cloud Atlas",
+//   "The Usual Suspects",
+//   "Toy Story",
+//   "Conan the Barbarian",
+//   "Titanic",
+//   "Harry Potter",
+//   "Fried Green Tomatoes",
+//   "Volver",
+//   "Oculus",
+//   "Seven",
+//   "Black Panther",
+//   "Harry Potter",
+//   "Imitation of Life",
+//   "Snatch",
+//   "Fast and Furious",
+// ];
 
-var randMovie = favMovies[Math.random() * favMovies.length];
-console.log(randMovie);
+// var randomMovie = favMovies[Math.floor(Math.random() * favMovies.length)];
+// console.log(randomMovie);
 
-console.log(randMovie.toUpperCase);
+// var randomMovie = favMovies[Math.floor(Math.random() * favMovies.length)];
+// console.log(randomMovie.toUpperCase());
 
-//Data types
+// Data types
 
-prompt("enter a number");
+// prompt('enter a number');
 
-//Number is a datatype of above value.
+// string is a datatype of above value.
+
+// var Num = prompt("enter a number");
+// Num = parseInt(Num);
+// console.log(Num + 5);
