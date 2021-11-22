@@ -5,15 +5,15 @@
 
 // console.log(pantry[1][2][1]);
 
-// // loops Part1
+// // ps Part1
 
 // let n = 17;
-// while (n <= 17 && n > 0) {
+// while (n > 0) {
 //   console.log(n);
 //   n -= 2;
 // }
 
-//  Loops Part2
+//  ps Part2
 
 // var days = ["Thursday", "Friday", "Saturday", "Sunday"];
 // var n = 0;
@@ -48,9 +48,11 @@
 //   ],
 // };
 
+// to log the last movies;
 // let lastMovie = brain.favMovies[brain.favMovies.length - 1];
 // console.log(lastMovie);
 
+//to change the energylevel to 99
 // console.log((brain.energyLevel = 99));
 
 // // builtin Function(4pt)
@@ -80,8 +82,10 @@ var favMovies = [
 // var randomMovie = favMovies[Math.floor(Math.random() * favMovies.length)];
 // console.log(randomMovie);
 
-var randomMovie = favMovies[0];
-console.log(randomMovie.toUpperCase());
+var randomMovie = favMovies[Math.floor(Math.random() * favMovies.length)];
+if (randomMovie == favMovies[0]) {
+  console.log(randomMovie.toUpperCase());
+}
 
 // Data types
 
