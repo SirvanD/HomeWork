@@ -29,13 +29,13 @@ var brain = {
     favMovies: ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious']
   };
 
-console.log(brain.favMovies);
+console.log(brain.favMovies.slice(-1)[0]);
 
 //Question 3 Objects 2
 brain.energyLevel = 99;
 console.log(brain);
 
-// Questions 4 Functiona 1
+// Questions 4 Functions 1
 var favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
 
 var randomMovie = favMovies[Math.floor(Math.random() * favMovies.length)];
