@@ -63,7 +63,7 @@ console.log(combineWords('red', 'dog'));
 
 /** The Pluralizer */
 
-var collNouns = ['sheep', 'geese', 'wolves'];
+//var collNouns = ['sheep', 'geese', 'wolves'];
 
 function pluralize(noun, number) {
     if (number > 1 && noun != 'sheep') {
