@@ -14,11 +14,11 @@ var currentNumber = 0;
 while (currentNumber < 21) {
     
     if (currentNumber % 2 === 0) {
-    console.log(currentNumber + " is even!");
+        console.log(currentNumber + " is even!");
     } else {
         console.log(currentNumber + " is odd!");
-        }
-        currentNumber = currentNumber + 1
     }
+        currentNumber = currentNumber + 1
+}
 
  
