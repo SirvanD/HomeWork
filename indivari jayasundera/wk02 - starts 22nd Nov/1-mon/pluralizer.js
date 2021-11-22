@@ -3,12 +3,10 @@ function pluralizer(count, noun) {
     console.log(`${count} ${noun}`);
   } else if (noun === "goose") {
     console.log(`${count} geese`);
+  } else if (count == 1 || noun == "sheep") {
+    console.log(`${count} ${noun}`);
   } else {
-    if (count == 1 || noun == "sheep") {
-      console.log(`${count} ${noun}`);
-    } else {
-      console.log(`${count} ${noun}s`);
-    }
+    console.log(`${count} ${noun}s`);
   }
 }
 

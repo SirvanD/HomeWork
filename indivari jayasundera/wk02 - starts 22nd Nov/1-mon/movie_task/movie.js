@@ -6,7 +6,9 @@ var movie = {
 
 function printMovieInfo() {
   console.log(
-    `The movie ${movie.title} lasts for ${movie.duration} , stars ${movie.stars[0]} ${movie.stars[1]} ${movie.stars[2]} ${movie.stars[3]}`
+    `The movie ${movie.title} lasts for ${
+      movie.duration
+    } , stars ${movie.stars.join(",")}`
   );
 }
 
