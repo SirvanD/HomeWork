@@ -30,7 +30,7 @@ while (i < bookArray.length) {
 let myFavMovie = {
     title: 'Interstellar',
     duration: 169,
-    stars: ['Matthew McConaughey', 'Anne Hathaway', 'Jessica Chastain']
+    stars: ['Matthew McConaughey', ' Anne Hathaway', ' Jessica Chastain']
 }
 
 function movieData() {
@@ -50,7 +50,9 @@ combineWords();
 // The pluraliser (Note: This doesn't feel like how we were meant to do this one (?) so any feedback is welcome!)
 function pluralize(num, word) {
     if (num > 1) {
-        return (num + ` ${word}` + 's')
+        return (`${num} ${word}` + 's')
+    } else {
+        return (`${num} ${word}`)
     }
 }
 
@@ -58,13 +60,13 @@ pluralize();
 
 // Word Order Reverse
 function wordReverse(string) {
-    const stringArr = string.split(" ");
+    const stringArr = `${string}`.split(" ");
     const reverseArr = stringArr.reverse();
     return reverseArr.join(' ')
 } 
 
 // example string for testing = "this should be totally reversed dude"
-wordReverse("");
+wordReverse();
 
 // Find longest word length
 let word = "";
