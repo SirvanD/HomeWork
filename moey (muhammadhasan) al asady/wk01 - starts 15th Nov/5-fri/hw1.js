@@ -2,4 +2,7 @@ var favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 
 
 var random = favMovies[Math.floor(Math.random()*favMovies.length)];
 
-////FIXED 
+
+if (random == favMovies[0]) {
+   console.log (random.toUpperCase())
+}

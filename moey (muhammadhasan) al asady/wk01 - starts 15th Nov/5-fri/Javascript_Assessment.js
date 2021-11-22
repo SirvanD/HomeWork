@@ -43,11 +43,12 @@ while( i  < days.length ) {
 //   //builtin functions (4pt)
   var favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
 // i found this online but it's not working. I've tried the Math.floor but couldnt get it to work. I'll work on this over the weekend. 
+
 var random = favMovies[Math.floor(Math.random()*favMovies.length)];
 
-////FIXED 
-if (favMovies[0]== true ) {
-   console.log (favMovies[0].toUpperCase())
+
+if (random == favMovies[0]) {
+   console.log (random.toUpperCase())
 }
 
 // //   data types and return values (3pt)
