@@ -29,7 +29,7 @@ var brain = {
     favMovies: ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious']
   };
 
-console.log(brain.favMovies.slice(-1));
+console.log(brain.favMovies);
 
 //Question 3 Objects 2
 brain.energyLevel = 99;
@@ -43,12 +43,9 @@ console.log(randomMovie);
 
 // Question 4 Functions 2
 function upperCase (favMovies, randomMovie) {
-    if (randomMovie === "Jaws") {
+    if (randomMovie === brain.favMovies[0]) {
         console.log(randomMovie.toUpperCase());
-    } else {
-        console.log("Jaws was not randomly selected")
     }
-
 }
 upperCase();
 
