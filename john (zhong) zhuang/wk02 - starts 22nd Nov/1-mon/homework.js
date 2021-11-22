@@ -101,15 +101,15 @@ WordReverse();
 
 
 function findLongestwordLength(x) {
-    let longest = x[0].length;
     let i = 0;
+    let currentLongest = x[0].length;
     while (i < x.length) {
-        let currentLongest = x[i].length;
-        if (currentLongest > longest) {
+        let longest = x[i].length;
+        if (longest > currentLongest) {
             return (currentLongest = longest);
         }
         i++;
-    }
+    } return currentLongest;
 }
 findLongestwordLength();
 
