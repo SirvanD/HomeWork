@@ -88,7 +88,7 @@ function pluralizer(num, name){
 // word order reverser
 
 function wordReverser(reverseThis){
-    return (reverseThis.split("").reverse().join(""))
+    return (reverseThis.split(" ").reverse().join(" "))
 }
 
 // find longest word length
