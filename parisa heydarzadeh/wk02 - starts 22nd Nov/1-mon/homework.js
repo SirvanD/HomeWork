@@ -1,7 +1,6 @@
-// let favFruits = ["apple", "banana", "kiwi", "cherry", "watermelon"];
-// let selFruits = prompt("select a fruit");
+// Homework part1/2
 
-// //the reading list
+//the reading list
 // let book = [
 //   {
 //     title: "search of lost times",
@@ -22,11 +21,11 @@
 
 // var index = 0;
 // while (index < book.length) {
-//   var theBook = book[index].title + " " + by + book[index].Author + " ";
+//   var theBook = book[index].title + " " + "by " + book[index].Author + " ";
 //   if (book[index].read) {
 //     console.log("You already read this" + " " + theBook);
 //   } else {
-//     console.log("You still need to read" + " " + object);
+//     console.log("You still need to read" + " " + theBook);
 //   }
 //   index++;
 // }
@@ -38,6 +37,7 @@
 //   duration: 120,
 //   stars: ["Decaprio", "Joseph Gordon", "Tom Hardy"],
 // };
+
 // console.log(
 //   favMovie.title +
 //     " " +
@@ -49,7 +49,31 @@
 //     favMovie.stars
 // );
 
-//Cobine Words
-let combineWords = ["dog", "house"];
+//Combine Words
+// let name1 = "fast";
+// let name2 = "food";
+// let combineWords = name1.concat(name2);
+// console.log(combineWords);
 
-ccombineWords.join();
+// The Pluralizer
+
+// function pluralize(object, num) {
+//   if (num >= 2) {
+//     console.log(num + " " + object + "s");
+//   } else {
+//     console.log(num + " " + object);
+//   }
+// }
+// pluralize("bag", 2);
+
+//WordOrder Reverse
+
+// function wordReverse(string) {
+// var stringArray = string.split(" ");
+// stringArray.reverse();
+// stringArray.join(" ");
+// console.log(stringArray);
+// }
+// wordReverse("Hello my name is Paris");
+
+//find longest Word Length
