@@ -13,10 +13,17 @@
 // }
 
 // bonus
-let i = 0;
+// let i = 0;
 let colors = ['blue', 'red', 'pink', 'white', 'black'];
-let sequence = ['1st', '2nd', '3rd', '4th', '5th'];
-while (i < colors.length) {
-    console.log(`My ${sequence[i]} choice is ${colors[i]}.`);
-    i++;
+// let sequence = ['1st', '2nd', '3rd', '4th', '5th'];
+// while (i < colors.length) {
+//     console.log(`My ${sequence[i]} choice is ${colors[i]}.`);
+//     i++;
+// }
+
+
+var index = 3;
+while (index > 0) {
+    console.log(`my #1 color is ${colors[index]}`);
+    index++;
 }
