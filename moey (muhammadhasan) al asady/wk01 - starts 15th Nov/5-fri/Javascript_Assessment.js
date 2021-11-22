@@ -46,8 +46,8 @@ while( i  < days.length ) {
 var random = favMovies[Math.floor(Math.random()*favMovies.length)];
 
 ////FIXED 
-if {
-  favMovies[0].toUpperCase())
+if (favMovies[0]== true ) {
+   console.log (favMovies[0].toUpperCase())
 }
 
 // //   data types and return values (3pt)
