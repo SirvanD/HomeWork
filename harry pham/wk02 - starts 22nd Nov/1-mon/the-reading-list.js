@@ -96,7 +96,9 @@ function findLongestWordLength(wordsArray) {
             temp = nextWord
         } 
         //creates a loop to define what word ends up with the most letters
-        console.log("temp", temp + " with " + temp.length + " letters")
     i++;
 }
+ console.log("temp", temp + " with " + temp.length + " letters")
 }
+
+findLongestWordLength(["asdf", "asdfasdf", "asdfas"])
