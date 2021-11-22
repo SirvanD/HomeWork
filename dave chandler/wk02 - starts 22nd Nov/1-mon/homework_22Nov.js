@@ -97,10 +97,10 @@ pluralise('cow',2);
 console.log('\n\nPART 5: REVERSE WORD');
 
 function wordReverse(word){
-    console.log(word.split('').reverse().join(''));
+    console.log(word.split(' ').reverse().join(' '));
 }
 
-wordReverse('supercalafragalisticexpialidocious');
+wordReverse('I love CSS');
 
 
 //Longest Word
@@ -116,3 +116,68 @@ console.log(`longest: ${ascSortByLength(wordList).pop()}`);
 
 //for the smallest word
 console.log(`shortest: ${ascSortByLength(wordList).shift()}`);
+
+
+// Guess the fruit
+// You are to create a basic guess the word game.
+
+// step 1
+// Prepare a list of your favourite fruits and store it in an appropriate data structure and have the computer select a random fruit as the secret word.
+
+// step 2
+// Base on the selected fruit give the use a hint like the example below. you can use prompt, alert or console.log to show the hint
+
+// for example if the secret fruit is "banana"
+
+// hint: it's 6 characters long. Starts with b and ends with a. guess the fruit.
+// instead of typing out the hint manually for every fruit. try to use a template string and programmatically work out the starting letter, ending letter and how many characters long.
+
+// step 3
+// Allow the user to guess the fruit repeatedly until they guess correctly. keep track of the number of guesses.
+
+// wrong. try again.
+// step 4
+// Congratulate the user and display number of attempts they made.
+
+// Congrats! you got it in 5 attempts.
+
+const fruit = [{
+    name: 'peaches',
+    hint: 'rowers love these'
+    },
+    {
+    name: 'bananas',
+    hint: 'yes we have no...'
+    },
+    {
+    name: 'grapes',
+    hint: 'wine is from these'
+    },
+    {
+    name: 'mangoes',
+    hint: 'go well with peaches'
+    },
+    {
+    name: 'kiwi',
+    hint: 'named after a bird'
+    }
+];
+//pick a random fruit
+let fruitIndex = Math.floor(Math.random()*fruit.length);
+let randomFruit = fruit[fruitIndex].name;
+let randomFruitHint = fruit[fruitIndex].hint;
+console.log(`random fruit secret word: ${randomFruit}`);
+console.log(`hint: it is ${randomFruit.length} letters long, starts with ${randomFruit[0]} and ends with ${randomFruit.split('').pop()} and ${randomFruitHint}. guess the fruit!`);
+let guess = '';
+let numGuesses = 0;
+
+while (guess !=randomFruit){
+    guess = prompt('guess the fruit',`hint: ${randomFruitHint}`);
+    
+    //give a message if the guess is wrong
+    if (guess.toLowerCase() != randomFruit){
+        alert('wrong. try again.');
+    }
+    numGuesses++;
+};
+alert(`Congrats! you guessed ${randomFruit} in ${numGuesses} attempts.`);
