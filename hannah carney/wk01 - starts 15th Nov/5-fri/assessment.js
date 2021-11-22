@@ -49,14 +49,14 @@
 // Question 3
 // Part 1
 
-// var brain = {
-//     energyLevel: 10,
-//     favMovies: ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious']
-//   }
+var brain = {
+    energyLevel: 10,
+    favMovies: ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious']
+  }
 
 // assuming Jaws is the first movie, to print the last movie in the console log you'd write in the console log:
 
-// console.log(brain.favMovies[brain.favMovies.length-1])
+console.log(brain.favMovies.slice -1 )
 
 // wirte code to change energyLevel to 99
 

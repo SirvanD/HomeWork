@@ -6,7 +6,8 @@
 // 4 x 9 = 36 ...
 
 var number = 0;
+
 while (number < 90) {
-    console.log(number);
+    console.log(`${number} x 9 = ${number}`);
     number = number + 1 * 9;
 }
