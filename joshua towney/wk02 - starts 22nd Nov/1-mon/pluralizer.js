@@ -4,16 +4,16 @@
 // Bonus: Make it handle a few collective nouns like "sheep" and "geese".
 
 // var noun = 'goose';
-// var number = 7;
+// var number = 7; these are not needed as tey will  be populated by user input when function is called.
 
 function pluralize(number, noun) {
-    var noun = 'goose';
-    var number = 7;
+    // var noun = 'goose'; these lines are not needed
+    // var number = 7; these lines are not needed
     if (noun == 'goose' && number > 1) {
-        console.log(number + ' geese') 
+        return number + ' geese';
     } else if (number > 1){
-    console.log(number + ' ' + noun + 's');
+    return number + ' ' + noun + 's';
     } else {
-        console.log(number + ' ' + noun);
+        return number + ' ' + noun;
     }
 }

@@ -12,3 +12,5 @@ function reverseString(str) {
     var printThis = reversedArray.join(' ');
     console.log(printThis);
 }
+
+// 'we are good friends'.split(' ').reverse().join(' '); much shorter way of doing this

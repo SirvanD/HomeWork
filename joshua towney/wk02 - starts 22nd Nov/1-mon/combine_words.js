@@ -10,8 +10,11 @@
 // var wordList = ['cat','dog'];
 
 function combineWords(string1, string2) {
-    var inputWords = [string1, string2];
-    console.log(inputWords.join(''));    
+    // var inputWords = [string1, string2]; + symbol makes this line unessescary
+    // console.log(inputWords.join('')); + symbol is much simpler than join function
+    return string1 + string2
 }
+
+
 
 // function combineWords(string1, string2) 
