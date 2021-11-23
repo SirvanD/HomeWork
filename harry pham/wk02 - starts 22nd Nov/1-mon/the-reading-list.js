@@ -82,22 +82,22 @@ movieInfo()
 
 // Find Longest Word Length
 
-// function findLongestWordLength(wordsArray) {
-//     var temp;
-//     let i = 0
-//     temp = wordsArray[0]
-//     while(i < wordsArray.length - 1){
-//         var currentWord = wordsArray[i]
-//         var nextWord = wordsArray[i + 1]
-//         if(temp === undefined && currentWord.length > nextWord.length){
-//             temp = currentWord
-//         } else if(temp !== undefined && temp.length < nextWord.length){
-//             temp = nextWord
-//         } 
-//         //creates a loop to define what word ends up with the most letters
-//     i++;
-// }
-//  console.log("temp", temp + " with " + temp.length + " letters")
-// }
+function findLongestWordLength(wordsArray) {
+    var temp;
+    let i = 0
+    temp = wordsArray[0]
+    while(i < wordsArray.length - 1){
+        var currentWord = wordsArray[i]
+        var nextWord = wordsArray[i + 1]
+        if(temp === undefined && currentWord.length > nextWord.length){
+            temp = currentWord
+        } else if(temp !== undefined && temp.length < nextWord.length){
+            temp = nextWord
+        } 
+        //creates a loop to define what word ends up with the most letters
+    i++;
+}
+ console.log("temp", temp + " with " + temp.length + " letters")
+}
 
-// findLongestWordLength(["asdf", "asdfasdf", "asdfas"])
+findLongestWordLength(["asdf", "asdfasdf", "asdfas"])
