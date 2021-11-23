@@ -115,7 +115,7 @@ numbers.unshift(3)
 ```
 
 ```text
-Your answer goes here.
+return value = ["dot", "dash", "pause", "dash", "dot"]
 ```
 
 What is the return value of the below code sample? Come up with an answer yourself before testing it out in the console.
