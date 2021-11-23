@@ -12,7 +12,7 @@ function pluralizer(count, noun) {
 
 pluralizer(1, "cat");
 pluralizer(5, "dog");
-pluralizer(0, "horses");
+pluralizer(0, "horse");
 pluralizer(2, "sheep");
 pluralizer(10, "goose");
 pluralizer(1, "goose");

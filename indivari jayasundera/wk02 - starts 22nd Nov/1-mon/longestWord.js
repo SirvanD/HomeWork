@@ -14,3 +14,4 @@ function longestWord(wordArray) {
 var name = ["John", "Alexandra", "payson", "tom"];
 
 longestWord(name);
+longestWord(["dfd", "aa"]);

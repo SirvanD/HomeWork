@@ -1,9 +1,7 @@
 function reverseArray(phrase) {
   var phraseArray = phrase.split(" ");
-  phraseArray.reverse();
-  for (let i = 0; i < phraseArray.length; i++) {
-    console.log(phraseArray[i]);
-  }
+
+  console.log(phraseArray.reverse().join(" "));
 }
 
 reverseArray("Hello World Enjoy Your Day");
