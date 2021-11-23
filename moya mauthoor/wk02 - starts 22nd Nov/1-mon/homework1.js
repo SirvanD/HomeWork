@@ -13,6 +13,7 @@ let bookList = [
     author: "George Elliot",
     alreadyRead: false} 
 ];
+// Homework feedback: array of objects needs proper structure, i.e. curly braces on separate lines with contents indented
 
 counter = 0;
 while (counter < bookList.length) {
@@ -56,6 +57,7 @@ function pluralize(noun, number) {
     } else {
         let plural = noun.concat("s");
         return `${number} ${plural}`;
+        // Simpler way to do above else statement: return `${number} ${noun}s`
     }
 }
 
@@ -74,6 +76,7 @@ function wordReverse(string) {
 
 function findLongestWordLength(array) {
     let longestWordLength = 0;
+    // Better way than setting to 0 - assume first word is longest, e.g. let longestWordLength = array[0].length
     counter = 0;
     while (counter < array.length) {
         let word = array[counter];
