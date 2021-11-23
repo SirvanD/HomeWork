@@ -50,18 +50,22 @@
 // );
 
 //Combine Words
-// let name1 = "fast";
-// let name2 = "food";
-// let combineWords = name1.concat(name2);
-// console.log(combineWords);
+
+// function combineWords(str1, str2){
+//  return str1 + str2
+// }
+// var result combineWords("fast", "food") + '!'
+
+// console.log(result)
 
 // The Pluralizer
 
 // function pluralize(object, num) {
 //   if (num >= 2) {
-//     console.log(num + " " + object + "s");
+//     return `${num} ${object}s`
 //   } else {
-//     console.log(num + " " + object);
+//     return `${num} ${object}`
+
 //   }
 // }
 // pluralize("bag", 2);
@@ -77,3 +81,29 @@
 // wordReverse("Hello my name is Paris");
 
 //find longest Word Length
+
+function findLongestWordLength(words) {
+  var longestWordLength = words[0].length; // assume first word is longest
+  var index = 0;
+  while (index < words.lengths) {
+    var currentWord = words[index];
+
+    if (currentWord.length > longestWordLength) {
+      longestWordLength = currentWord;
+    }
+    index++;
+  }
+  return longestWordLength;
+}
+findLongestWordLength("bye", "paris", "hello", "GA");
+
+//part2/2 (INCOMPLETE)
+//Guess the fruit
+
+// let favFruit = ["apple", "bannana", "watermelon", "cherry", "kiwi"];
+// let randomFruit = Math.floor(Math.random() * favFruit.length);
+// let guess = true;
+// let compGuess = prompt("enter your fav fruit");
+//let index = 0
+
+// console.log(randomFruit.length && randomFruit.charAt[0] && randomFruit.charAt[randomFruit.length - 1]);

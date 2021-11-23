@@ -1,0 +1,52 @@
+.pattern {
+  background: url("/images/pattern1.png");
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+h1 {
+  color: white;
+  grid: 60px;
+  height: 40px;
+  font-size: 200;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  padding-left: 5px;
+}
+
+h3 {
+  font-weight: lighter;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: auto;
+}
+.orchid {
+  width: 100%;
+}
+.orchid-image {
+  width: 100%;
+}
+.headername {
+  background-color: coral;
+}
+.photos {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+  background-image: cover;
+  margin-left: 0pt;
+}
+
+footer {
+  width: 100%;
+  text-align: right;
+  height: 50px;
+  background-color: coral;
+}
