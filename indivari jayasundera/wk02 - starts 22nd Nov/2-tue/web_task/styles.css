@@ -14,7 +14,7 @@ body {
   margin-top: -35px;
   padding-bottom: 30px;
   font-style: italic;
-  font-family: "M PLUS 2", sans-serif;
+  font-family: Apple Chancery, cursive;
 }
 #header {
   color: white;
@@ -22,13 +22,13 @@ body {
 
 .container {
   background-color: white;
-  width: 54%;
+  width: 70%;
   margin: 0 auto;
 }
 
-#main-image {
-  margin: -20px 0 0 0;
-  width: 1020px;
+.main-image {
+  margin-top: -20px;
+  width: 100%;
 }
 .img-container {
   margin: 0 auto;
@@ -49,4 +49,11 @@ footer {
 .main-content {
   padding: 10px 10px;
   margin: 0 auto;
+}
+.main-content div {
+  margin: 0 auto;
+}
+
+u {
+  font-family: Apple Chancery, cursive;
 }
