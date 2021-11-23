@@ -7,6 +7,6 @@
 // "doghouse"
 
 function combineWords(word1, word2){
-    var combo = String(word1+word2);
+    var combo = word1+word2;
     return combo;
 }
