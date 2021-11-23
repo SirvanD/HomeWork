@@ -29,6 +29,6 @@ var user = prompt();
 var guessNum = 1;
 while (user != computer) {
     guessNum++;
-    user = prompt();
+    user = prompt(`hint: it's ${computer.length} characters long. Starts with ${computer.slice(0, 1)} and ends with ${computer.slice(-1)}. guess the fruit.`);
 }
 alert(`Congrats! You got it in ${guessNum} attempt(s).`)

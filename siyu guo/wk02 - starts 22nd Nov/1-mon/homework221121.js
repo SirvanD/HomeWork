@@ -70,7 +70,7 @@ function info(favMovie) {
 
 function combineWords(wordA, wordB) {
     var result = wordA.concat(wordB);
-    console.log(result);
+    return result;
 }
 
 
