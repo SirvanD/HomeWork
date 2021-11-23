@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    
+}
+
+
+body {
+    background-image:url("images/pattern1.png") ;
+    display: flex;
+    justify-content: center;
+    
+    /* position: relative; */
+}
+
+
+.container {
+    background-color: whitesmoke;
+    width: 70vw;
+    height: 100%;
+    border:none;
+    margin: 0;
+    display: flex;
+    flex-direction:column;
+    
+}
+.header {
+    
+    height: 80px;
+    background-color: #F0776F;
+    padding: 10px;  
+    
+}
+.header > h1 {
+    color: whitesmoke;
+    font-family: 'Genos', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.top-img {
+width: 100%;
+
+}
+
+.content {
+padding: 20px;
+
+}
+
+h5 ,h4 {
+    text-decoration: underline;
+    font-family: 'Poiret One', cursive;
+    
+}
+.photos {
+    margin-top: 20px;
+}
+
+.photos-holder {
+    display: flex;
+    margin-top: 12px;
+    
+}
+.photos-holder > img {
+    
+    width: 24%;
+    border: 4px solid rgb(201, 197, 197);
+}
+img + img {
+    margin-left: 3px;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: #F0776F;
+    color: whitesmoke;
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+

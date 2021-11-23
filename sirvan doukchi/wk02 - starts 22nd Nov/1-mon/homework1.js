@@ -41,20 +41,26 @@ function func ()  {
 //--------------------------------------------------------
 //Combine Words
 function combineWords(word1,word2) {
-    console.log (`${word1}${word2}`)
-}combineWords('sam','doukchi');
+    return word1 + word2
+}
+let result = combineWords('sam','doukchi') + '!';
+console.log(result);
+
+
 //--------------------------------------------------------
 //The Pluralizer
 function pluralizer(noun,times){
     if (times > 1) {
-        console.log(`${times} ${noun}s`);
+        return `${times} ${noun}s`;
     } else if (times == 1){
-        console.log(`1 ${noun}`)
+        return `1 ${noun}`
     }
 }
-pluralizer ('light', 5);
-pluralizer ('cow', 1);
-pluralizer ('pizza', 3);
+let result2 = pluralizer ('light', 5);
+let result3 = pluralizer ('cow', 1);
+let result4 = pluralizer ('pizza', 3);
+
+console.log(result2, result3, result4)
 
 //--------------------------------------------------------
 //Word Order Reverse
@@ -76,7 +82,8 @@ function findLongestWordLength(wordsArray) {
         longestWord = currentWord.length;
     }counter4 ++;
 }
-    console.log (`The longest word has ${longestWord} characters`);
+    return `The longest word has ${longestWord} characters`;
 }
- findLongestWordLength(['birthday', 'cake' , 'my', 'happyfriday']);
+ let outcome = findLongestWordLength(['birthday', 'cake' , 'my', 'happyfriday']);
+ console.log (outcome);
 
