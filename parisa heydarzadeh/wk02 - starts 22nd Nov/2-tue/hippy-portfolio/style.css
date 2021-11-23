@@ -1,6 +1,5 @@
 .pattern {
   background: url("/images/pattern1.png");
-  overflow: hidden;
   background-size: cover;
   background-position: center;
 }
@@ -11,7 +10,6 @@ body {
 
 h1 {
   color: white;
-  grid: 60px;
   height: 40px;
   font-size: 200;
   font-family: Arial, Helvetica, sans-serif;
