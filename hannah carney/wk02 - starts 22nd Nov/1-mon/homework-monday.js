@@ -69,7 +69,7 @@
 // Combining words
 
 // function combineWords(one, two) {
-//     console.log(one+two)
+//     return(one+two)
 // }
 // combineWords();
 
@@ -81,9 +81,9 @@
 
 // function pluralize(noun, number) {
 //     if (number > 1) {
-//         console.log(number +' '+ noun + 's'); 
+//         return(number +' '+ noun + 's'); 
 //     } else {
-//         console.log(number + noun)
+//         return(number + noun)
 //     }
 // }
     //   return number > 1 ? pluralWord : singularWord; - the short hand for the above
@@ -91,10 +91,10 @@
 
 // word order reverse
 
-// function reverseString(s){
-//     return s.split("").reverse().join("");
-// }
-// reverseString("Hello");
+function wordReverse(words){
+    return (wordReverse(words));
+}
+wordReverse("hello");
 
 
 //  Find longest word length

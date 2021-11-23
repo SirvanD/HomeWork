@@ -1,0 +1,54 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-image: url('hippy-portfolio/images/pattern1.png');
+}
+
+#middle {
+    background-color: white;
+    
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    color: white;
+    font-size: 50px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px; ;
+    background: #ff6666;
+}
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    background-color: #ff6666;
+}
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-left: 20px;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+}
+
+
+.footer {
+    font-family: 'Times New Roman', Times, serif;
+    text-align-last: right;   
+    color: white;
+    font-size: 15px;
+    padding: 25px;
+    background-color: #ff6666;
+}
+
+#images {
+    align-items: center;
+    padding-left: 20px;;
+}
