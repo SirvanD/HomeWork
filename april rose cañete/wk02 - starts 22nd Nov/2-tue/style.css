@@ -9,6 +9,7 @@ body {
     align-items: center;
     margin: 0 auto;
     width: 70%;
+    height: 90%;
     padding: 0;
 }
 header {
@@ -22,11 +23,12 @@ header {
     font-family: 'Outfit', sans-serif;
     margin: 0 auto;
     color:  #fff;
+    font-size: 40px;
 }
 .subtitle {
     font-family: 'Satisfy', cursive;
     margin: 0 auto 2% auto;
-    font-size: 15px;
+    font-size: 14px;
 }
 #banner {
     width: 100%;
@@ -36,20 +38,26 @@ header {
 }
 .contents .desc {
     font-size: 85%;
+    margin: 8px auto;
 }
 .subheading {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Satisfy', cursive;
     text-decoration: underline;
     font-size: 85%;
+    margin: 5px auto;
 }
 #display-photos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100%;
+    padding: 0;
 }
 .imgs {
+    margin: 0 5px 0 0;
+    padding: 2px;
+    border: 1px solid grey;
     border-radius: 2px;
-    width: 98%;
+    width: 96%;
 }
 footer {
     position: relative;
