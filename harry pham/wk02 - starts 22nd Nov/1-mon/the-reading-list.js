@@ -1,51 +1,52 @@
 // // The Reading List
 
-// var books = [[
-//     title = "Harry Potter: Philosipher's stone",
-//     author = "J. K. Rowling",
-//     read = true,
-// ], 
-// [
-//     title = "The Stranger in the Lifeboat",
-//     author = "Mitch Albom",
-//     read = false,
-// ], 
-// [
-//     title = "The Fellowship of the Ring",
-//     author = "J. R. R. Tolkien",
-//     read = false,
-// ]]
+// var books = {
+//         list: [
+//             {
+//             title: "Harry Potter: Philosipher's stone",
+//             author: "J. K. Rowling",
+//             read: true
+//             }, 
+//             {           
+//             title: "The Stranger in the Lifeboat",
+//             author: "Mitch Albom",
+//             read: false
+//             },
+//             {
+//             title: "The Fellowship of the Ring",
+//             author: "J. R. R. Tolkien",
+//             read: false
+//             }
 
-// if (books[0][2] == true){
-//     console.log("you have already read " + books[0][0] + " by " + books[0][1])
-// } else {
-//     console.log("you still need to read " + books[0][0] + " by " + books[0][1])
+//         ]
 // }
-// if (books[1][2] == true){
-//     console.log("you have already read " + books[1][0] + " by " + books[1][1])
-// } else {
-//     console.log("you still need to read " + books[1][0] + " by " + books[1][1])
-// }
-// if (books[2][2] == true){
-//     console.log("you have already read " + books[2][0] + " by " + books[2][1])
-// } else {
-//     console.log("you still need to read " + books[2][0] + " by " + books[2][1])
+
+// i = 0
+// while(i < books.list.length){
+//     if(books.list[i]["read"] === true){
+//         console.log("you have already read " + books.list[i]["title"] + " by " + books.list[i]["author"])
+//     } else {
+//         console.log("you have yet to read " + books.list[i]["title"] + " by " + books.list[i]["author"] + ", chop chop!")
+//     }
+//     i++;
 // }
 
 
 // // Movie Database
 
-// var movies = [
-//     title = "Avengers: the End Game",
-//     duration = 3,
-//     stars = ["Robert Downey Jr.", " Scarlet Johansson", " Chris Evans"]
-// ]
+var movies =
+    {
+    title: "Avengers: the End Game",
+    duration: 3,
+    stars: ["Robert Downey Jr.", " Scarlet Johansson", " Chris Evans"]
+    }
 
-// function movieInfo(){
-//     console.log(title + " lasts for " + duration + " hours. Stars: " + stars)
-// }
 
-// movieInfo()
+function movieInfo(){
+    console.log(movies.title + " lasts for " + movies.duration + " hours. Stars: " + movies.stars)
+}
+
+movieInfo()
 
 
 // // Combine Words
@@ -59,10 +60,8 @@
 // //Pluralizer
 
 // function pluralize(number, noun) {
-//     if(number !== 1 && noun == "goose"){
-//         return(number + " geese")
-//     } else if(number !== 1 && noun == "wolf"){
-//         return(number + " wolves")
+//     if(number !== 1){
+//         return(number + " " + noun + "s")
 //     } else{
 //         return(number + " " + noun)
 //     }
@@ -83,22 +82,22 @@
 
 // Find Longest Word Length
 
-function findLongestWordLength(wordsArray) {
-    var temp;
-    let i = 0
-    temp = wordsArray[0]
-    while(i < wordsArray.length - 1){
-        var currentWord = wordsArray[i]
-        var nextWord = wordsArray[i + 1]
-        if(temp === undefined && currentWord.length > nextWord.length){
-            temp = currentWord
-        } else if(temp !== undefined && temp.length < nextWord.length){
-            temp = nextWord
-        } 
-        //creates a loop to define what word ends up with the most letters
-    i++;
-}
- console.log("temp", temp + " with " + temp.length + " letters")
-}
+// function findLongestWordLength(wordsArray) {
+//     var temp;
+//     let i = 0
+//     temp = wordsArray[0]
+//     while(i < wordsArray.length - 1){
+//         var currentWord = wordsArray[i]
+//         var nextWord = wordsArray[i + 1]
+//         if(temp === undefined && currentWord.length > nextWord.length){
+//             temp = currentWord
+//         } else if(temp !== undefined && temp.length < nextWord.length){
+//             temp = nextWord
+//         } 
+//         //creates a loop to define what word ends up with the most letters
+//     i++;
+// }
+//  console.log("temp", temp + " with " + temp.length + " letters")
+// }
 
-findLongestWordLength(["asdf", "asdfasdf", "asdfas"])
+// findLongestWordLength(["asdf", "asdfasdf", "asdfas"])
