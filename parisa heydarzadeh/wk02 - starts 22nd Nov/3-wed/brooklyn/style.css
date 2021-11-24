@@ -1,0 +1,46 @@
+header {
+  color: slategray;
+  font-size: 30px;
+  padding: 10px 0 10px 0;
+  text-align: ;
+}
+
+.img1 {
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+}
+
+h1 {
+  color: slategray;
+  font-size: 20px;
+}
+
+h2 {
+  color: steelblue;
+  font-size: small;
+}
+
+p {
+  color: slategray;
+  font-size: smaller;
+  padding-bottom: 10px;
+}
+
+.Img2 {
+  border: 3px solid gray;
+}
+.img3 {
+  border: 3px solid gray;
+}
+.img4 {
+  border: 3px solid gray;
+}
+
+.img5 {
+  border: 3px solid gray;
+}
+
+footer {
+  color: slategray;
+  font-size: x-small;
+}

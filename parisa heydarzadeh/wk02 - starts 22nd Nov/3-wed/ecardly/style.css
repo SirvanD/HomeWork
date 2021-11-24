@@ -1,0 +1,95 @@
+/* * {
+  box-sizing: border-box;
+}
+
+* {
+  border: 1px solid red;
+} */
+
+body {
+  background-image: url(images/background.jpg);
+  background-color: #8080803b;
+  background-repeat: repeat-x;
+  display: block;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+.heading {
+  font-size: 25px;
+  padding: 50px;
+  text-align: left;
+}
+
+p {
+  padding-bottom: 10px;
+  padding-left: 5px;
+  margin: auto;
+  display: inline-block;
+}
+
+.photo1,
+.photo2 {
+  width: 920px;
+  margin: 20px 0;
+}
+.footcontent1 {
+  padding: 10px 0 10px 0;
+  border-top: 2px dotted;
+  border-bottom: 2px solid;
+  float: left;
+  width: 926px;
+  text-align: left;
+}
+
+#para {
+  padding-bottom: 10px;
+  margin: auto;
+}
+
+.footcontent2 {
+  padding: 10px 0 10px 0;
+  border-top: 2px dotted;
+  border-bottom: 2px solid;
+  float: left;
+  width: 926px;
+  text-align: left;
+}
+aside {
+  height: 730px;
+  margin-left: 10px;
+  background-color: white;
+  padding: 20px;
+}
+main {
+  background-color: white;
+  padding: 20px;
+  width: 925px;
+}
+
+.name {
+  color: red;
+}
+
+.num {
+  color: red;
+}
+.line {
+  color: red;
+  font-family: initial;
+}
+
+footer {
+  text-align: center;
+  display: block;
+}

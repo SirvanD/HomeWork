@@ -19,7 +19,7 @@ h1 {
 
 h3 {
   font-weight: lighter;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetina baba off course +ca, sans-serif;
   font-size: 20px;
   margin: auto;
 }
@@ -33,18 +33,21 @@ h3 {
   background-color: coral;
 }
 .photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  padding: 0;
 
   background-image: cover;
   margin-left: 0pt;
 }
 
 footer {
+  color: white;
   width: 100%;
   text-align: right;
   height: 50px;
   background-color: coral;
-}

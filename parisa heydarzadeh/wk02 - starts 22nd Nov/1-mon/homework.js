@@ -97,13 +97,17 @@ function findLongestWordLength(words) {
 }
 findLongestWordLength("bye", "paris", "hello", "GA");
 
+
 //part2/2 (INCOMPLETE)
 //Guess the fruit
 
-// let favFruit = ["apple", "bannana", "watermelon", "cherry", "kiwi"];
-// let randomFruit = Math.floor(Math.random() * favFruit.length);
-// let guess = true;
-// let compGuess = prompt("enter your fav fruit");
-//let index = 0
+ let favFruit = ["apple", "bannana", "watermelon", "cherry", "kiwi"];
+ let randomFruit = Math.floor(Math.random() * favFruit.length);
+ let guess = true;
 
-// console.log(randomFruit.length && randomFruit.charAt[0] && randomFruit.charAt[randomFruit.length - 1]);
+let index = 0
+let hint =randomFruit.length && randomFruit.charAt[0] && randomFruit.charAt[randomFruit.length - 1]
+while(index < favFruit.length){
+  if (index )
+
+console.log()
