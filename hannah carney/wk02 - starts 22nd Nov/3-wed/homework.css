@@ -1,0 +1,25 @@
+main {
+    text-align: left;
+    width: 100%;
+}
+
+#images {
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    text-align: inline;
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    width: 65%;
+    position: relative;
+
+}
+
+section {
+    width: 800px;
+    align-self: center;
+}
