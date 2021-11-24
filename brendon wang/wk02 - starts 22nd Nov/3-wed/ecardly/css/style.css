@@ -1,0 +1,60 @@
+/* dev only
+* {
+    border: 1px solid red;
+} */
+/* reset  */
+
+/* site specific */
+body {
+    background-color: lightgrey;
+}
+header {
+    background-image:url(../images/background.jpg);
+    background-repeat: repeat-x;
+    text-align: center;
+}
+.logo {
+    width: 15%
+}
+.container {
+    margin: 0 15%;
+    display: grid;
+    grid-template-columns: 2fr 0.75fr;
+    gap: 10px;
+}
+.left {
+    background-color: white;
+    padding: 20px;
+}
+a {
+    font-size: 16px;
+    color: red;
+    text-decoration: none;
+}
+.horizontaldottedline {
+    border-bottom: 1px dotted black;
+}
+.horizontalsolidline {
+    border-top: 1px solid black;
+}
+.mainimages{
+    width: 100%;
+}
+aside {
+    align-self: start;
+    background-color: white;
+    padding: 20px;
+}
+h4 {
+    font-size: 12px;
+}
+.navlinks {
+    margin: 0 auto;
+}
+.navimg {
+    width: 100%;
+}
+footer{
+    margin: 25px;
+    text-align: center;
+}
