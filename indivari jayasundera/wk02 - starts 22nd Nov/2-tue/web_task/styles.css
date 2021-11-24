@@ -32,6 +32,7 @@ body {
 }
 .img-container {
   margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .img-container img {
@@ -56,4 +57,8 @@ footer {
 
 u {
   font-family: Apple Chancery, cursive;
+}
+
+#banner {
+  width: 100%;
 }
