@@ -40,16 +40,19 @@ h3{
     background: white;
 }
 
-.orchid img{
-    margin:auto;
-    max-width: 100%;
-    height: auto;
+.img {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
 }
 
-.content img{
+.orchid img{
+    margin:auto;
+    width: 100%;
+}
+
+.img img{
     border: 5px solid rgb(197, 197, 197);
-    max-width: 100%;
-    height: auto;
+    display: grid;
 }
 
 footer{
