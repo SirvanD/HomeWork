@@ -4,10 +4,10 @@ let ender = -1
 while (starter > ender) {
     if (starter %2 == 0){
 console.log(`${starter} is even`)
-    }else
+    }else 
     console.log(`${starter} is odd`)
-starter --
-}
+starter -- ;
+
     
     //checks to see if value is even & returns true or false
-
+}
