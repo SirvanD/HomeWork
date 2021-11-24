@@ -95,26 +95,26 @@ numbers.unshift(3)
 // Part 4
 
 // What is the return value of the below code sample? Come up with an answer yourself before testing it out in the console.
-var morse = ["dot", "pause", "dot"]
+// var morse = ["dot", "pause", "dot"]
 
-var moreMorse = morse.join(" dash ")
-// Returns the array as a string with the word dash seperating the words
+// var moreMorse = morse.join(" dash ")
+// // Returns the array as a string with the word dash seperating the words
 
-moreMorse.split(" ")
+// moreMorse.split(" ")
 // Makes the above string a new array
 
 
 // What will the contents of the below array be after the below code sample is executed? Come up with an answer yourself before testing it out in the console.
 
-var bands = []
-var beatles = ["Paul", "John", "George", "Pete"]
-var stones = ["Brian", "Mick", "Keith", "Ronnie", "Charlie"]
+// var bands = []
+// var beatles = ["Paul", "John", "George", "Pete"]
+// var stones = ["Brian", "Mick", "Keith", "Ronnie", "Charlie"]
 
-bands.push(beatles)
-bands.unshift(stones)
-bands[bands.length - 1].pop()
-bands[0].shift()
-bands[1][3] = "Ringo"
+// bands.push(beatles)
+// bands.unshift(stones)
+// bands[bands.length - 1].pop()
+// bands[0].shift()
+// bands[1][3] = "Ringo"
 
 // So this will log the length of the array + 1, then it will add length to the array again using unshift (to the front?)
 // Then bands[0-1].pop will add 1 to the bands array? Then bands 0 index position, minus that index? 
@@ -137,20 +137,20 @@ bands[1][3] = "Ringo"
 
 // a	b	    a OR b
 // true	true	true
-// true	false	false
-// false true	?
-// false false	?
+// true	false	true
+// false true	true
+// false false	true
 
-// a	b	a != b
-// 3	3	?
-// 1	5	?
-// 2	"2"	?
+// a	b	    a!= b
+// 3	3	      false
+// 1	5	      true
+// 2	"2"	      true
 
-// a	b	!a AND (a OR b)
-// true	true	?
-// true	false	?
-// false	true	?
-// false	false	?
+// a	    b	     !a AND (a OR b)
+// true	    true	        false
+// true	    false	        false
+// false	true	        false
+// false	false	        true
 
 // You're a bouncer at a bar. Given an age variable, create a conditional that satisfies the following requirements...
 
@@ -159,14 +159,16 @@ bands[1][3] = "Ringo"
 // If a patron is younger than 18, print out "You're too young to be in here!".
 // If a patron is older than 75, print out "Are you sure you want to be here?".
 
-function clubEntry (age) { 
-if (age < 18) {
-    console.log('You/re too young to be in here'); 
-} else if (age > 21 ) {
-    console.log('Come on in!'); 
-} else if (age < 18 && age > 21) {
-    console.log('Come on in, but no drinking')
-} else if (age < 75) {
-    console.log('Are you sure you want to be in here? ')
-    }
-}
+// function clubEntry (age) { 
+// if (age < 18) {
+//     console.log('You/re too young to be in here'); 
+// } else if (age > 21 ) {
+//     console.log('Come on in!'); 
+// } else if (age < 18 && age > 21) {
+//     console.log('Come on in, but no drinking');
+// } else if (age < 75) {
+//     console.log('Are you sure you want to be in here? ');
+// } else {
+//     console.log('No ID, no entry');
+//     }
+// }
