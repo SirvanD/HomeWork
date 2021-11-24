@@ -15,25 +15,34 @@
 //    return(longestWord);
 //   }
 
-function findLongestWordLength(words) {
+// function findLongestWordLength(words) {
 
-  var longestWordLength = words[0].length;
-  var index = 0;
+//   var longestWordLength = words[0].length;
+//   var counter = 0;
 
-  while (index < words.length) {
-    var currentWord = words[index]
+//   while (counter < words.length) {
+//     var currentWord = words[counter]
 
-    if (currentWord.length > longestWordLength) {
-      longestWordLength = currentWord.length
-    }
-    index = index + 1;
-  }
-  return longestWordLength
-}
-  // console.log(longestWordLength);
-  //console.log(word.length)
-
-  // return (needs to be a number)
+//     if (currentWord.length > longestWordLength) {
+//       longestWordLength = currentWord.length
+//     }
+//     counter = counter + 1;
+//   }
+//   return longestWordLength
 // }
 
+function findLongestWordLength(inputWords) {
+  
+  var longestWordLength = inputWords[0].length;
+  var index = 0;
+  
+  while (index < inputWords.length) {
+    var currentLongestWord = inputWords[index];
 
+    if (currentLongestWord.length > longestWordLength) {
+      longestWordLength = currentLongestWord.length;
+    }
+    index++;
+  } 
+  return longestWordLength
+}
