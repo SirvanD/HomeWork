@@ -1,9 +1,15 @@
 body {
   background-image: url("pattern1.png");
+  display: grid;
+  justify-content: center;
+}
+* {
+  box-sizing: border-box;
 }
 
 .header {
   background-color: rgb(238, 99, 99);
+  margin: 0;
 }
 
 .header h1 {
@@ -27,11 +33,13 @@ body {
 }
 
 .main-image {
+  /* display: block; */
   margin-top: -20px;
   width: 100%;
 }
 .img-container {
-  margin: 0 auto;
+  gap: 10px;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
@@ -48,10 +56,7 @@ footer {
 }
 
 .main-content {
-  padding: 10px 10px;
-  margin: 0 auto;
-}
-.main-content div {
+  padding: 20px;
   margin: 0 auto;
 }
 
