@@ -1,0 +1,38 @@
+h1,h2 {
+    margin: 0
+}
+* {
+    box-sizing:border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: gray;
+    line-height: 150%;
+    text-align:justify;
+}
+.topImg img {
+    width:100%;
+    max-height: auto;
+}
+h1 {
+    font-weight: bold;
+    margin-top: 30px;
+}
+nav {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+nav img{
+    border: 5px solid lightgray;
+    width: 100%;
+    padding: 1px;
+    
+}
+
+span {
+    color:lightsteelblue;
+}
