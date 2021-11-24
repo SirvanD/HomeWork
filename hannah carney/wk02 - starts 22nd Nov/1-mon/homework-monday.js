@@ -91,10 +91,10 @@
 
 // word order reverse
 
-function wordReverse(words){
-    return (wordReverse(words));
-}
-wordReverse("hello");
+// var words = "hello im hannah"
+
+// const reversed = words.reverse();
+// console.log('reversed:', reversed);
 
 
 //  Find longest word length
