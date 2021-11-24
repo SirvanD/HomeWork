@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecard</title>
+    <style>
+        /* temp*/
+        * {
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            display: grid;
+            /* grid-template-rows: 1fr 5fr; */
+            gap: 10px;
+            background-color: rgb(220, 217, 217);
+        }
+
+        header {
+            background-image: url("images/background.jpg");
+            background-repeat: repeat-x;
+        }
+
+        .ecard {
+            display: block;
+            margin: 0 auto;
+            /* text-align: center; */
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+        }
+
+        section {
+            padding-bottom: 25px;
+        }
+
+        .picture {
+            width: 100%;
+            display: block;
+            text-align: justify;
+        }
+
+        p {
+            text-align: justify;
+            justify-content: center;
+        }
+
+        span {
+            color: red;
+        }
+
+        .dotline {
+            padding: 0 20px 0;
+            margin: 20px 0;
+            border-top: 1px dotted grey;
+            text-align: center;
+        }
+
+        .solidline {
+            padding: 0 20px 0;
+            margin: 20px 0;
+            border-top: 2px solid grey;
+            text-align: center;
+        }
+
+        nav {
+            background-color: white;
+            padding: 20px;
+            height: fit-content;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0px;
+            padding-bottom: 20px;
+        }
+
+        .ad {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1><img src="images/logo.png" alt="" class="ecard"></h1>
+    </header>
+    <div class="container">
+        <main>
+            <section>
+                <h2>Ecard of the Day</h2>
+                <img src="images/ecard-nycstartups.jpg" alt="" class="picture">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, odio distinctio quam officiis
+                    maiores
+                    veritatis iusto, natus esse vero quod autem quos. Expedita impedit molestias facilis iusto at, enim
+                    voluptatum.</p>
+                <div class="dotline"></div>
+                <p>Lorem ipsum dolor sit amet <span><b>consectetur adipisicing elit</b></span>.Minima totam explicabo
+                    dolorum
+                    labore aliquam quo, consequatur cum optio quos libero atque quaerat porro, aspernatur illum, ad
+                    harum
+                    sint similique sequi.</p>
+                <div class="solidline"></div>
+
+            </section>
+            <section>
+                <h2>Doing The Big Work</h2>
+                <img src="images/ecard-courage.jpg" alt="" class="picture">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, odio distinctio quam officiis
+                    maiores
+                    veritatis iusto, natus esse vero quod autem quos. Expedita impedit molestias facilis iusto at, enim
+                    voluptatum.</p>
+                <div class="dotline"></div>
+                <p>Lorem ipsum dolor sit amet <span><b>consectetur adipisicing elit</b></span>. Minima totam explicabo
+                    dolorum labore aliquam quo, consequatur cum optio quos libero atque quaerat porro, aspernatur illum,
+                    ad
+                    harum sint similique sequi.</p>
+                <div class="solidline"></div>
+            </section>
+        </main>
+        <nav>
+            <ul>
+                <li><b>ARCHIVE</b></li>
+                <li>January</li>
+                <li>February</li>
+                <li>March</li>
+                <li>April</li>
+                <li>May</li>
+                <li>June</li>
+                <li>July</li>
+            </ul>
+            <ul>
+                <li><b>BLOGROLL</b></li>
+                <li>Mallchimp</li>
+                <li>Shopify</li>
+                <li>The Next Web</li>
+                <li>Mint.com</li>
+                <li>Mashable</li>
+            </ul>
+            <div class="ad">
+                <img src="images/ad-cut-and-paste.gif" alt="">
+                <img src="images/ad-postcard-tee.png" alt="">
+                <img src="images/ad-submit-your-own.png" alt="">
+            </div>
+        </nav>
+    </div>
+    <footer>
+        <img src="images/social-icon-twitter.png" alt="">
+        <img src="images/social-icon-facebook.png" alt="">
+        <img src="images/social-icon-pinterest.png" alt="">
+    </footer>
+
+</body>
+
+</html>
