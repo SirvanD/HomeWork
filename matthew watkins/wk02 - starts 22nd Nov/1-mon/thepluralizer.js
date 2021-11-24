@@ -1,7 +1,10 @@
-function pluralizer () {
-    var noun = prompt(`enter a noun`) ;
-    var number =  prompt(`enter a number`);
-    console.log( `${number}  ${noun}\'s ` )
+
+function pluralizer ( noun , number ) {
+    if (number === 1) {
+        return `${number} ${noun}`
+    } else {
+        return `${number} ${noun}\'s`
+    }
 }
 
 pluralizer()

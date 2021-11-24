@@ -1,7 +1,5 @@
-function wordReverse () {
-    if (`we are good friends`) {
-    return `friends good are we`
-    } else if (`i love css`) {
-        return `css i love`
-    }
+function reverseString(s){
+    return s.split(" ").reverse().join(" ");
+
+   //then we reverse the array
 }
