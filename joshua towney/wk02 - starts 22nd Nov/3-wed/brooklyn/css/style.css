@@ -1,0 +1,22 @@
+body {
+    max-width:72%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.first-pic {
+    max-width: 100%;
+    height: 100%;
+}
+.second-pic {
+    max-width: 100%;
+    height: auto;
+}
+span {
+    color: blue;
+}
+.brands {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+}
+
