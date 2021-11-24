@@ -1,7 +1,7 @@
 const readingList = [
-    { title: 'Harry Potter', author: 'J K Rowling', alreadyRead: 'false'},
-      { title: 'Donnie Darko', author: 'Richard Kelly', alreadyRead: 'true'},
-    {title: 'This will be funny someday', author: 'Katie Henry', alreadyRead: 'false'}
+    { title: 'Harry Potter', author: 'J K Rowling', alreadyRead: false},
+      { title: 'Donnie Darko', author: 'Richard Kelly', alreadyRead: true},
+    {title: 'This will be funny someday', author: 'Katie Henry', alreadyRead: false}
 ];
 
 // if (alreadyRead == true){ 
@@ -21,7 +21,7 @@ const readingList = [
     for (let i = 0; i < readingList.length; i++ ) {
         const book = readingList[i];
         const bookInfo = `"${ book.title} by ${book.author}"`;
-        if (book.alreadyRead === 'true'){
+        if (book.alreadyRead === true){
           console.log(`You already read "${book.title}"  by ${book.author}`);
         } else {
           console.log(`You still need to ready "${book.title}" by ${book.author}`);
@@ -29,7 +29,7 @@ const readingList = [
       }
 
 
-      //////IMBD
+//       //////IMBD
 
       const favMovie = {
         title: 'Prisoners',
@@ -38,57 +38,77 @@ const readingList = [
       };
       
         function  movie1 (movie) {
-        console.log(`${favMovie.title} last for ${favMovie.duration} minutes. Stars: ${favMovie.stars.join(', ')}`);
-      
+        console.log(`${movie.title} lasts for ${movie.duration} minutes. Stars: ${movie.stars.join(', ')}`);
       };
-      console.log(movie1);
-      
+        movie1(favMovie);   
 
 
-      ///////////////
+//       ///////////////
 
-      var word = '';
-      var word2 = '';
 
-      function join (word, word2) {
+      function combineWords (word, word2) {
        return word + word2   
     }
-     join('dog', 'house')
 
-      ///////
+    var result = combineWords('bread', 'maker');
+    console.log(result)
+    ;
 
 
-      ////////THE PLURALIZER
+//       ///////
 
-      var enterNumber = '';
-      var enterAnimal = '';
 
-      function plural (enterNumber, enterAnimal){
-      return enterNumber + enterAnimal;
-    }
+//       ////////THE PLURALIZER
 
-    if (enterNumber > 1){ 
-    console.log(`${enterNumber} ${enterAnimal}s`)
-    } else {
-        console.log(`${enterNumber} ${enterAnimal}`)
-    }
-      
-
-      if (enterNumber > 1){ 
-      console.log(`${enterNumber} ${enterAnimal}s`)
-      } else {
-          console.log(`${enterNumber} ${enterAnimal}`)
-      }
     
-      
-    ////////Word Order Reverse
- 
-    //   var 
+    function plural (enterNumber, enterAnimal){
+        if (enterNumber > 1){ 
+            console.log(`${enterNumber} ${enterAnimal}s`)
+        } else {
+            console.log(`${enterNumber} ${enterAnimal}`)
+        }
+    //   return enterNumber + enterAnimal;
+    }
+    var result1 = plural('5', 'dog')
+    console.log(result1)
+//     ////////Word Order Reverse
+ function wordReverse (sentence){
+    var final = sentence.split(' ').reverse().join(' ');
+     return final
+ }
+ wordReverse('We are good friends')
 
-    // function wordReverse () {
-    //     var doIt = 
-    // }
+
+    //////find longest work
+
+//  findLongestWordLength(['my', 'cake', 'pudding']) // => 7
+//  findLongestWordLength(['I', 'love', 'css']) // => 4
+
+function longestWord (words) {
+    var longestWordLength = words[0].length 
+
+    var index = 0;
+
+    while (index < words.length) {
+        var currentWord = words[index];
+
+        if (currentWord.length > longestWordLength) {
+            longestWordLength = currentWord.length;
+        }
+
+        // var currentLongestLength = words[index].length
+        index = index + 1;
+    }
+    // console.log(longestWordLength)
+    return longestWordLength
+}
+longestWord(['my', 'cake'])
 
 
+
+
+//// word reverse 
+
+'We are good friends'.split(' ').reverse().join(' ')
 
 
