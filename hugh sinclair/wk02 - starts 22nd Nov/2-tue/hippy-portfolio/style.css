@@ -1,3 +1,4 @@
+
 body{
     background-image: url('images/pattern1.png');
     margin: 0 0;
@@ -9,11 +10,15 @@ header, footer{
     margin: 0 0;
     padding: 1% 0 1% 2%;
 }
+
 header h1{
     margin: 0 0;
 }
+
 header p{
     margin: 0 0;
+    font-family: 'Dancing Script', cursive;
+    color: black;
 }
 
 .container > img{
@@ -43,7 +48,8 @@ img{
 
 .title{
     margin: 0 0;
-    
+    font-family: 'Dancing Script', cursive;
+    text-decoration: underline;
 }
 
 footer{
@@ -58,4 +64,6 @@ footer{
     margin: 5%;
     border: 3px solid gray;
 }
+
+/* do i need to have margin on all of them, or can i use body div make the rules for all it's kids */
 
