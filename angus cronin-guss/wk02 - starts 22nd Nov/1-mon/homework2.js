@@ -1,34 +1,36 @@
 // Guess the fruit game
-// prompt("Guess the fruit I am thinking of");
+var fruits = ["apple", "pineapple", "banana", "blueberry"];
+var hints = ["it's also a company", "spongebob lives in one", "it's long and yellow", "it's from the berry family"];
 
-var fruits = ["apple", "pinapple", "banana", "blueberry"];
-var randomFruit = Math.floor(Math.random() * 14 + 1);
-  
+var input = prompt("Guess what fruit I am thinking of from this list. Apple, Pineapple, Banana or Blueberry");
+var randomFruit = fruits[Math.floor(Math.random() * fruits.length)];
+var attemps = 0;
 
-// NOT MY WORK BELOW. FOUND THIS ONLINE TO HELP ME COMPLETE!!!
 
-    // counting the number of guesses
-    // made for correct Guess
-    //var guess = 1;
-      
-    //document.getElementById("submitguess").onclick = function(){
-      
-   // number guessed by user     
-   //var x = document.getElementById("guessField").value;
-  
-   //if(x == y)
-   //{    
-   //    alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
-               + guess + " GUESS ");
-   //}
-   //else if(x > y) /* if guessed number is greater
-                   than actual number*/ 
-   //{    
-   //    guess++;
-   //    alert("OOPS SORRY!! TRY A SMALLER NUMBER");
-   //}
-   //else
-   //{
-  //     guess++;
-  //     alert("OOPS SORRY!! TRY A GREATER NUMBER")
-  // }
+// function guessGame (fruits) {
+
+//    while (guesses < fruits.lenth) {
+//        if (input == randomFruit) {
+//            alert("Congrats! you got it in 5 attempts.");
+//        } else if (randomFruit === "pineapple") {
+//            alert("Wrong, try again.)
+//            guesses = guesses + 1;
+//            return "Wrong, try again" + input;
+           
+//        }
+//    }
+// } 
+// guessGame();
+
+// while (input !== randomFruit) {   
+//         var input = prompt("it's also a company");
+//         guesses = guesses + 1;
+//         if (guesses > maxGuesses) {
+//             console.log("You are out of guesses");
+        
+//         } else 
+// }
+// computer tells user to guess a fruit between var fruits
+// if user is wrong, display a hint to the user
+// user will have 5 guesses otherwise they fail
+
