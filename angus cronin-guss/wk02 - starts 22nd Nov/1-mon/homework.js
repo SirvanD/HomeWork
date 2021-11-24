@@ -19,68 +19,88 @@ var books = [{
     author: "Chris Voss",
     read: false,
 }];
-
-for (var i = 0; i < books.length; i++) {
-    var book = books[i];
-    var myBooks = book.title + " by " + book.author;
-    if (book.Read) {
-        console.log(myBooks + " I read this book");
-    } else {
-        console.log(myBooks + " I haven't read this book yet");
-    }
-}
-
+// function readBooks (books){
+//     for (var i = 0; i < books.length; i++) {
+        
+//         var myBooks = books.title + " by " + books.author + ". ";
+//         if (books[2] = true) {
+//             console.log(myBooks + "I have read this book");
+//         } else {
+//             console.log(myBooks + "I haven't read this book yet");
+//     }
+// }
+// }
+// readBooks();
 // Question 2
-var favMovie = {
-    title: "Step Brothers",
-    duration: 90,
-    stars: ["Will ferral", "John Reilly"],
-};
- function favouriteMovie (favMovie) {
-     console.log(favMovie.title + ' lasts for ' + favMovie.duration + ' minutes. Stars ' + favMovie.stars.join(', '));
-   }
-favouriteMovie(favMovie);
+// var favMovie = {
+//     title: "Step Brothers",
+//     duration: 90,
+//     stars: ["Will ferral", "John Reilly"],
+// };
+//  function favouriteMovie (favMovie) {
+//      console.log(favMovie.title + ' lasts for ' + favMovie.duration + ' minutes. Stars ' + favMovie.stars.join(', '));
+//    }
+// favouriteMovie(favMovie);
 
 //Question 3
-
-function combineWords (word1, word2) { 
-    var word1 = "dog";
-    var word2 = "house";
-   return String(word1) + String(word2); 
+function addWords (str1, str2) {
+return str1 + str2; 
 }
-combineWords();
+console.log(addWords("dog", "house"));
 
- // Question 4
- function pluralize (noun, number) {
-    if (number < 1 && noun == 'cat' || noun == 'horse') {
-        return number + ' ' + noun + 's';
+
+
+// Question 4
+function pluralize (noun, number) {
+    counter = number;
+    if (counter > 1) {
+        return `${number} ${noun}s`
     } else {
-        return number + ' ' + noun;
+        return `${noun} ${number}`
+    } 
 }
-}
+console.log(pluralize('cat', 1));
 
 
 //Question 5
-var words = "Hello my name is Angus";
-function wordReverse(sentance) {
-   return sentance.split("").reverse().join("");
+function reverseSent(sentence){
+    var result = "";
+    var split = sentence.split(" ");
+  
+    for (var i = split.length - 1; i >= 0; i--){
+    
+     if (i ==split.length - 1) {
+            result += "";
+      }
+      else {
+          result += " ";
+      }
+    
+      result += split[i];
+      var words = result;
+    }
+    return '"' + words + '"';
+  }
+// // Question 6
+function longestWord (bugs) {
+    var wordLength = bugs[0].length
+    var index = 0;
+    while (index < words.length) {
+        var currentWord = words[index];
+     if (currentWord.length > wordLength.length) {
+        var longestWord = currentWord.length;
+} index = index + 1;
+} return longestWord;
 }
-wordReverse(words);
-
-// Question 6
 var bugs = ['ant', 'spider', 'beetle', 'butterfly'];
 
-function findLongestWordLength(array) {
-
-    var long = 0;
-    var longest = '';
-
-    for (var i = 0; i < findLongestWordLength.length; i++) {
-        if (array[i].length > long) {
-            var long = array[i].length;
-            longest = array[i];
-        }
-    }
-    return longest.length;
+// function findLongestWordLength(array) {
+//     for (var i = 0; i < findLongestWordLength.length; i++) {
+//         if (array[i].length > long) {
+//             var long = array[i].length;
+//             longest = array[i];
+//         }
+//     }
+//     return longest.length;
 
 }
