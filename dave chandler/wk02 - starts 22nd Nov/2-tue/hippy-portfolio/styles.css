@@ -5,6 +5,9 @@ body{
     margin-top:0;
     margin-bottom:10px;
 }
+*{
+    box-sizing: border-box;
+}
 
 .container{
     width:70%;
@@ -32,10 +35,9 @@ header{
     padding:0;
 }
 
-.banner>img{
+.banner img{
+    display: block;
     width:100%;
-    margin: 0;
-    padding:0;
 }
 
 .photo-reel{
@@ -47,9 +49,9 @@ header{
     padding:10px;
 }
 
-.photo-reel>img{
-    object-fit: cover;
-    width: 96%;
+.photo-reel img{
+    display: block;
+    width:99%;
     border: 3px solid gainsboro;
     padding: 3px;
 }
@@ -61,6 +63,7 @@ h1{
 
 h3{
     font-size: 1em;
+    font-family: "Dancing Script";
     margin:0;
     color:black;
     padding-bottom: 10px;
