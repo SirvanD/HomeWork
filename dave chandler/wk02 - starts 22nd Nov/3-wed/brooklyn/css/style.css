@@ -28,8 +28,16 @@ header {
   grid-row: 2/3;
 }
 
+#banner-1 img {
+  width: 100%;
+}
+
 #banner-2 {
   grid-row: 3/4;
+}
+
+#banner-2 img {
+  width: 100%;
 }
 
 p {
@@ -68,11 +76,10 @@ h3 {
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 20px;
+  justify-items: stretch;
 }
 
 .gallery img {
-  margin: 0 auto;
-  width: fit-content;
-  border: 5px solid #c5c5c5;
+  border: 5px solid grey;
 }
