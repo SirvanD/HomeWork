@@ -88,3 +88,47 @@ bands[1][3] = "Ringo"
 
 //Ringo
 
+// Booleans & Comparisons
+
+// a	b	a AND b
+// true	true	true
+// true	false	false
+// false	true	false
+// false	false	true
+
+// a	b	a OR b
+// true	true	true
+// true	false	true
+// false	true	false
+// false	false	false
+
+// a	b	a != b
+// 3	3	false
+// 1	5	true
+// 2	"2"	false
+
+// a	b	!a AND (a OR b)
+// true	true	false
+// true	false	true
+// false	true	true
+// false	false	false
+
+// CONDITIONALS
+// If a patron is older than 21, print out "Come on in!".
+// If a patron is between 18 and 21, print out "Come on in (but no drinking)!".
+// If a patron is younger than 18, print out "You're too young to be in here!".
+// If a patron is older than 75, print out "Are you sure you want to be here?".
+var age = 21
+var patron = [];
+function bouncer (age, patron) {
+    if (age < patron && patron < 74) {
+        console.log("Come on in!"); 
+    } else if (patron >= 18 && patron < age) {
+        console.log("Come on in (but no drinking!)");
+    } else if (patron < 18) {
+        console.log("You're too young to be in here!");
+    } else if (patron > 74) {
+        console.log("Are you sure you want to be here?");
+    }
+}
+bouncer(age, patron)

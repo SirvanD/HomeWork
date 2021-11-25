@@ -5,14 +5,21 @@ header {
 article {
     border: 3px solid yellow;
     display: block;
+    padding: 10px 2px 0px 10px;
+    background-color: white;
+}
+article img {
     width: 100%;
-    margin: 30px;
-
 }
 aside{
     border: 2px solid black;
     margin: 30px;
+    align-self: start;
+    padding: 15px;
+    background-color: white;
+    
 }
+
 footer {
     border: 3px solid green;
 }
@@ -31,3 +38,15 @@ body {
     max-height:100%;
 
 }
+a {
+    color: red;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+.caption {
+    padding: 10px;
+    border-bottom: 2px dotted black;
+}
+

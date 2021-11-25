@@ -1,0 +1,83 @@
+
+main {
+    width: 100%;
+}
+body {
+    padding: 15%;
+}
+p {
+    color: gray;
+}
+#maintitle {
+    color: red;
+    display: inline;
+    padding: 10px;
+}
+#title2 {
+    display: inline;
+    color: lightgray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+}
+
+#topnav {
+    position: relative;
+}
+
+article  {
+    display: block;
+    width: 100%;
+}
+.blogdates{ 
+    color: lightgray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.blogtitles {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#blog1img {
+     width: 100%;
+ }
+#blog2img {
+    width: 100%;
+}
+
+aside {
+    border: 2px solid yellow;
+    width: 100%;
+}
+footer {
+    border: 2px solid purple;
+}
+#bottomnav {
+    display: flex;
+    width: relative;
+}
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5px;
+}
+#nav-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+#nav-wrapper a {
+    padding: 15px;
+    background-color: black;
+    border: 1px solid white;
+}
+#nav2-wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    border: 1px solid yellow;
+    color: red;
+    text-align: center;
+    padding: 15px;
+}
+
+
+ 
