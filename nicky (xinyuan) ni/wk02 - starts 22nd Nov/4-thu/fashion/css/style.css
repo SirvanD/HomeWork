@@ -1,0 +1,142 @@
+body{
+    margin: auto;
+    width: 960px;
+    background-color: white;  
+    color: grey;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+h1{
+    color: tomato;
+    font-size: 80px;
+    margin: 0px;
+}
+
+h2{
+    color: lightseagreen;
+    font-size: 30px;
+    margin: 0px;
+}
+
+h3{
+    font-size: 25px;
+    margin: 10px;
+}
+
+c{
+    color: lightseagreen;
+    font-size: 30px; 
+    padding: 20px;
+}
+
+#catalog {
+    height: 40px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 0;
+}
+
+#catalog ul {
+    list-style: none;
+} 
+
+#catalog li{
+    background-color: darkslategray;
+    color: white;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+}
+
+#catalog li:hover {
+    background-color: lightsalmon;   
+}
+
+#main{
+    width: 600px;
+    display: block;
+    background:white;
+    padding: 20px 20px;
+}
+
+#sidebar{
+    padding: 50px 20px;
+    display: block;
+    background:white;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+div.bottomcatalog ul{
+    float: left;
+}
+
+nav.footer-menu ul{
+    list-style: none;
+    padding: 0;
+    color: tomato;
+    font-size: 12px;
+}
+
+nav.footer-menu li{
+    display: inline;
+    border-right:1px solid tomato;
+    padding: 0 5px;
+}
+
+nav.footer-menu li:last-child{
+    border: none;
+}
+
+a{
+    color:lightseagreen;
+    float: left;
+    font-size: 70px;
+    padding:0px 10px;
+}
+
+h6{
+    color:tomato;
+    text-align: right;
+    font-size: 20px;
+    margin: 10px;
+
+}
+
+
+h7{
+    text-align: left;
+    font-size: 12px;
+}
+
+h4{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#box{
+    margin: 10px 10px;
+    display: block;
+    width: 250px;
+    height:250px;
+    background-color: lightgrey;
+    color:dimgrey;
+    text-align: center;
+    font-size: 50px;
+}
+
+nav.furtherinfo {
+    color: tomato;
+}
+
+nav.furtherinfo ul{
+    list-style: none;
+    counter-reset: count;   
+}
