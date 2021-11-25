@@ -60,6 +60,9 @@ aside section {
 aside section ul li {
   color: rgb(247, 139, 157);
 }
+aside section a {
+  color: rgb(247, 139, 157);
+}
 
 header h2 {
   font-family: "Quicksand", sans-serif;
