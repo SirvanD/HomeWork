@@ -36,6 +36,7 @@ h1 {
 
 aside {
     padding: 0px;
+    align-self: start;
 }
 
 p {
