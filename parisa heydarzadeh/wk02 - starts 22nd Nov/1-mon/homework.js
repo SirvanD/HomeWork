@@ -82,32 +82,33 @@
 
 //find longest Word Length
 
-function findLongestWordLength(words) {
-  var longestWordLength = words[0].length; // assume first word is longest
-  var index = 0;
-  while (index < words.lengths) {
-    var currentWord = words[index];
+// function findLongestWordLength(words) {
+//   var longestWordLength = words[0].length; // assume first word is longest
+//   var index = 0;
+//   while (index < words.lengths) {
+//     var currentWord = words[index];
 
-    if (currentWord.length > longestWordLength) {
-      longestWordLength = currentWord;
-    }
-    index++;
-  }
-  return longestWordLength;
-}
-findLongestWordLength("bye", "paris", "hello", "GA");
-
+//     if (currentWord.length > longestWordLength) {
+//       longestWordLength = currentWord;
+//     }
+//     index++;
+//   }
+//   return longestWordLength;
+// }
+// findLongestWordLength("bye", "paris", "hello", "GA");
 
 //part2/2 (INCOMPLETE)
 //Guess the fruit
 
- let favFruit = ["apple", "bannana", "watermelon", "cherry", "kiwi"];
- let randomFruit = Math.floor(Math.random() * favFruit.length);
- let guess = true;
+let fruit = ["apple", "bannana", "watermelon", "cherry", "kiwi"];
+let randomFruitIndex = Math.floor(Math.random() * favFruit.length);
+console.log(fruit[randomFruitIndex]);
 
-let index = 0
-let hint =randomFruit.length && randomFruit.charAt[0] && randomFruit.charAt[randomFruit.length - 1]
-while(index < favFruit.length){
-  if (index )
+//  let guess = true;
 
-console.log()
+// let index = 0
+// let hint =randomFruit.length && randomFruit.charAt[0] && randomFruit.charAt[randomFruit.length - 1]
+// while(index < favFruit.length){
+//   if (index )
+
+// console.log()
