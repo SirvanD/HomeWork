@@ -57,7 +57,7 @@ main, .nav{
     background-color: white;
 }
 
-article>img{
+article>img, .nav>img{
     width: 100%;
 }
 
