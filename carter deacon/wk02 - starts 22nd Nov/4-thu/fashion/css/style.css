@@ -1,0 +1,141 @@
+* {
+    /* border: 1px solid red; */
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    margin: 0 15% 0 15%;
+}
+
+h1 { 
+    font-size: 72px;
+    color: #C42626;
+    margin: 40px 0 0 0;
+}
+span { 
+    font-size: 44px;
+    color: darkgrey;
+    padding: 0 0 0 25px;
+}
+
+h2 {
+    font-size: 36px;
+    color: grey;
+    margin: 50px 0 0 0;
+}
+h3 {
+    font-size: 36px;
+    color: black;
+    margin: 10px 0 10px 0;
+}
+
+.header-nav {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2px;
+}
+
+.header-nav a {
+    background-color: black;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.dropcap {
+    font-size: 90px;
+    float: left;
+    line-height: 60px;
+    padding: 4px 8px 0 3px;
+}
+
+article {
+    border-bottom: 2px solid grey;
+    padding: 0 0 25px 0;
+}
+
+h4 {
+    padding: 5px 0 25px 5px;
+    font-size: 18px;
+    color: grey;
+}
+
+article img {
+    width: 100%;
+}
+
+p {
+    margin: 25px 0 0 0;
+    font-size: 18px;
+}
+
+aside {
+    padding: 40px 10px 10px 10px;
+    display: block;
+    width: 100%;
+}
+
+aside img {
+    display: block;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+a {
+    color: #C42626;
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.popular {
+    color: #C42626;
+}
+
+ .footer-nav {
+     list-style-type: none;
+     color: #C42626;
+     padding: 20px;
+     text-align: center;
+ }
+
+ .footer-nav a {
+     display: inline;
+     text-align: center;
+     border-right: 1px solid grey;
+     padding: 5px 10px;
+ }
+
+ .footer-nav a:last-child {
+     border: none;
+ }
+ footer {
+     color: grey;
+     padding: 50px;
+ }
+
+ @media (max-width: 500px) {
+
+     h1, h2 { 
+         font-size: 32px;
+     }
+
+     .grid-wrapper {
+         grid-template-columns: 1fr;
+         margin: 0 0 0 0;
+     }
+     .container {
+         margin: 0 0 0 0;
+     }
+ }
