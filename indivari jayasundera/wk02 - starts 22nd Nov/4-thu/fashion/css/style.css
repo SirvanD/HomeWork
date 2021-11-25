@@ -21,6 +21,9 @@ a {
   color: white;
   text-decoration: none;
 }
+article img {
+  width: 100%;
+}
 
 .grid-wrapper {
   display: grid;
@@ -28,7 +31,7 @@ a {
   gap: 50px;
 }
 
-footer ul li {
+.footer-menu ul li {
   display: inline;
   color: rgb(247, 139, 157);
 }
@@ -44,7 +47,9 @@ footer ul li {
   padding-bottom: 30px;
 }
 .container {
-  margin: 100px 100px 100px 100px;
+  /* margin: 100px 100px 100px 100px; */
+  margin: 0 auto;
+  width: 80%;
 }
 
 aside section {
@@ -96,7 +101,8 @@ header {
 
 .footer-menu li {
   border-left: 1px solid rgb(247, 139, 157);
-  padding: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .first-letter {
@@ -106,8 +112,11 @@ header {
   padding: 5px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   body {
     background-color: mistyrose;
+  }
+  .grid-wrapper {
+    grid-template-columns: 1fr;
   }
 }
