@@ -135,12 +135,14 @@
 
 .aside {
     margin-top: 20px;
+    margin-left: 10px;
 }
 
 .aside-title2 {
     padding-top: 20px;
     border-top: 1px solid silver;
 }
+
 
 .ad {
     border: 1px solid silver;
@@ -159,4 +161,13 @@
 
 .main-2 {
     margin-top:20px;
+}
+
+@media (max-width: 1000px){
+    .aside{
+        display:none;
+    }
+    .main-wrapper {
+        grid-template-columns: 1fr;
+    }
 }
