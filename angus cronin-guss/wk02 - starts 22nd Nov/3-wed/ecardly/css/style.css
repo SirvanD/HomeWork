@@ -1,11 +1,23 @@
 header {
     border: 3px solid purple;
-    display: block;
 }
+.headerbg {
+    grid: 1fr 1fr;
+    display: inline;
+    width: 100%;
+}
+#logo {
+    position: absolute;
+      top: 20px;
+      left: 300px;
+    
+}
+
 article {
     border: 3px solid yellow;
     display: block;
-    padding: 10px 2px 0px 10px;
+    margin-top: 100px;
+    padding: 10px 10px 0px 10px;
     background-color: white;
 }
 article img {
@@ -13,11 +25,15 @@ article img {
 }
 aside{
     border: 2px solid black;
-    margin: 30px;
     align-self: start;
-    padding: 15px;
+    width: 75%;
+    margin-top: 100px;
     background-color: white;
-    
+    text-align: left;
+}
+.ads {
+    display: flex;
+    justify-content: center;
 }
 
 footer {
@@ -26,6 +42,7 @@ footer {
 body {
     border: 3px solid red;
     background-color: lightgrey;
+    width: 75%;
 } 
 .grid-wrapper {
     display: grid;

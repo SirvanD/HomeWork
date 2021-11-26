@@ -1,37 +1,45 @@
 // Question 1
+
 var books = [{
     title: 'Dotcom Secrets',
     author: 'Russel Brunson',
-    read: true,
+    alreadyRead: true,
 },
 {
     title: "That will never work",
     author: "Marc Randolf",
-    read: true,
+    alreadyRead: true,
 },
 {
     title: "Brief answers to big questions",
     author: "Stephen Hawking",
-    read: true,
+    alreadyRead: true,
 },
 {
     title: "Never split the difference",
     author: "Chris Voss",
-    read: false,
+    alreadyRead: false,
 }];
-function readBooks (books){
-    for (var i = 0; i < books.length; i++) {
-        
-        var myBooks = books.title + " by " + books.author + ". ";
-        if (books[2] = true) {
-            console.log(myBooks + "I have read this book");
-        } else {
-            console.log(myBooks + "I haven't read this book yet");
+
+// while (counter < books[0].length) {
+//     var counter = counter + 1; 
+//     if (books[0].alreadyRead == 'true') {
+//     console.log(books[0].title + " by " + books[0].author + "I have alreadyRead this book.");
+//     } else { 
+//         console.log(books[0].title + " by " + books[0].author + " i have not alreadyRead this book." );
+//     }
+// }
+
+for (var i = 0; i < books.length; i++) {
+    var myBooks = books[i].title + " by " + books[i].author;
+    if (books[i].alreadyRead === true) {
+        console.log(myBooks + " I read this book");
+    } else {
+        console.log(myBooks + " I haven't read this book yet");
     }
 }
-}
-// readBooks();
-// Question 2
+
+
 // var favMovie = {
 //     title: "Step Brothers",
 //     duration: 90,
@@ -62,7 +70,13 @@ function readBooks (books){
 // console.log(pluralize('cat', 1));
 
 
-// //Question 5
+//Question 5
+function reverseString(str) {
+    console.log(str.split(" ").reverse().join(" "))
+     
+  }
+reverseString("Hello there");
+
 // function reverseSent(sentence){
 //     var result = "";
 //     var split = sentence.split(" ");
@@ -103,4 +117,4 @@ function readBooks (books){
 //     }
 //     return longest.length;
 
-}
+//}
