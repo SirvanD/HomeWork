@@ -7,9 +7,9 @@ while(!isAllUpper){
         console.log(conversation[i], conversation[i].toUpperCase());
         if(conversation[i] !== conversation[i].toUpperCase()){
             isAllUpper = false;
-            i = conversation.length;
             alert('HUH?! SPEAK UP, SONNY!');
             conversation = prompt("what do you want to say to grandma?","speak loudly she's deaf!");
+            break;
         } else{
             i++;
             isAllUpper = true;
