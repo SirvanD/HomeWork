@@ -35,7 +35,7 @@ while (hiGrandma != 'BYE') {
         } else {
             hiGrandma = alert("HUH?! SPEAK UP SONNY");
     }
-    var hiGrandma = prompt('Anything else, dearie?');
+    hiGrandma = prompt('Anything else, dearie?');
 }
 
 alert("BYE BYE, SONNY");
