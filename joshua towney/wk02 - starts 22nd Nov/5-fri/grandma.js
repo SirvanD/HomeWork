@@ -40,7 +40,7 @@ while (hiGrandma != 'BYE') {
 
 alert("BYE BYE, SONNY");
 
-//notes: var hiGrandma = prompt("HI SONNY") needs to be present BEFORE the while loop or it will not be read by the while part of the loop. 
+//notes: var hiGrandma = prompt("HI SONNY") needs to be present BEFORE the while loop or it will not be read by the while part of the loop. Second var = needed inside the loop to update the receiver outside.
 
 // var areEqual = string1.toUpperCase() === string2.toUpperCase();
 
