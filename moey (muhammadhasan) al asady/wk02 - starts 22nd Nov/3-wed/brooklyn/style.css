@@ -1,0 +1,24 @@
+.container {
+    max-width: 960px; /* lazy responsive container */
+    margin: 0 auto; /* center */
+    background-color: white;
+    padding: 1em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+  }
+
+  body {
+    background-color: white; /* #321 => #332211 */
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+  
+  }
+
+  .textin {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+   }
