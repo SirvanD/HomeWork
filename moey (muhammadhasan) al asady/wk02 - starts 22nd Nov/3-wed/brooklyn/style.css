@@ -17,9 +17,9 @@
     color: grey;
   }
 
-  /* .bottom-pics {
-      padding: ;
-  } */
+  .bottom-pics {
+      border:black ;
+  }
 
   .date {
       color: blue;
