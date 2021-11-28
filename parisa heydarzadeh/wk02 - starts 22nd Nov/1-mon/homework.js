@@ -83,7 +83,9 @@
 //find longest Word Length
 
 // function findLongestWordLength(words) {
+
 //   var longestWordLength = words[0].length; // assume first word is longest
+
 //   var index = 0;
 //   while (index < words.lengths) {
 //     var currentWord = words[index];
@@ -95,14 +97,27 @@
 //   }
 //   return longestWordLength;
 // }
-// findLongestWordLength("bye", "paris", "hello", "GA");
+// findLongestWordLength()
 
 //part2/2 (INCOMPLETE)
 //Guess the fruit
 
 let fruit = ["apple", "bannana", "watermelon", "cherry", "kiwi"];
-let randomFruitIndex = Math.floor(Math.random() * favFruit.length);
-console.log(fruit[randomFruitIndex]);
+let answer = fruit[Math.floor(Math.random() * fruit.length)];
+console.log(
+  `${answer.length} + ${answer.charAt(0)} + ${answer.charAt(answer.length - 1)}`
+);
+
+for (guess = 0; guess++; ) {
+  var guess = prompt("what's your guess");
+  if ((guess = "incorrect")) {
+    console.log("wrong, try again.");
+  } else {
+    ("congrats, you got it in ");
+  }
+}
+
+// let randomFruit = fruit[randomFruit];
 
 //  let guess = true;
 
@@ -112,3 +127,13 @@ console.log(fruit[randomFruitIndex]);
 //   if (index )
 
 // console.log()
+
+// Write a function called countDown that accepts a single number as argument.
+
+// function countDown(number) {
+//   while (number >= 1) {
+//     console.log(number);
+//     number--;
+//   }
+//   console.log("forking legends");
+// }
