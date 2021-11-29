@@ -1,0 +1,48 @@
+<!-- Summary
+This lab will help you practice JavaScript functions and manipulating the DOM. You'll be selecting elements, manipulating HTML, and manipulating style along with building out the logic using JavaScript.
+
+Specification:
+Create an ATM web app for customers of GA bank so they can deposit and withdraw money and see their account balance.
+
+Keep track of account balance somewhere
+Add functionality so that a user can deposit money into the bank account.
+Make sure you are updating the display and manipulating the HTML of the page so a user can see the change.
+Add functionality so that a user can withdraw money from the bank account.
+Make sure you are updating the display and manipulating the HTML of the page so a user can see the change.
+Make sure the balance in an account can't go negative. If a user tries to withdraw more money than exists in the account, ignore the transaction.
+When the balance of the bank account is $0 the background of that bank account should be change to a different colour (for example mistyrose).
+When the balance is positive change the background color back to normal.
+spend some time on CSS. use your imagination. make an effort.
+optional extension
+Your savings account include 10 free withdrawals. If a user tries to withdraw more than 10 times charge a $2 withdrawal fee for every withdrawal there after. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="atm.css">    
+    <title>ATM</title>
+</head>
+<body>
+    
+    <section>
+        <h1>ATM</h1>
+    
+    <div class="container">
+        <span class="balance"></span>
+        <input class="amount" type="number">
+        <button class="deposit-btn">deposit</button>
+        <button class="withdraw-btn">withdraw</button>
+    
+    </div>
+    
+    
+    
+    
+    </section>
+
+    <script src="atm.js"></script>
+</body>
+</html>
