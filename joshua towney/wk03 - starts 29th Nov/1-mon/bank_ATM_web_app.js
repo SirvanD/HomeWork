@@ -18,15 +18,15 @@ function depositMoney() {
     }
 }
 
-// function withdrawMoney() { 
-//     if ((amount.value - balance.textContent) < 1) {
-//         var newBalance = Number(balance.textContent) - Number(amount.value);
-//         balance.textContent = newBalance;
-//         if (newBalance <= 0) {
-//             balance.style.backgroundColor = "red"
-//         }
-//     }
-// }
+function withdrawMoney() { 
+    if ((amount.value - balance.textContent) < 1) {
+        var newBalance = Number(balance.textContent) - Number(amount.value);
+        balance.textContent = newBalance;
+        if (newBalance <= 0) {
+            balance.style.backgroundColor = "red"
+        }
+    }
+}
 
 
 deposit.addEventListener('click', depositMoney);
