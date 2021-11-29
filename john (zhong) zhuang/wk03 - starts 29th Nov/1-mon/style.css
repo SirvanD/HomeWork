@@ -1,0 +1,59 @@
+*{ 
+    box-sizing: border-box;
+
+ }
+.container {
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    border: gray solid 2px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: bisque;
+    box-shadow: 5px 10px 10px gray;
+}
+h1 {
+    text-align: center;
+}
+h2, .balance{
+    font-style: italic;
+}
+.screen {
+    margin:30px auto;
+    width: 500px;
+    height: 80px;
+    border: gray solid 2px;
+    border-radius: 10px;
+    color: #00FF41;
+    background-color: #0D0208;
+    text-align: center;
+}
+
+button {
+    margin:30px auto;
+    width: 80px;
+    height: 45px;
+    text-align: center;
+    font-size: 12px;
+    background-color: gray;
+}
+input {
+    margin:30px auto;
+    height: 45px;
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+    display: inline;
+}
+
+.deposit-button {
+    color: #00FF41
+}
+.withdraw-button {
+    color: orangered;
+}
+
+.count-down {
+    color: red;
+    font-size: 20px;
+}
