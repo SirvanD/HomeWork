@@ -28,7 +28,9 @@ h1 {
 .amt-label,
 .amt-input,
 .balance-label,
-.acc-balance {
+.acc-balance,
+.charge-display,
+.withdraw-fee-label {
   padding: 20px;
   font-size: 20px;
 }
@@ -53,7 +55,8 @@ p {
   padding: 10px;
 }
 .amt-input,
-.acc-balance {
+.acc-balance,
+.charge-display {
   border: none;
 }
 
