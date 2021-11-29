@@ -1,6 +1,4 @@
 
-
-
 document.querySelector('#sun').textContent = 'cheese';
 document.querySelector('h1').textContent = 'do not change any html code';
 document.querySelector('#mercury').textContent = '5';
