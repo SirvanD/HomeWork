@@ -17,7 +17,7 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   text-transform: capitalize;
-  font-size: 12px;
+  font-size: 1em;
 }
 
 .grid-wrapper {
@@ -25,11 +25,11 @@
   background-color: #e66550;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 0.2fr 0.8fr 2fr;
-  padding: var(--padding-medium);
+  padding: var(--padding-small);
   row-gap: var(--grid-gap-small);
   column-gap: var(--grid-gap-very-small);
   height: 100vh;
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
   border-radius: var(--radius);
   border: var(--border-size) solid rgb(250, 186, 179);
@@ -48,13 +48,13 @@
 
 .screen-transactions {
   background: #f8f8f8;
-  padding: var(--padding-small);
+  padding: var(--padding-very-small);
   display: none;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.5fr 1fr;
   justify-items: left;
   align-items: center;
-  gap: 1rem;
+  gap: 1em;
   overflow-x: hidden;
 }
 
@@ -85,26 +85,19 @@
   width: 15vh;
 }
 
-h1 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 3.5vw;
-}
-
+h1,
 h1 span {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 3.5vw;
+  font-size: 1.7em;
 }
 
-h2 {
-  font-size: 1vw;
-}
-
+h2,
 h2 span {
-  font-size: 1vw;
+  font-size: 1em;
 }
 
 h3 {
-  font-size: 0.8vw;
+  font-size: 0.7em;
 }
 
 .screen-animations {
@@ -139,6 +132,7 @@ h3 {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   align-items: stretch;
   gap: var(--grid-gap-very-small);
+  max-height: 50vh;
 }
 
 button {
@@ -149,7 +143,7 @@ button {
   border: 0.4em solid var(--border-color);
   background-color: #fff;
   cursor: pointer;
-  font-size: 0.8vw;
+  font-size: 0.7em;
   font-weight: 700;
   color: var(--border-color);
 }
@@ -202,24 +196,30 @@ button:active {
 #logo {
   text-align: center;
   grid-row: 4/5;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  max-height: 20vh;
 }
 
 #logo img {
-  width: 50%;
+  width: 10vh;
   margin: 0;
   padding: 0;
 }
 
 .bank-logo {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 6rem;
+  font-size: 4em;
   color: #fff;
   margin: 0;
   padding: 0;
 }
 
 .bank-motto {
-  font-size: 1.1em;
+  font-size: 1em;
   color: #fff;
 }
 

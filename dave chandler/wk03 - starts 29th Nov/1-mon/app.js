@@ -1,6 +1,6 @@
 //DOM references
 let balance = document.getElementById('balance');
-let transType = document.querySelector('#trans-type h1');
+let transType = document.getElementById('transact-type');
 let transAmount = document.getElementById('trans-amount');
 let enterBtn = document.getElementById('enterBtn');
 let transactionMessage = document.getElementById('transaction');
