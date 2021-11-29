@@ -14,12 +14,36 @@ document.querySelector('#mars').textContent = '7'
 document.querySelectorAll('li')[5].style.color = "purple"
 
 //.6
-var num1 = document.querySelector('#mars').textContent; 
 
-function favNum () {
-    var plusMe = Number(num1) + 1;
-    return num1;
+
+var mars = document.querySelector('#mars'); 
+
+var plusOneBtn = document.querySelector('.plus-one-btn');
+
+
+function handleClick () {
+var number = Number(mars.textContent) + 1;
+mars.textContent = number
 }
-window.addEventListener('click', favNum);
+plusOneBtn.addEventListener('click', handleClick);
 
-//7.i need help with this one ;/
+//.7
+
+document.querySelector('.saturn').value = 'sega saturn'
+
+//.8 
+
+var tomoatoBtn = document.querySelector('.tomato-color-btn');
+
+var pluto = document.querySelector('#pluto')
+
+function turnRed () {
+    pluto.style.background = 'red'
+}
+
+tomoatoBtn.addEventListener('click',turnRed )
+
+
+//.9
+pluto.classList.add ('dwarf-planet')
+
