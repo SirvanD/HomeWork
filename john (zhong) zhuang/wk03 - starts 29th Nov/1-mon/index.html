@@ -14,13 +14,20 @@
         <h1>Welcome to GA Bank ATM</h1>
         <h3>Your current account balance is:</h3>
         <div class="screen">
-            <h2>A$ <span class="balance"></span></h2>
+            <h2>A$ <span class="balance">100</span></h2>
         </div>
         <input type="number" class="deposit-screen">
         <button class="deposit-button">DEPOSIT</button>
         <br>
         <input type="number" class="withdraw-screen" id="">
         <button class="withdraw-button">WITHDRAW</button>
+        <p>Please note: your account has <b>10</b> free withdrawls. <br> After that, you will be charge a <b>$2
+                withdrawal fee</b>
+            for
+            every
+            withdrawal.
+        </p>
+        <h3>Now you still have <b><span class="count-down"></span></b> free withdrawls left</h3>
     </div>
     <script src="ATM.js"></script>
 </body>

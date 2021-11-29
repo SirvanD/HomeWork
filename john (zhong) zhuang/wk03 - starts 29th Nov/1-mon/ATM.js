@@ -30,12 +30,28 @@ function depositMoney() {
     balanceNum.textContent = Number(balanceNum.textContent) + Number(deposit.value);
     document.querySelector('.container').style.backgroundColor = "bisque";
 }
-// deposit.addEventListener('input', depositMoney)
 depBtn.addEventListener('click', depositMoney);
 
+document.querySelector('.count-down').textContent = 10;
+let click = 0;
+
 function withdrawMoney() {
-    balanceNum.textContent = Number(balanceNum.textContent) - Number(withdraw.value)
-    if (Number(balanceNum.textContent) <= 0) {
+    Number(balanceNum.textContent) === Number(balanceNum.textContent) - Number(withdraw.value);
+    click++;
+
+    if (click <= 10 && Number(balanceNum.textContent) - Number(withdraw.value) > 0) {
+        document.querySelector('.count-down').textContent = 10 - click;
+        balanceNum.textContent = Number(balanceNum.textContent) - Number(withdraw.value)
+    }
+    else if (click <= 10 && Number(balanceNum.textContent) - Number(withdraw.value) <= 0) {
+        document.querySelector('.container').style.backgroundColor = "yellow";
+        alert('Insufficient Funds!');
+        return false;
+    } else if (click > 10 && Number(balanceNum.textContent) - Number(withdraw.value) - 2 >= 0) {
+        document.querySelector('.count-down').textContent = 0;
+        balanceNum.textContent = Number(balanceNum.textContent) - Number(withdraw.value) - 2
+    } else if (click > 10 && Number(balanceNum.textContent) - Number(withdraw.value) - 2 < 0) {
+        document.querySelector('.count-down').textContent = 0;
         document.querySelector('.container').style.backgroundColor = "yellow";
         document.querySelector('.balance').textContent = 0;
         alert('Insufficient Funds!');
@@ -43,10 +59,4 @@ function withdrawMoney() {
     }
 
 }
-// withdraw.addEventListener('input', withdrawMoney);
 withBtn.addEventListener('click', withdrawMoney);
-
-function freeWithdraw() {
-    let i = 0;
-    document.querySelector('.withBtn')
-}
