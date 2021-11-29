@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+    </style>
+</head>
+<body>
+    <div class="outer-container">
+        <div class="container">
+            <div class="header-wrapper">
+                <img src="images/bank-icon.png" alt="">
+                <div class="name"> 
+                    <h1>Carter Credit Union</h1>
+                    <p class ="slogan">Low interest, high fees on your savings.</p>
+                </div>
+            </div>
+            <div class="balance-wrapper">
+                <p>The available balance of your account is</p>
+                <span class="balance-span">$</span><p class="balance">25461.21</p>
+            </div>
+            <div class="grid-input">
+                <div class="input-wrapper">
+                    <h3>Enter an amount</h3>
+                    <span class="transfer-span">$</span><input type="number" name="Amount" id="user-amount">
+                    <p class="transfer-confirm"> </p>
+                </div>
+            </div>
+            <div class="button-wrapper">
+                <button id="deposit-btn">Deposit</button>
+                <button id="withdraw-btn">Withdraw</button>
+    
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
