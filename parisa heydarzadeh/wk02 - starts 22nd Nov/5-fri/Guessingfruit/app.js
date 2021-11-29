@@ -23,23 +23,18 @@
 
 let fruit = ["apple", "bannana", "watermelon", "cherry", "kiwi"];
 let randomFruit = fruit[Math.floor(Math.random() * fruit.length)];
-let hint =
-  randomFruit.length &&
-  randomFruit.charAt(0) &&
-  randomFruit.charAt(randomFruit.length - 1);
 
-// let guess = true;
+console.log(
+  `${randomFruit.length} + ${randomFruit.charAt(0)} + ${randomFruit.charAt(
+    randomFruit.length - 1
+  )}`
+);
 
-// console.log(`${answer.length} + ${answer.charAt(0)} + ${answer.charAt(
-//   answer.length - 1
-// )}`
 var guess = prompt("what's your guess");
- while(guess == true) {
+var counter = 1;
+while (guess !== true) {
+  console.log("wrong, try again.");
 
-//   if ((guess = "incorrect")) {
-//     console.log("wrong, try again.");
-//   } else {
-//     ("congrats, you got it in ");
-//   }
-// }
-// console.log("Congrates! you got it in  attempts")
+  counter = counter + 1;
+}
+console.log(`Congrates! you got it in" + ${counter} +  attempts`);

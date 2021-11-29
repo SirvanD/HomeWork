@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: pink;
+}
+
+.main-ATM {
+  width: 500px;
+  height: 500px;
+  background-color: gray;
+  position: absolute;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-color: black;
+}
+
+.screen {
+  position: absolute;
+  font-size: 30px;
+  width: 350px;
+  height: 350px;
+  background-color: lightsteelblue;
+  left: 25px;
+  color: white;
+  justify-content: center;
+  top: 50px;
+  right: 70px;
+  left: 70px;
+  text-align: center;
+}
+
+.accountBal-btn {
+  position: relative;
+  width: 250px;
+  height: 100px;
+  top: 100px;
+}
+
+.Deposit-btn {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  top: 250px;
+  bottom: 20px;
+  left: 220px;
+  color: gray;
+}
+
+.WithDraw-btn {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  top: 250px;
+  bottom: 30px;
+  left: 30px;
+  color: gray;
+}
