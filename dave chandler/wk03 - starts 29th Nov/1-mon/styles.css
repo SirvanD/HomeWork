@@ -1,0 +1,238 @@
+:root {
+  --radius: 8px;
+  --padding-large: 5rem;
+  --padding-medium: 3rem;
+  --padding-small: 2rem;
+  --padding-very-small: 1rem;
+  --grid-gap-large: 3rem;
+  --grid-gap-small: 1rem;
+  --grid-gap-very-small: 0.5rem;
+  --border-color: rgb(92, 92, 92);
+  --border-size: 0.8em;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.grid-wrapper {
+  display: grid;
+  background-color: #e66550;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 0.2fr 0.8fr 2fr;
+  padding: var(--padding-medium);
+  row-gap: var(--grid-gap-small);
+  column-gap: var(--grid-gap-very-small);
+  height: 100vh;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  border: var(--border-size) solid rgb(250, 186, 179);
+}
+
+.screen-grid {
+  background: #f8f8f8;
+  border-radius: var(--radius);
+  border: var(--border-size) solid var(--border-color);
+  grid-column: 1/3;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 35vh;
+}
+
+.screen-transactions {
+  background: #f8f8f8;
+  padding: var(--padding-small);
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.5fr 1fr;
+  justify-items: left;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: hidden;
+}
+
+#trans-amount {
+  display: none;
+}
+
+.welcome-screen {
+  background-color: #f8f8f8;
+  display: grid;
+  gap: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+  justify-items: center;
+  align-items: stretch;
+  grid-column: 1/3;
+}
+
+.welcome-screen p,
+.welcome-screen h1,
+.welcome-screen img {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.welcome-screen img {
+  width: 15vh;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 3.5vw;
+}
+
+h1 span {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 3.5vw;
+}
+
+h2 {
+  font-size: 1vw;
+}
+
+h2 span {
+  font-size: 1vw;
+}
+
+h3 {
+  font-size: 0.8vw;
+}
+
+.screen-animations {
+  background: #f8f8f8;
+  padding-top: var(--padding);
+}
+
+#money-slot {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background: #e0dedf;
+  border-radius: var(--radius);
+  border: 1rem solid var(--border-color);
+  padding: var(--padding-very-small);
+  cursor: pointer;
+}
+
+.money-slot {
+  border-bottom: 3px solid var(--border-color);
+  height: 50%;
+}
+
+.keyboard-grid {
+  background: #e0dedf;
+  border-radius: var(--radius);
+  border: var(--border-size) solid var(--border-color);
+  padding: var(--padding-very-small);
+  grid-column: 1/2;
+  grid-row: 2/5;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  align-items: stretch;
+  gap: var(--grid-gap-very-small);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  border: 0.4em solid var(--border-color);
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 0.8vw;
+  font-weight: 700;
+  color: var(--border-color);
+}
+
+button:active {
+  background: #e5e5e5;
+  /* -webkit-box-shadow: inset 0px 0px 3px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 3px #c1c1c1; */
+  box-shadow: inset 0px 0px 10px rgb(91, 91, 91);
+  outline: none;
+  border: 0.6rem solid var(--border-color);
+}
+
+#cancelBtn {
+  grid-column: 1/2;
+  background-color: red;
+  color: #fff;
+}
+
+#enterBtn {
+  grid-column: 3/4;
+  background-color: rgb(150, 150, 150);
+  color: #fff;
+}
+
+#depositBtn {
+  background-color: rgb(149, 216, 15);
+  color: #fff;
+}
+
+#withdrwBtn {
+  background-color: rgba(0, 38, 255, 0.577);
+  color: #fff;
+}
+
+#cardSlot {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  background: #e0dedf;
+  border-radius: var(--radius);
+  border: 1rem solid var(--border-color);
+  padding: var(--padding-very-small);
+}
+
+.card-slot {
+  border-bottom: 3px solid var(--border-color);
+  height: 50%;
+}
+
+#logo {
+  text-align: center;
+  grid-row: 4/5;
+}
+
+#logo img {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.bank-logo {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 6rem;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.bank-motto {
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.blink {
+  animation: blinker 2s step-end infinite;
+}
+
+.status {
+  color: red;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
