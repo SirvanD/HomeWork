@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>GA Bank ATM System</h1>
+      </div>
+
+      <div class="main">
+        <div class="info">
+          <div class="label-amt">
+            <label class="amt-label">Input Amount</label>
+          </div>
+          <div class="input-amt">
+            <label>$</label>
+            <input class="amt-input" type="number" />
+          </div>
+          <div class="label-balance">
+            <label class="balance-label">Account Balance</label>
+          </div>
+          <div class="display-balance">
+            <label>$</label>
+            <input class="acc-balance" readonly />
+          </div>
+        </div>
+
+        <p>
+          <button class="deposit-btn">Deposit</button>
+          <button class="withdraw-btn">Withdraw</button>
+        </p>
+      </div>
+    </div>
+
+    <script src="bank.js"></script>
+  </body>
+</html>
