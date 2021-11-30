@@ -46,6 +46,7 @@ function handleWithdraw() {
         balanceBox.value = Number(balanceBox.value) - Number(inputBox.value)  
         counter++;
         console.log(counter)
+        
     }else if (newBalance > 0 && counter > 10) {
         warningBox.innerText = 'You have reached your 10 free withdrawal limit, you will be charged $2 for each withdrawal you make now'
         balanceBox.value = Number(balanceBox.value) - Number(inputBox.value) - 2;
