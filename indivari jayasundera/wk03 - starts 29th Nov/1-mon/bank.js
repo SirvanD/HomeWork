@@ -1,5 +1,5 @@
 console.log("Bank app");
-var accBalance = 0;
+var accBalance = 50;
 var withdrawCount = 0;
 var withdrawCharge = 0;
 
@@ -29,7 +29,7 @@ function checkWithdrawLimit() {
     );
   } else if (withdrawCount >= 12) {
     withdrawCharge += 2;
-    withdrawFee.style.backgroundColor = "tomato";
+    withdrawFee.style.backgroundColor = "tomato ";
     withdrawFee.value = withdrawCharge;
   }
 }
