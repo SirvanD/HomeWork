@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* * {
+            border: 1px solid red;
+    
+        } */
+
+        .header1 {
+            text-align: center;
+            font-size: 50px;
+        }
+
+            .grid-wrapper {
+            display: grid;
+            grid-template-columns:  1fr 1fr 1fr;
+            text-align: center;
+        }
+        .main-img {
+            width: 300px;
+            height: auto;
+        }
+
+        .atm{
+            height: 300px;
+            width: 300px;
+            border: 1px solid black;
+            background-color:grey;
+        }
+
+        .input1 {
+        background-color: aqua;     
+        position: static;
+        /* bottom: 0;  */
+        }
+        .input2 {
+        background-color: aqua;     
+        position: static;
+        }
+        .result-span {
+            background-color: azure;
+        }
+
+
+    </style>
+</head>
+<body>
+    <img class= "main-img" src="https://i.imgflip.com/3dg85d.png" alt="">
+    <img class= "main-img" src="https://i.imgflip.com/3dg85d.png" alt="">
+    <img class= "main-img" src="https://i.imgflip.com/3dg85d.png" alt="">
+
+
+<header class= "header1">Lord Elon's bank</header>
+    <div class="grid-wrapper">
+        
+        <div> 
+            <input class = "input1" type="number">
+
+            <button class= "deposit-btn">Deposit</button>    
+        </div>     
+        
+        
+        <div class = "atm">  
+            ATM
+            <br>
+            
+            BALANCE
+            <br>
+            <span class="result-span">0</span>
+
+
+            
+        </div>
+        <div>  
+            <input class = "input2" type="number">
+
+            <button class= "withdrawl-btn">Withdrawl</button> 
+        
+        </div>
+
+
+
+
+    </div>
+    
+    <script src="app.js"></script> 
+</body>
+</html>
