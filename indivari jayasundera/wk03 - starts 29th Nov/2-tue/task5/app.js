@@ -1,22 +1,31 @@
-var boxes = document.querySelectorAll(".box");
+var boxOne = document.querySelector(".box-one");
+var boxTwo = document.querySelector(".box-two");
+var boxThree = document.querySelector(".box-three");
 
-var count = 0;
 function goGreen() {
-  boxes.forEach((box) => {
-    box.style.backgroundColor = "green";
-  });
+  boxOne.style.backgroundColor = "green";
+  boxTwo.style.backgroundColor = "green";
+  boxThree.style.backgroundColor = "green";
+
+  boxOne.classList.remove("red");
+  boxTwo.classList.remove("red");
+  boxThree.classList.remove("red");
 }
 
 function handleClick(event) {
-  count++;
   var boxClicked = event.target;
   boxClicked.style.backgroundColor = "red";
-  if (count == 3) {
-    count = 0;
+  boxClicked.classList.add("red");
+
+  if (
+    boxOne.className == "box-one red" &&
+    boxTwo.className == "box-two red" &&
+    boxThree.className == "box-three red"
+  ) {
     setTimeout(goGreen, 500);
   }
 }
 
-boxes.forEach((box) => {
-  box.addEventListener("click", handleClick);
-});
+boxOne.addEventListener("click", handleClick);
+boxTwo.addEventListener("click", handleClick);
+boxThree.addEventListener("click", handleClick);
