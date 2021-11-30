@@ -15,9 +15,7 @@ function sum(numArray){
 }
 
 function lengths(stringArray){
-    let strLengthArray = [];
-    stringArray.forEach(element => strLengthArray.push(element.length));
-    return strLengthArray;
+    return stringArray.map(element => element.length);
 }
 
 function sumOfLengths(stringArray){
