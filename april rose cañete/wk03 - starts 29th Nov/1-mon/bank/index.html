@@ -16,6 +16,7 @@
             border: 1px solid lightgray;
             border-radius: 5px;
             width: 70%;
+            /* height: 500px; */
             padding: none;
             margin: auto;
             text-align: center;
@@ -53,6 +54,14 @@
             margin: 30px 20px;
             text-align: left;
         }
+        .alert-msg-box {
+            /* border: 1px solid gray; */
+            padding: 10px;
+            text-align: center;
+            color: salmon;
+            font-size: small;
+            display: none;
+        }
 
     </style>
 </head>
@@ -62,7 +71,8 @@
         <div class="input-wrapper">
             <h4>Balance: $<span class="bal-span"></span></h4> 
             <input class="number-input" type="number" placeholder="$ enter amount">
-        </div>    
+        </div>
+        <p class="alert-msg-box"></p>
         <div class="btn-wrapper">
             <button class="withdraw-btn">withdraw</button>
             <button class="deposit-btn">deposit</button>
