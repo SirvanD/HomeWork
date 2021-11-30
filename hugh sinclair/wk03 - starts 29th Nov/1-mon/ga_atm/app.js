@@ -56,6 +56,7 @@ function handleWithdraw() {
     input.value = ''
 }
 
+//this function allows me to add a delay to JS reading the css style to make the error message box white again. 
 function setErrorMessageToWhite(){
     errorMessage.style.backgroundColor = 'white'
 }
