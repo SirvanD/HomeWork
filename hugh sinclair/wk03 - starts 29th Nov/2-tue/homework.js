@@ -91,37 +91,54 @@ console.log(sum(lengths(fruits)));
 // 3. After **every** box has been clicked, change all of them immediately to **green**.
 
 var boxes = document.querySelectorAll('section div')
+var isTrue = false
 
+var truthArray = []
 
-
-
+function checkAllTrue(array){
+    isTrue = false
+    for (let i = 0; i < array.length; i++){
+        if (array[i] == false){
+            isTrue = false
+            return
+        } else isTrue = true
+    }
+}
 
 function handleClick(event){
-
 
 
     //this is just somerthing I'm gunna try to come back to and make work
     //make a global variable, object with box1 = false box2 = false etc
     // have it so that if the background color ISNT red, put false onto that boxes' object, then if ALL of the boxes are true, make em green ? will need a lot of thinking
-    // if(event.target.style.backgroundColor == 'green'){
-    //     return
-    // } else event.target.style.backgroundColor = 'red'
-    // boxes.forEach(function(box){
-    //     var isRed = Boolean
-    //     if (box.style.backgroundColor == 'red'){
-    //         var isRed = true
-    //     } else return
-    // })
 
-
-
-
-    event.target.style.backgroundColor = 'red'
-    if (boxes[0].style.backgroundColor == 'red' && boxes[1].style.backgroundColor == 'red' && boxes[2].style.backgroundColor == 'red'){
-        boxes[0].style.backgroundColor = 'green'
-        boxes[1].style.backgroundColor = 'green'
-        boxes[2].style.backgroundColor = 'green'
+    if(event.target.style.backgroundColor == 'green'){
+        return
+    } else {
+        event.target.style.backgroundColor = 'red'
     }
+    
+    boxes.forEach(function(box){
+        truthArray = [];
+        if (box.style.backgroundColor == 'red'){
+            truthArray.push(true)
+        } else truthArray.push(false)
+    });
+    checkAllTrue(truthArray);
+    if (isTrue){
+        boxes.forEach(function(box){
+            box.style.backgroundColor = 'green'
+        })
+    }
+
+
+
+    // event.target.style.backgroundColor = 'red'
+    // if (boxes[0].style.backgroundColor == 'red' && boxes[1].style.backgroundColor == 'red' && boxes[2].style.backgroundColor == 'red'){
+    //     boxes[0].style.backgroundColor = 'green'
+    //     boxes[1].style.backgroundColor = 'green'
+    //     boxes[2].style.backgroundColor = 'green'
+    // }
 }
 
 
