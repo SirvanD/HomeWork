@@ -47,7 +47,7 @@ length(arrr);
 // var fruits = ['kiwi', 'apple', 'mango']
 // your code should print 14
 
-var fruits = ['kiwi', 'apple', 'mango']
+
 
 // version one below works too
 // function sumOfLengths(arr) {
@@ -64,14 +64,17 @@ var fruits = ['kiwi', 'apple', 'mango']
 
 // sumOfLengths(fruits);
 
+// function sumOfLengths(arr) {
+//     var sumLength = 0;
+//     arr.forEach(element => {
+//         sumLength = sumLength + element.length
+//     });
+//     console.log(sumLength);
+// }
+var fruits = ['kiwi', 'apple', 'mango']
 function sumOfLengths(arr) {
-    var sumLength = 0;
-    arr.forEach(element => {
-        sumLength = sumLength + element.length
-    });
-    console.log(sumLength);
+    return sum(length(arr));
 }
-
 sumOfLengths(fruits);
 // 5. Make Them Green
 // Remember to write your assumptions if you feel the question is ambiguous.
