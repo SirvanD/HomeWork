@@ -12,7 +12,7 @@ var guessNumberSpan = document.querySelector('.guess-number-span')
 var guessNumber = 3
 var secretNumber = Math.ceil(Math.random() * 10)
 var messageDiv = document.querySelector('.message-div')
-console.log(secretNumber)
+
 
 
 guessNumberSpan.textContent = 3;
