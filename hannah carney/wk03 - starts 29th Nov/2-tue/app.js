@@ -38,12 +38,7 @@ function length(array) {
 
 var fruits = ['kiwi', 'apple', 'mango']
 
-function lengthSum(array) {
-    const lengthArray = array.map(element => element.length);
-    //an array of the length of each string
-    return arrayTotal(lengthArray)
-}
-
+arrayTotal(length(fruits))
 
 // Remember to write your assumptions if you feel the question is ambiguous.
 
@@ -60,6 +55,9 @@ function redBox(event){
     var eventTarget = event.target;
         if(eventTarget.style.backgroundColor == '') {
         eventTarget.style.backgroundColor = 'red';
+        if(boxOne.style.backgroundColor == 'red' && boxTwo.style.backgroundColor == 'red' && boxThree.style.backgroundColor == 'red') {
+        boxOne.style.backgroundColor = 'green', boxTwo.style.backgroundColor = 'green', boxThree.style.backgroundColor = 'green';
+         }
     }
 }
 
@@ -73,4 +71,3 @@ boxTwo.addEventListener('click', redBox)
 boxThree.addEventListener('click', redBox)
 
 // After every box has been clicked, change all of them immediately to green.
-//I know I need to do this...and I will... I promise 
