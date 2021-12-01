@@ -45,21 +45,21 @@ for (let i = 0; i < allBoxes.length; i++) {
 var box1 = document.querySelectorAll('.box')[0];
 var box2 = document.querySelectorAll('.box')[1];
 var box3 = document.querySelectorAll('.box')[2];
+var allRed = box1.style.backgroundColor == "red" && box2.style.backgroundColor == "red" && box3.style.backgroundColor == "red"; 
 
 function handleClick(event) {
     var clickedOn = event.target;
-    if (box1.style.backgroundColor == "red" && box2.style.backgroundColor == "red" && box3.style.backgroundColor == "red") {
+    var allRed = box1.style.backgroundColor == "red" && box2.style.backgroundColor == "red";
+    box3.style.backgroundColor == "red";
+    clickedOn.style.backgroundColor = "red";
+    if (allRed) {
         handleReset();
-    } else if (clickedOn.style.backgroundColor == "red") {
-        clickedOn.style.backgroundColor = "green";
-    } else {
-        clickedOn.style.backgroundColor = "red";
     }
 }
 
-// Seems to only do it with an "extra" click on all red circles. I tried changing this to a mouseup event so as soon as all circles were red, it reset but it still requires and extra click and I wasn't able to figure out why.
+// Seems to only do it with an "extra" click on all red circles. I tried changing this to a mouseup event so as soon as all circles were red, it reset but it still requires an extra click and I wasn't able to figure out why.
 function handleReset() {
-        box1.style.backgroundColor = "green";
-        box2.style.backgroundColor = "green";
-        box3.style.backgroundColor = "green";
+    box1.style.backgroundColor = "green";
+    box2.style.backgroundColor = "green";
+    box3.style.backgroundColor = "green";
 }
