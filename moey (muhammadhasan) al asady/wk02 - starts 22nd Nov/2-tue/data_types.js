@@ -91,8 +91,40 @@ bands[bands.length - 1].pop()
 bands[0].shift()
 bands[1][3] = "Ringo"
 
+
+
 //answer
-//bands = [Ringo ]
+//bands = [Ringo]
+
+
+
+
+| a | b | a AND b |
+| --- | --- | --- |
+| true | true | true|
+| true | false | true | //false 
+| false | true | false |
+| false | false | false |
+
+|a|b|a OR b|
+|---|---|---|
+|true|true|true|
+|true|false|true|
+|false|true|true|
+|false|false|false|
+
+|a|b|a `!=` b|
+|---|---|---|
+|3|3|false|
+|1|5|true|
+|2|"2"|false|
+
+|a|b|!a AND (a OR b)|
+|---|---|---|
+|true|true|false|
+|true|false|false|
+|false|true|true|
+|false|false|false|
 
 // Conditionals
 // You're a bouncer at a bar. Given an age variable, create a conditional that satisfies the following requirements...
