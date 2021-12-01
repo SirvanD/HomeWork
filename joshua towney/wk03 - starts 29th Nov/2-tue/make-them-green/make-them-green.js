@@ -10,7 +10,7 @@ var divs = document.querySelectorAll('.green');
 
 function turnRed(event) {
     let clickedOnBox = event.target;
-    if ((divs[0].className == "red") && (divs[1].className == "red") && (divs[1].className == "red")) {
+    if ((divs[0].className == "red") && (divs[1].className == "red") && (divs[2].className == "red")) {
         turnGreen()
     } else if (clickedOnBox.className == "green") {
         clickedOnBox.className = "red";
@@ -23,7 +23,7 @@ divs.forEach(function(boxes) {
     boxes.addEventListener('click', turnRed);
 })
 
-function turnGreen() {
+function turnGreen() {  
     divs[0].className = "green";
     divs[1].className = "green";
     divs[2].className = "green";
