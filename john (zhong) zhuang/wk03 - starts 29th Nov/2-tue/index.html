@@ -12,7 +12,7 @@ After every box has been clicked, change all of them immediately to green. -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Make Them Green</title>
     <style>
         div {
             width: 100px;
@@ -24,6 +24,10 @@ After every box has been clicked, change all of them immediately to green. -->
             line-height: 100px;
             text-align: center;
             vertical-align: middle;
+        }
+
+        .red {
+            background-color: red;
         }
     </style>
 </head>
@@ -38,9 +42,44 @@ After every box has been clicked, change all of them immediately to green. -->
         boxes.forEach(function (box) {
             box.addEventListener('click', turnRed);
         });
+
+        // answer 1: adding the clicked box a new class name, then counting the length of the array with new class name to see if all boxes have been clicked!
+
+        function turnRed(event) {
+            event.target.classList.add('red');
+            if (document.querySelectorAll('.red').length == 3) {
+                boxes[0].style.backgroundColor = "green";
+                boxes[1].style.backgroundColor = "green";
+                boxes[2].style.backgroundColor = "green";
+            }
+        }
+
+        // answer 2
+        // function turnRed(event) {
+        //     event.target.style.backgroundColor = 'red';
+        //     if (boxes[0].style.backgroundColor == "red" &&
+        //         boxes[1].style.backgroundColor == "red" &&
+        //         boxes[2].style.backgroundColor == "red") 
+        // {
+        //         boxes[0].style.backgroundColor = "green";
+        //         boxes[1].style.backgroundColor = "green";
+        //         boxes[2].style.backgroundColor = "green";
+        //     }
+        // }
+
+        // answer 3
         // function turnRed(event) {
         //     if (boxes[0].style.backgroundColor == 'red' &&
-        //         boxes[1].style.backgroundColor == 'red' &&
+        //         boxes[1].style.backgroundColor == 'red') {
+        //         boxes[0].style.backgroundColor = "green";
+        //         boxes[1].style.backgroundColor = "green";
+        //         boxes[2].style.backgroundColor = "green";
+        //     } else if (boxes[0].style.backgroundColor == 'red' &&
+        //         boxes[2].style.backgroundColor == 'red') {
+        //         boxes[0].style.backgroundColor = "green";
+        //         boxes[1].style.backgroundColor = "green";
+        //         boxes[2].style.backgroundColor = "green";
+        //     } else if (boxes[1].style.backgroundColor == 'red' &&
         //         boxes[2].style.backgroundColor == 'red') {
         //         boxes[0].style.backgroundColor = "green";
         //         boxes[1].style.backgroundColor = "green";
@@ -51,37 +90,6 @@ After every box has been clicked, change all of them immediately to green. -->
         //         event.target.style.backgroundColor = 'transparent';
         //     }
         // }
-        // function turnRed(event) {
-        //     let i = 0;
-        //     while (i < boxes.length) {
-        //         if (i < (boxes.length) / 2) {
-        //             event.target.style.backgroundColor = 'red';
-        //         } else { event.target.style.backgroundColor = 'green'; }
-        //     } i++
-        // }
-        function turnRed(event) {
-            if (boxes[0].style.backgroundColor == 'red' &&
-                boxes[1].style.backgroundColor == 'red') {
-                boxes[0].style.backgroundColor = "green";
-                boxes[1].style.backgroundColor = "green";
-                boxes[2].style.backgroundColor = "green";
-            } else if (boxes[0].style.backgroundColor == 'red' &&
-                boxes[2].style.backgroundColor == 'red') {
-                boxes[0].style.backgroundColor = "green";
-                boxes[1].style.backgroundColor = "green";
-                boxes[2].style.backgroundColor = "green";
-            } else if (boxes[1].style.backgroundColor == 'red' &&
-                boxes[2].style.backgroundColor == 'red') {
-                boxes[0].style.backgroundColor = "green";
-                boxes[1].style.backgroundColor = "green";
-                boxes[2].style.backgroundColor = "green";
-            }
-            else if (event.target.style.backgroundColor !== 'red') {
-                event.target.style.backgroundColor = 'red';
-            } else {
-                event.target.style.backgroundColor = 'transparent';
-            }
-        }
 
     </script>
 </body>
