@@ -1,11 +1,6 @@
-arr = ["one", "only", "booms"]
-
-
 function lengths(arr) {
     for(i=0;i < arr.length; i++){
-        arr[i] = arr[i].split("").length
+        arr[i] = arr[i].length
     }
-    console.log(arr)
+    return arr
 }
-
-lengths(arr)

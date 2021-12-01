@@ -11,9 +11,9 @@ var boxThree = document.querySelector(".box3")
 function handleColor(event) {
     let clicked = event.target
     clicked.style.backgroundColor = "red"
-        if(boxOne.style.backgroundColor == "red" && boxTwo.style.backgroundColor == "red" && boxThree.style.backgroundColor == "red"){
-            for(var i=0; i<allBoxes.length;i++){
-                allBoxes[i].style.backgroundColor="green"
+    if(boxOne.style.backgroundColor == "red" && boxTwo.style.backgroundColor == "red" && boxThree.style.backgroundColor == "red")   {
+        for(var i=0; i<allBoxes.length;i++ )    {
+            allBoxes[i].style.backgroundColor="green"
         }   
     }
 }
@@ -21,6 +21,6 @@ function handleColor(event) {
 
 
 //callbacks
-allBoxes.forEach(function(box){
+allBoxes.forEach(function(box)  {
     box.addEventListener("click", handleColor)
 })
