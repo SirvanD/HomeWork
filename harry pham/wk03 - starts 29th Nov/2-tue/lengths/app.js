@@ -1,6 +1,7 @@
 function lengths(arr) {
+    newArr = new Array();
     for(i=0;i < arr.length; i++){
-        arr[i] = arr[i].length
+        newArr.push(arr[i].length)
     }
-    return arr
+    return newArr
 }

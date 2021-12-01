@@ -26,15 +26,15 @@ function sum(arr) {
 }
 
 function lengths(arr) {
+    newArr = new Array();
     for(i=0;i < arr.length; i++){
-        arr[i] = arr[i].split("").length
+        newArr.push(arr[i].length)
     }
-    return arr
+    return newArr
 }
 
 function sumOfFruits(fruits) {
-    lengths(fruits)
-    console.log(sum(fruits))
+    console.log(sum(lengths(fruits)))
 }
 
 
