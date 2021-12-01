@@ -23,4 +23,11 @@ while (num2 <= 10){
     num2++;
 }
 
+
+var favChoices = ['Arsenal', 'Football', 'MotoGP', 'Blue', 'Black']
+
+for (let i = 0; i < favChoices.length; i++){
+    console.log(`My #${i + Number(1)} choice is ${favChoices[i]}`)
+}
+
  
