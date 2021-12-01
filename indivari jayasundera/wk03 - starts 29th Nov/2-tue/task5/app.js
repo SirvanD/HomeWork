@@ -6,21 +6,16 @@ function goGreen() {
   boxOne.style.backgroundColor = "green";
   boxTwo.style.backgroundColor = "green";
   boxThree.style.backgroundColor = "green";
-
-  boxOne.classList.remove("red");
-  boxTwo.classList.remove("red");
-  boxThree.classList.remove("red");
 }
 
 function handleClick(event) {
   var boxClicked = event.target;
   boxClicked.style.backgroundColor = "red";
-  boxClicked.classList.add("red");
 
   if (
-    boxOne.className == "box-one red" &&
-    boxTwo.className == "box-two red" &&
-    boxThree.className == "box-three red"
+    boxOne.style.backgroundColor == "red" &&
+    boxTwo.style.backgroundColor == "red" &&
+    boxThree.style.backgroundColor == "red"
   ) {
     setTimeout(goGreen, 500);
   }
