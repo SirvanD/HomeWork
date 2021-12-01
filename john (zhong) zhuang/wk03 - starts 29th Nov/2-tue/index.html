@@ -34,25 +34,55 @@ After every box has been clicked, change all of them immediately to green. -->
     <div class="box">3</div>
 
     <script>
-        // debugger;
-
         let boxes = document.querySelectorAll('div');
         boxes.forEach(function (box) {
             box.addEventListener('click', turnRed);
         });
+        // function turnRed(event) {
+        //     if (boxes[0].style.backgroundColor == 'red' &&
+        //         boxes[1].style.backgroundColor == 'red' &&
+        //         boxes[2].style.backgroundColor == 'red') {
+        //         boxes[0].style.backgroundColor = "green";
+        //         boxes[1].style.backgroundColor = "green";
+        //         boxes[2].style.backgroundColor = "green";
+        //     } else if (event.target.style.backgroundColor !== 'red') {
+        //         event.target.style.backgroundColor = 'red';
+        //     } else {
+        //         event.target.style.backgroundColor = 'transparent';
+        //     }
+        // }
+        // function turnRed(event) {
+        //     let i = 0;
+        //     while (i < boxes.length) {
+        //         if (i < (boxes.length) / 2) {
+        //             event.target.style.backgroundColor = 'red';
+        //         } else { event.target.style.backgroundColor = 'green'; }
+        //     } i++
+        // }
         function turnRed(event) {
             if (boxes[0].style.backgroundColor == 'red' &&
-                boxes[1].style.backgroundColor == 'red' &&
+                boxes[1].style.backgroundColor == 'red') {
+                boxes[0].style.backgroundColor = "green";
+                boxes[1].style.backgroundColor = "green";
+                boxes[2].style.backgroundColor = "green";
+            } else if (boxes[0].style.backgroundColor == 'red' &&
                 boxes[2].style.backgroundColor == 'red') {
                 boxes[0].style.backgroundColor = "green";
                 boxes[1].style.backgroundColor = "green";
                 boxes[2].style.backgroundColor = "green";
-            } else if (event.target.style.backgroundColor !== 'red') {
+            } else if (boxes[1].style.backgroundColor == 'red' &&
+                boxes[2].style.backgroundColor == 'red') {
+                boxes[0].style.backgroundColor = "green";
+                boxes[1].style.backgroundColor = "green";
+                boxes[2].style.backgroundColor = "green";
+            }
+            else if (event.target.style.backgroundColor !== 'red') {
                 event.target.style.backgroundColor = 'red';
             } else {
                 event.target.style.backgroundColor = 'transparent';
             }
         }
+
     </script>
 </body>
 
