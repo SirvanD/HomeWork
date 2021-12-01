@@ -23,16 +23,14 @@ function lengths(arr){
 }
 
 //4
-function sumLengths(arr) {
-    var lengthArr = [];
-    for (var counter = 0; counter<arr.length; counter++) {
-        lengthArr.push(arr[counter].length);
-    }
+var fruits = ['kiwi', 'apple', 'mango']
 
-    var sum = 0;
-    for (var index = 0; index<lengthArr.length; index++) {
-        sum = sum +lengthArr[index];
-    }
-    return sum;
+function sumLengths(arr) {
+    return sum(lengths(arr));
 }
+
+sumLengths(fruits);
+
+
+
 
