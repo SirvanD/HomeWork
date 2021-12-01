@@ -2,9 +2,10 @@ console.log('our first game!');
 
 
 
-var guessBtns = document.querySelectorAll('.guess-btn');
+var guessBtns = document.querySelectorAll('section button');
 var msg = document.querySelector('.msg');
 var resetBtn = document.querySelector('.reset-btn');
+var allBtns = document.querySelectorAll('button')
 
 
 var secretNumber = Math.ceil(Math.random() * guessBtns.length);
@@ -49,6 +50,12 @@ console.log(secretNumber); //this randomises the secret number to be anywhere be
 
 
 
+
+
+//event.target.dataset.number
+
+
+
 var numberOfGuesses = 0 //this tracks the number of guesses the user has made
 
 
@@ -66,8 +73,16 @@ function handleClick(event){
         secretNumber = Math.ceil(Math.random() * guessBtns.length); //gives the secret number a random number between 1 and 10
         console.log(secretNumber); //I'm console logging this just so i can cheat to test code, can remove it whenever
     }else {
+
         numberOfGuesses++ // this means if the reset button wasn't pressed, add one to the number of guesses the user has had
-        if(Number(clickedButton.textContent) === secretNumber){ 
+        if (numberOfGuesses >= 3){
+            guessBtns.forEach(function(btn){ //this will disable all the buttons if you went over your guesses.
+                btn.disabled = true
+            })
+            msg.textContent = 'You ran out of guesses! Hit that reset and try again!'
+            return
+        }
+        if(Number(clickedButton.dataset.number) === secretNumber){ //this uses the dataset number that we declared in the html, so the button can be labeled whatever we want
             guessBtns.forEach(function(btn){ //this will disable all the buttons if you guessed the right one.
                 btn.disabled = true
             })
@@ -85,14 +100,16 @@ function handleClick(event){
 }
 
 
-
-guessBtns.forEach(function(btn){
+allBtns.forEach(function(btn){
     btn.addEventListener('click', handleClick)
 })
-resetBtn.addEventListener('click', handleClick)
+// guessBtns.forEach(function(btn){
+//     btn.addEventListener('click', handleClick)
+// })
+// resetBtn.addEventListener('click', handleClick)
 
 
-
+//eventually you ALWAYS win, maybe we can limit how many guesses the user gets!
 
 
 

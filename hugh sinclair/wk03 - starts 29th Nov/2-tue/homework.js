@@ -93,7 +93,7 @@ console.log(sum(lengths(fruits)));
 var boxes = document.querySelectorAll('section div')
 var isTrue = false
 
-var truthArray = []
+
 
 function checkAllTrue(array){
     isTrue = false
@@ -111,7 +111,7 @@ function handleClick(event){
     //this is just somerthing I'm gunna try to come back to and make work
     //make a global variable, object with box1 = false box2 = false etc
     // have it so that if the background color ISNT red, put false onto that boxes' object, then if ALL of the boxes are true, make em green ? will need a lot of thinking
-
+    var truthArray = []
     if(event.target.style.backgroundColor == 'green'){
         return
     } else {
