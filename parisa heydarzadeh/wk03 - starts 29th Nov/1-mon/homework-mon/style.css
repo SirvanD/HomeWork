@@ -38,6 +38,11 @@ body {
   top: 100px;
 }
 
+.user-amount {
+  width: 150px;
+  height: 50px;
+}
+
 .Deposit-btn {
   position: absolute;
   width: 100px;

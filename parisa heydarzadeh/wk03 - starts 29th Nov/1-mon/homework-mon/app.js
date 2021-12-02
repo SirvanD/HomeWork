@@ -19,36 +19,49 @@
 // spend some time on CSS. use your imagination. make an effort.
 
 console.log("ATM");
-
-var debitBalance = 50000;
-var balance = document.querySelector(".accountBal-btn");
+var balance = 50000;
+var accountBalance = document.querySelector(".accountBal-btn");
 var deposit = document.querySelector(".Deposit-btn");
 var withdraw = document.querySelector(".WithDraw-btn");
+var userAmount = document.querySelector('user-amount');
+ var transaction = document.querySelector(".transaction");
+
 
 function makeDeposit() {
-  AccBalance = Number(deposit.value) + debitBalance;
-  balance.textContent = AccBalance;
-  console.log("Account balance" == AccBalance);
-}
+  var depositMoney = Number(userAmount.value);
+  var currentAmount = Number(accountBalance.textContent);
+  var result = currentBalance + depositMoney;
+  if (deposit > 0) {
+    accountBalance.textContent = result
+    accountBalance.style.color = "white";   
+  } else {
+    transaction.textContent = "Please enter deposit amount"
+  }
+  
+ 
+
 
 function makeWithdraw() {
-  AccBalance = debitBalance - Number(withdraw.value);
-  balance.textContent = AccBalance;
-  console.log("Account balance" == AccBalance);
+  var withdrawMoney = Number(userAmount.value);
+  var currentAmount = Number(accountBalance.textContent);
+  var result = accountBalance - withdrawMoney;
+  if (result > 0) {
+    currentBalance.textContent = result
+    transaction.textContent = "transaction complete"
+  } else if (result == 0) {
+    currentBalance.style.backgroundColor = "mistyrose";
+  }else {
+   {
+    transaction.textContent ="insufficient amount"
+  }
 }
 // if (AccBalance <= 0) {
 //   text.content = "Transaction declined";
 //   console.log("Transaction declined");
 // }
 
-function zeroBalance() {
-  if (Number(AccBalance.value) == 0) {
-    balance.style.backgroundColor = "mistyrose";
-  } else {
-    document.balance.style.backgroundColor = "white";
-  }
-}
+
 
 deposit.addEventListener("input", makeDeposit);
 withdraw.addEventListener("input", makeWithdraw);
-balance.addEventListener("click", zeroBalance);
+

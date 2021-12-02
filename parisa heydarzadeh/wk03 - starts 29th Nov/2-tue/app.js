@@ -3,7 +3,9 @@
 // three arguments, which you can assume will be numbers. Your function should return the "transmogrified" result
 // The transmogrified result of three numbers is the product of the first two numbers, raised to the power of the third number.
 
-// function transmogrifier(numbers) {}
+// function transmogrifier(numbers) {
+
+//}
 
 // 2. sum
 // Write a function sum that accepts a single parameter as an argument, namely an array of numbers. The function should return the sum of all the numbers in the array
@@ -15,31 +17,44 @@
 //   for (counter = 0; counter < Arr.length; counter++) {
 //     let num = Arr[counter];
 //     i = i + num;
-//     return i;
 //   }
+//   return i;
+// }
+// console.log(sum([1, 2, 3]));
 
 // 3. lengths
 // Write a function lengths that accepts a single parameter as an argument, namely an array of strings. The function should return an array of
 // numbers where each number is the length of the corresponding string.
+// lengths(['my', 'cake', 'pudding']) // => [2,4,7]
 
-function length(strArr) {
-  strArr.forEach(function (str) {
-    return str.length;
-  });
-  return strArr;
-}
+// function lengths(Arr) {
+//   let convertedArr = [];
+//   for (i = 0; i < Arr.length; i++) {
+//     convertedArr.push(Arr[i].length);
+//   }
+//   return convertedArr;
+// }
+// console.log(lengths(["apple", "kiwi"]));
 
 // 4. sum of lengths
 // using the sum and lengths function you wrote in the last 2 questions write code to work
 // out the sum of the lengths of the following fruits array. display the result in the console.
 
 // var Arr = ["apple", "kiwi", "watermelon"];
-// var add = 0;
-// for (n = 0; n < Arr.length; n++) {
-//   add += Arr[index].length;
+// let convertedArr = [];
+// for (i = 0; i < Arr.length; i++) {
+//   let Array = convertedArr.push(Arr[i].length);
 // }
-// console.log(add);
+// let sum = 0;
+// for (i = 0; i < Array.length; i++) {
+//   let num = Array[i];
+//   sum += num;
+// }
+// console.log(sum);
 
+//console.log(Arr["apple", "kiwi", "watermelon]));
+
+// console.log(sumOfLength(["apple", "kiwi"]));
 // 5. Make Them Green
 // Remember to write your assumptions if you feel the question is ambiguous.
 
@@ -47,11 +62,26 @@ function length(strArr) {
 // When you click on any box, it's background color should immediately become red.
 // After every box has been clicked, change all of them immediately to green.
 
-var allBoxes = document.querySelectorAll("div");
+var box1 = document.querySelector(".box1");
+var box2 = document.querySelector(".box2");
+var box3 = document.querySelector(".box3");
 
 function clickOnBox(event) {
   let userClickOnAnyBox = event.target;
+
   userClickOnAnyBox.style.backgroundColor = "red";
+
+  if (
+    box1.style.backgroundColor == `red` &&
+    box2.style.backgroundColor == `red` &&
+    box3.style.backgroundColor == `red`
+  ) {
+    box1.style.backgroundColor = `green`;
+    box2.style.backgroundColor = `green`;
+    box3.style.backgroundColor = `green`;
+  }
 }
 
-allBoxes.addEventListener("click", clickOnBox);
+box1.addEventListener("click", clickOnBox);
+box2.addEventListener("click", clickOnBox);
+box3.addEventListener("click", clickOnBox);
