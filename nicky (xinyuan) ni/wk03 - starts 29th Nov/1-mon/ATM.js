@@ -17,7 +17,6 @@ function handleDeposit(){
 }
 depositBtn.addEventListener('click',handleDeposit)
 
-
 function handleWithdraw(){
     var withdraw = Number(numInput.value);
     var oldBalance = Number(balance.textContent);
@@ -25,6 +24,10 @@ function handleWithdraw(){
 
    if (newBalance < 0){
         document.querySelector('h3').textContent = "Insufficient balance. Press cancel to restart.";
+    } else if (newBalance ==0) {
+        document.querySelector('.balance').style.backgroundColor = "mistyrose";
+        document.querySelector('.balance').style.color = "red";
+        document.querySelector('.balance').textContent = newBalance;
     } else {
         document.querySelector('.balance').textContent = newBalance;
     }
@@ -42,6 +45,8 @@ resetBtn.addEventListener('click',handleReset)
 function handleCancel(){
     numInput.value = '';
     document.querySelector('h3').textContent = "YOUR BALANCE:";
+    document.querySelector('.balance').style.backgroundColor = "";
+    document.querySelector('.balance').style.color = "black";
     console.log("cancel"); 
 }
 cancelBtn.addEventListener('click',handleCancel)
@@ -49,9 +54,13 @@ cancelBtn.addEventListener('click',handleCancel)
 function handleNewtran(){
     numInput.value = '';
     document.querySelector('h3').textContent = "YOUR BALANCE:";
+    document.querySelector('.balance').style.backgroundColor = "";
+    document.querySelector('.balance').style.color = "black";
     console.log("newtran"); 
 }
 newtranBtn.addEventListener('click',handleNewtran)
+
+
 
 
 
