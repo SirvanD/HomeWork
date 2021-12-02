@@ -12,10 +12,20 @@ function handleDeposit(){
     var deposit = Number(numInput.value);
     var oldBalance = Number(balance.textContent);
     var newBalance = deposit + oldBalance;
-    document.querySelector('.balance').textContent = newBalance;
+    if (newBalance <= 0) {
+        document.querySelector('.balance').style.backgroundColor = "mistyrose";
+        document.querySelector('.balance').style.color = "red";
+        document.querySelector('.balance').textContent = newBalance;
+    } else {
+        document.querySelector('.balance').style.backgroundColor = "";
+        document.querySelector('.balance').style.color = "black";
+        document.querySelector('.balance').textContent = newBalance;
+        document.querySelector('h3').textContent = "YOUR BALANCE:"
+    }
     console.log("deposit");
 }
 depositBtn.addEventListener('click',handleDeposit)
+
 
 function handleWithdraw(){
     var withdraw = Number(numInput.value);
