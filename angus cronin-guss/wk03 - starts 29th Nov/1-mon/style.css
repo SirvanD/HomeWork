@@ -1,0 +1,51 @@
+main {
+    
+    background-color: black;
+    width: 400px;
+    height: 600px;
+    border-radius: 25px;
+}
+section {
+    border: 5px solid black;
+    height: 150px;
+    border-radius: 25px;
+}
+input {
+    border: 10px solid yellow;
+    height: 50px;
+    margin: 25px;
+    text-align: center;
+    font-size: 20px;
+}
+div {
+    border: 20px solid black;
+    display: grid;
+}
+button {
+    padding: 10px;
+}
+#buttons {
+    background-color: grey;
+    display: grid;
+    text-align: center;
+    padding: 5px;
+}
+section {
+    text-align: center;
+    background-color: lightseagreen;
+}
+p {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#balance-display {
+    font-size: 30px;
+}
+#depositbtn {
+    background-color: lightgreen;
+}
+#withdrawbtn {
+    background-color: red;
+}
