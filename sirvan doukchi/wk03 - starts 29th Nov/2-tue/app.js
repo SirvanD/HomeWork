@@ -23,14 +23,14 @@ sum([2,4,6,8,10]) //30
 //had to use map function even without fully understanding it! will do more practice on it.
 
 function lengths(stringArray) {
-    let countArray = ""
+    let countArray = []
     for (i = 0; i < stringArray.length; i++) {
         //console.log (stringArray[i].length)
-        countArray = countArray + [stringArray[i].length] 
+        countArray.push(stringArray[i].length)  
 
-        //countArray +  stringArray[i].length;
+        
     } 
-    return countArray.split('').map(Number);
+    return countArray//.split('').map(Number);
 }
 lengths(['now', 'I', 'know', 'my', 'ABC!']) // => [3,1,4,2,4]
 lengths(['my', 'cake', 'pudding']) // => [2,4,7]
@@ -53,6 +53,7 @@ lengths(['my', 'cake', 'pudding']) // => [2,4,7]
 // After every box has been clicked, change all of them immediately to green.
 
 let allDivs = document.querySelectorAll('div')
+
 let topDiv = document.querySelector('.first')
 let middleDiv = document.querySelector('.second')
 let bottomDiv = document.querySelector('.third')
@@ -63,18 +64,19 @@ allDivs.forEach(function(div){
 })
 
 function handleClick (event) {
+    
     let userClicked = event.target
     userClicked.style.backgroundColor = 'red'  
-    
+    //handleResetColor();    
 }
 
 //reset color does not work yet, have to find a way around it.
 document.addEventListener('click',handleResetColor)
 function handleResetColor () {
-    if (topDiv.style.backgroundColor === 'red' && middleDiv.style.backgroundColor === 'red' && bottomDiv.style.backgroundColor === 'red' ) {
-        topDiv.style.backgroundColor == 'white'
-        middleDiv.style.backgroundColor == 'white'
-        bottomDiv.style.backgroundColor == 'white'
+    if (topDiv.style.backgroundColor == 'red' && middleDiv.style.backgroundColor == 'red' && bottomDiv.style.backgroundColor == 'red' ) {
+        topDiv.style.backgroundColor = 'green'
+        middleDiv.style.backgroundColor = 'green'
+        bottomDiv.style.backgroundColor = 'green'
     }
 }
 
