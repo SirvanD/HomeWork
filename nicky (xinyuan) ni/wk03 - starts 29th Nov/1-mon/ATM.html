@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <style>
     body{
-        background-color: mistyrose;
+        background-color: white;
     }
 
     h3{
@@ -25,7 +26,7 @@
         padding: 10px;
     }
 
-    .new-balance{
+    .balance{
         width: 150px;
         height: 40px;
     }
@@ -85,18 +86,29 @@
         background-color: darkorange;
         color: white;
     }
+
+    .newtran-btn{
+        border: none;
+        background-color:tomato;
+        width: 195px;
+        height: 40px;
+        border-radius: 8px;
+        text-align: left;
+        margin-top: 20px;
+    }
+    .newtran-btn:hover {
+        background-color: darkorange;
+        color: white;
+    }
+
 </style>
 
 <body>
     <div class="machine">
         <h3>YOUR BALANCE:</h3>
-        <div class="old-balance"> </div> 
-
-        <h3>YOUR NEW BALANCE:</h3>
-        <div class="new-balance"></div> 
+        <div class="balance">100</div> 
         
         <input class="num-input" type="number">
-       
        
         <br>
         <button class="deposit-btn">DEPOSIT</button>
@@ -104,13 +116,14 @@
         <br>
         <button class="reset-btn">CONFIRM TRANSACTION</button>
         <button class="cancel-btn">CANCEL TRANSACTION</button>
-    
+        <button class="newtran-btn">START NEW TRANSACTION</button>
     </div>
     
 
     <script src="ATM.js"></script>
 </body>
 </html>
+
 
 
 
