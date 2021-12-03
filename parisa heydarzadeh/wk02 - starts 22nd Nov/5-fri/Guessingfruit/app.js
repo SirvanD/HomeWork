@@ -29,12 +29,13 @@ console.log(
     randomFruit.length - 1
   )}`
 );
-
 var guess = prompt("what's your guess");
 var counter = 1;
-while (guess !== true) {
+
+while (guess !== randomFruit) {
   console.log("wrong, try again.");
 
   counter = counter + 1;
+  guess = prompt("what's your guess");
 }
 console.log(`Congrates! you got it in" + ${counter} +  attempts`);
