@@ -25,8 +25,10 @@ function lovelyGrandma(userInput) {
         let randomYear = Math.floor(Math.random() * (2021 - 1912 + 1) + 1912);
         if (userInput == desiredInput && userInput !== "BYE") {
             userInput = prompt(`NO, NOT SINCE ${randomYear}!`);
+            byeCount = 0;
         } else if (userInput !== desiredInput) {
             userInput = prompt("HUH?! SPEAK UP, SONNY!");
+            byeCount = 0;
         } else if (userInput == "BYE") {
             userInput = prompt("WHERE DO YOU THINK YOU'RE GOING?");
             byeCount++
