@@ -44,13 +44,18 @@ function handleClick(event) {
 }
 
 function areAllBoxesClicked() {
-    let isBoxClicked = [];
-    boxes.forEach(function(box) {
-        isBoxClicked.push(box.classList.contains("clicked-box"));
-    });
-    if (isBoxClicked.includes(false) === false) {
+    let clickedBoxes = document.querySelectorAll(".clicked-box");
+    if (clickedBoxes.length === boxes.length) {
         turnGreen();
     }
+    // My original code before Kasun told me querySelectorAll could be used:
+    // let isBoxClicked = [];
+    // boxes.forEach(function(box) {
+    //     isBoxClicked.push(box.classList.contains("clicked-box"));
+    // });
+    // if (isBoxClicked.includes(false) === false) {
+    //     turnGreen();
+    // }
 }
 
 function turnGreen() {

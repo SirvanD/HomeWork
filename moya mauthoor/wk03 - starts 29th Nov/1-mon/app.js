@@ -26,8 +26,25 @@ function handleDeposit() {
     accountBalance.textContent = newBalance;
 }
 
+function over10Withdrawals() {
+    withdrawalCounter++;        
+    let newBalance = subtract(Number(accountBalance.textContent), Number(fundsInput.value)) - 2;
+    if (newBalance >= 0) {
+        if (newBalance === 0) {
+            atmScreen.style.backgroundColor = "mistyrose"; 
+        }
+        accountBalance.textContent = newBalance;
+        transactionFee.textContent = `${withdrawalCounter} withdrawals have been made. Transaction of $2 applied.`;
+    } else {
+        alert("You do not have enough funds for this transaction (including withdrawal fee)!");
+        withdrawalCounter--;
+    }
+}
+
 function handleWithdrawal() {
-    if (withdrawalCounter < 10) {
+    if (withdrawalCounter >= 10) {
+        over10Withdrawals();        
+    } else {
         withdrawalCounter++;
         let newBalance = subtract(Number(accountBalance.textContent), Number(fundsInput.value));
         if (newBalance >= 0) {
@@ -37,20 +54,6 @@ function handleWithdrawal() {
             accountBalance.textContent = newBalance;
         } else {
             alert("You do not have enough funds for this transaction!");
-        }
-    } else {
-        withdrawalCounter++;        
-        let newBalance = subtract(Number(accountBalance.textContent), Number(fundsInput.value)) - 2;
-        if (newBalance >= 0) {
-            if (newBalance === 0) {
-                atmScreen.style.backgroundColor = "mistyrose"; 
-            }
-            accountBalance.textContent = newBalance;
-            transactionFee.textContent = `${withdrawalCounter} withdrawals have been made. Transaction of $2 applied.`;
-        } else {
-            transactionFee.textContent = "";
-            alert("You do not have enough funds for this transaction (including withdrawal fee)!");
-            withdrawalCounter--;
         }
     }
 }
