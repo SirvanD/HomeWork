@@ -117,7 +117,7 @@ function handleClick(event){
     } else {
         event.target.style.backgroundColor = 'red'
     }
-    
+    debugger
     boxes.forEach(function(box){
         truthArray = [];
         if (box.style.backgroundColor == 'red'){
