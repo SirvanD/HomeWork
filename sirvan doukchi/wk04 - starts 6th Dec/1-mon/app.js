@@ -24,11 +24,12 @@ vowelCount("cake pudding"); // => 4
 
 // 2. Grandma returns
 
+let userArray = [];
+let byeArray = ["BYE", "BYE", "BYE"];
+
 function randomNumberFunc() {
   return Math.floor(Math.random() * (1950 - 1930 + 1) + 1930);
 }
-let userArray = [];
-let winArray = ["BYE", "BYE", "BYE"];
 
 function handleKeyPress() {
   let message = prompt("Speak to Grandma here !");
@@ -55,9 +56,9 @@ handleKeyPress();
 
 function arrayCompare() {
   if (
-    userArray[0] == winArray[0] &&
-    userArray[1] == winArray[1] &&
-    userArray[2] == winArray[2]
+    userArray[0] == byeArray[0] &&
+    userArray[1] == byeArray[1] &&
+    userArray[2] == byeArray[2]
   ) {
     return true;
   }
