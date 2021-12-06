@@ -37,15 +37,15 @@
         message = prompt(yearsList[randIdx]); 
 
         if (message == 'BYE') {
-        userInputs.push(message);
+         userInputs.push(message);
         }
 
-    // if (message == message.toUpperCase()) {
-    //     message = prompt('NO, NOT SINCE 1938!');
-    // } else {
-    //     message = prompt('HUH?! SPEAK UP, SONNY!'); 
-    // 
-    // }
+        // if (message == message.toUpperCase()) {
+        //     message = prompt('NO, NOT SINCE 1938!');
+        // } else {
+        //     message = prompt('HUH?! SPEAK UP, SONNY!'); 
+        // 
+        // }
    }
  
 
