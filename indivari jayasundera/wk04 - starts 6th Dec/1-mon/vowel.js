@@ -1,6 +1,5 @@
 function vowelCount(word) {
-  let a = word.toLowerCase();
-  const wordArray = a.split("");
+  const wordArray = word.toLowerCase().split("");
   let countVowels = 0;
 
   for (let i = 0; i < wordArray.length; i++) {
