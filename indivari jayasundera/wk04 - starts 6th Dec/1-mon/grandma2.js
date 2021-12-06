@@ -24,7 +24,14 @@ function isUpperCase(text) {
     return false;
   }
 }
-let countBye = 0;
+
+let countBye;
+if (userInput == "BYE") {
+  countBye = 1;
+} else {
+  countBye = 0;
+}
+
 while (countBye != 3) {
   if (isUpperCase(userInput)) {
     alert(`No, NOT SINCE ${randomYear}!`);
@@ -34,5 +41,8 @@ while (countBye != 3) {
   userInput = prompt("Say something to Grandma! ");
   if (userInput == "BYE") {
     countBye++;
+  } else {
+    countBye = 0;
   }
 }
+alert("BYE BYE SONNY");
