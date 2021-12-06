@@ -18,24 +18,31 @@ let userInput = prompt("HELLO DEAR!");
 
 function lovelyGrandma(userInput) {
     let byeCount = 0;
-    while (byeCount < 2) {
+    while (byeCount < 3) {
         let desiredInput = userInput.toUpperCase();
-        let counter = 0;
         // Giving it random year between 1912 and 2021 to make it more realistic
         let randomYear = Math.floor(Math.random() * (2021 - 1912 + 1) + 1912);
-        if (userInput == desiredInput && userInput !== "BYE") {
-            userInput = prompt(`NO, NOT SINCE ${randomYear}!`);
-            byeCount = 0;
-        } else if (userInput !== desiredInput) {
+        if (byeCount == 2 && userInput !== "BYE" && userInput !== desiredInput) {
             userInput = prompt("HUH?! SPEAK UP, SONNY!");
             byeCount = 0;
+        } else if (byeCount == 2 && userInput !== "BYE") {
+            userInput = prompt(`NO, NOT SINCE ${randomYear}!`);
+            byeCount = 0;
+        } else if (byeCount == 2 && userInput == "BYE") {
+            alert("BYE DEAR!");
+            return;
         } else if (userInput == "BYE") {
-            userInput = prompt("WHERE DO YOU THINK YOU'RE GOING?");
-            byeCount++
-        }
-        counter++;
+            userInput = prompt(`NO, NOT SINCE ${randomYear}!`);
+            byeCount++;
+            console.log(byeCount)
+        } else if (userInput == desiredInput && userInput !== "BYE") {
+            userInput = prompt(`NO, NOT SINCE ${randomYear}!`);
+            byeCount = 0;
+        } else {
+            userInput = prompt("HUH?! SPEAK UP, SONNY!");
+            byeCount = 0;
+        } 
     }
-    alert("BYE DEAR!")
 }
 
 lovelyGrandma(userInput);
