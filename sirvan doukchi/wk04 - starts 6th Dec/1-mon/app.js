@@ -47,8 +47,8 @@ function handleKeyPress() {
         alert("Bye if you insist!!!!!!!!!");
         break;
       }
-      alert("No BYE");
-      message = prompt("Talk loudest you can !");
+      alert("Not too soon!");
+      message = prompt("Come again !");
     }
   }
 }
