@@ -42,32 +42,30 @@ console.log(vowelCount('cake pudding'));
 // 2. What if grandma doesn't want you to leave? When you shout BYE, she could pretend not to hear you. 
 // Change your previous program so that you have to shout BYE three times in a row. Make sure to test your program: if you shout BYE three times, but not in a row, you should still be talking to grandma.
 
-// let talkEnd = false;
+// debugger;
+alert(`Grandma is smiling at you. Do you want to say something to her?`);
+
 let year = Math.round(Math.random() * 20 + 1930);
-function talk() {
-    // if (talkEnd == true) {
-    //     return;
-    // }
-    alert(`Grandma is smiling at you. Do you want to say something to her?`);
-    while (usr = prompt(`You say: `)) {
-        let n = 1;
-        while (n < 4) {
-            if (usr == 'BYE' && n == 3) {
-                alert(`Finally, grandma let you go.`);
-                // talkEnd = true;
-                return;
-            } else if (usr == 'BYE') {
-                prompt('But grandma still wants to talk.')
-            } n++;
-        }
-        if (usr === usr.toUpperCase()) {
-            alert(`NO, NOT SINCE ${year}`)
-        } else {
-            alert(`HUH? SPEAK UP SONNY!`);
-        }
+let youSay = [];
+let youInput = String();
+
+let i = 0;
+while (youInput = prompt(`You said`)) {
+    youSay.push(youInput);
+    if (youInput !== youInput.toUpperCase()) {
+        alert(`HUH? SPEAK UP SONNY!`)
+    } else if (youInput == `BYE`) {
+        alert('It seemed she did not hear your goodbye')
     }
+    else {
+        alert(`NO, NOT SINCE ${year}`);
+    }
+    if (youSay[i] == `BYE` && youSay[i] == youSay[i - 1] && youSay[i - 1] == youSay[i - 2]) {
+        alert('Finally, grandma let you go.')
+        break;
+    } i++
 }
-talk();
+
 
 // # 3. Lord buckethead
 // var users = {
