@@ -3,7 +3,10 @@
 // three arguments, which you can assume will be numbers. Your function should return the "transmogrified" result
 // The transmogrified result of three numbers is the product of the first two numbers, raised to the power of the third number.
 
-// function transmogrifier(numbers) {
+function transmogrifier(X, Y, Z) {
+  return Math.pow(X * Y, Z);
+}
+transmogrifier(4, 3, 2);
 
 //}
 
@@ -62,26 +65,26 @@
 // When you click on any box, it's background color should immediately become red.
 // After every box has been clicked, change all of them immediately to green.
 
-var box1 = document.querySelector(".box1");
-var box2 = document.querySelector(".box2");
-var box3 = document.querySelector(".box3");
+// var box1 = document.querySelector(".box1");
+// var box2 = document.querySelector(".box2");
+// var box3 = document.querySelector(".box3");
 
-function clickOnBox(event) {
-  let userClickOnAnyBox = event.target;
+// function clickOnBox(event) {
+//   let userClickOnAnyBox = event.target;
 
-  userClickOnAnyBox.style.backgroundColor = "red";
+//   userClickOnAnyBox.style.backgroundColor = "red";
 
-  if (
-    box1.style.backgroundColor == `red` &&
-    box2.style.backgroundColor == `red` &&
-    box3.style.backgroundColor == `red`
-  ) {
-    box1.style.backgroundColor = `green`;
-    box2.style.backgroundColor = `green`;
-    box3.style.backgroundColor = `green`;
-  }
-}
+//   if (
+//     box1.style.backgroundColor == `red` &&
+//     box2.style.backgroundColor == `red` &&
+//     box3.style.backgroundColor == `red`
+//   ) {
+//     box1.style.backgroundColor = `green`;
+//     box2.style.backgroundColor = `green`;
+//     box3.style.backgroundColor = `green`;
+//   }
+// }
 
-box1.addEventListener("click", clickOnBox);
-box2.addEventListener("click", clickOnBox);
-box3.addEventListener("click", clickOnBox);
+// box1.addEventListener("click", clickOnBox);
+// box2.addEventListener("click", clickOnBox);
+// box3.addEventListener("click", clickOnBox);

@@ -54,12 +54,6 @@ function makeWithdraw() {
    {
     transaction.textContent ="insufficient amount"
   }
-}
-// if (AccBalance <= 0) {
-//   text.content = "Transaction declined";
-//   console.log("Transaction declined");
-// }
-
 
 
 deposit.addEventListener("input", makeDeposit);

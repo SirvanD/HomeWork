@@ -25,9 +25,13 @@ let fruit = ["apple", "bannana", "watermelon", "cherry", "kiwi"];
 let randomFruit = fruit[Math.floor(Math.random() * fruit.length)];
 
 console.log(
-  `${randomFruit.length} + ${randomFruit.charAt(0)} + ${randomFruit.charAt(
+  `it's + ${
+    randomFruit.length
+  } + charachters long. start with + ${randomFruit.charAt(
+    0
+  )} +  and ends with + ${randomFruit.charAt(
     randomFruit.length - 1
-  )}`
+  )} + guess the fruit.`
 );
 var guess = prompt("what's your guess");
 var counter = 1;
@@ -35,7 +39,7 @@ var counter = 1;
 while (guess !== randomFruit) {
   console.log("wrong, try again.");
 
-  counter = counter + 1;
+  counter++;
   guess = prompt("what's your guess");
 }
-console.log(`Congrates! you got it in" + ${counter} +  attempts`);
+console.log(`Congrats! you got it in + ${counter} +  attempts`);
