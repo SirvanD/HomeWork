@@ -37,7 +37,7 @@
         message = prompt(yearsList[randIdx]); 
 
         if (message == 'BYE') {
-         userInputs.push(message);
+            userInputs.push(message);
         }
 
         // if (message == message.toUpperCase()) {
