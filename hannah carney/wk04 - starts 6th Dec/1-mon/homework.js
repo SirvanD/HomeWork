@@ -7,39 +7,48 @@
 //     // return number of vowels
 //     return vowels;
 // }
- // this is the coolest function ever why aren't we using this all the time (however, when I remove .gi it just returns the same number, why is that? )
+
+
+
+// function numberVowels(str) {
+//     var vowelsCount = 0;
+  
+//     //turn the input into a string
+//     var string = str.toString();
+  
+//     //loop through the string
+//     for (var i = 0; i <= string.length - 1; i++) {
+  
+  
+//       if (string.charAt(i) == "a" || string.charAt(i) == "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u") {
+//         vowelsCount += 1;
+//       }
+//     }
+//     return vowelsCount;
+//   }
 
  
  
- function checkCase(message){
-     var randomYears = [
-         "1930!",
-         "1978!",
-         "YESTERDAY",
-         "1955!",
-         "1987!"
-     ];
-    
-    var finalBye = 'BYE BYE';
-    var counter = 0; 
-    
-    while(message != finalBye){
-    var message = prompt('HI SONNY'); {
-    } if(message == message.toLowerCase('')){
-            message = prompt('HUH?! SPEAK UP, SONNY!'); 
-    } if(message == message.toUpperCase('')){
-            message = prompt(`NO, NOT SINCE ${randomYears[Math.floor(Math.random() * randomYears.length)]}`);
-    } if (counter == 3){
-           message = prompt(finalBye)
-        }
-    counter++;
-    }
-}
 
-checkCase(); 
-
-
-
+//  var heySonny = prompt(`HI SONNY!`);
+//  var byeCounter = 1;
+//  var randomYears = [ "1930!",
+//  "1978!",
+//  "YESTERDAY",
+//  "1955!",
+//  "1987!"]
+ 
+//  while (byeCounter != 3) {
+ 
+//      if (heySonny != `BYE`){
+//          heySonny = prompt(`NO, NOT SINCE ${randomYears[Math.floor(Math.random() * randomYears.length)]}`)
+//          byeCounter = 1
+//      }
+//      else{
+//          heySonny = prompt(`WHY DONT U LOVE ME`)
+//          byeCounter++
+//      }
+//  }
 
 
 // 3. Lord buckethead
@@ -65,3 +74,4 @@ checkCase();
 
 // // How would you change mr fishfinger's party to "birds eye"?
 // users.mr_fishfinger.party = 'birds eye'
+
