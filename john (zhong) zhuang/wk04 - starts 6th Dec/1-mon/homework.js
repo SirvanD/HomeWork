@@ -50,38 +50,38 @@ let youSay = [];
 let youInput = String();
 
 let i = 0;
-while (youInput = prompt(`You said`)) {
+while (youInput = prompt(`You say`)) {
     youSay.push(youInput);
     if (youInput !== youInput.toUpperCase()) {
         alert(`HUH? SPEAK UP SONNY!`)
     } else if (youInput == `BYE`) {
-        alert('It seemed she did not hear your goodbye')
+        alert(`It seems she does not hear your goodbye.`)
     }
     else {
         alert(`NO, NOT SINCE ${year}`);
     }
-    if (youSay[i] == `BYE` && youSay[i] == youSay[i - 1] && youSay[i - 1] == youSay[i - 2]) {
-        alert('Finally, grandma let you go.')
+    if (youSay[i] == `BYE` && youSay[i - 1] == `BYE` && youSay[i - 2] == `BYE`) {
+        alert(`Finally, grandma let you go.`)
         break;
     } i++
 }
 
 
 // # 3. Lord buckethead
-// var users = {
-//     theresa: {
-//         party: "Conserative",
-//         favoriteNumbers: [12, 42, 75]
-//     },
-//     Lord_Buckethead: {
-//         party: "Gremloids",
-//         favoriteNumbers: [8, 12, 24, 9]
-//     },
-//     mr_fishfinger: {
-//         party: "Independent",
-//         favoriteNumbers: [12, 14, 85, 99, 1001]
-//     }
-// }
+var users = {
+    theresa: {
+        party: "Conserative",
+        favoriteNumbers: [12, 42, 75]
+    },
+    Lord_Buckethead: {
+        party: "Gremloids",
+        favoriteNumbers: [8, 12, 24, 9]
+    },
+    mr_fishfinger: {
+        party: "Independent",
+        favoriteNumbers: [12, 14, 85, 99, 1001]
+    }
+}
 
 // 1. How would you access theresa's party (i.e. the string "Conservative")?  
 users.theresa.party;
