@@ -1,65 +1,87 @@
 //1.Vowel Count
 
-const vowelArray = ['a','e','i','o','u'];
+const vowelArray = ["a", "e", "i", "o", "u"];
 
-function vowelCount(strInpout){
-    
-   let newArray = strInpout.toLowerCase().split('')
-   let vowelCounter = 0;
-   for (let i = 0; i<newArray.length; i++){
+function vowelCount(strInpout) {
+  let newArray = strInpout.toLowerCase().split("");
+  let vowelCounter = 0;
+  for (let i = 0; i < newArray.length; i++) {
     //console.log(newArray);
-    vowelArray.forEach (function(element) {
-        
-        if (newArray[i] == element) {
-            vowelCounter++;
-            vowelCounter = vowelCounter;
-            //console.log(newArray[i])
-        }
-         
-    }
-    )
-   }console.log(vowelCounter) 
-   
+    vowelArray.forEach(function (element) {
+      if (newArray[i] == element) {
+        vowelCounter++;
+        vowelCounter = vowelCounter;
+        //console.log(newArray[i])
+      }
+    });
+  }
+  console.log(vowelCounter);
 }
 
-
-// vowelCount('Spaghettification') // => 7
-// vowelCount('HELLO') // => 2
-// vowelCount('cake pudding') // => 4
+vowelCount("Spaghettification"); // => 7
+vowelCount("HELLO"); // => 2
+vowelCount("cake pudding"); // => 4
 
 // 2. Grandma returns
-function randomNumberFunc() {  
-    return Math.floor(Math.random() * (1950 - 1930 + 1) + 1930)
-  }
-  
-  
-  //console.log(randomYear)
 
+function randomNumberFunc() {
+  return Math.floor(Math.random() * (1950 - 1930 + 1) + 1930);
+}
+let userArray = [];
+let winArray = ["BYE", "BYE", "BYE"];
 
-// function randomNumber() {
-//   let randomNum = Math.floor(Math.random() * 20)  
-//   return randomNum;
-// }let randomNumTest = randomNumber()
-// console.log(randomNumTest)
+function handleKeyPress() {
+  let message = prompt("Speak to Grandma here !");
 
-let message = toString(prompt ('Speak to Grandma here !')); 
-function handleKeyPress(){
-    while(message !== 'BYE') {
-    if (message != message.toUpperCase()) {
-        alert('Huh?! SPEAK UP, SONNY')  
-        message = prompt ('Speak to Grandma here !');      
-    } else {
-        let randomYear = randomNumberFunc()
-        alert ('NO, NOT SINCE ' + randomYear)
-        message = prompt ('Speak to Grandma here !');
+  while (true) {
+    if (message !== message.toUpperCase()) {
+      message = prompt("Talk in capitals !");
+    } else if (message !== "BYE") {
+      alert("NO, NOT SINCE " + randomNumberFunc());
+      message = prompt("Talk louder !");
+      userArray = [];
+    } else if (message == "BYE") {
+      userArray.push("BYE");
+      if (arrayCompare()) {
+        alert("Bye if you insist!!!!!!!!!");
+        break;
+      }
+      alert("No BYE");
+      message = prompt("Talk loudest you can !");
     }
-} 
-let counter = 0;
-counter ++;
-if (counter == 3) {
-    alert ("BYE SUN! ")
+  }
+}
+handleKeyPress();
+
+function arrayCompare() {
+  if (
+    userArray[0] == winArray[0] &&
+    userArray[1] == winArray[1] &&
+    userArray[2] == winArray[2]
+  ) {
+    return true;
+  }
+  return false;
 }
 
+//3. Lord buckethead - 2 points
 
+var users = {
+  theresa: {
+    party: "Conserative",
+    favoriteNumbers: [12, 42, 75],
+  },
+  Lord_Buckethead: {
+    party: "Gremloids",
+    favoriteNumbers: [8, 12, 24, 9],
+  },
+  mr_fishfinger: {
+    party: "Independent",
+    favoriteNumbers: [12, 14, 85, 99, 1001],
+  },
+};
 
- } handleKeyPress()
+console.log(users.theresa.party); //['party']
+console.log(users.Lord_Buckethead.party); //['party']
+users.mr_fishfinger["party"] = "birds eye"; //also could do .party
+console.log(users.mr_fishfinger.party);
