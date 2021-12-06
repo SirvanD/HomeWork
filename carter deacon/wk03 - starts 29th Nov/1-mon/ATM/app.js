@@ -42,7 +42,7 @@ function withdrawMoney() {
         console.log(clickCount);
     } else if (withdrawAmount == 0) {
         transferComplete.textContent = "Please enter a withdrawal amount."
-    } else if (clickCount >= 10 && result > 0) {
+    } else if (clickCount >= 10 && result-2 > 0) {
         currentBalance.textContent = (result - 2).toFixed(2);
         transferComplete.textContent = "Withdrawal complete. You've reached your free withdrawal limit this month. Withdrawals now incur a $2 fee."
         clickCount++;

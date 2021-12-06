@@ -1,6 +1,7 @@
+let userInput = prompt("HELLO DEAR!");
+
 function lovelyGrandma(userInput) {
     while (userInput !== "BYE") {
-        let userInput = prompt("HELLO DEAR!");
         let desiredInput = userInput.toUpperCase();
         let counter = 0;
         if (userInput == desiredInput) {
@@ -13,4 +14,4 @@ function lovelyGrandma(userInput) {
     alert("BYE DEAR!")
 }
 
-lovelyGrandma();
+lovelyGrandma(userInput);
