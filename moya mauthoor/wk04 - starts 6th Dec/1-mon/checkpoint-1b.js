@@ -26,7 +26,7 @@ while (yelledBye3Times !== true ) {
             yelledBye3Times = true;
             alert("GOODBYE, SWEET FACE!");
         } else {
-            let randomYear = Math.floor(Math.random() * (20) + 1930);
+            let randomYear = Math.floor(Math.random() * (21) + 1930);
             alert(`NO, NOT SINCE ${randomYear}!`);
             userSays = prompt("What else would you like to say to Grandma?");
         }
