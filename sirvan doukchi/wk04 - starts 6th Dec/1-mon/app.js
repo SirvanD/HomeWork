@@ -15,7 +15,7 @@ function vowelCount(strInpout) {
       }
     });
   }
-  console.log(vowelCounter);
+  console.log(parseInt(vowelCounter)); //used pareint to convert output to number
 }
 
 vowelCount("Spaghettification"); // => 7
@@ -48,6 +48,7 @@ function grandma() {
   while (true) {
     if (message !== message.toUpperCase()) {
       message = prompt("Talk in capitals !");
+      userArray = []; //added to fix the bug- empty array after inputting small case string
     } else if (message !== "BYE") {
       alert("NO, NOT SINCE " + randomNumberFunc());
       message = prompt("Talk louder !");
