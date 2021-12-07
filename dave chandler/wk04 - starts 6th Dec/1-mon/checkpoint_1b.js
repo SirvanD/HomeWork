@@ -11,16 +11,24 @@ console.log(vowelCount('cake pudding'));
 
 let conversation = prompt("what do you want to say to grandma?","speak loudly she's deaf!");
 let isAllUpper = false;
-let counter = 1;
+let counter = 0;
 while(counter<3){
-        if(conversation !== conversation.toUpperCase()){
-            alert('THE YEAR WAS ' + (Math.floor(Math.random()*21)+1930));
-            counter = 1;
-        } else if (conversation === 'BYE'){
+    //unclear whether
+        if(conversation != 'BYE'){
+            alert('HUH?! SPEAK UP, SONNY! ' + (Math.floor(Math.random()*21)+1930));
+            counter = 0;
+        }  else {
             counter++;
             alert('U CANT LEAVE NOW SONNY!');
         }
-        conversation = prompt("what do you want to say to grandma?","speak loudly she's deaf!");
+        //removed as the question says 'what ever you say' therefore it doesn't care about upper/lower
+        // } else if (conversation.toUpperCase() === conversation){
+        //     alert('NO, NOT SINCE 1938!');
+        // }
+
+        if(counter<3){
+            conversation = prompt("what do you want to say to grandma?","speak loudly she's deaf!");
+        } 
 }
 alert('FINE! BUGGER OFF THEN');
 
