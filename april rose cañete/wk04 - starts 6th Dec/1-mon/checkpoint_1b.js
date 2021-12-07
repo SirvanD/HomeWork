@@ -18,7 +18,6 @@
     var yearsList = [];
 
     function yearRange(yearFrom, yearTo) {    
-        
         for (let i = yearFrom; i <= yearTo; i++) {  
             yearsList.push(i);
         }
@@ -26,20 +25,24 @@
     }
 
    // console.log(message);
-    var userInputs = [];
+   // var userInputs = [];
+    var counter = 1;
 
-    while (userInputs.length != 3) {
+    while (counter != 3) {
+       // debugger
+       // console.log(counter);
 
         yearRange(1930, 1950);
 
         var randIdx = Math.floor(Math.random() * yearsList.length);
 
-        message = prompt(yearsList[randIdx]); 
-
         if (message == 'BYE') {
-            userInputs.push(message);
+            counter++;
+            message = prompt('HUH?! SPEAK UP, SONNY! ' + yearsList[randIdx]); 
+        } else {
+            message = prompt('HUH?! SPEAK UP, SONNY! ' + yearsList[randIdx]); 
+            counter = 1;
         }
-
         // if (message == message.toUpperCase()) {
         //     message = prompt('NO, NOT SINCE 1938!');
         // } else {
