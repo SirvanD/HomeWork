@@ -1,13 +1,12 @@
 function randomYear() {
-var randomNum = Math.floor(Math.random() * 21 )
-console.log(randomNum)
-return 1950 - randomNum
+    var randomNum = Math.floor(Math.random() * 21 )
+    console.log(randomNum)
+    return 1950 - randomNum
 }
 var goodByes = ["","",""]
 
 console.log("first3", first3)
 while(first3 != "BYEBYEBYE") {
-
     var promptWord = prompt("hello")
     console.log(promptWord)
     goodByes.push(promptWord)

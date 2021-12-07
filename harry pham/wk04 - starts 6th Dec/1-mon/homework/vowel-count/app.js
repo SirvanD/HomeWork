@@ -22,5 +22,5 @@ function vowelCount(word) {
         }
         i++;
     }
-    console.log("number of vowels", counter)
+    return counter
 }
