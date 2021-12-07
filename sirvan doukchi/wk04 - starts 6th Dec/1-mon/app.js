@@ -31,7 +31,18 @@ function randomNumberFunc() {
   return Math.floor(Math.random() * (1950 - 1930 + 1) + 1930);
 }
 
-function handleKeyPress() {
+function arrayCompare() {
+  if (
+    userArray[0] == byeArray[0] &&
+    userArray[1] == byeArray[1] &&
+    userArray[2] == byeArray[2]
+  ) {
+    return true;
+  }
+  return false;
+}
+
+function grandma() {
   let message = prompt("Speak to Grandma here !");
 
   while (true) {
@@ -52,18 +63,7 @@ function handleKeyPress() {
     }
   }
 }
-handleKeyPress();
-
-function arrayCompare() {
-  if (
-    userArray[0] == byeArray[0] &&
-    userArray[1] == byeArray[1] &&
-    userArray[2] == byeArray[2]
-  ) {
-    return true;
-  }
-  return false;
-}
+grandma();
 
 //3. Lord buckethead - 2 points
 
