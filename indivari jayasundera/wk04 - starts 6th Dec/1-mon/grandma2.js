@@ -33,6 +33,7 @@ if (userInput == "BYE") {
 }
 
 while (countBye != 3) {
+  randomYear = year[Math.floor(Math.random() * 21)];
   if (isUpperCase(userInput)) {
     alert(`No, NOT SINCE ${randomYear}!`);
   } else {
