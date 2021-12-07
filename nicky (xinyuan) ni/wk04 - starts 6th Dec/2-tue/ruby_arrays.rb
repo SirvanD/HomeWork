@@ -20,8 +20,7 @@ rangers = ["Red", "Blue", "Pink", "Yellow", "Black"]
 
 # p planeteers.push("heart")
 
-# planeteers.concat(rangers)
-# hero = planeteers
+# heroes = planeteers.concat(rangers)
 
 # p hero.sort!
 
