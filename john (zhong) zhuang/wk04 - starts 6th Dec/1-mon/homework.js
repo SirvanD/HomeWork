@@ -43,51 +43,57 @@ console.log(vowelCount('cake pudding'));
 // Change your previous program so that you have to shout BYE three times in a row. Make sure to test your program: if you shout BYE three times, but not in a row, you should still be talking to grandma.
 
 // debugger;
+
+// let year = Math.round(Math.random() * 20 + 1930);
 alert(`Grandma is smiling at you. Do you want to say something to her?`);
 
-let year = Math.round(Math.random() * 20 + 1930);
 let youSay = [];
 let youInput = String();
 
 let i = 0;
-while (youInput = prompt(`You say`)) {
+while (true) {
+    youInput = prompt(`You say`);
+    if (youInput == null) {
+        youInput = "";
+    }
     youSay.push(youInput);
-    if (youInput !== youInput.toUpperCase()) {
-        alert(`HUH? SPEAK UP SONNY!`)
-    } else if (youInput == `BYE`) {
-        alert(`It seems she does not hear your goodbye.`)
-    }
-    else {
-        alert(`NO, NOT SINCE ${year}`);
-    }
     if (youSay[i] == `BYE` && youSay[i - 1] == `BYE` && youSay[i - 2] == `BYE`) {
         alert(`Finally, grandma let you go.`)
         break;
+    }
+    if (youInput !== youInput.toUpperCase()) {
+        alert(`HUH? SPEAK UP SONNY!`)
+    }
+    else if (youInput == `BYE`) {
+        alert(`It seems she does not hear your goodbye.`)
+    }
+    else {
+        alert(`NO, NOT SINCE ${Math.round(Math.random() * 20 + 1930)}`);
     } i++
 }
 
 
 // # 3. Lord buckethead
-var users = {
-    theresa: {
-        party: "Conserative",
-        favoriteNumbers: [12, 42, 75]
-    },
-    Lord_Buckethead: {
-        party: "Gremloids",
-        favoriteNumbers: [8, 12, 24, 9]
-    },
-    mr_fishfinger: {
-        party: "Independent",
-        favoriteNumbers: [12, 14, 85, 99, 1001]
-    }
-}
+// var users = {
+//     theresa: {
+//         party: "Conserative",
+//         favoriteNumbers: [12, 42, 75]
+//     },
+//     Lord_Buckethead: {
+//         party: "Gremloids",
+//         favoriteNumbers: [8, 12, 24, 9]
+//     },
+//     mr_fishfinger: {
+//         party: "Independent",
+//         favoriteNumbers: [12, 14, 85, 99, 1001]
+//     }
+// }
 
-// 1. How would you access theresa's party (i.e. the string "Conservative")?  
+// // 1. How would you access theresa's party (i.e. the string "Conservative")?  
 users.theresa.party;
-// 2. How would you access Lord Buckethead's party (i.e. the string "Gremloids")?  
+// // 2. How would you access Lord Buckethead's party (i.e. the string "Gremloids")?  
 users.Lord_Buckethead.party;
-// 3. How would you change mr fishfinger's party to "birds eye"?  
+// // 3. How would you change mr fishfinger's party to "birds eye"?  
 users.mr_fishfinger.party = 'birds eye';
 
 
