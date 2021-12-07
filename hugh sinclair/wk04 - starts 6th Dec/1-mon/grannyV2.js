@@ -14,7 +14,7 @@ function talkToGrandma(){
         } else byeCounter = 0
         console.log(byeCounter)
         if (toGrandma == toGrandma.toUpperCase()) {
-            alert(`NO, NOT SINCE ${Math.floor(Math.random() * 20) + 1930}!`);
+            alert(`NO, NOT SINCE ${Math.floor(Math.random() * 21) + 1930}!`);
             toGrandma = prompt('Say something else to grandma, or say bye');
         }else{
             alert(`HUH?! SPEAK UP, SONNY!`);
