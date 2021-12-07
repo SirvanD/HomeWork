@@ -43,21 +43,18 @@ transmogrifier(4, 3, 2);
 // using the sum and lengths function you wrote in the last 2 questions write code to work
 // out the sum of the lengths of the following fruits array. display the result in the console.
 
-// var Arr = ["apple", "kiwi", "watermelon"];
-// let convertedArr = [];
-// for (i = 0; i < Arr.length; i++) {
-//   let Array = convertedArr.push(Arr[i].length);
-// }
-// let sum = 0;
-// for (i = 0; i < Array.length; i++) {
-//   let num = Array[i];
-//   sum += num;
-// }
-// console.log(sum);
+var Arr = ["apple", "kiwi", "watermelon"];
 
-//console.log(Arr["apple", "kiwi", "watermelon]));
+let sum = 0;
+for (i = 0; i < Arr.length; i++) {
+  sum = sum + Arr[i].length;
+}
+console.log(sum);
+
+// console.log(Arr["apple", "kiwi", "watermelon]));
 
 // console.log(sumOfLength(["apple", "kiwi"]));
+
 // 5. Make Them Green
 // Remember to write your assumptions if you feel the question is ambiguous.
 
