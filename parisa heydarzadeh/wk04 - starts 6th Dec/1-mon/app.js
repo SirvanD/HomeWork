@@ -37,74 +37,30 @@
 // You can't stop talking to grandma until you shout BYE.
 // What if grandma doesn't want you to leave? When you shout BYE, she could pretend not to hear you. Change your previous program so that you have to shout BYE three times in a row. Make sure to test your program: if you shout BYE three times, but not in a row, you should still be talking to grandma.
 
-// let userInput = prompt("text");
-// let randNum = Math.floor(Math.random() * (1950 - 1930 + 1) + 1930);
+let userInput = prompt("text");
+let randNum = Math.floor(Math.random() * (1950 - 1930 + 1) + 1930);
 
-while () {
-  if (userInput !== "BYE") {
+if (userInput !== "BYE") {
+  alert("HUH?! SPEAK UP, SONNY! NOT SINCE" + " " + randNum);
   userInput = prompt("text");
-  alert("HUH?! SPEAK UP, SONNY!");
-  if ((userInput = prompt())) {
-    alert(randNum);
-  }
+} else {
+  alert("BYE SONNY");
 }
-alert("BYE SONNY");
 
-// let userArray = [];
-// let byeArray = ["BYE", "BYE", "BYE"];
-
-// function randomNumberFunc() {
-//   return Math.floor(Math.random() * (1950 - 1930 + 1) + 1930);
-// }
-
-// function arrayCompare() {
-//   if (
-//     userArray[0] == byeArray[0] &&
-//     userArray[1] == byeArray[1] &&
-//     userArray[2] == byeArray[2]
-//   ) {
-//     return true;
-//   }
-//   return false;
-// }
-
-// function grandma() {
-//   let message = prompt("Speak to Grandma here !");
-
-//   while (true) {
-//     if (message !== message.toUpperCase()) {
-//       message = prompt("Talk in capitals !");
-//       userArray = []; //added to fix the bug- empty array after inputting small case string
-//     } else if (message !== "BYE") {
-//       alert("NO, NOT SINCE " + randomNumberFunc());
-//       message = prompt("Talk louder !");
-//       userArray = [];
-//     } else if (message == "BYE") {
-//       userArray.push("BYE");
-//       if (arrayCompare()) {
-//         alert("Bye if you insist!!!!!!!!!");
-//         break;
-//       }
-//       alert("Not too soon!");
-//       message = prompt("Come again !");
-//     }
-//   }
-// }
-// grandma();
-
-let userInput;
+//part2
+userInput;
 let countBye = 0;
 while (countBye < 3) {
   if (userInput !== "BYE") {
     countBye = 0;
-    alert("SPEAK UP SONNY");
+    alert("Grandma can't hear");
     userInput = prompt("text");
   } else if (userInput === "BYE") {
     userInput = prompt("text");
-    countBye++;
-  } 
+  }
+  countBye++;
 }
-alert("bye");
+alert("BYE SONNY");
 
 //    3. Lord buckethead
 
