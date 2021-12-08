@@ -1,5 +1,5 @@
 
-    list_items = []
+list_items = []
 loop do
     puts "main menu"
     puts "========="
