@@ -61,19 +61,23 @@ planeteers.push("Heart")
 
 # Combine planeteers with rangers = ["Red", "Blue", "Pink", "Yellow", "Black"] and save the result in a variable called heroes.
 
-heroes = ["Earth", "Wind", "Captain Planet", "Fire", "Water","Red", "Blue", "Pink", "Yellow", "Black"]
+rangers = ["Red", "Blue", "Pink", "Yellow", "Black"]
+
+heroes = planeteers.concat rangers
+
+# puts heroes
 
 # Alphabetize the contents of heroes using a method. The Ruby documentation might help.
 
-abc_heroes = heroes.sort
+# abc_heroes = heroes.sort
 
 # Randomize the contents of heroes using a method. The Ruby documentation might help.
 
-heroes.shuffle
+# heroes.shuffle
 
 # Select a random element from heroes using a method. The Ruby documentation might help.
 
-heroes.sample
+# heroes.sample
 
 # display each hero in a new line on the terminal using the .each method
 
