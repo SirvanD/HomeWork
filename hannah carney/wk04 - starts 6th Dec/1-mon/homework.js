@@ -28,27 +28,33 @@
 //   }
 
  
- 
 
-//  var heySonny = prompt(`HI SONNY!`);
-//  var byeCounter = 1;
-//  var randomYears = [ "1930!",
-//  "1978!",
-//  "YESTERDAY",
-//  "1955!",
-//  "1987!"]
+var byeCounter = 0;
+var randomYears = [ "1950", "1949", "1948", "1947", "1946", "1945", "1944", "1943","1942", "1941", 
+   "1940", "1939", "1938", "1937", "1936", "1935", "1934", "1933", "1932", "1931", "1930"]
+
+function grandma() {
  
-//  while (byeCounter != 3) {
+   var heySonny = prompt("HI SONNY!");
+
+    
+    while (byeCounter < 10) {
  
-//      if (heySonny != `BYE`){
-//          heySonny = prompt(`NO, NOT SINCE ${randomYears[Math.floor(Math.random() * randomYears.length)]}`)
-//          byeCounter = 1
-//      }
-//      else{
-//          heySonny = prompt(`WHY DONT U LOVE ME`)
-//          byeCounter++
-//      }
-//  }
+        if (heySonny != 'BYE'){ // if the prompt does not = bye it returns the year response 
+            heySonny = prompt(`NO, NOT SINCE ${randomYears[Math.floor(Math.random() * randomYears.length)]}`)
+            //  byeCounter = 1;
+        }
+        
+        else {
+            byeCounter++
+            if (byeCounter == 3) {
+                break }
+                heySonny = prompt("WHY DONT U LOVE ME")
+        }
+    }
+}
+
+// this grandma almost killed me :) 
 
 
 // 3. Lord buckethead
