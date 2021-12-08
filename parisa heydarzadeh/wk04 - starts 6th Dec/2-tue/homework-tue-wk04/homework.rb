@@ -30,12 +30,12 @@ days_of_the_week = [
 # 4. Remove either the weekdays or the weekends
 # Your choice...
 
-days_of_the_week.shift()
-days_of_the_week = [["saturday", "sunday"]]
+days_of_the_week.pop()
+days_of_the_week = [["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]]
 
 
 # 5. Sort the remaining days alphabetically
-sortedDays = days_of_the_week.sort 
+sortedDays = days_of_the_week[0].sort 
 
 sortedDays = [["saturday", "sunday"]]
 
@@ -103,9 +103,14 @@ heroes.sample = "red"
 
 # display each hero in a new line on the terminal using the .each method
 
-heroes.each { |hero| print heroes + "\n" } 
+heroes.each { |hero| print hero + "\n" } 
 
 
 # display each hero in a new line on the terminal using the .each method only if the hero starts with the letter 'W'
 
+
 heroes.each { |hero| 
+  if hero[0].downcase == "w"
+    print hero + "\n" 
+ end
+}

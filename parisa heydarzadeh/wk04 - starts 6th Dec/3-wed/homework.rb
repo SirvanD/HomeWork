@@ -18,3 +18,36 @@
 # nutella, flour, butter, bread, milk
 # entering 3 quits the program
 # note: for this exercise you do not need to save the list permanently in your hard disk.
+
+
+require 'pry'
+
+list_items = []
+
+
+loop do
+
+  main_menu = {
+    :add new item
+    :list all items
+    :quit
+}
+
+     puts "main_menu"
+     print "enter an option"
+     option_value = gets.chomp
+
+     if option_value == '1'
+        puts "add an item"
+       list_item.push(gets.chomp)
+
+       elsif option_value == '2'
+       puts "you have the following items in your shopping list",list_item
+       else option_value == '3'
+      break
+    end
+end
+
+
+
+#binding.pry
