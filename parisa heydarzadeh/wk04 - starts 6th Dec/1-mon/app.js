@@ -35,31 +35,33 @@
 // Whatever you say to grandma (whatever you type in), she should respond with HUH?! SPEAK UP, SONNY!. To make your program really believable, have grandma shout a different year each time; maybe any year at random between 1930 and 1950.
 // You can't stop talking to grandma until you shout BYE.
 
-let userInput = prompt("text");
-let randNum = Math.floor(Math.random() * (1950 - 1930 + 1) + 1930);
+// let userInput = prompt("text");
+// let randNum = Math.floor(Math.random() * (1950 - 1930 + 1) + 1930);
 
-while (userInput !== "BYE") {
-  userInput = prompt("text");
-   alert('HUH?! SPEAK UP, SONNY!')
-   if (userInput = prompt()){
-     alert (randNum)
-   }
-    
-
+// while (userInput !== "BYE") {
+//   userInput = prompt("text");
+//   alert("HUH?! SPEAK UP, SONNY!");
+//   if ((userInput = prompt())) {
+//     alert(randNum);
+//   }
+// }
+// alert("BYE SONNY");
 // What if grandma doesn't want you to leave? When you shout BYE, she could pretend not to hear you. Change your previous program so that you have to shout BYE three times in a row. Make sure to test your program: if you shout BYE three times, but not in a row, you should still be talking to grandma.
 
 let userInput = prompt("text");
-let countBye = 0
-while (bye < 3) {
-  userInput = prompt("text")
-  if (userInput === "BYE" ) {
-   countBye++
-  } else {
-    countBye = 0
+let countBye = 0;
+while (countBye < 3) {
+  console.log(countBye);
+  if (userInput !== "BYE") {
+    countBye = 0;
+    alert("speak up Sonny");
+    userInput = prompt("text");
+  } else if (userInput === "BYE") {
+    countBye++;
+    userInput = prompt("text");
   }
 }
-
-  
+alert("bye");
 
 //    3. Lord buckethead
 

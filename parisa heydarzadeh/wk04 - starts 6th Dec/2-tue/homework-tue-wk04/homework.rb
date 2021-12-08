@@ -37,7 +37,7 @@ days_of_the_week = [["saturday", "sunday"]]
 # 5. Sort the remaining days alphabetically
 sortedDays = days_of_the_week.sort 
 
-sortedDays = ["saturday", "sunday"]
+sortedDays = [["saturday", "sunday"]]
 
 
 
@@ -103,7 +103,9 @@ heroes.sample = "red"
 
 # display each hero in a new line on the terminal using the .each method
 
-heroes.each { |heroes| print heroes + "\n" } 
+heroes.each { |hero| print heroes + "\n" } 
+
 
 # display each hero in a new line on the terminal using the .each method only if the hero starts with the letter 'W'
 
+heroes.each { |hero| 

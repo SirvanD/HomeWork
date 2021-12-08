@@ -15,14 +15,14 @@ transmogrifier(4, 3, 2);
 
 // sum([1,2,3,4]) // = 10
 
-// function sum(Arr) {
-//   let i = 0;
-//   for (counter = 0; counter < Arr.length; counter++) {
-//     let num = Arr[counter];
-//     i = i + num;
-//   }
-//   return i;
-// }
+function sum(Arr) {
+  let i = 0;
+  for (counter = 0; counter < Arr.length; counter++) {
+    let num = Arr[counter];
+    i = i + num;
+  }
+  return i;
+}
 // console.log(sum([1, 2, 3]));
 
 // 3. lengths
@@ -30,26 +30,22 @@ transmogrifier(4, 3, 2);
 // numbers where each number is the length of the corresponding string.
 // lengths(['my', 'cake', 'pudding']) // => [2,4,7]
 
-// function lengths(Arr) {
-//   let convertedArr = [];
-//   for (i = 0; i < Arr.length; i++) {
-//     convertedArr.push(Arr[i].length);
-//   }
-//   return convertedArr;
-// }
+function lengths(Arr) {
+  let convertedArr = [];
+  for (i = 0; i < Arr.length; i++) {
+    convertedArr.push(Arr[i].length);
+  }
+  return convertedArr;
+}
 // console.log(lengths(["apple", "kiwi"]));
 
 // 4. sum of lengths
 // using the sum and lengths function you wrote in the last 2 questions write code to work
 // out the sum of the lengths of the following fruits array. display the result in the console.
 
-var Arr = ["apple", "kiwi", "watermelon"];
+var fruits = ["apple", "kiwi", "watermelon"];
 
-let sum = 0;
-for (i = 0; i < Arr.length; i++) {
-  sum = sum + Arr[i].length;
-}
-console.log(sum);
+console.log(sum(lengths(fruits)));
 
 // console.log(Arr["apple", "kiwi", "watermelon]));
 
