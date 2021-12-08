@@ -39,7 +39,7 @@ puts(newDaysOfWeek)
 
 # remember to test your code and use (irb/pry/p)!
 
-planeteers = ['Earth', 'Wind', 'Captain Planet', 'Fire', 'Water']
+planeteers = %w[Earth Wind Captain Planet Fire Water]
 # Access the second value in planeteers.
 
 # # Your answer here
