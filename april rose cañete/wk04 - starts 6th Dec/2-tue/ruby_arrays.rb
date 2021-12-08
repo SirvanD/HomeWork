@@ -11,14 +11,14 @@
 
     # 3. Create a new array of the days of the week:
 
-    weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-
-    weekend_days = ["Saturday", "Sunday"]
-
-
+    days_of_the_week = [
+        ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        ["Saturday", "Sunday"]
+    ]
+    
     # 4. Remove either the weekdays or the weekends
 
-    weekend_days.clear
+    days_of_the_week.pop
 
     # 5. Sort the remaining days alphabetically
 
