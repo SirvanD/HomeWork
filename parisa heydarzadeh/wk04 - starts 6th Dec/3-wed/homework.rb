@@ -22,16 +22,16 @@
 
 require 'pry'
 
-list_items = []
+list_items = ["nutella", "flour", "butter", "bread", "milk"]
 
 
 loop do
 
-  main_menu = {
-    :add new item
-    :list all items
-    :quit
-}
+#   main_menu = {
+#     :add new item
+#     :list all items
+#     :quit
+# }
 
      puts "main_menu"
      print "enter an option"
@@ -40,6 +40,7 @@ loop do
      if option_value == '1'
         puts "add an item"
        list_item.push(gets.chomp)
+       print "main_menu"
 
        elsif option_value == '2'
        puts "you have the following items in your shopping list",list_item

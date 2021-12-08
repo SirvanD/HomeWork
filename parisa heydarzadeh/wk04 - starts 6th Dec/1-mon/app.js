@@ -40,15 +40,15 @@
 // let userInput = prompt("text");
 // let randNum = Math.floor(Math.random() * (1950 - 1930 + 1) + 1930);
 
-// while () {
-//   if (userInput !== "BYE") {
-//   userInput = prompt("text");
-//   alert("HUH?! SPEAK UP, SONNY!");
-//   if ((userInput = prompt())) {
-//     alert(randNum);
-//   }
-// }
-// alert("BYE SONNY");
+while () {
+  if (userInput !== "BYE") {
+  userInput = prompt("text");
+  alert("HUH?! SPEAK UP, SONNY!");
+  if ((userInput = prompt())) {
+    alert(randNum);
+  }
+}
+alert("BYE SONNY");
 
 // let userArray = [];
 // let byeArray = ["BYE", "BYE", "BYE"];
@@ -92,7 +92,7 @@
 // }
 // grandma();
 
-let userInput = prompt("text");
+let userInput;
 let countBye = 0;
 while (countBye < 3) {
   if (userInput !== "BYE") {
@@ -100,9 +100,9 @@ while (countBye < 3) {
     alert("SPEAK UP SONNY");
     userInput = prompt("text");
   } else if (userInput === "BYE") {
-    countBye++;
     userInput = prompt("text");
-  }
+    countBye++;
+  } 
 }
 alert("bye");
 
