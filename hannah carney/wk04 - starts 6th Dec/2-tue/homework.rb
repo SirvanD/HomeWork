@@ -56,7 +56,7 @@ planeteers[1]
 planeteers.push('Heart')
 
 # Combine planeteers with rangers = ["Red", "Blue", "Pink", "Yellow", "Black"] and save the result in a variable called heroes.
-planeteers.concat(rangers) = "heroes"
+heroes = Array.new(planeteers.concat(rangers))
 
 
 # Alphabetize the contents of heroes using a method. The Ruby documentation might help.
