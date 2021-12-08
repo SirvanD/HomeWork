@@ -2,11 +2,7 @@ require 'pry'
 
     
     def menu()
-        puts "main menu"
-        puts "========="
-        puts "1) add new item"
-        puts "2) list all items"
-        puts "3) quit\n\n"
+        puts "main menu \n=========\n1) add new item\n2) list all items\n3) quit\n\n"
     end
 
     shopping_list = []
@@ -21,20 +17,13 @@ require 'pry'
         # puts input
         
         if input == 1
-            puts "\n"
-            print 'enter item name: '
-        
+            print "\nenter item name: "
             shopping_list.push(gets.chomp)
-        end
-
-        if input == 2
+        elsif input == 2
+            puts "\nyou have the following items in your shopping list:"
+            puts shopping_list.join(', ')
             puts "\n"
-            puts 'you have the following items in your shopping list:'
-            puts shopping_list.join(',')
-            puts "\n"
-        end
-
-        if input == 3
+        else 
             break
         end
     end
