@@ -19,10 +19,6 @@
 # note: for this exercise you do not need to save the list permanently in your hard disk.
 
 
-
-# if gets == 2 # list current items in shopping list
-#     if gets == 3 #end 
-        
         
 shopping_list = ['flour', 'butter', 'bread']
 
@@ -30,17 +26,17 @@ loop do
     puts "main menu\n ======== \n 1) add new item \n 2) list all items \n 3) quit \n \n enter an option:"
     input = gets().chomp
             if input == "1" # add a new item to your shopping list 
-                print "add a new item to your shopping list: "
-                    shopping_list.push(input)
-                end 
+                puts "add a new item to your shopping list: "
+                shopping_list.push(gets.chomp)
+            end 
 
             if input == "2" # show current items in shopping list
                 puts "The current items in your shopping list are " + shopping_list.join("\n")
             end
 
             if input == "3" # end the program
-            break
-    end
+                break
+            end
 end
 
 
