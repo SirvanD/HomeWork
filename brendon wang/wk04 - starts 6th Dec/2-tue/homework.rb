@@ -65,28 +65,33 @@ heroes = []
 rangers.each do |ranger|
     planeteers.push(ranger)
 end
-heroes.push(planeteers)
+
+planeteers.each do |planeteer|
+    heroes.push(planeteer)
+end
 
 # puts heroes
 
 #Alphabetize the contents of heroes using a method. The Ruby documentation might help.
 
-puts heroes[0].sort
+puts heroes.sort
 
 #Randomize the contents of heroes using a method. The Ruby documentation might help.
 
-puts "shuffling #{heroes[0].shuffle}"
+puts "shuffling #{heroes.shuffle}"
 
 #Select a random element from heroes using a method. The Ruby documentation might help.
 
-puts "sampling #{heroes[0].sample}"
+puts "sampling #{heroes.sample}"
 
 # display each hero in a new line on the terminal using the .each method
 
-puts heroes[0] 
+heroes.each do |hero|
+    puts "#{hero} on each line"
+end
 
 # display each hero in a new line on the terminal using the .each method only if the hero starts with the letter 'W'
-heroes[0].each do |hero|
+heroes.each do |hero|
     if hero[0] == "W"
         puts "#{hero} starts with W"
     end
