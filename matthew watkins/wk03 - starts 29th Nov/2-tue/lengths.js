@@ -1,9 +1,10 @@
-function lengths(stringsArray) {
-    var splitFunction = stringsArray.split(` `)
+function lengths(splitArray) {
+    // var splitArray = string.split(` `)
     var lengthArray = []
-    for (let i = 0; i < splitFunction.length ; i++){
-        lengthArray.push(splitFunction[i].length)
+    for (let i = 0; i < splitArray.length ; i++){
+        lengthArray.push(splitArray[i].length)
     }
     return lengthArray
 
 }
+console.log(lengths(["hello", "how", "are", "you"]))

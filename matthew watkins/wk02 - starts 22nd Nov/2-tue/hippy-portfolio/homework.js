@@ -184,16 +184,32 @@ You're a bouncer at a bar. Given an `age` variable, create a conditional that sa
 
 ```js
 // Your answer goes here.
-var patron = 21
-if (patron < 21) {
-    let him in
-} else if (patron >=18 <21) {
-    sys.printcome on in but no drinking lmaooooo
-}else if (patron <18) {
-    print() go away
-}else if (patron >74) {
-    print are you sure you wanna be here?
+//var patron = 21
+if (patron >= 21 && patron < 74) {
+    console.log("come on in")
+}else if (patron <=17) {
+    console.log("youre too young to be in here!")
+}else if (patron ==18 || patron ==19 || patron ==20) {
+    console.log("come on in but no drinking")
+}else {
+    console.log("are you sure you want to be in here?")
 }   
+
+
+
+
+
+
+
+
+
+if (patron >= 21 && patron < 74) {
+    console.log("come on in")
+}else if (patron ==18 || patron ==19 || patron ==20) {
+    console.log("you're too young to be in here!")
+}else {
+    console.log("are you sure you want to be in here?")
+}
 
 
 
@@ -202,9 +218,9 @@ if (patron < 21) {
 
 #### Bonus
 
-Bar patrons must have an ID if the bouncer is even going to consider what age they are.
-- If the patron has an ID, the bouncer will then check if they are of the proper age
-- If the patron does not have an ID, the bouncer will tell them `"No ID, no entry."`
+// Bar patrons must have an ID if the bouncer is even going to consider what age they are.
+// - If the patron has an ID, the bouncer will then check if they are of the proper age
+// - If the patron does not have an ID, the bouncer will tell them `"No ID, no entry."`
 
 > Hint: Whether the patron has an ID or not can be stored in a `hasId` variable. What do you think the stored data type should be?
 

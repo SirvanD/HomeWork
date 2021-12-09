@@ -9,10 +9,10 @@ function sum(array) {
 }
 
 function lengths(stringsArray) {
-    var splitFunction = stringsArray.split(` `)
+    // var splitFunction = stringsArray.split(` `)
     var lengthArray = []
-    for (let i = 0; i < splitFunction.length ; i++){
-        lengthArray.push(splitFunction[i].length)
+    for (let i = 0; i < stringsArray.length ; i++){
+        lengthArray.push(stringsArray[i].length)
     }
     return lengthArray
 

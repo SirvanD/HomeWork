@@ -1,11 +1,24 @@
-var fruits = [`mango `, `pear`, `orange`, `banana`, `squidward`]
+var fruits = [`mango `, `pear`, `orange`, `banana`, `squidward`];
+const elementNumber = Math.floor( Math.random() * fruits.length );
+var counter = 1;
+const answer = fruits[elementNumber]
+var promptGuess = prompt(`The fruit starts with a ${answer.charAt(0)} and ends with ${answer.charAt(answer.length -1)}`);
 
-var elementNumber = Math.floor( Math.random() * fruits.length)
-
-var hint = prompt(`the fruit starts with a  ${fruits[elementNumber].charAt(0)}`)
 
 
-console.log(fruits[elementNumber])
+while (promptGuess != answer) {
+  promptGuess = prompt(`guess again`)
+
+    // store your variable in a new prompt variable = prompt(`wrong, guess again`) 
+  counter++
+  
+}
+console.log(`yay! you got it after ${counter} attempts`)
+
+
+
+
+// console.log(fruits[elementNumber])
 
 // function guessTheFruit() {
 // console.log(fruits[elementNumber])
