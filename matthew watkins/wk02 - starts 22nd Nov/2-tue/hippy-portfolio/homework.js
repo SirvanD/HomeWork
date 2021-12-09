@@ -205,8 +205,10 @@ if (patron >= 21 && patron < 74) {
 
 if (patron >= 21 && patron < 74) {
     console.log("come on in")
-}else if (patron ==18 || patron ==19 || patron ==20) {
-    console.log("you're too young to be in here!")
+}else if (patron <=17) {
+    console.log("youre too young to be in here!")
+}else if (patron >=18 && patron <=20) {
+    console.log("come on in but no drinking")
 }else {
     console.log("are you sure you want to be in here?")
 }
