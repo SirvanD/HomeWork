@@ -29,7 +29,7 @@ days_of_the_week = [['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], ['
 days_of_the_week.shift()
 
 # 5. Sort the remaining days alphabeticallyc
-days_of_the_week.sort
+planeteers.sort
 
 # MORE ARRAYS
 planeteers = ["Earth", "Wind", "Captain Planet", "Fire", "Water"]
