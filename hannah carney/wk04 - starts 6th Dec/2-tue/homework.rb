@@ -61,7 +61,7 @@ heroes = Array.new(planeteers.concat(rangers))
 
 # Alphabetize the contents of heroes using a method. The Ruby documentation might help.
 heroes = ["Earth", "Wind", "Captain Planet", "Fire", "Water","Red", "Blue", "Pink", "Yellow", "Black"]
-heroes.sort
+heroes.sort { |a, b| a <=> b }
 
 # Randomize the contents of heroes using a method. The Ruby documentation might help.
 heroes.shuffle
