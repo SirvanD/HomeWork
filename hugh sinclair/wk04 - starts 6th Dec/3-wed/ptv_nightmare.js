@@ -12,9 +12,7 @@ var origin = ""
 var destination = ""
 var route = ""
 
-var newArray = []
-var line1 = []
-var line2 = []
+
 
 
 
@@ -28,6 +26,7 @@ function singleLineJourney(array){
     if (array.indexOf(origin) > array.indexOf(destination)){
         array.reverse()
     }
+    var stopsArray = array.slice(array.indexOf(origin), array.indexOf(destination))
     for (let i = array.indexOf(origin); i <= array.indexOf(destination); i++){
         route += `${array[i]}`   
         if(i !== array.indexOf(destination)){
@@ -35,6 +34,8 @@ function singleLineJourney(array){
         }
     }
     console.log(route)
+    console.log(`Total stops: ${stopsArray.length}`)
+    
 }
 
 
@@ -53,41 +54,35 @@ function journey(userOrigin, userDestination){
         console.log (`origin: ${origin}`)
         console.log (`destination: ${destination}`)
         findLines(origin, destination);
-        concatAndSliceArrays(line1, line2);
-        for (let i = newArray.indexOf(origin); i <= newArray.indexOf(destination); i++){
-            debugger
-            if (newArray.indexOf(newArray[i]) == newArray.lastIndexOf("Richmond")){
-                route += " HERE I AM "
-            } 
-            route += `${newArray[i]}`
-            if(i !== newArray.indexOf(destination)){
-                route += "  ----->  "
-            }
-        }
-        console.log(route)
-    }
-    
-    
 
+        var routes = concatAndSliceArrays(line1, line2);
+        console.log(routes.line1.join(' ----> '))
+        console.log(`${gimmeSpaces(routes.line1.join(' ----> ').length -5 )} || `)
+        console.log(`${gimmeSpaces(routes.line1.join(' ----> ').length -8 )} ${routes.line2.join(' ----> ')}`)
+        console.log(`Total stops: ${routes.line1.length + routes.line2.length -2}`)
+    } 
 }
 
 
 //this for some reason doesn't slice properly? I'll have to try it later
-function concatAndSliceArrays(array1, array2){
-    newArray = []
-    if (array1.indexOf(origin) > array1.indexOf("Richmond")){
-        array1.reverse()
+function concatAndSliceArrays(trainLine1, trainLine2){
+    var routes = {
+        line1: [],
+        line2: []
     }
-    array1Sliced = array1.slice(array1.indexOf(origin), (array1.indexOf("Richmond")+1))
-    if (array2.indexOf("Richmond") > array2.indexOf(destination)){
-        array2.reverse()
+    if (trainLine1.indexOf(origin) > trainLine1.indexOf("Richmond")){
+        trainLine1.reverse()
     }
-    array2Sliced = array2.slice(array2.indexOf("Richmond"), (array2.indexOf(destination)+1))
-    array3 = array1Sliced.concat(array2Sliced)
-    if (array3.indexOf(origin) > array3.indexOf(destination)){
-        array3.reverse()
+    var trainLine1Sliced = trainLine1.slice(trainLine1.indexOf(origin), (trainLine1.indexOf("Richmond")+1))
+    if (trainLine2.indexOf("Richmond") > trainLine2.indexOf(destination)){
+        trainLine2.reverse()
     }
-    newArray = array3.slice(array3.indexOf(origin), (array3.indexOf(destination)+1))
+    var trainLine2Sliced = trainLine2.slice(trainLine2.indexOf("Richmond"), (trainLine2.indexOf(destination)+1))
+
+    routes.line1 = trainLine1Sliced
+    routes.line2 = trainLine2Sliced
+
+    return routes
 }
 
 
@@ -124,3 +119,11 @@ function findLines(origin, destination){
 // array 2 lines
 
 // 
+
+function gimmeSpaces(lineStrLength){
+    let str = "";
+    for (let i = 0; i <lineStrLength; i++){
+        str += " "
+    }
+    return str
+}
