@@ -6,11 +6,13 @@
 
 
 
-// function transmogrified (num1, num2, num3) {
-//     (num1 + num2) * num3
-// }
+function transmogrified (num1, num2, num3) {
+    var num3 = num1 * num2
+    total = num3 * num3
+    return total
+}
 
-// transmogrified (num1, num2, num3);
+transmogrified (4, 3, 2);
 
 
 
