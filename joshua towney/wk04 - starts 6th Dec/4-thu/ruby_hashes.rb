@@ -44,7 +44,17 @@ res = {
 puts res[:data][:cards][2][:images][:svg]
 
 # 2: iterate over all the cards to print in the terminal the following:
-puts "#{res[:data][:cards][0][:value]} of #{res[:data][:cards][0][:suit]}"
-puts "#{res[:data][:cards][1][:value]} of #{res[:data][:cards][1][:suit]}"
-puts "#{res[:data][:cards][2][:value]} of #{res[:data][:cards][2][:suit]}"
-puts "#{res[:data][:cards][3][:value]} of #{res[:data][:cards][3][:suit]}"
+
+
+i = 0
+cards = res[:data][:cards]
+
+cards.each do
+  puts "#{res[:data][:cards][i][:value]} of #{res[:data][:cards][i][:suit]}"
+  i+=1
+end
+
+# puts "#{res[:data][:cards][0][:value]} of #{res[:data][:cards][0][:suit]}"
+# puts "#{res[:data][:cards][1][:value]} of #{res[:data][:cards][1][:suit]}"
+# puts "#{res[:data][:cards][2][:value]} of #{res[:data][:cards][2][:suit]}"
+# puts "#{res[:data][:cards][3][:value]} of #{res[:data][:cards][3][:suit]}"
