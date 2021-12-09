@@ -1,73 +1,84 @@
-//train lines
-// var alamein = ['Flinders Street','Richmond','East Richmond','Burnley','Kooyong','Glenferrie'];
-// var glenWaverly = ['Flagstaff','Melbourne Central','Parliament','Richmond','Kooyong','Tooronga'];
-// var sandringham = ['Southern Cross','Richmond','South Yarra','Prahran','Windsor'];
-
-//9 possible routes
-// var route1 = ['Flinders Street','Richmond','East Richmond','Burnley','Kooyong','Glenferrie']
-// var route2 = ['Flinders Street','Richmond','Kooyong','Tooronga']
-// var route3 = ['Flinders Street','Richmond','South Yarra','Prahran','Windsor']
-// var route4 = ['Flagstaff','Melbourne Central','Parliament','Richmond','Kooyong','Tooronga']
-// var route5 = ['Flagstaff','Melbourne Central','Parliament','Richmond','Burnley','Kooyong','Glenferrie']
-// var route6 = ['Flagstaff','Melbourne Central','Parliament','Richmond','South Yarra','Prahran','Windsor']
-// var route7 = ['Southern Cross','Richmond','South Yarra','Prahran','Windsor']
-// var route8 = ['Southern Cross','Richmond','Burnley','Kooyong','Glenferrie']
-// var route9 = ['Southern Cross','Richmond','Kooyong','Tooronga']
-
 var trainLines = {
     alamein: ['Flinders Street','Richmond','East Richmond','Burnley','Kooyong','Glenferrie'],
     glenWaverly: ['Flagstaff','Melbourne Central','Parliament','Richmond','Kooyong','Tooronga'],
     sandringham: ['Southern Cross','Richmond','South Yarra','Prahran','Windsor']
 }
 
-//indexOf() can find the position of the stop on the array
-//toUpperCase/lowercase to ensure the word is correct either way
-//booleans needed to know if we can reach destination from origin on same track
-//includes() can work this out
+function trainRide(origin,destination) {
+    var originToLower = origin.toLowerCase();
+    var originSplit = originToLower.split(" ");
+    var originCapitalized = [];
 
-function trip(getOn) {
-
-    var originToLower = getOn.toLowerCase();
-    var words = originToLower.split(" ");
-    var wordsCapitalized = [];
-
-    for (let i = 0; i < words.length; i++) {
-        wordsCapitalized.push(words[i][0].toUpperCase() + words[i].slice(1));
-        console.log(wordsCapitalized);
+    for (let i = 0; i < originSplit.length; i++) {
+        originCapitalized.push(originSplit[i][0].toUpperCase() + originSplit[i].slice(1));
     }
-    var trueGetOn = wordsCapitalized.join(" ");
+    var getOn = originCapitalized.join(" ");
+    var destinationToLower = destination.toLowerCase();
+    var destinationSplit = destinationToLower.split(" ");
+    var destinationCapitalized = [];
 
-    if (trainLines.alamein.includes(trueGetOn)) {
-        console.log("Start on Alemain line");
-    } else if (trainLines.glenWaverly.includes(trueGetOn)) {
-        console.log("Start on Glen Waverly Line");
-    } else if (trainLines.sandringham.includes(trueGetOn)) {
-        console.log('Start on Sandringham line');
+    for (let i = 0; i < destinationSplit.length; i++) {
+        destinationCapitalized.push(destinationSplit[i][0].toUpperCase() + destinationSplit[i].slice(1));
+    }
+    var getOff = destinationCapitalized.join(" ");
+    var legOne = [];
+    var legTwo = [];
+    var unbrokenRoute = [];
+    var startingLine = "";
+    var finishLine = "";
+
+    if (trainLines.alamein.includes(getOn)) {
+        startingLine = trainLines.alamein;
+    } else if (trainLines.glenWaverly.includes(getOn)) {
+        startingLine = trainLines.glenWaverly;
+    } else if (trainLines.sandringham.includes(getOn)) {
+        startingLine = trainLines.sandringham;
     } else {
-        console.log("Not a station. Goodbye");
+        return "Either your origin or destination was spelt incorrectly. Your card has not ben charged. Have a great day";
+    }
+
+    if (trainLines.alamein.includes(getOff)) {
+        finishLine = trainLines.alamein;
+    } else if (trainLines.glenWaverly.includes(getOff)) {
+        finishLine = trainLines.glenWaverly;
+    } else if (trainLines.sandringham.includes(getOff)) {
+        finishLine = trainLines.sandringham;
+    } else {
+        return "Either your origin or destination was spelt incorrectly. Your card has not ben charged. Have a great day";
+    }
+   
+    if (startingLine.includes(getOff)) {
+        for (i = startingLine.indexOf(getOn); i <= startingLine.indexOf(getOff); i++ ) {
+            unbrokenRoute.push(startingLine[i]);
+        }
+    } else {
+        for (i = startingLine.indexOf(getOn); i <= startingLine.indexOf("Richmond"); i++ ) {
+            legOne.push(startingLine[i]);
+        }
+        for (i = finishLine.indexOf("Richmond"); i <= finishLine.indexOf(getOff) + 1; i++ ) {
+            legTwo.push(finishLine[i]);
+        }
+    }
+
+    if (legTwo[-1] == undefined) {
+        legTwo.pop();
+    }
+
+    if (startingLine.includes(getOff)) {
+        var numberOfStops = (unbrokenRoute.length - 1);
+        var mappedRoute = unbrokenRoute.join(' ---> ');
+        console.log('origin: ' + getOn);
+        console.log('destination: ' + getOff);
+        console.log(mappedRoute);
+        console.log(numberOfStops + " stops total");
+    } else {
+        var numberOfStops = ((legOne.length - 1) + (legTwo.length - 1));
+        var legOneRoute = legOne.join(' ---> ');
+        var legTwoRoute = legTwo.join(' ---> ');
+        console.log('origin: ' + getOn);
+        console.log('destination: ' + getOff);
+        console.log(legOneRoute);
+        console.log((" ".repeat(legOneRoute.length - 8)) + legTwoRoute);
+        console.log(numberOfStops + " stops total")
     }
 } 
-
-
-
-
-// function trip(getOn, getOff) {
-//     var route = [];
-
-//     for (i = route1.indexOf(getOn); i <= route1.indexOf(getOff) + 1; i++ ) {
-//         route.push(route1[i]);
-//     }
-//     route.pop();
-//     if (route[0] == undefined) {
-//         route.shift()
-//     }
-//     console.log(route);
-
-//     var numberOfStops = (route.length - 1);
-//     var mappedRoute = route.join(' ---> ')
-
-//     console.log('origin: ' + getOn);
-//     console.log('destination: ' + getOff);
-//     console.log(mappedRoute);
-//     console.log(numberOfStops + " stops total")
-// } 
