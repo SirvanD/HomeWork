@@ -1,9 +1,36 @@
+var alameindiv = document.getElementsByClassName('alamein');
+var glenWaverlydiv = document.getElementsByClassName('glenWaverly');
+var sandringhamdiv = document.getElementsByClassName('sandringham');
 var alamein = ["Flinders Street", "Richmond", "East Richmond", "Burnley", "Hawthorn", "Glenferrie"];
 var glenWaverly = ["Flagstaff", "Melbourne Central", "Parliament", "Richmond", "Kooyong", "Tooronga"];
 var sandringham = ["Southern Cross", "Richmond", "South Yarra", "Prahran", "Windsor"];
 
+
+function start(){
+    var origin = document.getElementById('origin').value
+    var destination = document.getElementById('destination').value
+    journey(origin,destination)
+}
+
+function restart(){
+    for(var index = 0; index < 6; index++){
+        document.getElementsByClassName('alamein')[index].style.backgroundColor = "transparent";
+        document.getElementsByClassName('alamein')[index].style.color = "transparent";
+    }
+    for(var index = 0; index < 6; index++){
+        document.getElementsByClassName('glenWaverly')[index].style.backgroundColor = "transparent";
+        document.getElementsByClassName('glenWaverly')[index].style.color = "transparent";
+    }
+    for(var index = 0; index < 5; index++){
+        document.getElementsByClassName('sandringham')[index].style.backgroundColor = "transparent";
+        document.getElementsByClassName('sandringham')[index].style.color = "transparent";
+    }
+}
+
 function isSameLine(origin,destination){
-    if(alamein.indexOf(destination)>=0 && (alamein.indexOf(destination)-alamein.indexOf(origin)) <= alamein.indexOf(destination)){
+    if(origin == "Richmond" || destination == "Richmond"){
+        return true 
+    } else  if(alamein.indexOf(destination)>=0 && (alamein.indexOf(destination)-alamein.indexOf(origin)) <= alamein.indexOf(destination)){
         return true 
     } else if (glenWaverly.indexOf(destination)>=0 && (glenWaverly.indexOf(destination)-glenWaverly.indexOf(origin)) <= glenWaverly.indexOf(destination)){
         return true 
@@ -15,9 +42,7 @@ function isSameLine(origin,destination){
 } 
 
 function journey(origin,destination){
-    var allStopsR = []
-    var allStops = []  
-
+  
     function toRichmond(station){
         if (alamein.indexOf(station)>=0){
             var richmondIndex1 = alamein.indexOf("Richmond")
@@ -26,13 +51,15 @@ function journey(origin,destination){
             if(numOfStopsR > 0){
                 var index = stationIndex
                 while(index <= richmondIndex1){
-                    allStopsR.push(alamein[index])
+                    document.getElementsByClassName('alamein')[index].style.backgroundColor = "orangered";
+                    document.getElementsByClassName('alamein')[index].style.color = "white";
                     index++
                 }
             } else if (numOfStopsR < 0){
                 var index = stationIndex
                 while(index >= richmondIndex1){
-                    allStopsR.push(alamein[index])
+                    document.getElementsByClassName('alamein')[index].style.backgroundColor = "orangered";
+                    document.getElementsByClassName('alamein')[index].style.color = "white";
                     index--
                 }
             } else {
@@ -45,13 +72,15 @@ function journey(origin,destination){
             if(numOfStopsR > 0){
                 var index = stationIndex
                 while(index <= richmondIndex2){
-                    allStopsR.push(glenWaverly[index])
+                    document.getElementsByClassName('glenWaverly')[index].style.backgroundColor = "orangered";
+                    document.getElementsByClassName('glenWaverly')[index].style.color = "white";
                     index++
                 }
             } else if (numOfStopsR < 0){
                 var index = stationIndex
                 while(index >= richmondIndex2){
-                    allStopsR.push(glenWaverly[index])
+                    document.getElementsByClassName('glenWaverly')[index].style.backgroundColor = "orangered";
+                    document.getElementsByClassName('glenWaverly')[index].style.color = "white";
                     index--
                 }
             } else {
@@ -64,20 +93,21 @@ function journey(origin,destination){
             if(numOfStopsR > 0){
                 var index = stationIndex
                 while(index <= richmondIndex3){
-                    allStopsR.push(sandringham[index])
+                    document.getElementsByClassName('sandringham')[index].style.backgroundColor = "orangered";
+                    document.getElementsByClassName('sandringham')[index].style.color = "white";
                     index++
                 }
             } else if (numOfStopsR < 0){
                 var index = stationIndex
                 while(index >= richmondIndex3){
-                    allStopsR.push(sandringham[index])
+                    document.getElementsByClassName('sandringham')[index].style.backgroundColor = "orangered";
+                    document.getElementsByClassName('sandringham')[index].style.color = "white";
                     index--
                 }
             } else {
                 allStopsR = ["Richmond"]
             }
         }
-        console.log(allStopsR)
     }
     
     if (isSameLine(origin,destination)==true){
@@ -88,13 +118,15 @@ function journey(origin,destination){
             if(numOfStops > 0){
                 var index = originIndex
                 while(index <= destinationIndex){
-                    allStops.push(alamein[index])
+                    document.getElementsByClassName('alamein')[index].style.backgroundColor = "orangered";
+                    document.getElementsByClassName('alamein')[index].style.color = "white";
                     index++
                 }
             } else if (numOfStops < 0){
                 var index = originIndex
                 while(index >= destinationIndex){
-                    allStops.push(alamein[index])
+                    document.getElementsByClassName('alamein')[index].style.backgroundColor = "orangered";
+                    document.getElementsByClassName('alamein')[index].style.color = "white";
                     index--
                 }
             }
@@ -106,13 +138,15 @@ function journey(origin,destination){
             if(numOfStops > 0){
                 var index = originIndex
                 while(index <= destinationIndex){
-                    allStops.push(glenWaverly[index])
+                    document.getElementsByClassName('glenWaverly')[index].style.backgroundColor = "orangered";
+                    document.getElementsByClassName('glenWaverly')[index].style.color = "white";
                     index++
                 }
             } else if (numOfStops < 0) {
                 var index = originIndex
                 while(index >= destinationIndex){
-                    allStops.push(glenWaverly[index])
+                    document.getElementsByClassName('glenWaverly')[index].style.backgroundColor = "orangered";
+                    document.getElementsByClassName('glenWaverly')[index].style.color = "white";
                     index--
                 }
             }
@@ -123,44 +157,43 @@ function journey(origin,destination){
             if(numOfStops > 0){
                 var index = originIndex
                 while(index <= destinationIndex){
-                    allStops.push(sandringham[index])
+                    document.getElementsByClassName('sandringham')[index].style.backgroundColor = "orangered";
+                    document.getElementsByClassName('sandringham')[index].style.color = "white";
                     index++
                 }
             } else if (numOfStops < 0) {
                 var index = originIndex
                 while(index >= destinationIndex){
-                    allStops.push(sandringham[index])
+                    document.getElementsByClassName('sandringham')[index].style.backgroundColor = "orangered";
+                    document.getElementsByClassName('sandringham')[index].style.color = "white";
                     index--
                 }
             }
         }
-        console.log(allStops)
     } else {
         if (alamein.indexOf(origin)>=0 && glenWaverly.indexOf(destination)>=0){
-            console.log(toRichmond(origin))
-            console.log(toRichmond(destination)) 
+            toRichmond(origin)
+            toRichmond(destination) 
         } else if (alamein.indexOf(origin)>=0 && sandringham.indexOf(destination)>=0){
-            console.log(toRichmond(origin))
-            console.log(toRichmond("Richmond")) 
-            console.log(toRichmond(destination))   
+            toRichmond(origin)
+            document.getElementsByClassName('glenWaverly')[3].style.backgroundColor = "orangered";
+            document.getElementsByClassName('glenWaverly')[3].style.color = "white";
+            toRichmond(destination)   
         } else if (glenWaverly.indexOf(origin)>=0 && sandringham.indexOf(destination)>=0){
-            console.log(toRichmond(origin))
-            console.log(toRichmond(destination))   
+            toRichmond(origin)
+            toRichmond(destination)  
         } else  if (glenWaverly.indexOf(origin)>=0 && alamein.indexOf(destination)>=0){
-            console.log(toRichmond(origin))
-            console.log(toRichmond(destination))   
+            toRichmond(origin)
+            toRichmond(destination)  
         } else if (sandringham.indexOf(origin)>=0 && alamein.indexOf(destination)>=0){
-            console.log(toRichmond(origin))
-            console.log(toRichmond("Richmond")) 
-            console.log(toRichmond(destination))   
+            toRichmond(origin)
+            document.getElementsByClassName('glenWaverly')[3].style.backgroundColor = "orangered";
+            document.getElementsByClassName('glenWaverly')[3].style.color = "white";
+            toRichmond(destination) 
         } else if (sandringham.indexOf(origin)>=0 && glenWaverly.indexOf(destination)>=0){
-            console.log(toRichmond(origin))
-            console.log(toRichmond(destination))   
+            toRichmond(origin)
+            toRichmond(destination)  
         }   
     }
 }
 
-
-
-// same line test>   journey("Flinders Street","Hawthorn") journey("Hawthorn","Flinders Street")  journey("Southern Cross", "Windsor")
-// different line test> journey("Hawthorn","South Yarra")
