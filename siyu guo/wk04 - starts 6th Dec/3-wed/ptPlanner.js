@@ -141,4 +141,6 @@ function whiteSpace(number) {
     return string
 }
 
-ptPlanner("Melbourne Central", "Windsor")
+var info = ptPlanner("Melbourne Central", "Windsor")
+
+document.querySelector("p").innerText = info;
