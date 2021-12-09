@@ -11,9 +11,9 @@
     // then print each of the value
 
 
-    var alamein = ["Flinders Street", "Richmond", "East Richmond", "Burnley", "Hawthorn", "Glenferrie"];
-    var glenWaverly = ["Flagstaff", "Melbourne Central", "Parliament", "Richmond", "Kooyong", "Tooronga"];
-    var sandringham = ["Southern Cross", "Richmond", "South Yarra", "Prahran", "Windsor"];
+    // var alamein = ["Flinders Street", "Richmond", "East Richmond", "Burnley", "Hawthorn", "Glenferrie"];
+    // var glenWaverly = ["Flagstaff", "Melbourne Central", "Parliament", "Richmond", "Kooyong", "Tooronga"];
+    // var sandringham = ["Southern Cross", "Richmond", "South Yarra", "Prahran", "Windsor"];
 
     var lines = [
         ["Flinders Street", "Richmond", "East Richmond", "Burnley", "Hawthorn", "Glenferrie"],
@@ -26,46 +26,42 @@
     var origin = "Melbourne Central";
     var destination = "Windsor";
 
-    var originDestination = [origin, destination];
-
     
-    lines.forEach(line => {
 
-        var isStationExist = originDestination.every(station => line.includes(station));
+    function travel(origin, destination) {
+        var originDestination = [origin, destination];
 
-        // debugger
+        lines.forEach(line => {
 
-        if (isStationExist) {
-            var orginIdx = line.indexOf(origin);
-            var destinationIdx = line.indexOf(destination);
-            var newArray = [];
-            var counter = 0;
-
-            for (let i = orginIdx; i <= destinationIdx; i++) {
-                var station = line[i];
-                newArray.push(station);
-                counter+= 1;
+            var isStationExist = originDestination.every(station => line.includes(station));
+    
+            // debugger
+    
+            if (isStationExist) {
+                var orginIdx = line.indexOf(origin);
+                var destinationIdx = line.indexOf(destination);
+                var newArray = [];
+                var counter = 0;
+    
+                for (let i = orginIdx; i <= destinationIdx; i++) {
+                    var station = line[i];
+                    newArray.push(station);
+                    counter+= 1;
+                }
+    
+                // var findRichmondIntersect = newArray.filter(station => {return station == 'Richmond'}).length
+    
+                // console.log(findRichmondIntersect);
+    
+                // if (findRichmondIntersect == 2) {
+                //     console.log(`orgin: ${origin} \ndestination: ${destination} \n\n${newArray.join(' -----> ')} \n\n${counter-1} stops total`);
+                // }
+                console.log(`orgin: ${origin} \ndestination: ${destination} \n\n${newArray.join(' -----> ')} \n\n${counter-1} stops total`);
             }
-
-            // var findRichmondIntersect = newArray.filter(station => {return station == 'Richmond'}).length
-
-            // console.log(findRichmondIntersect);
-
-            // if (findRichmondIntersect == 2) {
-            //     console.log(`orgin: ${origin} \ndestination: ${destination} \n\n${newArray.join(' -----> ')} \n\n${counter-1} stops total`);
-            // }
-            console.log(`orgin: ${origin} \ndestination: ${destination} \n\n${newArray.join(' -----> ')} \n\n${counter-1} stops total`);
-        }
-          
-        
-        // for (let i = 0; i < line.length; i++) {
-        //     // for each array find the origin and destination
-        //     // if orgin and destintation exist
-        //     // find the index of each destination
-        // }
-
-    });
-
+    
+        });
+    }
+    
 
 
   
