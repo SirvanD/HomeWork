@@ -50,7 +50,7 @@ KING of HEARTS
 4 of SPADES
 QUEEN of HEARTS
 
-res.each do |value, suit|
-    puts "#{value} = #{suit}"
+res[:data][:cards].each do |card|
+   puts "#{card[:value]} of #{card[:suit]}"
 end
 
