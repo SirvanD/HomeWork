@@ -50,7 +50,7 @@ i = 0
 cards = res[:data][:cards]
 
 cards.each do
-  puts "#{res[:data][:cards][i][:value]} of #{res[:data][:cards][i][:suit]}"
+  puts "#{cards[i][:value]} of #{cards[i][:suit]}"
   i+=1
 end
 
