@@ -14,15 +14,18 @@ days_of_the_week.push("Sunday")
 
 # Question 3
 
-theWeek = {
-     "weekdays" => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-     "weekends" => ['Saturday', 'Sunday',]
-}
+theWeek = [
+     ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+     ['Saturday', 'Sunday',],
+]
 
 # Question 4
-p theWeek.delete("weekdays")
-
+p theWeek.shift
 # Question 5
+theWeek.sort
+
+
+# more arrays
 planeteers = ["Earth", "Wind", "Captain Planet", "Fire", "Water"]
 # 1
 planeteers[1]
