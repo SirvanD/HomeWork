@@ -14,27 +14,83 @@ function transmogrified (num1, num2, num3) {
 
 transmogrified (4, 3, 2);
 
+// .2 SUM
 
+arrayNum = [1,2,3,4];
+var j = 0;
+
+
+function sum (arrayNum) {
+    for(let i = 0; i < arrayNum.length; i++){
+        j += Number(arrayNum[i]);
+
+    }
+    return j
+}
+
+
+
+//3. lengths
+
+food = ['my', 'cake', 'pudding'];
+var wordCount = [];
+
+
+function lengths (food) {
+    for(let i = 0; i < food.length; i++){
+        wordNum = food[i].length;
+        wordCount.push(wordNum)
+
+    } 
+    return wordCount
+}
+
+//4. Sum of Lengths
+
+var fruits = ['kiwi', 'apple', 'mango']
+// var fruitsLength = lengths(fruits)
+// console.log(sum(fruitsLength))
+console.log(sum(lengths(fruits)))
+// var wordCount = [];
+// var j = 0;
+
+
+// function sumOfLengths (fruits) {
+//     for(let i = 0; i < fruits.length; i++){
+//         wordNum = fruits[i].length;
+//         wordCount.push(wordNum);
+//         for(let i = 0; i < wordCount.length; i++){
+//         j += Number(wordCount[i]);
+
+//     }
+
+//     } 
+//     console.log(j)
+// }
 
 //MAKE THEM GREEN
 
-var box1 = document.querySelector('.box1');
-var box2 = document.querySelector('.box2');
-var box3 = document.querySelector('.box3');
+// var box1 = document.querySelector('.box1');
+// var box2 = document.querySelector('.box2');
+// var box3 = document.querySelector('.box3');
 
-function turnRed(event){
-    var userClick = event.target;
-    console.log(event.target);
-    userClick.disabled = true;
-    userClick.style.backgroundColor = "red";
+// function turnRed(event){
+//     var userClick = event.target;
+//     console.log(event.target);
+//     userClick.disabled = true;
+//     userClick.style.backgroundColor = "red";
 
 
-    if (box1.style.backgroundColor == "red" && box2.style.backgroundColor == "red" && box3.style.backgroundColor == "red") {
-        box1.style.backgroundColor = "green";
-        box2.style.backgroundColor = "green";
-        box3.style.backgroundColor = "green";
-    }
-}
+//     if (box1.style.backgroundColor == "red" && box2.style.backgroundColor == "red" && box3.style.backgroundColor == "red") {
+//         box1.style.backgroundColor = "green";
+//         box2.style.backgroundColor = "green";
+//         box3.style.backgroundColor = "green";
+//     }
+// }
+
+/// WORKSSS ^^^
+
+
 // function turnRedd(event){
 //     var userClick = event.target;
 //     userClick.disabled = true;
@@ -58,9 +114,13 @@ function turnRed(event){
 
 // function turn
 
-box1.addEventListener('click', turnRed);
-box2.addEventListener('click', turnRed);
-box3.addEventListener('click', turnRed);
+// __________________________________________________________________
+
+// box1.addEventListener('click', turnRed);
+// box2.addEventListener('click', turnRed);
+// box3.addEventListener('click', turnRed);
+
+//WORKS^^^^
 
 
 
