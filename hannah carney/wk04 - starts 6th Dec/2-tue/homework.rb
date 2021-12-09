@@ -36,7 +36,7 @@ days_of_the_week.delete(["Saturday", "Sunday"])
 
 
 # 5. Sort the remaining days alphabetically
-days_of_the_week.sort
+days_of_the_week[0].sort { |a, b| a <=> b }
 
 
 
