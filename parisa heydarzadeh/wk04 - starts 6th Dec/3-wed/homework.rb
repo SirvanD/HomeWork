@@ -28,8 +28,8 @@ list_items = ["nutella", "flour", "butter", "bread", "milk"]
 loop do
 
 #   main_menu = {
-#     :add new item
-#     :list all items
+#     :add new item,
+#     :list all items,
 #     :quit
 # }
 
