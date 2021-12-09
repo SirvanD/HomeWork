@@ -12,29 +12,37 @@
 # 3) quit
 
 
-main_menu = puts "main menu
-=========
-1) add new item
-2) list all items
-3) quit"
-userinput = gets.chomp
+# main_menu = puts "main menu
+# =========
+# 1) add new item
+# 2) list all items
+# 3) quit"
+# userinput = gets.chomp
+
 all_lists = []
 
-loop do
+
+loop do 
+    main_menu = puts "main menu
+    =========
+    1) add new item
+    2) list all items
+    3) quit"
+    userinput = gets.chomp
+    
     if userinput == "1"
         puts "New item"
         new_item = gets.chomp
         all_lists.push(new_item)
-        return main_menu
-        elsif userinput == "2"
-        return all_lists
-        elsif userinput == "3"
+        # puts main_menu
+    elsif userinput == "2"
+        puts all_lists
+    else userinput == "3"
         break
     end
-
-
-
 end
+    
+# end
 
 # i need help fixing this
 
