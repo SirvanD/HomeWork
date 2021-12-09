@@ -41,25 +41,10 @@ res[:data][:cards][2][:images][:svg]
 
 iterate over all the cards to print in the terminal the following:
 
-KING of HEARTS
-king = res[:data][:cards][0][:value] 
-heart = res[:data][:cards][0][:suit]
-puts "#{king} of #{heart}"
+
+res[:data][:cards].each {|ele|
+    puts "#{ele[:value]} of #{ele[:suit]}"
+}
+puts "  "
 
 
-8 of CLUBS
-8 = res[:data][:cards][1][:value]
-clubs = res[:data][:cards][1][:suit]
-puts "#{8} of #{clubs}"
-
-
-4 of SPADES
-4 = res[:data][:cards][2][:value] 
-spades = res[:data][:cards][2][:suit]
-puts "#{4} of #{spades}"
-
-
-QUEEN of HEARTS
-queen = res[:data][:cards][3][:value] 
-hearts = res[:data][:cards][3][:suit]
-puts "#{queen} of #{hearts}"
