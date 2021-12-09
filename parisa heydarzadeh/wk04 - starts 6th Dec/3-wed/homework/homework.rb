@@ -38,12 +38,15 @@ loop do
      if option_value == '1'
         puts "add an item"
        list_item.push(gets.chomp)
-    
+       File.write("list.txt", list_items.join("\n"), mode: "a")
 
        elsif option_value == '2'
-       puts "you have the following items in your shopping list: \n"
+       puts "you have the following items in your shopping list: \n\n"
        puts "=====================\n"
-     
+       puts file_data = File.read("list.txt")
+
+       
+       puts "=====================\n"
 
        else option_value == '3'
       break
