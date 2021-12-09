@@ -37,7 +37,7 @@ heroes.sample #Select a random element from heroes using a method.
 
 #display each hero in a new line on the terminal using the .each method only if the hero starts with the letter 'W'
  heroes.each {|hero|
-if hero[0] == 'W'
+if hero[0].smallcase == 'W'
     puts "#{hero} \n"
 end
 }

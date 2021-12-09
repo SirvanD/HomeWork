@@ -2,7 +2,6 @@
 menu = "\n                  main menu\n=====================================================\n1) add new item\n2) list all items\n3) quit\n\n"
 # puts File.exists?("list.txt")
 
-
 shopping_list = []
 loop do
     puts menu
@@ -29,7 +28,6 @@ loop do
     end
 
 end
-
 
 # require 'pry'
 # binding.pry
