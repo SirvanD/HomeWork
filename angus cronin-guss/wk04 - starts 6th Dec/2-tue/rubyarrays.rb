@@ -22,7 +22,7 @@ theWeek = [
 # Question 4
 p theWeek.shift
 # Question 5
-theWeek.sort
+theWeek[1].sort
 
 
 # more arrays
