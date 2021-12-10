@@ -22,8 +22,8 @@ main {
 }
 nav {
     display: inline-block;
-    margin: 1rem;
-    font-size: 1.5rem;
+    margin: 1vw;
+    font-size: 3vw;
 }
 
 a:link {
@@ -48,26 +48,25 @@ footer {
 
 button {
     font-family: 'Open Sans', sans-serif;
-    padding: 0.1rem 1.5rem;
+    padding: 0.1vw 1.5vw;
     background-color: rgb(255, 233, 144);
-    font-size: 1.5rem;
+    font-size: 3vw;
     color: rgb(250, 197, 63);
-    border: 1 rem;
     border-color:rgb(250, 197, 63);
 }
 
 input[type="text"]
 {
-    font-size: 1.5rem;
+    font-size: 3vw;
 }
 
 h1 {
-    font-size: 10rem;
+    font-size: 10vw;
     font-weight: bold;
     color:rgb(255, 212, 105)
 }
 
 p {
-    font-size: 2rem;
+    font-size: 3vw;
     color:orange;
 }
