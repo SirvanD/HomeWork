@@ -10,32 +10,23 @@ function balance(){
     return accountBalance
 }
 
-if (accountBalance <= '0') {
-amount.style.backgroundColor = 'red' 
-} if (accountBalance > '0' ) {
-    amount.style.backgroundColor = 'greenyellow'
-}
-
 function deposit(){
     accountBalance.textContent = Number(amount.value) + Number(accountBalance.textContent)
+    if (Number(accountBalance.textContent) > '0' ) {
+        accountBalance.style.backgroundColor = 'black'
+    } 
 }
+
 
 function withdraw(){
-    accountBalance.textContent = accountBalance.textContent - Number(amount.value) 
-
-    // } if (accountBalance - Number(amount.value) >= 0 ) {
-    //     accountBalance = accountBalance - Number(amount.value)
-    //     accountBalance.textContent = accountBalance
-    //    } if (accountBalance >= 1) {
-    //     balanceDisplay.style.backgroundColor = ``}
-
-        if (Number(accountBalance.textContent) == 0) {
-            accountBalance.style.backgroundColor = `red`
-            console.log ('account balance must be over $0.00')
-        }
+    if (accountBalance.textContent - Number(amount.value) < '0') {
+        accountBalance.style.backgroundColor = `red`
+    } 
+    else {
+        accountBalance.style.backgroundColor = 'black'
+        accountBalance.textContent = accountBalance.textContent - Number(amount.value)  
+    }
 }
-
-
 
 depositBtn.addEventListener('click', deposit)
 withdrawBtn.addEventListener('click', withdraw)
