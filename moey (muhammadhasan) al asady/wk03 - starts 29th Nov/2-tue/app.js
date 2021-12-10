@@ -17,10 +17,11 @@ transmogrified (4, 3, 2);
 // .2 SUM
 
 arrayNum = [1,2,3,4];
-var j = 0;
 
 
 function sum (arrayNum) {
+    var j = 0;
+
     for(let i = 0; i < arrayNum.length; i++){
         j += Number(arrayNum[i]);
 
@@ -33,14 +34,14 @@ function sum (arrayNum) {
 //3. lengths
 
 food = ['my', 'cake', 'pudding'];
-var wordCount = [];
 
 
 function lengths (food) {
+    var wordCount = [];
+
     for(let i = 0; i < food.length; i++){
         wordNum = food[i].length;
         wordCount.push(wordNum)
-
     } 
     return wordCount
 }
