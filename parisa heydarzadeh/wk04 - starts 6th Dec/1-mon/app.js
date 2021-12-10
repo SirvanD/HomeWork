@@ -37,30 +37,26 @@
 // You can't stop talking to grandma until you shout BYE.
 // What if grandma doesn't want you to leave? When you shout BYE, she could pretend not to hear you. Change your previous program so that you have to shout BYE three times in a row. Make sure to test your program: if you shout BYE three times, but not in a row, you should still be talking to grandma.
 
-let userInput = prompt("text");
-let randNum = Math.floor(Math.random() * (1950 - 1930 + 1) + 1930);
+function randNum() {
+  return Math.floor(Math.random() * (1950 - 1930 + 1) + 1930);
+}
+randNum();
 
-if (userInput !== "BYE") {
-  alert("HUH?! SPEAK UP, SONNY! NOT SINCE" + " " + randNum);
-  userInput = prompt("text");
-} else {
+function grandma() {
+  let countBye = 0;
+  while (countBye < 3) {
+    let userInput = prompt("say something");
+    if (userInput !== "BYE") {
+      countBye = 0;
+      alert("HUH?! SPEAK UP, SONNY! NO, NOT SINCE" + " " + randNum());
+    } else if (userInput === "BYE") {
+      // userInput = prompt("say something");
+      countBye++;
+    }
+  }
   alert("BYE SONNY");
 }
-
-//part2
-userInput;
-let countBye = 0;
-while (countBye < 3) {
-  if (userInput !== "BYE") {
-    countBye = 0;
-    alert("Grandma can't hear");
-    userInput = prompt("text");
-  } else if (userInput === "BYE") {
-    userInput = prompt("text");
-  }
-  countBye++;
-}
-alert("BYE SONNY");
+grandma();
 
 //    3. Lord buckethead
 
