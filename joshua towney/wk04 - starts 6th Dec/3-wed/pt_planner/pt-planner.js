@@ -1,10 +1,9 @@
-var trainLines = {
-    alamein: ['Flinders Street','Richmond','East Richmond','Burnley','Kooyong','Glenferrie'],
-    glenWaverly: ['Flagstaff','Melbourne Central','Parliament','Richmond','Kooyong','Tooronga'],
-    sandringham: ['Southern Cross','Richmond','South Yarra','Prahran','Windsor']
-}
-
 function trainRide(origin,destination) {
+    var trainLines = {
+        alamein: ['Flinders Street','Richmond','East Richmond','Burnley','Hawthorn','Glenferrie'],
+        glenWaverly: ['Flagstaff','Melbourne Central','Parliament','Richmond','Kooyong','Tooronga'],
+        sandringham: ['Southern Cross','Richmond','South Yarra','Prahran','Windsor']
+    }
     var originToLower = origin.toLowerCase();
     var originSplit = originToLower.split(" ");
     var originCapitalized = [];
@@ -12,6 +11,7 @@ function trainRide(origin,destination) {
     for (let i = 0; i < originSplit.length; i++) {
         originCapitalized.push(originSplit[i][0].toUpperCase() + originSplit[i].slice(1));
     }
+    
     var getOn = originCapitalized.join(" ");
     var destinationToLower = destination.toLowerCase();
     var destinationSplit = destinationToLower.split(" ");
@@ -24,8 +24,8 @@ function trainRide(origin,destination) {
     var legOne = [];
     var legTwo = [];
     var unbrokenRoute = [];
-    var startingLine = "";
-    var finishLine = "";
+    var startingLine = [];
+    var finishLine = [];
 
     if (trainLines.alamein.includes(getOn)) {
         startingLine = trainLines.alamein;
@@ -48,22 +48,40 @@ function trainRide(origin,destination) {
     }
    
     if (startingLine.includes(getOff)) {
-        for (i = startingLine.indexOf(getOn); i <= startingLine.indexOf(getOff); i++ ) {
-            unbrokenRoute.push(startingLine[i]);
+        if(startingLine.indexOf(getOn) < startingLine.indexOf(getOff)) {
+            for (i = startingLine.indexOf(getOn); i <= startingLine.indexOf(getOff); i++ ) {
+                unbrokenRoute.push(startingLine[i]);
+            }
+        } else {
+            for (i = startingLine.indexOf(getOn); i >= startingLine.indexOf(getOff); i-- ) {
+                unbrokenRoute.push(startingLine[i]);
+            }
         }
     } else {
-        for (i = startingLine.indexOf(getOn); i <= startingLine.indexOf("Richmond"); i++ ) {
-            legOne.push(startingLine[i]);
+        if (startingLine.indexOf(getOn) < startingLine.indexOf('Richmond')) { 
+            for (i = startingLine.indexOf(getOn); i <= startingLine.indexOf('Richmond'); i++ ) {
+                legOne.push(startingLine[i]);
+            }
+        } else {
+            for (i = startingLine.indexOf(getOn); i >= startingLine.indexOf('Richmond'); i-- ) {
+                legOne.push(startingLine[i]);
         }
-        for (i = finishLine.indexOf("Richmond"); i <= finishLine.indexOf(getOff) + 1; i++ ) {
-            legTwo.push(finishLine[i]);
+    }
+        if (finishLine.indexOf('Richmond') < finishLine.indexOf(getOff)) {
+            for (i = finishLine.indexOf('Richmond'); i <= finishLine.indexOf(getOff) + 1; i++ ) {
+                legTwo.push(finishLine[i]);
+            }
+        } else {
+            for (i = finishLine.indexOf('Richmond'); i >= finishLine.indexOf(getOff) - 1; i-- ) {
+                legTwo.push(finishLine[i]);
+            }
         }
     }
 
     if (legTwo[-1] == undefined) {
         legTwo.pop();
     }
-
+    
     if (startingLine.includes(getOff)) {
         var numberOfStops = (unbrokenRoute.length - 1);
         var mappedRoute = unbrokenRoute.join(' ---> ');
