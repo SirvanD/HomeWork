@@ -37,10 +37,12 @@ res = {
 }
 
 # get the image urls
-res[:data][:cards].each do |_x|
-  # if the element has a hash node (not all do)
-  puts(_x[:images][:svg]) if _x[:images].instance_of?(Hash)
-end
+# res[:data][:cards].each do |_x|
+#   # if the element has a hash node (not all do)
+#   puts(_x[:images][:svg]) if _x[:images].instance_of?(Hash)
+# end
+
+puts(res[:data][:cards][2][:images][:svg])
 
 # KING of HEARTS
 # 8 of CLUBS
