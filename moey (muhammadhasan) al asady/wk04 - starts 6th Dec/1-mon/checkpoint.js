@@ -8,10 +8,20 @@
 // say for example the word "Spaghettification". your function should tell me there are 7 vowels
 
 // ```javascript
+var vowels = ["a", "e", "i", "o", "u"];
 
 function vowelCount(str) {
-    return ( str = str.match(/[aeiou]/gi)) ? str.length : 0;
+    
+    var counter = 0;
+    for(let i = 0; i < str.length; i++){
+        if (vowels.indexOf(str[i]) !== -1 ){
+            counter++
+        }
+    }
+    return counter
+
    }
+
 vowelCount('Spaghettification') // => 7
 vowelCount('HELLO') // => 2
 vowelCount('cake pudding') // => 4
@@ -66,5 +76,8 @@ var users = {
 }
 // ```
 // 1. How would you access theresa's party (i.e. the string "Conservative")?  
+users["theresa"]["party"]
 // 2. How would you access Lord Buckethead's party (i.e. the string "Gremloids")?  
+users["Lord_Buckethead"]["party"]
 // 3. How would you change mr fishfinger's party to "birds eye"?  
+users["mr_fishfinger"]["party"] = "birdseye"

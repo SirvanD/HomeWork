@@ -29,7 +29,7 @@ days_of_the_week = [['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], ['
 days_of_the_week.shift()
 
 # 5. Sort the remaining days alphabeticallyc
-planeteers.sort
+days_of_the_week[0].sort
 
 # MORE ARRAYS
 planeteers = ["Earth", "Wind", "Captain Planet", "Fire", "Water"]
@@ -42,6 +42,7 @@ planeteers[1]
 planeteers.push('Heart')
 
 # Combine planeteers with rangers = ["Red", "Blue", "Pink", "Yellow", "Black"] and save the result in a variable called heroes.
+rangers = ["Red", "Blue", "Pink", "Yellow", "Black"]
 heroes = planeteers.concat(rangers)
 
 # Alphabetize the contents of heroes using a method. The Ruby documentation might help.
@@ -57,20 +58,21 @@ heroes.sample
 
 # display each hero in a new line on the terminal using the .each method
 
-heroes.each do |n|
-    text = "#{n}"
-    puts text
+heroes.each do |hero|
+    puts hero
   end 
 
 # display each hero in a new line on the terminal using the .each method only if the hero starts with the letter 'W'
 
 # and this 
-heroes.each do |n|
-    text = "#{n}#start_with?("W")"
-    puts text
-  end 
+heroes.each do |hero|
 
-  #Didn't work^^
+  if hero[0] === "W" 
+    puts hero
+  end
+  
+end 
+
 
 
 
