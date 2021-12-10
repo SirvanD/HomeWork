@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+
 <body>
 
 <h1>Select your movie</h1>
 
-<form action="/movie_details">
-
-<input type="text" name="movie" placeholder="Enter Movie">
-
-<button>Search</button>
-
-
+<form action="/movie_details"> <!-- action will take us to the selected page once button is pressed-->
+    <input type="text" name="movie" placeholder="Enter Movie">   <!-- name is the PARAMETERS we can throw into our URL(check first page movie = params["movie"]-->
+    <button>Search</button> <!-- only one button per form -->
 </form>
 
     
-</body>
-</html>
