@@ -1,0 +1,73 @@
+h1,h2 {
+    font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+}
+body {
+    margin-top:0;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("../images/film-and-cinema-vectors.jpg");
+    background-color: cornsilk;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+main {
+    text-align: center;
+}
+nav {
+    display: inline-block;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+a:link {
+    color: orangered
+  }
+  
+  a:visited {
+    color: green;
+  }
+
+  a:hover {
+    color: orange;
+  }
+  
+  a:active {
+    color: orangered
+  }
+
+footer {
+    text-align: center;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.1rem 1.5rem;
+    background-color: rgb(255, 233, 144);
+    font-size: 1.5rem;
+    color: rgb(250, 197, 63);
+    border: 1 rem;
+    border-color:rgb(250, 197, 63);
+}
+
+input[type="text"]
+{
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-size: 10rem;
+    font-weight: bold;
+    color:rgb(255, 212, 105)
+}
+
+p {
+    font-size: 2rem;
+    color:orange;
+}
