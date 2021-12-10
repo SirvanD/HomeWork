@@ -4,13 +4,20 @@ var transport = [
     sandringhan= ["Southern Cross", "Richmond", "South Yarra", "Prahran", "Windsor"]
 ]
 
+let newAlamein = transport[0]
 
-var origin = "Southern Cross"
-var destination = "Windsor"
+
+
+var origin = "Flinders Street"
+console.log("origin", origin)
+var destination = "Richmond"
+console.log("destination", destination)
+
+
 
 for(var i=0; i < transport.length; i++) {
     if(transport[i].includes(origin)) {
-        console.log("transport # ", transport[i].indexOf(origin))
+        console.log("transport location number " + i + " and array number " + transport[i].indexOf(origin))
         var inputOrigin = transport[i].indexOf(origin)
     }
 }
@@ -33,6 +40,16 @@ for(var i=0; i < transport.length; i++) {
         }
     }
 }
+
+function 
+i=alamein.length - 1
+while(newAlamein[i] != destination) {
+    newAlamein.pop()
+    i--
+}
+
+
+
 console.log("input origin ", inputOrigin)
 console.log("input destination ", inputDestination)
 var count = inputDestination - inputOrigin 
