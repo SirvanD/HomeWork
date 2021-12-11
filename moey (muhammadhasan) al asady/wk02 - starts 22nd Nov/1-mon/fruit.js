@@ -1,13 +1,37 @@
 var fruits = ['banana', 'apple', 'apricot']
 
-var random = fruits[Math.floor(Math.random()*fruits.length)];
 // fruits[Math.floor(Math.random()*fruits.length)];
 var i = 0;
+var random = fruits[Math.floor(Math.random()*fruits.length)];
+
+console.log(`the fruit has ${random.length} letters starting with ${random.charAt(0)} and ends with ${random.charAt(random.length-1)}`)
 var num1 = (prompt('enter a fruit'));
 
-while (i < random){
-if (random == fruits[0]) { 
-    (alert('the fruit has 5 letters starting with a and ends with e'));
-    (prompt('guess the fruit'))
+while (num1 !== random) {
+//    (prompt('enter a fruit'));
+
+    if (random == fruits[0]) { 
+        // console.log(`the fruit has ${random.length} letters starting with ${random.charAt(0)} and ends with ${random.charAt(random.length-1)}`);
+         num1 = (prompt('guess the fruit'))
+        i++
+    } else if (random == fruits[1]) {
+        // console.log(`the fruit has ${random.length} letters starting with ${random.charAt(0)} and ends with ${random.charAt(random.length-1)}`);
+        // num1 = (prompt('guess the fruit'))
+        i++
+    } else if (random == fruits[2]) {
+        // console.log(`the fruit has ${random.length} letters starting with ${random.charAt(0)} and ends with ${random.charAt(random.length-1)}`); 
+        // num1 = (prompt('guess the fruit'))
+        i++
+    } 
+
 }
-i++}
+
+if (random == num1) {
+    console.log(`Congrats, you got the answer in ${i} attempts`) 
+
+}
+// }
+
+
+// generate random fruit 
+
