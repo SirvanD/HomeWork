@@ -1,4 +1,4 @@
-given the following hash:
+# given the following hash:
 
 # ruby
 res = {
@@ -38,16 +38,32 @@ res = {
     remaining: 50
   }
 }
-```
 
 
-1. write code to print in the terminal the svg image url for the 4 of spades
 
-2. iterate over all the cards to print in the terminal the following:
+# 1. write code to print in the terminal the svg image url for the 4 of spades
 
-```
+res[:data][:cards][2][:images][:svg]
+
+# 2. iterate over all the cards to print in the terminal the following:
+
+
 # KING of HEARTS
+# puts "res[:data][:cards][0][:value] of res[:data][:cards][0][:suit]"
 # 8 of CLUBS
 # 4 of SPADES
 # QUEEN of HEARTS
-```
+
+
+# res[:data][:cards][0][:value].each do |value|
+#   puts value
+# end 
+# loop do |n|
+
+res[:data][:cards].each do |value|
+  puts("#{value[:value]} of #{value[:suit]}")
+end
+
+
+
+  # puts "#{res[:data][:cards][0][:value]} of res[:data][:cards][0][:suit]"
