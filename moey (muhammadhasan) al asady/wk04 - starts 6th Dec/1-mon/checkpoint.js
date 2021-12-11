@@ -8,23 +8,25 @@
 // say for example the word "Spaghettification". your function should tell me there are 7 vowels
 
 // ```javascript
-var vowels = ["a", "e", "i", "o", "u"];
+// var vowels = ["a", "e", "i", "o", "u"];
 
-function vowelCount(str) {
+// function vowelCount(str) {
     
-    var counter = 0;
-    for(let i = 0; i < str.length; i++){
-        if (vowels.indexOf(str[i]) !== -1 ){
-            counter++
-        }
-    }
-    return counter
+//     var counter = 0;
+//     for(let i = 0; i < str.length; i++){
+//         if (vowels.includes(str[i]) == true){ 
+//             counter++
+//         }
+//     }
+//     return counter
 
-   }
+//    }
 
-vowelCount('Spaghettification') // => 7
-vowelCount('HELLO') // => 2
-vowelCount('cake pudding') // => 4
+   
+
+// vowelCount('Spaghettification') // => 7
+// vowelCount('HELLO') // => 2
+// vowelCount('cake pudding') // => 4
 // ```
 
 // # 2. Grandma returns - 6 points
@@ -41,43 +43,62 @@ vowelCount('cake pudding') // => 4
 
 // 2. What if grandma doesn't want you to leave? When you shout BYE, she could pretend not to hear you. 
 // Change your previous program so that you have to shout BYE three times in a row. Make sure to test your program: if you shout BYE three times, but not in a row, you should still be talking to grandma.
+// var counter = 0;
 
-while (input1 != 'BYE' ){
-    var input1 = prompt('Enter anything');
-    // var input2 = prompt('Enter anything');
-    // var input3 = prompt('Enter anything');
+// while (counter !== 3){
+//   var input1 = prompt('Enter anything');
+//     if (input1 === input1.toUpperCase()) {
+//         console.log('NO, NOT SINCE 1938!')
+//        counter = 0;
+//       } else if (input1 === 'bye'){
+//       console.log('')
+//       counter++
+//     }
+//     else  {
+//         console.log('HUH?! SPEAK UP, SONNY!')
+//         //  counter = 0;
+//       } 
 
-    if (input1 == input1.toUpperCase() && input1 != 'BYE') {
-        console.log('NO, NOT SINCE 1938!')
-    }   else {
+ var counter = 0;
+
+while (counter !== 3){
+   var input1 = prompt('Enter anything');
+  if (input1 === 'BYE'){
+      console.log('')
+      counter++
+    } else if (input1 === input1.toUpperCase()) {
+        console.log(`NO, NOT SINCE ${Math.floor(Math.random() * (1950 - 1930 + 1) + 1930)}!`)
+       counter = 0;
+    } else  {
         console.log('HUH?! SPEAK UP, SONNY!')
-    } 
+         counter = 0;
+        }  
+      }
 
-}
 
 // & input2!= 'BYE' && input3 != 'BYE')
 
 // # 3. Lord buckethead - 2 points
 
 // ```javascript
-var users = {
-  theresa: {
-    party: "Conserative",
-    favoriteNumbers: [12, 42, 75]
-  },
-  Lord_Buckethead: {
-    party: "Gremloids",
-    favoriteNumbers: [8, 12, 24, 9]
-  },
-  mr_fishfinger: {
-    party: "Independent",
-    favoriteNumbers: [12, 14, 85, 99, 1001]
-  }
-}
-// ```
-// 1. How would you access theresa's party (i.e. the string "Conservative")?  
-users["theresa"]["party"]
-// 2. How would you access Lord Buckethead's party (i.e. the string "Gremloids")?  
-users["Lord_Buckethead"]["party"]
-// 3. How would you change mr fishfinger's party to "birds eye"?  
-users["mr_fishfinger"]["party"] = "birdseye"
+// var users = {
+//   theresa: {
+//     party: "Conserative",
+//     favoriteNumbers: [12, 42, 75]
+//   },
+//   Lord_Buckethead: {
+//     party: "Gremloids",
+//     favoriteNumbers: [8, 12, 24, 9]
+//   },
+//   mr_fishfinger: {
+//     party: "Independent",
+//     favoriteNumbers: [12, 14, 85, 99, 1001]
+//   }
+// }
+// // ```
+// // 1. How would you access theresa's party (i.e. the string "Conservative")?  
+// users["theresa"]["party"]
+// // 2. How would you access Lord Buckethead's party (i.e. the string "Gremloids")?  
+// users["Lord_Buckethead"]["party"]
+// // 3. How would you change mr fishfinger's party to "birds eye"?  
+// users["mr_fishfinger"]["party"] = "birdseye"
