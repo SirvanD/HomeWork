@@ -1,43 +1,3 @@
-// Original data structure
-
-// let lines = [
-//     flindersStreetLine = {
-//         stop1:  "Flinders Street",
-//         stop2: {
-//             // station: "Richmond",
-//             // flagstaffLineStations: {
-//             //     stop5: "Kooyong",
-//             //     stop6: "Tooronga"
-//             // },
-//             // southernCrossLineStations: {
-//             //     stop3: "South Yarra",
-//             //     stop4: "Prahran",
-//             //     stop5: "Windsor"
-//             // }
-//         },
-//         stop3: "East Richmond",
-//         stop4: "Burnley",
-//         stop5: "Hawthorn",
-//         stop6: "Glenferrie"
-//     },
-//     flagstaffLine = {
-//         stop1: "Flagstaff",
-//         stop2: "Melbourne Central",
-//         stop3: "Parliament",
-//         stop4: flindersStreetLine.stop2.station,
-//         stop5: flindersStreetLine.stop2.flagstaffLineStations.stop5,
-//         stop6: flindersStreetLine.stop2.flagstaffLineStations.stop6
-//     },
-//     southernCrossLine = {
-//         stop1: "Southern Cross",
-//         stop2: flindersStreetLine.stop2.station,
-//         stop3: flindersStreetLine.stop2.southernCrossLineStations.stop3,
-//         stop4: flindersStreetLine.stop2.southernCrossLineStations.stop4,
-//         stop5: flindersStreetLine.stop2.southernCrossLineStations.stop5
-//     }
-// ]
-
-// New data structure
 let intersection = {
     station: "Richmond",
     flindersStreetLineStations: {
@@ -83,116 +43,102 @@ let lines = [
     }
 ]
 
-
 function planJourney(origin, destination) {
 
-    // Will probably need a counter for the number of stops
-    // Will need to loop through multiple objects in an array and search through each of them to find a specific value - DONE
-    // will need to somehow get hold of the object the item came from - DONE
-    // will need to iterate through that object and print the values of the keys - DONE
-
-    // then will need to work out how to switch lines 
-
-    // ultimately will need to reverse to move backwards
+    let originStationLine = {};
+    let destinationStationLine = {};
 
     lines.forEach(function(line) {
-        let startingPointLine = {};
-        let startingPointStation;
-        let endPointLine = {};
-        let endPointStation;
-
-        let stopCounter = -1;
-
-        // could maybe make object.entries below an object.values instead
         for (const [key, value] of Object.entries(line)) {
             if (value === origin) {
-                // Could also store this in an object, e.g. startingPoint.line and startingPoint.key
-                startingPointLine = line;
-                startingPointStation = key; 
+                originStationLine = line;
             } else if (value === destination) {
-                endPointLine = line;
-                endPointStation = key;
+                destinationStationLine = line;
             }
         }
-
-        let startingPointLineStops = Object.values(startingPointLine);
-
-        // This is to check if the destination is on the same line as the origin. Ideally would be its own function
-        if (startingPointLineStops.includes(destination)) {
-            let originIndex = startingPointLineStops.indexOf(origin);
-            let destinationIndex = startingPointLineStops.indexOf(destination);
-
-            let journey = [];
-            if (originIndex < destinationIndex) {
-                for (let i = originIndex; i <= destinationIndex; i++) {
-                    journey.push(startingPointLineStops[i]);
-                    stopCounter ++;
-                }
-            } else if (originIndex > destinationIndex) {
-                for (let i = originIndex; i >= destinationIndex; i--) {
-                    journey.push(startingPointLineStops[i]);
-                    stopCounter ++;
-                }
-            } else {
-                console.log("no journey needed - origin and destination are the same");
-            }
-            // DT says do this last, so would mean ensuring intersection function produces an array of stops as well
-            printJourney(journey, stopCounter);
-            // console.log(journey.join(" ----> "));
-            // console.log("Total number of stops is " + stopCounter);
-            
-        } else {
-           // handleintersection function 
-            // should probably look through starting object, stop at richmond, then look through endpoint object, put all into single array
-            let originIndex = startingPointLineStops.indexOf(origin);
-            let startLineIntersectionIndex = startingPointLineStops.indexOf("Richmond");
-
-            let endPointLineStops = Object.values(endPointLine);
-            console.log(endPointLine)
-            let endLineIntersectionIndex = endPointLineStops.indexOf("Richmond");
-            let destinationIndex = endPointLineStops.indexOf(destination);
-
-            let journey = [];
-            debugger
-            for (let i = originIndex; i < startLineIntersectionIndex; i++) {
-                journey.push(startingPointLineStops[i]);
-                stopCounter++;
-            }
-                        
-            for (let i = endLineIntersectionIndex; i <= destinationIndex; i++ ) {
-                journey.push(endPointLineStops[i]);
-                stopCounter++
-            }
-            console.log(journey);
-
-            printJourney(journey, stopCounter);
-
-
-        }
-        
-        
-
-       
-
-        // }
-        
     });
-    
+
+    let originStationLineStops = Object.values(originStationLine);
+
+    if (originStationLineStops.includes(destination)) {
+        handleSingleLine(origin, destination, originStationLineStops);
+    } else {
+        handleMultiLines(origin, destination, originStationLineStops, destinationStationLine);
+    }
 } 
 
-function handleIntersection() {
+function handleSingleLine(origin, destination, originStationLineStops) {
 
+    let originIndex = originStationLineStops.indexOf(origin);
+    let destinationIndex = originStationLineStops.indexOf(destination);
+    let journey = [];
+    let stopCounter = -1;
+    
+    if (originIndex < destinationIndex) {
+        for (let i = originIndex; i <= destinationIndex; i++) {
+            journey.push(originStationLineStops[i]);
+            stopCounter ++;
+        }
+    } else if (originIndex > destinationIndex) {
+        for (let i = originIndex; i >= destinationIndex; i--) {
+            journey.push(originStationLineStops[i]);
+            stopCounter ++;
+        }
+    } else {
+        console.log("No journey needed - origin and destination are the same.");
+    }
+
+    printJourney(origin, destination, journey, stopCounter);
 }
 
-function printJourney(journeyArray, numOfStops) {
+function handleMultiLines(origin, destination, originStationLineStops, destinationStationLine) {
+
+    let originIndex = originStationLineStops.indexOf(origin);
+    let originLineIntersectionIndex = originStationLineStops.indexOf("Richmond");
+
+    let destinationStationLineStops = Object.values(destinationStationLine);
+    let destinationLineIntersectionIndex = destinationStationLineStops.indexOf("Richmond");
+    let destinationIndex = destinationStationLineStops.indexOf(destination);
+
+    let journey = []; 
+    let stopCounter = -1;
+
+    if (originIndex < originLineIntersectionIndex) {
+        for (let i = originIndex; i < originLineIntersectionIndex; i++) {
+            journey.push(originStationLineStops[i]);
+            stopCounter++;
+        } 
+    } else {
+        for (let i = originIndex; i > originLineIntersectionIndex; i--) {
+            journey.push(originStationLineStops[i]);
+            stopCounter++;
+        }
+    }        
+    if (destinationIndex > destinationLineIntersectionIndex) {
+        for (let i = destinationLineIntersectionIndex; i <= destinationIndex; i++) {
+            journey.push(destinationStationLineStops[i]);
+            stopCounter++;
+        }
+    } else {
+        for (let i = destinationLineIntersectionIndex; i >= destinationIndex; i--) {
+            journey.push(destinationStationLineStops[i]);
+            stopCounter++;
+        }
+    }
+    printJourney(origin, destination, journey, stopCounter); 
+}
+
+function printJourney(origin, destination, journeyArray, numOfStops) {
+    console.log(`Origin: ${ origin }`);
+    console.log(`Destination: ${ destination }`);
     console.log(journeyArray.join(" ----> "));
-    console.log("Total number of stops is " + numOfStops);
+    if (numOfStops >= 0) {
+        console.log(numOfStops + " stops total");
+    }
 }
 
-
-
-// planJourney("Flinders Street", "Burnley")
-
-
+let origin = prompt("Where are you travelling from?");
+let destination = prompt("Where would you like to go?");
+planJourney(origin, destination);
 
 
