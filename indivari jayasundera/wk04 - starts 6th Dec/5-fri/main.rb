@@ -14,10 +14,12 @@ get '/movie_details' do
     
     title = res["title"]
     year = res ["year"]
+    poster = res ["poster"]
    
     erb(:movie_details, locals: {
         title:title,
-        year:year
+        year:year,
+        poster:poster
     })
 end
 

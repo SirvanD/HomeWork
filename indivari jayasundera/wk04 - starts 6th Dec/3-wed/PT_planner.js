@@ -39,13 +39,17 @@ var route = [];
 console.log("Route Planner");
 var origin = process.argv[2];
 var destination = process.argv[3];
+var indexOrigin;
+var indexDestination;
+var j;
+var indexRichmondAlamein, indexRichmondGlen, indexRichmondSandringham;
 
 if (transport.alameinLine.includes(origin)) {
-  var indexOrigin = transport.alameinLine.indexOf(origin);
+  indexOrigin = transport.alameinLine.indexOf(origin);
   if (transport.alameinLine.includes(destination)) {
-    var indexDestination = transport.alameinLine.indexOf(destination);
+    indexDestination = transport.alameinLine.indexOf(destination);
 
-    var j = 0;
+    j = 0;
     if (indexOrigin <= indexDestination) {
       for (let i = indexOrigin; i <= indexDestination; i++) {
         route[j] = transport.alameinLine[i];
@@ -61,9 +65,9 @@ if (transport.alameinLine.includes(origin)) {
   } else if (transport.glenwaverleyLine.includes(destination)) {
     indexDestination = transport.glenwaverleyLine.indexOf(destination);
 
-    var indexRichmondAlamein = transport.alameinLine.indexOf("Richmond");
+    indexRichmondAlamein = transport.alameinLine.indexOf("Richmond");
 
-    var indexRichmondGlen = transport.glenwaverleyLine.indexOf("Richmond");
+    indexRichmondGlen = transport.glenwaverleyLine.indexOf("Richmond");
 
     for (let i = indexOrigin; i <= indexRichmondAlamein; i++) {
       route[i] = transport.alameinLine[i]; // adding stations upto Richmond in AlameinLine
@@ -72,40 +76,55 @@ if (transport.alameinLine.includes(origin)) {
       route.push(transport.glenwaverleyLine[i]); //adding remaining stations from the Glen waverley line
     }
     console.log(route.join("----->"));
+  } //Sandringham line includes destination
+  else if (transport.sandringhamLine.includes(destination)) {
+    indexRichmondAlamein = transport.alameinLine.indexOf("Richmond");
+    indexRichmondSandringham = transport.sandringhamLine.indexOf("Richmond");
+    indexDestination = transport.sandringhamLine.indexOf(destination);
+
+    for (let i = indexOrigin; i <= indexRichmondAlamein; i++) {
+      route[i] = transport.alameinLine[i];
+    }
+    for (let i = indexRichmondSandringham + 1; i <= indexDestination; i++) {
+      route.push(transport.sandringhamLine[i]);
+    }
+    console.log(route.join("----->"));
+  }
+} else if (transport.glenwaverleyLine.includes(origin)) {
+  indexOrigin = transport.glenwaverleyLine.indexOf(origin);
+
+  if (transport.glenwaverleyLine.includes(destination)) {
+    indexDestination = transport.glenwaverleyLine.indexOf(destination);
+    j = 0;
+    if (indexOrigin <= indexDestination) {
+      for (let i = indexOrigin; i <= indexDestination; i++) {
+        route[j] = transport.glenwaverleyLine[i];
+        j++;
+      }
+    } else {
+      for (let i = indexOrigin; i >= indexDestination; i--) {
+        route[j] = transport.glenwaverleyLine[i];
+        j++;
+      }
+    }
+    console.log(route.join("----->"));
+  } else if (transport.alameinLine.includes(destination)) {
+    indexRichmondGlen = transport.glenwaverleyLine.indexOf("Richmond");
+    indexRichmondAlamein = transport.alameinLine.indexOf("Richmond");
+    indexDestination = transport.alameinLine.indexOf(destination);
+    j = 0;
+
+    console.log(indexRichmondGlen);
+    console.log(indexRichmondAlamein);
+    console.log(indexDestination);
+
+    for (let i = indexOrigin; i <= indexRichmondGlen; i++) {
+      route[j] = transport.glenwaverleyLine[i];
+      j++;
+    }
+    for (let i = indexRichmondAlamein + 1; i <= indexDestination; i++) {
+      route.push(transport.alameinLine[i]);
+    }
+    console.log(route.join("----->"));
   }
 }
-
-// function printOriginToRichmond(indexOrigin,indexRich){
-//   for(let i=indexOrigin; i<= indexRich){
-//     console.log()
-//   }
-// }
-
-// var line;
-// console.log(destination);
-
-// if (transport.alameinLine.includes(destination)) {
-//   line = 1;
-
-//   console.log("Destination index: " + indexDestination);
-// } else if (transport.glenwaverleyLine.includes(destination)) {
-//   line = 2;
-// } else if (transport.sandringhamLine.includes(destination)) {
-//   line = 3;
-// } //destination not found in a
-// else {
-//   var indexRichmond = transport.alameinLine.indexOf("Richmond");
-// }
-
-// // backward trip - same line
-// if (indexOrigin < indexDestination) {
-//   for (let i = indexOrigin; i <= indexDestination; i++) {
-//     console.log(transport.alameinLine[i]);
-//     console.log("--------->");
-//   }
-// } else {
-//   for (let i = indexOrigin; i >= indexDestination; i--) {
-//     console.log(transport.alameinLine[i]);
-//     console.log("--------->");
-//   }
-// }
