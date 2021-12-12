@@ -13,18 +13,18 @@ function vowelCount(str) {
 //Question 2 (Grandma)
 var speak = prompt("Say something to Grandma");
 var byeCounter = 0;
-while (byeCounter !== 3) {
+while (byeCounter !== 2) {
   if (speak === 'BYE') {
     speak = prompt('What?')
     byeCounter = byeCounter + 1;
   } else if (speak === speak.toUpperCase()) {
       speak = prompt("No, not since " + Math.floor(Math.random() * (1950 - 1930 + 1) + 1930))
-  } else if (byeCounter === 3) {
-      alert('You have left Grandma')
   } else {
         speak = prompt("HUH?! SPEAK UP, SONNY");
     }
 } 
+alert('You have left Grandma')
+
 
 
 // Question 3 

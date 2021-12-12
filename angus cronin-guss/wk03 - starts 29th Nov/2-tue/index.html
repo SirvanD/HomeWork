@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+        #box1 {
+            background-color: #fff;
+        }
+        #box2 {
+            background-color: #fff;
+        }
+        #box3 {
+            background-color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box1" id="allBoxes"></div>
+    <div class="box2" id="allBoxes"></div>
+    <div class="box3" id="allBoxes"></div>
+    <script>
+
+        var box1 = document.querySelector(".box1")
+        var box2 = document.querySelector(".box2")
+        var box3 = document.querySelector(".box3")
+        var countClicks = 0
+        
+        box1.addEventListener('click', handleBox1)
+        box2.addEventListener('click', handleBox2)
+        box3.addEventListener('click', handleBox3)
+       
+        function handleGreen() {
+            if (countClicks > 2) {
+                box1.style.backgroundColor = 'green'
+                box2.style.backgroundColor = 'green'
+                box3.style.backgroundColor = 'green'
+            }
+        }
+        function handleBox1() {
+            box1.style.backgroundColor = 'red'
+            countClicks = countClicks + 1
+            console.log(countClicks);
+            handleGreen()
+        }
+        function handleBox2() {
+            box2.style.backgroundColor = 'red'
+            countClicks = countClicks + 1
+            console.log(countClicks);
+            handleGreen()
+        }
+        function handleBox3() {
+            box3.style.backgroundColor = 'red'
+            countClicks = countClicks + 1
+            console.log(countClicks);
+            handleGreen()
+        }
+        
+    </script>
+</body>
+</html>
