@@ -8,7 +8,8 @@ var userinput2 = process.argv[3]
 
    
         for(let i= 0; i < alameinLine.length; i++){
-            console.log(` ----> ${alameinLine[i]} ----> `)
+
+            console.log(`${userinput1} ----> ${alameinLine[i]} ----> ${userinput2}`)
         }
         
     
