@@ -1,0 +1,38 @@
+.body{
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    /* align-items: center; */
+    width: auto;
+    gap: 5px;
+}
+
+
+
+#submit_input_box{
+    font-size: 20px;
+    padding: 10px 20px;
+}
+#clear_input_box{
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h4 {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.route_show {
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    margin: auto;
+}
