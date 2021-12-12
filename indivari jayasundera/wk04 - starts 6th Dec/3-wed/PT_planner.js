@@ -18,6 +18,7 @@ const transport = {
   ],
   sandringhamLine: [
     "Southern Cross",
+    "Test2",
     "Richmond",
     "South Yarra",
     "Prahran",
@@ -44,24 +45,28 @@ var indexDestination;
 var j;
 var indexRichmondAlamein, indexRichmondGlen, indexRichmondSandringham;
 
+function printSameLineRoute(indexOrigin, indexDestination, line) {
+  j = 0;
+  if (indexOrigin <= indexDestination) {
+    for (let i = indexOrigin; i <= indexDestination; i++) {
+      route[j] = line[i];
+      j++;
+    }
+  } else {
+    for (let i = indexOrigin; i >= indexDestination; i--) {
+      route[j] = transport.line[i];
+      j++;
+    }
+  }
+  console.log(route.join("----->"));
+}
+
 if (transport.alameinLine.includes(origin)) {
   indexOrigin = transport.alameinLine.indexOf(origin);
   if (transport.alameinLine.includes(destination)) {
     indexDestination = transport.alameinLine.indexOf(destination);
 
-    j = 0;
-    if (indexOrigin <= indexDestination) {
-      for (let i = indexOrigin; i <= indexDestination; i++) {
-        route[j] = transport.alameinLine[i];
-        j++;
-      }
-    } else {
-      for (let i = indexOrigin; i >= indexDestination; i--) {
-        route[j] = transport.alameinLine[i];
-        j++;
-      }
-    }
-    console.log(route.join("----->"));
+    printSameLineRoute(indexOrigin, indexDestination, transport.alameinLine);
   } else if (transport.glenwaverleyLine.includes(destination)) {
     indexDestination = transport.glenwaverleyLine.indexOf(destination);
 
@@ -96,6 +101,11 @@ if (transport.alameinLine.includes(origin)) {
 
   if (transport.glenwaverleyLine.includes(destination)) {
     indexDestination = transport.glenwaverleyLine.indexOf(destination);
+    printSameLineRoute(
+      indexOrigin,
+      indexDestination,
+      transport.glenwaverleyLine
+    );
     j = 0;
     if (indexOrigin <= indexDestination) {
       for (let i = indexOrigin; i <= indexDestination; i++) {
@@ -155,5 +165,38 @@ if (transport.alameinLine.includes(origin)) {
       }
     }
     console.log(route.join("----->"));
-  } else if(transport)
+  } else if (transport.glenwaverleyLine.includes(destination)) {
+    indexDestination = transport.glenwaverleyLine.indexOf(destination);
+    indexRichmondSandringham = transport.sandringhamLine.indexOf("Richmond");
+
+    indexRichmondGlen = transport.glenwaverleyLine.indexOf("Richmond");
+
+    j = 0;
+
+    for (let i = indexOrigin; i <= indexRichmondSandringham; i++) {
+      route[j] = transport.sandringhamLine[i];
+      j++;
+    }
+    for (let i = indexRichmondGlen + 1; i <= indexDestination; i++) {
+      route.push(transport.glenwaverleyLine[i]);
+    }
+    console.log(route.join("----->"));
+  } else if (transport.alameinLine.includes(destination)) {
+    indexDestination = transport.alameinLine.indexOf(destination);
+    indexRichmondSandringham = transport.sandringhamLine.indexOf("Richmond");
+
+    indexRichmondAlamein = transport.alameinLine.indexOf("Richmond");
+
+    j = 0;
+
+    for (let i = indexOrigin; i <= indexRichmondSandringham; i++) {
+      route[j] = transport.sandringhamLine[i];
+      j++;
+    }
+    for (let i = indexRichmondAlamein + 1; i <= indexDestination; i++) {
+      route.push(transport.alameinLine[i]);
+    }
+
+    console.log(route.join("----->"));
+  }
 }
