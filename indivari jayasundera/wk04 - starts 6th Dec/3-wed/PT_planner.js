@@ -92,6 +92,7 @@ if (transport.alameinLine.includes(origin)) {
   }
 } else if (transport.glenwaverleyLine.includes(origin)) {
   indexOrigin = transport.glenwaverleyLine.indexOf(origin);
+  indexRichmondGlen = transport.glenwaverleyLine.indexOf("Richmond");
 
   if (transport.glenwaverleyLine.includes(destination)) {
     indexDestination = transport.glenwaverleyLine.indexOf(destination);
@@ -109,14 +110,9 @@ if (transport.alameinLine.includes(origin)) {
     }
     console.log(route.join("----->"));
   } else if (transport.alameinLine.includes(destination)) {
-    indexRichmondGlen = transport.glenwaverleyLine.indexOf("Richmond");
     indexRichmondAlamein = transport.alameinLine.indexOf("Richmond");
     indexDestination = transport.alameinLine.indexOf(destination);
     j = 0;
-
-    console.log(indexRichmondGlen);
-    console.log(indexRichmondAlamein);
-    console.log(indexDestination);
 
     for (let i = indexOrigin; i <= indexRichmondGlen; i++) {
       route[j] = transport.glenwaverleyLine[i];
@@ -126,5 +122,38 @@ if (transport.alameinLine.includes(origin)) {
       route.push(transport.alameinLine[i]);
     }
     console.log(route.join("----->"));
+  } else if (transport.sandringhamLine.includes(destination)) {
+    indexRichmondSandringham = transport.sandringhamLine.indexOf("Richmond");
+    indexDestination = transport.sandringhamLine.indexOf(destination);
+    j = 0;
+
+    for (let i = indexOrigin; i <= indexRichmondGlen; i++) {
+      route[j] = transport.glenwaverleyLine[i];
+      j++;
+    }
+    for (let i = indexRichmondSandringham + 1; i <= indexDestination; i++) {
+      route.push(transport.sandringhamLine[i]);
+    }
+    console.log(route.join("----->"));
   }
+} else if (transport.sandringhamLine.includes(origin)) {
+  indexOrigin = transport.sandringhamLine.indexOf(origin);
+  indexRichmondSandringham = transport.sandringhamLine.indexOf("Richmond");
+
+  if (transport.sandringhamLine.includes(destination)) {
+    indexDestination = transport.glenwaverleyLine.indexOf(destination);
+    j = 0;
+    if (indexOrigin <= indexDestination) {
+      for (let i = indexOrigin; i <= indexDestination; i++) {
+        route[j] = transport.sandringhamLine[i];
+        j++;
+      }
+    } else {
+      for (let i = indexOrigin; i >= indexDestination; i--) {
+        route[j] = transport.sandringhamLine[i];
+        j++;
+      }
+    }
+    console.log(route.join("----->"));
+  } else if(transport)
 }
