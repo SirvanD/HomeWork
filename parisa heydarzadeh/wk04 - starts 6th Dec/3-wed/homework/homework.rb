@@ -20,9 +20,8 @@
 # note: for this exercise you do not need to save the list permanently in your hard disk.
 
 
-require 'pry'
-main_menu = "\n         
-menu\n========================\n1) add new item\n2) list all items\n3) quit\n\n"
+# require 'pry'
+main_menu = "main menu","========================" "(1) add new item","(2) list all items","(3) quit"
 
 
 
@@ -31,26 +30,24 @@ list_items = []
 
 loop do
 
-     puts "main_menu"
-     print "enter an option: "
+     puts main_menu
+     print "enter an option:"
      option_value = gets.chomp
+
 
      if option_value == '1'
         puts "add an item"
-       list_item.push(gets.chomp)
-       File.write("list.txt", list_items.join("\n"), mode: "a")
+       list_items.push(gets.chomp.to_s)
+     
 
        elsif option_value == '2'
-       puts "you have the following items in your shopping list: \n\n"
-       puts "=====================\n"
-       puts file_data = File.read("list.txt")
-
-       
-       puts "=====================\n"
-
+       puts "you have the following items in your shopping list",list_items
+       puts "========================"
+      
+      
        else option_value == '3'
-      break
-    end
+       break
+     end
 end
 
 
