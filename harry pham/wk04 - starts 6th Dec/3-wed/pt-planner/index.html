@@ -5,13 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>PT Planner</h1>
 
+        <section class="org-dest">
+            <div class="origin-text">origin: 
+                <select name="origin-list" id="origin_name">
+                    <option value="">please choose an option</option>
+                    <option value="Flinders Street">Flinders Street</option>
+                    <option value="Richmond">Richmond</option>
+                    <option value="East Richmond">East Richmond</option>
+                    <option value="Burnley">Burnley</option>
+                    <option value="Hawthorn">Hawthorn</option>
+                    <option value="Flagstaff">Flagstaff</option>
+                    <option value="Melbourne Central">Melbourne Central</option>
+                    <option value="Parliament">Parliament</option>
+                    <option value="Kooyang">Kooyang</option>
+                    <option value="Southern Cross">Southern Cross</option>
+                    <option value="South Yarra">South Yarra</option>
+                    <option value="Prahran">Prahran</option>
+                </select>
+            </div>
+            <div class="destination-text">destination: 
+                <select name="destination-list" id="destination_name">
+                    <option value="">please choose an option</option>
+                    <option value="Richmond">Richmond</option>
+                    <option value="East Richmond">East Richmond</option>
+                    <option value="Burnley">Burnley</option>
+                    <option value="Hawthorn">Hawthorn</option>
+                    <option value="Glenferrie">Glenferrie</option>
+                    <option value="Melbourne Central">Melbourne Central</option>
+                    <option value="Parliament">Parliament</option>
+                    <option value="Kooyang">Kooyang</option>
+                    <option value="Tooronga">Tooronga</option>
+                    <option value="South Yarra">South Yarra</option>
+                    <option value="Prahran">Prahran</option>
+                    <option value="Windsor">Windsor</option>
+                </select>
+            </div>
+            <button class="search">Finding Route</button>
+            <button class="reset">reset</button>
+        </section>
 
+        <section class="planner">
+            <div class="train1"></div>
+            <div class="train2"></div>
+            <div class="train3"></div>
+        </section>
+
+        <p>total stops: <span class= "total-stops"></span>
+        </p>
+
+    </div>
 
 
     <script src="pt-planner.js"></script>
 </body>
-</html>
+</html>                 
