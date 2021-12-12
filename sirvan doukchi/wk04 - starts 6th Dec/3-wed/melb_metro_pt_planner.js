@@ -1,7 +1,3 @@
-// const prompt = require("prompt-sync")({ sigint: true });
-// var readline = require("readline");
-// let originInput = "Flinders Street";
-// let destInput = "Glenferrie";
 let travelArray = [];
 let travelArraySecond = [];
 let routeShowDiv = document.querySelector(".route_show");
@@ -12,6 +8,7 @@ let destInputBox = document.querySelector("#dest_input_box");
 let submitInputBox = document.querySelector("#submit_input_box");
 let clearInputBox = document.querySelector("#clear_input_box");
 let stopsCounterP = document.querySelector(".stops_counter_p");
+let routeShow = document.querySelector(".route_show");
 
 // originDiv.textContent = "This is a test";
 
@@ -108,7 +105,8 @@ const findRoute = (originStop, destStop) => {
     for (let i = originIndex; i <= destIndex; i++) {
       travelArray.push(originFunc[i]);
     }
-    return travelArray.join(", ");
+    travelArraySecond = [];
+    return showRoute(travelArray, travelArraySecond);
   } else if (
     // if both stops are in the same line and origin is after intersection - reverse
     findOrigin(originStop) == findDestination(destStop) &&
@@ -119,9 +117,9 @@ const findRoute = (originStop, destStop) => {
     for (let k = originIndexReversed; k <= destIndexReversed; k++) {
       travelArray.push(originReversed[k]);
     }
-
+    travelArraySecond = [];
     // console.log(travelArray);
-    return travelArray.join(", ");
+    return showRoute(travelArray, travelArraySecond);
   } else if (
     // 2 different lines - first one straight and second one reverse
     findOrigin(originStop) !== findDestination(destStop) &&
@@ -192,6 +190,9 @@ const showRoute = (originArray, destArray) => {
   // console.log("||");
   // console.log(destArray.join(" -----> "));
   destP.textContent = destArray.join(" -----> ");
+  let totalStops = originArray.length - 1 + destArray.length - 1;
+
+  stopsCounterP.textContent = `Total Stops : ${totalStops}`;
 };
 
 //Handle Submit function
@@ -199,13 +200,19 @@ const showRoute = (originArray, destArray) => {
 const handleSubmitFunction = () => {
   travelArray = [];
   travelArraySecond = [];
+  routeShow.classList.remove("route_show_hidden");
+  routeShow.classList.add("route_show_visible");
+
   findRoute(originInputBox.value, destInputBox.value);
 };
 
 const handleClearFunction = () => {
+  routeShow.classList.remove("route_show_visible");
+  routeShow.classList.add("route_show_hidden");
+
   originP.textContent = "";
   destP.textContent = "";
-  stopsCounterP = "";
+  stopsCounterP.textContent = "";
   travelArray = [];
   travelArraySecond = [];
 };
