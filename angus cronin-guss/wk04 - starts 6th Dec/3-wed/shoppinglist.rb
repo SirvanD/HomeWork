@@ -29,5 +29,4 @@ while
     end 
 end
 
-# def add_item_to_array
-#     shopping_list.push(new_item)
+
