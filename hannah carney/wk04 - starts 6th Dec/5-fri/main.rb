@@ -1,6 +1,6 @@
 require 'httparty'
 require 'sinatra'
-require 'sinatra/reloader' # reloads ur code so you dont need to stop theprogram each time 
+require 'sinatra/reloader' # reloads ur code so you dont need to stop the program each time 
 
 
 get '/' do 
@@ -25,7 +25,8 @@ get '/movie_details' do
     erb :movie_details, locals: {
         title: res["Title"],
         plot: res["Plot"],
-        poster: res["Poster"]
+        poster: res["Poster"],
+        year: res["Year"]
     }
 end    
 
