@@ -11,7 +11,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Special+Elite&display=swap');
 
     body{
-        margin-left: 200px;
+        margin-left: 50px;
         background-color: lightsalmon;
     }
     
@@ -50,13 +50,22 @@
     }
 
     .alamein-all{
-        margin-left: 220px;
+        margin-left: 240px;
+        display: inline-grid;
+        grid-template-columns: 80px 40px 80px 40px 80px 40px 80px 40px 80px 40px 80px;
+        gap:1px;
     }
     .glenWaverly-all{
-        margin-left: 10px;
+        margin-left: 0px;
+        display: inline-grid;
+        grid-template-columns: 80px 40px 80px 40px 80px 40px 80px 40px 80px 40px 80px;
+        gap:1px;
     }
     .sandringham-all{
-        margin-left: 220px;
+        margin-left: 240px;
+        display: inline-grid;
+        grid-template-columns: 80px 40px 80px 40px 80px 40px 80px 40px 80px 40px 80px;
+        gap:1px;
     }
 
     .alamein{
@@ -70,10 +79,20 @@
         text-align: center;
         font-size: 14px;
         font-family: 'Special Elite', cursive;
+        transition: all 200ms linear;   
+    }
+    .arrows-a{
+        background-color: transparent;
+        color: black;
+        height: 35px;
+        width: 25px;
+        margin: 5px;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Special Elite', cursive;
         transition: all 200ms linear;
-        display: inline-grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap:10px;
+        
     }
     .glenWaverly{
         background-color: transparent;
@@ -86,10 +105,19 @@
         text-align: center;
         font-size: 14px;
         font-family: 'Special Elite', cursive;
-        transition: all 200ms linear;
-        display: inline-grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap:10px;
+        transition: all 200ms linear; 
+    }
+    .arrows-b{
+        background-color: transparent;
+        color: black;
+        height: 35px;
+        width: 25px;
+        margin: 5px;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Special Elite', cursive;
+        transition: all 200ms linear;    
     }
     .sandringham{
         background-color: transparent;
@@ -102,12 +130,20 @@
         text-align: center;
         font-size: 14px;
         font-family: 'Special Elite', cursive;
-        transition: all 200ms linear;
-        display: inline-grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        gap:10px;
+        transition: all 200ms linear;    
     }
-  
+    .arrows-c{
+        background-color: transparent;
+        color: black;
+        height: 35px;
+        width: 25px;
+        margin: 5px;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Special Elite', cursive;
+        transition: all 200ms linear;    
+    }
 
 </style>
 <body>
@@ -157,37 +193,56 @@
     <div class = "all-stations">
 
         <div class = "alamein-all">
-            <div class = "alamein" >Flinders Street</div>
-            <div class = "alamein" >Richmond</div>
-            <div class = "alamein" >East Richmond</div>
-            <div class = "alamein" >Burnley</div>
-            <div class = "alamein" >Hawthorn</div>
-            <div class = "alamein" >Glenferrie</div>
+            <div class ="arrows-a" style="display: none;"></div>
+            <div class ="alamein" >Flinders Street</div>
+            <div class ="arrows-a"></div>
+            <div class ="alamein" >Richmond</div>
+            <div class ="arrows-a"></div>
+            <div class ="alamein" >East Richmond</div>
+            <div class ="arrows-a"></div>
+            <div class ="alamein" >Burnley</div>
+            <div class ="arrows-a"></div>
+            <div class ="alamein" >Hawthorn</div>
+            <div class ="arrows-a"></div>
+            <div class ="alamein" >Glenferrie</div>
         </div>
 
         <br>
 
         <div class = "glenWaverly-all">
-            <div class = "glenWaverly">Flagstaff</div>
-            <div class = "glenWaverly">Melbourne Central</div>
-            <div class = "glenWaverly">Parliament</div>
-            <div class = "glenWaverly">Richmond</div>
-            <div class = "glenWaverly">Kooyong</div>
-            <div class = "glenWaverly">Tooronga</div>
+            <div class ="arrows-b" style="display: none;"></div>
+            <div class ="glenWaverly">Flagstaff</div>
+            <div class ="arrows-b"></div>
+            <div class ="glenWaverly">Melbourne Central</div>
+            <div class ="arrows-b"></div>
+            <div class ="glenWaverly">Parliament</div>
+            <div class ="arrows-b"></div>
+            <div class ="glenWaverly">Richmond</div>
+            <div class ="arrows-b"></div>
+            <div class ="glenWaverly">Kooyong</div>
+            <div class ="arrows-b"></div>
+            <div class ="glenWaverly">Tooronga</div>
         </div>
 
         <br>
 
         <div class = "sandringham-all">
+            <div class ="arrows-c" style="display: none;"></div>
             <div class = "sandringham">Southern Cross</div>
+            <div class ="arrows-c"></div>
             <div class = "sandringham">Richmond</div>
+            <div class ="arrows-c"></div>
             <div class = "sandringham">South Yarra</div>
+            <div class ="arrows-c"></div>
             <div class = "sandringham">Prahran</div>
+            <div class ="arrows-c"></div>
             <div class = "sandringham">Windsor</div>
+            <div class ="arrows-c"></div>
+            <div class = "sandringham"></div>
         </div>
 
     </div>
-    
+  
 
     <script src="railway.js"></script>
 </body>
