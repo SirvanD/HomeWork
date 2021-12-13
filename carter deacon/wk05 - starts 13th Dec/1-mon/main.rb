@@ -17,7 +17,7 @@ get '/search' do
     url = "http://www.omdbapi.com/?s=#{input}&apikey=2f6435d9"
     list = HTTParty.get(url)
     erb :search, locals: {
-        title: list["Search"]
+        results: list["Search"]
     }
 end
 
