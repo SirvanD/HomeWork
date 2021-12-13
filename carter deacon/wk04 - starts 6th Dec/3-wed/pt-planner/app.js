@@ -59,8 +59,8 @@ function fullTrip(line1, line2) {
         }
     // Multi-line trips    
     } else if (line1 !== line2) {
-        line1Richmond = line1.indexOf("Richmond");
-        line2Richmond = line2.indexOf("Richmond");
+        let line1Richmond = line1.indexOf("Richmond");
+        let line2Richmond = line2.indexOf("Richmond");
         if (originIndex < line1Richmond) {
             newLine1 = line1.slice(originIndex, line1Richmond+1);
             stopCount1 = newLine1.length;
