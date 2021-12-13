@@ -1,3 +1,4 @@
+require 'pry'
 days_of_the_week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 days_of_the_week.shift()
@@ -65,18 +66,27 @@ Randomize the contents of `heroes` using a method. [The Ruby documentation might
 
 ```rb
 # Your answer here
+heroes.shuffle()
 ```
 
 Select a random element from `heroes` using a method. [The Ruby documentation might help](http://ruby-doc.org/core-2.2.0/Array.html).
 
 ```rb
 # Your answer here
+heroes.sample()
 ```
 
 display each `hero` in a new line on the terminal using the `.each` method
 
 ```rb
 # Your answer here
+planeteers.each do
+    i=0
+    p planeteers[i]
+    i += 1
+end
+
+
 ```
 
 display each `hero` in a new line on the terminal using the `.each` method only if the hero starts with the letter 'W'
@@ -84,3 +94,5 @@ display each `hero` in a new line on the terminal using the `.each` method only 
 ```rb
 # Your answer here
 ```
+
+binding.pry
