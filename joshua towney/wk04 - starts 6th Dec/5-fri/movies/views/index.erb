@@ -3,8 +3,8 @@
 
 <h1>Select your movie</h1>
 
-<form action="/movie_details"> <!-- action will take us to the selected page once button is pressed-->
-    <input type="text" name="movie" placeholder="Enter Movie">   <!-- name is the PARAMETERS we can throw into our URL(check first page movie = params["movie"]-->
+<form action="/movie_details"> <!-- action will take us to the selected page once button is pressed KASUN - will take you to the selected route (which will render the specific page via erb file)-->
+    <input type="text" name="movie" placeholder="Enter Movie">   <!-- name is the PARAMETERS we can throw into our URL(check first page movie = params["movie"] KASUN - name parameter is what goes into the params hash in Sinatra.-->
     <button>Search</button> <!-- only one button per form -->
 </form>
 
