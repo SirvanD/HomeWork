@@ -6,10 +6,12 @@ class route{
         this.start_line_i = '', 
         this.start_stn_i = '', 
         this.start_line_inter_i = '',
+        this.start_line_plus = '',
         this.end_stn_name = '',
         this.end_line_i = '', 
         this.end_stn_i = '', 
         this.end_line_inter_i = '',
+        this.end_line_plus = '',
         this.route_connector = " --> ",
         this.route = '',
         this.switch_lines = ''
@@ -28,71 +30,117 @@ class line {
 
 //build network
 let network = []
-network.push(new line ('alamein',['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie']));
-network.push(new line ('glen_waverly',['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 'Kooyong', 'Tooronga']));
-network.push(new line ('sandringham',['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Windsor']));
-let any_issues = false;
+network.push(new line ('alamein',[
+  {name:'Flinders Street', plus_code:'5XJ8+MR Melbourne, Victoria'},
+  {name:'Richmond', plus_code:'5XGQ+FM Richmond, Victoria'},
+  {name:'East Richmond', plus_code:'5XFW+FW Richmond, Victoria'},
+  {name:'Burnley', plus_code:'52C5+W3 Burnley, Victoria'},
+  {name:'Hawthorn', plus_code:'52HF+FR Hawthorn, Victoria'},
+  {name:'Glenferrie', plus_code:'52HP+9H Hawthorn, Victoria'}
+  ]));
+network.push(new line ('glen_waverly',[
+  {name:'Flagstaff', plus_code:'5XQ4+8C West Melbourne, Victoria'},
+  {name:'Melbourne Central', plus_code:'5XQ7+R5 Melbourne, Victoria'},
+  {name:'Parliament', plus_code:'5XQF+V4 East Melbourne, Victoria'},
+  {name:'Richmond', plus_code:'5XGQ+FM Richmond, Victoria'},
+  {name:'Kooyong', plus_code:'526M+35 Kooyong, Victoria'},
+  {name:'Tooronga', plus_code:'522R+6J Malvern, Victoria'}
+]));
+network.push(new line ('sandringham',[
+  {name:'Southern Cross', plus_code:'5XJ2+JX Docklands, Victoria'},
+  {name:'Richmond', plus_code:'5XGQ+FM Richmond, Victoria'},
+  {name:'South Yarra', plus_code:'5X6R+CV South Yarra, Victoria'},
+  {name:'Prahran', plus_code:'4XXQ+CP Windsor, Victoria'},
+  {name:'Windsor', plus_code:'4XVR+HP Windsor, Victoria'}
+]));
 
 //pass in station objects and this updates the route object.  It also passes back true/false if it had issues finding the terminal station names
 function find_stations(start_stn_name, dest_stn_name){
     trip = new route();
     trip.start_stn_name = start_stn_name;
     trip.end_stn_name = dest_stn_name;
-    any_issues = false;
-    let i;
+    no_issues_origin = false;
+    no_issues_dest = false;
+
 
     //find the origin station and line details
-    network.forEach((line, index) => 
-       (i = line.stations.indexOf(start_stn_name))!= -1 ? 
-            (trip.start_line_i = index, 
-            trip.start_stn_i = i,
-            trip.start_line_inter_i = line.stations.indexOf(trip.interconnect))
-        : any_issues = true
-            );
+  let i;
+  network.forEach((line, line_index) => {
+    line.stations.forEach((station, station_index) => {
+      (i = station.name.indexOf(start_stn_name))!= -1 && start_stn_name !=''? 
+            (trip.start_line_i = line_index, 
+            trip.start_stn_i = station_index,
+            trip.start_line_plus = station.plus_code,
+            trip.start_line_inter_i = line.stations.findIndex(function(station){
+              return station.name == trip.interconnect
+            }),
+            
+            no_issues_origin = true
+            )
+            : 'missed at least once'
+    })
+  });
 
     //find the destination station and line details
-    network.forEach((line, index) => 
-       (i = line.stations.indexOf(dest_stn_name))!= -1 ? 
-            (trip.end_line_i  = index, 
-            trip.end_stn_i = i,
-            trip.end_line_inter_i = line.stations.indexOf(trip.interconnect))
-        : any_issues = true
-            );
+    network.forEach((line, line_index) => {
+      line.stations.forEach((station, station_index) => {
+        (i = station.name.indexOf(dest_stn_name))!= -1 && dest_stn_name !=''? 
+              (trip.end_line_i = line_index, 
+              trip.end_stn_i = station_index,
+              trip.end_line_plus = station.plus_code,
+              trip.end_line_inter_i = line.stations.findIndex(function(station){
+                return station.name == trip.interconnect
+              }),
+              
+              no_issues_dest = true
+              )
+              : 'missed at least once'
+      })
+    });
     
-            trip.start_line_i == trip.end_line_i ? trip.switch_lines = false : trip.switch_lines = true
-    console.log(any_issues);
-    return any_issues;
+    trip.start_line_i == trip.end_line_i ? trip.switch_lines = false : trip.switch_lines = true
+    return no_issues_dest && no_issues_dest ? true : false
 }
 
 //fetch the names of the station and handle reverse order
 function fetch_station_names(line, start_station, end_station){
-    return start_station > end_station ? (line.stations.slice(end_station, start_station+1)).reverse() : (line.stations.slice(start_station,end_station+1))
+  let station_arr = [];
+  line.stations.forEach(station=> station_arr.push(station.name));
+  return start_station > end_station ? (station_arr.slice(end_station, start_station+1)).reverse() : (station_arr.slice(start_station,end_station+1))
 }
 
 //build the route as an array so it can easily be used for DOM manipulation
 function build_route(){
-
+  console.log('build_route');
+    //single line trip
     if (!trip.switch_lines){
         trip.route = fetch_station_names(network[trip.start_line_i], trip.start_stn_i, trip.end_stn_i);
-        
+        printToConsole();
+        printToDom(true); 
     } else {
-        
         //crosses two lines
         trip.route = fetch_station_names(network[trip.start_line_i], trip.start_stn_i, trip.start_line_inter_i);
         //remove richmond as the second half of the journey ALSO has richmond/interconnecting station name
-        printToConsole();
         trip.route.pop();
         trip.route = trip.route.concat(fetch_station_names(network[trip.end_line_i], trip.end_line_inter_i, trip.end_stn_i));
-        printToDom(true);
+        printToConsole();
+        printToDom(true); 
     }  
 };
 
 function printToConsole() {
-    let end_spacing = (trip.route.at(-1).length / 2) + 1
-    let line_1_string = trip.route.join(trip.route_connector)
-    console.log(line_1_string)
-    console.log(" ".repeat(line_1_string.length - end_spacing) + "||")
-    console.log(" ".repeat(line_1_string.length - end_spacing - end_spacing + 2) + fetch_station_names(network[trip.end_line_i], trip.end_line_inter_i, trip.end_stn_i).join(trip.route_connector))
+let line_1_string;
+    
+    if(!trip.switch_lines){
+      console.log(trip.route.join(trip.route_connector))
+    } else {
+      //print the first line up to the interconnect station with route connector arrows and stick that all in a strin
+      console.log(line_1_string = fetch_station_names(network[trip.start_line_i], trip.start_stn_i, trip.start_line_inter_i).join(trip.route_connector))
+      //use the string length to work out how many spaces needed 
+      console.log(" ".repeat(line_1_string.length - 5) + "||")
+      console.log(" ".repeat(line_1_string.length - 8) + 
+      fetch_station_names(network[trip.end_line_i], trip.end_line_inter_i, trip.end_stn_i).join(trip.route_connector))
+    } 
 }
 
 function printToDom(printRoute){
@@ -100,6 +148,7 @@ function printToDom(printRoute){
     if(printRoute){
         trip.route.forEach(station => document.getElementById('stationList').innerHTML += `<div class='station-name'>${station}</div>`)
     }
+    calcRoute(trip.start_line_plus, trip.end_line_plus);
 }
 
 //AUTOCOMPLETE ON INPUT FORMS
@@ -138,7 +187,7 @@ function autocomplete(inp, arr) {
                 /*insert the value for the autocomplete text field:*/
                 inp.value = this.getElementsByTagName("input")[0].value;
 
-                userSelections();
+                
                 /*close the list of autocompleted values,
                 (or any other open lists of autocompleted values:*/
                 closeAllLists();
@@ -149,7 +198,7 @@ function autocomplete(inp, arr) {
     });
 
     /*execute a function presses a key on the keyboard:*/
-    inp.addEventListener("keydown", function(e) {
+    inp.addEventListener("keyup", function(e) {
         var x = document.getElementById(this.id + "autocomplete-list");
         if (x) x = x.getElementsByTagName("div");
         if (e.keyCode == 40) {
@@ -164,17 +213,12 @@ function autocomplete(inp, arr) {
           currentFocus--;
           /*and and make the current item more visible:*/
           addActive(x);
-        } else if (e.keyCode == 9) {
+        } else if (e.keyCode == 13) {
           /*If the ENTER key is pressed, prevent the form from being submitted,*/
-
-          userSelections();
-          e.preventDefault();
           if (currentFocus > -1) {
             /*and simulate a click on the "active" item:*/
-
             if (x) {
                 x[currentFocus].click();
-
             }
           }
         }
@@ -203,8 +247,13 @@ function autocomplete(inp, arr) {
       for (var i = 0; i < x.length; i++) {
         if (elmnt != x[i] && elmnt != inp) {
           x[i].parentNode.removeChild(x[i]);
+          if(document.getElementById('originInput').value != null && document.getElementById('destInput').value != null){
+            userSelections();
+          }
         }
       }
+      
+ 
     }
     /*execute a function when someone clicks in the document:*/
     document.addEventListener("click", function (e) {
@@ -212,19 +261,15 @@ function autocomplete(inp, arr) {
     });
 
   }
-  
+  let userSelectionCalls = 0
   function userSelections(){
+    userSelectionCalls++;
     let originSelect = document.getElementById('originInput').value;
     let destinationSelect = document.getElementById('destInput').value;
-      //only do something if bot inputs have strings
-
-    if(originSelect.trim().length !=0 && destinationSelect.trim().length !=0){
-       
-        //only do something if those strings match station names
-        if(find_stations(originSelect, destinationSelect)){
-        
-            build_route();
-        }
+    
+    //if it finds stations and there's no problems
+    if(find_stations(originSelect, destinationSelect)){        
+        build_route();
     }
   }
 
@@ -232,9 +277,24 @@ const userInputOrigin = document.getElementById("originInput");
 const userInputDest = document.getElementById("destInput");
 
   /*An array containing all the country names in the world:*/
-  var stations = [];
-    network.forEach(array=> stations = stations.concat(array.stations));
+  var stationList = [];
+network.forEach(line => {
+    line.stations.forEach(station => {
+      stationList.push(station.name)         
+    })
+  });
 
   /*initiate the autocomplete function on the "originInput" element, and pass along the stations array as possible autocomplete values:*/
-  autocomplete(userInputOrigin, stations);
-  autocomplete(userInputDest, stations);
+  document.getElementById('reset').addEventListener('click',function(){
+    //strip the list of stations from the DOM
+    document.querySelectorAll('.station-name').forEach(function(a){
+        a.remove()
+    });
+
+    //reset the inputs
+    document.getElementById('destInput').value = '';
+    document.getElementById('originInput').value = '';
+    initialize();
+  })
+  autocomplete(userInputOrigin, stationList);
+  autocomplete(userInputDest, stationList);
