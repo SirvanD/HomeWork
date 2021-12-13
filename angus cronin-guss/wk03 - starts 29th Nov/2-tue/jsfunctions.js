@@ -24,11 +24,9 @@ function sum(array) {
 function lengths(arr) {
     
     for (let i = 0; i < arr.length; i++) {
-        var lengthArray = []
-        lengthArray = arr[i].length + arr.push()
-        
+        newArray = arr[i].length 
     }
-    return lengthArray;
+    return newArray;
 }
 lengths(['hellohellohello', 'bye'])
 // Question 4
