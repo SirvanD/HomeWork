@@ -17,5 +17,5 @@ get '/www.omdbapi.com/?t=title' do
     erb(:index, locals:{
     t: title
     })
-    # /www.omdbapi.com/?t=jaws
+    s
 end

@@ -20,20 +20,19 @@ function sum(array) {
 
 
 // Question 3 Lengths
-
 function lengths(arr) {
-    
+    newArray = []
     for (let i = 0; i < arr.length; i++) {
-        newArray = arr[i].length 
+        newArray = newArray + ', ' + arr[i].length 
     }
     return newArray;
 }
-lengths(['hellohellohello', 'bye'])
+// test lengths(['hellohellohello', 'bye', 'test', 'test'])
+
 // Question 4
 var fruits = ['kiwi', 'apple', 'mango']
 var x = lengths(fruits)
-var y = sum([x])
-console.log(y);
+
 
 
 
