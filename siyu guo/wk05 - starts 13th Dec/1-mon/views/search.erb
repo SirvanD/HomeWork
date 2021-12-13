@@ -1,0 +1,6 @@
+<h2>Matches: </h2>
+<% search.each do |movie|%>
+<p>
+     <a href="http://omdbapi.com/?t=<%=movie["Title"]%>&apikey=2c6318ac"><%=movie["Title"]%></a>
+</p>
+<% end %>
