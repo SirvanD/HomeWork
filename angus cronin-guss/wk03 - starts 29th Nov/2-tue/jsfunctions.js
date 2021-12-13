@@ -1,9 +1,10 @@
 // Question 1
 function transmogrifier(num1, num2, num3) {
-    var result = Math.floor(num1 * num2) * num3;
-    return result
+    var result = num1 * num2 ** num3  
+    console.log(result);
+    
 } 
-transmogrifier(1, 2, 2)
+// test transmogrifier(1, 2, 2)
 
 
 
@@ -21,13 +22,15 @@ function sum(array) {
 // Question 3 Lengths
 
 function lengths(arr) {
-    var lengthArray = []
+    
     for (let i = 0; i < arr.length; i++) {
-        lengthArray = lengthArray + arr[i].length
+        var lengthArray = []
+        lengthArray = arr[i].length + arr.push()
+        
     }
-    return lengthArray.split('').join(', ');
+    return lengthArray;
 }
-
+lengths(['hellohellohello', 'bye'])
 // Question 4
 var fruits = ['kiwi', 'apple', 'mango']
 var x = lengths(fruits)
