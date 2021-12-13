@@ -11,18 +11,21 @@ function vowelCount(str) {
 }
 
 //Question 2 (Grandma)
-var speak = prompt("Say something to Grandma");
 var byeCounter = 0;
-while (byeCounter !== 2) {
-  if (speak === 'BYE') {
-    speak = prompt('What?')
+
+while (byeCounter <= 2) {
+  var speak = prompt("Say something to Grandma");
+  if (speak === speak.toUpperCase() && speak !== 'BYE') {
+    alert("No, not since " + Math.floor(Math.random() * (1950 - 1930 + 1) + 1930));
+    byeCounter = 0;
+  } else if (speak === speak.toLowerCase()) {
+    alert("HUH?! SPEAK UP, SONNY");
+    byeCounter = 0;
+  } else if (speak === "BYE") {
+    alert("What?");
     byeCounter = byeCounter + 1;
-  } else if (speak === speak.toUpperCase()) {
-      speak = prompt("No, not since " + Math.floor(Math.random() * (1950 - 1930 + 1) + 1930))
-  } else {
-        speak = prompt("HUH?! SPEAK UP, SONNY");
-    }
-} 
+  } 
+}
 alert('You have left Grandma')
 
 
