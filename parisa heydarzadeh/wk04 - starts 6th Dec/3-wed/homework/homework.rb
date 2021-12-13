@@ -21,7 +21,7 @@
 
 
 # require 'pry'
-main_menu = "main menu","========================" "(1) add new item","(2) list all items","(3) quit"
+main_menu = "main menu","========================" , "(1) add new item","(2) list all items","(3) quit"
 
 
 
