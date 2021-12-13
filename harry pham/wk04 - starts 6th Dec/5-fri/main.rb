@@ -2,7 +2,7 @@ require "sinatra"
 require "sinatra/reloader"
 # http://localhost:4567/
 require "httparty"
-
+# https://www.omdbapi.com/?s=#{title}s&apikey=6010dc57
 
 get "/" do
     erb :index
