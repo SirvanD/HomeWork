@@ -276,25 +276,41 @@ function autocomplete(inp, arr) {
 const userInputOrigin = document.getElementById("originInput");
 const userInputDest = document.getElementById("destInput");
 
-  /*An array containing all the country names in the world:*/
-  var stationList = [];
+/*An array containing all the country names in the world:*/
+var stationList = [];
 network.forEach(line => {
     line.stations.forEach(station => {
       stationList.push(station.name)         
     })
   });
 
-  /*initiate the autocomplete function on the "originInput" element, and pass along the stations array as possible autocomplete values:*/
-  document.getElementById('reset').addEventListener('click',function(){
-    //strip the list of stations from the DOM
-    document.querySelectorAll('.station-name').forEach(function(a){
-        a.remove()
-    });
+//thanks to Nour Saud for this code - Bubbly Button
+var animateButton = function(e) {
+  e.preventDefault;
+  //strip the list of stations from the DOM
+  document.querySelectorAll('.station-name').forEach(function(a){
+    a.remove()
+  });
+  //reset the inputs
+  document.getElementById('destInput').value = '';
+  document.getElementById('originInput').value = '';
+  //re-initialise the map
+  initialize();
+  //reset animation
+  e.target.classList.remove('animate');
+  e.target.classList.add('animate');
 
-    //reset the inputs
-    document.getElementById('destInput').value = '';
-    document.getElementById('originInput').value = '';
-    initialize();
-  })
-  autocomplete(userInputOrigin, stationList);
-  autocomplete(userInputDest, stationList);
+  setTimeout(function(){
+    e.target.classList.remove('animate');
+  },900);
+};
+
+var bubblyButtons = document.getElementsByClassName("bubbly-button");
+
+for (var i = 0; i < bubblyButtons.length; i++) {
+  bubblyButtons[i].addEventListener('click', animateButton, false);
+}
+
+/*initiate the autocomplete function on the "originInput" element, and pass along the stations array as possible autocomplete values:*/
+autocomplete(userInputOrigin, stationList);
+autocomplete(userInputDest, stationList);
