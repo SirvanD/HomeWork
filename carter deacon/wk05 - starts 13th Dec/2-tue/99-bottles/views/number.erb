@@ -1,0 +1,15 @@
+<% if number.to_i > 1 %>
+    <h2><%= "#{number} bottles of beer on the wall." %>
+        <a href="/<%= number.to_i - 1 %>"> Take one down, pass it around.</a>
+    </h2>
+<% elsif number.to_i == 1 %>
+    <h2><%= "#{number} bottle of beer on the wall." %>
+        <a href="/<%= number.to_i - 1 %>"> Take one down, pass it around.</a>
+    </h2>
+<% elsif number.to_i == 0 %>
+    <h2><%= "No bottles of beer on the wall." %>
+        <a href="/99"> Start over. </a>
+    </h2>
+<% end %>
+    
+
