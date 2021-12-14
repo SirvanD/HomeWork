@@ -50,12 +50,16 @@ data = {
 
 # print the number of rooms in the castle by accessing the hash
 p data[:town][:castle][:num_rooms]
+print "\n\n"
 # Add "Belle" to the beginning of the guests array
 data[:town][:castle][:guests].unshift("Belle")
+print "\n\n"
 # print the year of birth for robby by accessing the hash
 p data[:town][:castle][:residents][0][:year_of_birth]
+print "\n\n"
 # Add a new key and value pair to the castle hash (key :cook value "Mrs Potts")
 data[:town][:castle][:cook] = "Mrs Potts"
+print "\n\n"
 =begin final object
 
 {:town=>
@@ -86,6 +90,7 @@ lost_boys.each do |lost_boy|
   
 end
  p total = sum;
+ print "\n\n"
 
 #  Question 6 = Assume you have the following hash...
 resident = {
@@ -126,8 +131,68 @@ end
 
 # Question 7 = Write a function letter_reverse that accepts a single argument, a string. The function should maintain the order of words in the string but reverse the letters in each word. Don't worry about punctuation.
 
+# letter_reverse("Now I know what a TV dinner feels like")
+# => "woN I wonk tahw a VT rennid sleef ekil"
+# letter_reverse("Put Hans back on the line")
+# => "tuP snaH kcab no eht enil"
+
+str_input = ""
+def letter_reverse (str_input) 
+  str_array = []
+  str_array_reverse = []
+  str_array = str_input.split(' ')
+  i = 0
+  # print str_array;
+  while i < str_array.length 
+    str_array_reverse.push (str_array[i].reverse())
+    i = i+1;
+  end
+  print "\n\n"
+  print str_array_reverse
+
+end
+
+letter_reverse("Now I know what a TV dinner feels like") #"woN I wonk tahw a VT rennid sleef ekil"
 
 
 
+# Question 8 = Define a scream method that accepts a single parameter and when called should as return a string as per the examples below"
 
-binding.pry
+# scream(0) #=> "crickets"
+# scream(1) #=> "lol"
+# scream(2) #=> "lolol"
+# scream(3) #=> "lololol"
+# scream(4) #=> "lolololol"
+# scream(5) #=> "lololololol"
+# scream(7) #=> "lololololololol"
+# scream(10) #=> "lolololololololololol"
+
+def scream (num_input)
+  j = 0
+  str_out_array = []
+  if num_input == 0
+      str_out_array.push("crickets")
+return str_out_array
+  elsif num_input > 0
+    while j < num_input
+      str_out_array.push("lol")
+      j = j + 1;
+    end
+  end
+return str_out_array.join('');
+end
+
+
+print "\n\n"
+print scream(0)
+print "\n"
+print scream(2)
+print "\n"
+print scream(5)
+print "\n"
+print scream(10)
+print "\n\n"
+
+
+
+# binding.pry
