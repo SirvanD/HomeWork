@@ -38,5 +38,16 @@ res = {
 # Question 1
 p res[:data][:cards][2][:images][:svg]
 
-res.each do |key, value|
-  puts
+# Question 2
+
+res[:data][:cards].each do |key|
+  p key[:value]
+end
+ res[:data][:cards].each do |value|
+  p value[:suit]
+end
+
+# key = [:value]
+# res[:data][:cards].each do |value|
+# value = [:suits]
+# p "#{key} of #{value}"
