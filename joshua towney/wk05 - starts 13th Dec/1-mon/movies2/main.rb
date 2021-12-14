@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'httparty'
+# require 'pry'
 
 get '/' do 
     "MOVIE DATABASE MAGIC"
@@ -41,3 +42,11 @@ get '/movie_details' do
     })
 
 end
+
+#     url_list = "https://omdbapi.com/?s=jaws&apikey=ebc931bb"
+#     all_matches = HTTParty.get(url_list)
+#     search = all_matches["Search"]
+#     jaws = search[0]
+#     search[i]["Title"]
+
+# pry binding
