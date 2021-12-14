@@ -81,7 +81,7 @@ counter = 0
 while counter < resident[:friends].length
 
     resident[:friends].each do | friend |
-        puts "Belle is friends with #{friend[:name]}"
+        puts "#{resident[:name]} is friends with #{friend[:name]}"
         counter += 1
     end 
 
