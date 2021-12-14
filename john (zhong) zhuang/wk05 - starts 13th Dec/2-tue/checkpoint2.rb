@@ -51,13 +51,13 @@
 # Question 5 (2pt)
 # Assume the following array of hashes:
 
-# lost_boys = [
-#   {name: 'Tootles', age: '11'},
-#   {name: 'Nibs', age: '9'},
-#   {name: 'Slightly', age: '10'},
-#   {name: 'Curly', age: '8'},
-#   {name: 'The Twins', age: '9'}
-# ]
+lost_boys = [
+  {name: 'Tootles', age: '11'},
+  {name: 'Nibs', age: '9'},
+  {name: 'Slightly', age: '10'},
+  {name: 'Curly', age: '8'},
+  {name: 'The Twins', age: '9'}
+]
 # Use .each to iterate over the lost_boys array to calculate to the sum of all lost boys age. print the sum age in the terminal
 # i=0
 # x=0
@@ -66,6 +66,13 @@
 # i = i+1
 # end
 # puts x
+
+sum = 0
+lost_boys.each do |boy|
+   age = boy[:age].to_i
+   sum += age
+end
+puts sum
 
 # ==============================================
 
