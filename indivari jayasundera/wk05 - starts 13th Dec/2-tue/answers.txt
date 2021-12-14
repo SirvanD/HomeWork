@@ -10,4 +10,4 @@ Question 2
  eg : params["title"]
 
  Question 3
- By typing binding.irb
+ By typing binding.irb in the code.
