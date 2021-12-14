@@ -45,6 +45,7 @@ data[:town][:castle][:residents][0][:year_of_birth]
 # Add a new key and value pair to the castle hash (key :cook value "Mrs Potts")
 data[:town][:castle].merge!(cook: "Mrs Potts")
 
+
 # Question 5 (2pt)
 # Assume the following array of hashes:
 
@@ -55,25 +56,17 @@ lost_boys = [
   {name: 'Curly', age: '8'},
   {name: 'The Twins', age: '9'}
 ]
+
 # Use .each to iterate over the lost_boys array to calculate to the sum of all lost boys age. print the sum age in the terminal
 
-lost_boys[:age].each do |age|
-    counter = 0
+total = 0
 
-        while counter <= 5
-            age = lost_boys[:age]
-        
-            counter += 1 # counter = counter + 1
-        end
-
-    puts(age).to_i
-    total = total + age.to_i
+lost_boys.each do |boy|
+    age = boy[:age].to_i
+    total = total + age
 end
 
 puts(total)
-# ((I know this doesn't work, this is just where I got to before time ran out))
-
-
 
 
 # Question 6 (3pt)
@@ -128,10 +121,9 @@ end
 # letter_reverse("Put Hans back on the line")
 # # => "tuP snaH kcab no eht enil"
 
-string = "Now I know what a TV dinner feels like"
-new_string = string.reverse
-
-puts new_string
+def letter_reverse(string)
+    string.split.map {|word| word.reverse}.join(" ")
+end
 
 
 # Question 8 (3pt)
