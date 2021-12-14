@@ -1,3 +1,4 @@
+require 'pry'
 # 1. Name 3 ways to make a HTTP requests in a web browser.
     # Forms, Address / Search bar, Links
 
@@ -103,7 +104,7 @@ resident = {
         stringArray.each do |word|
             reversedWords.push(word.reverse)
         end
-        p reversedWords.join(' ')
+        return reversedWords.join(' ')
     end
     
     letter_reverse("Now I know what a TV dinner feels like")
@@ -112,19 +113,19 @@ resident = {
 # 8. Define a scream method that accepts a single parameter and when called should as return a string as per the examples below"
 
     def scream (num)
-        string = "lol"
         if num == 0
-            p "crickets"
-        elsif num == 1
-            p string
-        else
+            string = "crickets"
+        elsif num > 1
             i = 1
+            string = "lol"
             while i < num do
                 string = string + "ol"
                 i += 1
             end
-            p string
+        else
+          string = "lol" 
         end
+        return string
     end 
 
     scream(0)
