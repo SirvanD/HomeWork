@@ -122,7 +122,7 @@ end
 # Write a function letter_reverse that accepts a single argument, a string. The function should maintain the order of words in the string but reverse the letters in each word. Don't worry about punctuation.
 
 def letter_reverse(sentence)
-  puts sentence.split.map(&:reverse).join ' '
+  sentence.split.map(&:reverse).join ' '
 end
 letter_reverse('Now I know what a TV dinner feels like')
 # => "woN I wonk tahw a VT rennid sleef ekil"
