@@ -1,0 +1,14 @@
+<%if (beers + 1) == 0 %>
+    <h1>No more bottles of beer on the wall!</h1>
+    <h1><a href="/">Start over!</a></h1>
+<% elsif (beers + 1) == 1 %>
+    <h1>
+    <%= (beers + 1)%> bottle of beer on the wall 
+    <a href="/<%= beers %>">take one down</a>
+    </h1>
+
+<% else %>
+    <h1><%= (beers + 1)%> bottles of beer on the wall 
+    <a href="/<%= beers %>">take one down</a>
+    </h1>
+<%end%>
