@@ -20,7 +20,7 @@ data = {
       residents: [
         {
           name: "Robby Benson",
-          year_of_birth: 1956
+          year_of_birth: 1956,
         }
       ],
       guests: ['birds']
@@ -30,9 +30,9 @@ data = {
 # 4.1
 p data[:town][:castle][:num_rooms]
 #4.2
-data[:town][:castle][:guests].push('belle') #unfinished
+data[:town][:castle][:guests].unshift('belle') 
 # 4.3
-#p data[:town][:castle][:residents[:year_of_birth] #unfinished
+p data[:town][:castle][:residents] #unfinished
 # 4.4
 cook = {cook: 'Mrs Potts'} 
 data[:town][:castle].merge!(cook: "Ms Potts")
@@ -45,6 +45,40 @@ lost_boys = [
   {name: 'Curly', age: '8'},
   {name: 'The Twins', age: '9'}
 ]
-lost_boys.each do |calculate|
-    calculate = calculate + {:age}
+# lost_boys.each do |calculate|
+#     array = []
+#     array[:name][:age].push()
+# end #unfinished
+
+# Question 6
+resident = {
+  name: "Belle",
+  friends: [
+    {
+      name: "Chip Potts",
+      personality: "adventurous"
+    },
+    {
+      name: "Cogsworth",
+      personality: "serious"
+    },
+    {
+      name: "Lumière",
+      personality: "charsmatic"
+  
+    },
+    {
+      name: "Mrs. Potts",
+      personality: "intelligent"
+    }
+  ]
+}
+
+friends.each |key, value|
+    p "Belle is friends with #{value}"
+end
+
+# Question 7
+def letter_reverse (str)
+    str.split(" ").reverse().join(" ")
 end
