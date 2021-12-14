@@ -9,7 +9,7 @@ get '/' do
 end
 
 get '/movie_details' do
-    url = "http://omdbapi.com/?t=#{params["movie_title"]}&apikey=2c6318ac"
+    url = "http://omdbapi.com/?t=#{params["title"]}&apikey=2c6318ac"
     res = HTTParty.get(url)
     title = res["Title"]
     year = res["Year"]
@@ -17,8 +17,8 @@ get '/movie_details' do
     plot = res["Plot"]
 
     erb(:movie_details, locals: {
-        m_title: title,
-        release_year: year,
+        title: title,
+        year: year,
         poster: poster,
         plot: plot
     })

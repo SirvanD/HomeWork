@@ -1,6 +1,6 @@
 <h2>Matches: </h2>
 <% search.each do |movie|%>
 <p>
-     <a href="/movie_details"><%=movie["Title"]%></a>
+     <a href="/movie_details?title=<%=movie["Title"]%>"><%=movie["Title"]%></a>
 </p>
 <% end %>
