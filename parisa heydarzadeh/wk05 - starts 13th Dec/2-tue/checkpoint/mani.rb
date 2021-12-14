@@ -7,12 +7,12 @@
 # how to access the query string sent to the server inside a route in a sinatra web application? (answer with words or code)
 
 query string is whatever shown after "?" in the address bar for example if there is title written after '?' hence we can access it with params as below example:
-title = patrams['title']
+title = params['title']
 
 # Question 3 (1pt)
 # how can we pause a ruby program to inspect the variables? (answer with words or code)
 require 'pry'
-binding 'pry'
+binding.pry
 
 # Question 4 (2pt)
 # Assume the following hash...
@@ -43,7 +43,7 @@ puts data[:town][:castle][:guests].unshift("Belle") = ["Belle", "birds"]
 # print the year of birth for robby by accessing the hash
 puts data[:town][:castle][:residents][0][:year_of_birth] = 1956
 # Add a new key and value pair to the castle hash (key :cook value "Mrs Potts")
-puts data[:town][:castle]
+puts data[:town][:castle][:cook] = "Mrs Potts"
 
 # Question 5 (2pt)
 # Assume the following array of hashes:
@@ -57,7 +57,9 @@ lost_boys = [
 ]
 # Use .each to iterate over the lost_boys array to calculate to the sum of all lost boys age. print the sum age in the terminal
 sum = 0
-lost_boys[:age].each { |a| sum+=age}
+lost_boys.each do |lost_boy| 
+  sum = sum + lost_boy[:age].to_i
+end
 puts sum
 
 # Question 6 (3pt)
@@ -92,7 +94,15 @@ resident = {
 # Belle is friends with Lumière
 # Belle is friends with Mrs. Potts
 
+counter = 0
 
+while counter < resident[:friends].length  do 
+
+  puts "#{resident[:name]} is firends with #{resident[:friends][counter][:name]}"
+  
+  counter = counter + 1
+
+end
 
 # Question 7 (3pt)
 # Write a function letter_reverse that accepts a single argument, a string. The function should maintain the order of words in the string but reverse the letters in each word. Don't worry about punctuation.
@@ -102,15 +112,34 @@ resident = {
 # letter_reverse("Put Hans back on the line")
 # # => "tuP snaH kcab no eht enil"
 
-def letter_reverse(str) 
-    str_Array= str.split('')
-    str_Array.reverse 
-    str_Array.reverse.join('')
-     
+def letter_reverse(sentence) 
+    
+  sentence.split.map {|word| word.reverse}.join(" ")
 end
-puts "Now I know what a TV dinner feels like"
+
 # Question 8 (3pt)
 # Define a scream method that accepts a single parameter and when called should as return a string as per the examples below"
+
+
+def scream (num_input)
+  counter = 0
+  str_array = []
+  if num_input == 0
+    str_array.push("crickets")
+    return str_array
+     elsif num_input == 1
+      str_array.push("lol")
+       else num_input > 1
+          while counter < num_input
+           str_array.push("ol")
+           counter = counter + 1;
+          end
+        end
+     end
+  end
+  return str_array.join('');
+end
+
 
 # scream(0) #=> "crickets"
 # scream(1) #=> "lol"
@@ -120,5 +149,3 @@ puts "Now I know what a TV dinner feels like"
 # scream(5) #=> "lololololol"
 # scream(7) #=> "lololololololol"
 # scream(10) #=> "lolololololololololol"
-
- 
