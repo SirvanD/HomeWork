@@ -82,7 +82,7 @@ def letter_reverse(str)
     rev_str = []
 
     str_split_to_arr.each do |word|
-        new_str << word.reverse 
+        rev_str << word.reverse 
     end
 
     puts rev_str.join(" ")
