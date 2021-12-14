@@ -33,11 +33,11 @@ data = {
 
 # print the number of rooms in the castle by accessing the hash
 
-data[:town][:castle][:num_rooms]
+print data[:town][:castle][:num_rooms]
 # Add "Belle" to the beginning of the guests array
-data[:town][:residents].unshift("Belle")
+data[:town][:castle][:guests].unshift("Belle")
 # print the year of birth for robby by accessing the hash
-data[:town][:castle][:residents][0][:year_of_birth]
+print data[:town][:castle][:residents][0][:year_of_birth]
 # Add a new key and value pair to the castle hash (key :cook value "Mrs Potts")
 data[:town][:castle][:cook] = "Mrs Potts"
 # Question 5 (2pt)
@@ -108,11 +108,13 @@ end
 def letter_reverse (str)
     arr = []
     word_arr = str.split(" ")
-    word_arr.each {|word|
-        arr.push(word.reverse)
-    }
-    puts arr.join(" ")
+      word_arr.each {|word|
+          arr.push(word.reverse)
+      }
+    return arr.join(" ")
 end
+
+
 
 # Question 8 (3pt)
 # Define a scream method that accepts a single parameter and when called should as return a string as per the examples below"
@@ -132,14 +134,13 @@ def scream (num)
     i = 0
     result = "l"
     if num == 0
-        puts "crickets"
+        return "crickets"
     else
         while i < num
         result += "ol"
         i += 1
         end
-        puts result
+        return result
     end
 end
-
 scream (3)
