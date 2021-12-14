@@ -38,11 +38,5 @@ res = {
 # Question 1
 p res[:data][:cards][2][:images][:svg]
 
-res[0][2].each do |change|
-  change
-p res [:data][:cards] = [
-  "KING of HEARTS",
-  "8 of CLUBS",
-  "4 of SPADES",
-  "QUEEN of HEARTS",
-]
+res.each do |key, value|
+  puts

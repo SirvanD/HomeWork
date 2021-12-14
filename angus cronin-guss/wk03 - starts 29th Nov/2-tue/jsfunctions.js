@@ -1,6 +1,6 @@
 // Question 1
 function transmogrifier(num1, num2, num3) {
-    var result = num1 * num2 ** num3  
+    var result = (num1 * num2) ** num3  
     console.log(result);
     
 } 
@@ -31,8 +31,7 @@ function lengths(arr) {
 
 // Question 4
 var fruits = ['kiwi', 'apple', 'mango']
-var x = lengths(fruits)
-
+sum(lengths(fruits))
 
 
 

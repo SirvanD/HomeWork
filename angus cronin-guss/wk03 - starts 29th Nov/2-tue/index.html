@@ -11,48 +11,31 @@
             width: 100px;
             height: 100px;
         }
-        #box1 {
-            background-color: #fff;
+        .boxes {
+            background-color: blue;
         }
-        #box2 {
-            background-color: #fff;
-        }
-        #box3 {
-            background-color: #fff;
-        }
+        
 
     </style>
 </head>
 <body>
     
-    <div class="box1" id="allBoxes"></div>
-    <div class="box2" id="allBoxes"></div>
-    <div class="box3" id="allBoxes"></div>
+    <div class="boxes" id="box1"></div>
+    <div class="boxes" id="box2"></div>
+    <div class="boxes" id="box3"></div>
     <script>
 
-        var boxes = document.querySelector("#allBoxes")
-        for (let index = 0; index < boxes.length; index++) {
-            const divs = boxes[index];
-            boxes.addEventListener('click', function() {
-            boxes.style.backgroundColor = 'red'
+        var allBoxes = document.querySelectorAll(".boxes")
+        
+        allBoxes.forEach(allBoxes => {
+            console.log(allBoxes);
+            allBoxes.addEventListener('click', allBoxes => {
+                allBoxes.style.backgroundColor = 'red';
+                console.log(allBoxes);
+                
             })
-        }
-        
-        
-        // box2.addEventListener('click', handleBox)
-        // box3.addEventListener('click', handleBox)
-       
-        // function handleGreen() {
-        //     if (countClicks > 2) {
-        //         box1.style.backgroundColor = 'green'
-        //         box2.style.backgroundColor = 'green'
-        //         box3.style.backgroundColor = 'green'
-        //     }
-        // }
-        // f
-        //     // box2.style.backgroundColor = 'red'
-        //     // box3.style.backgroundColor = 'red'
-        // }
+            
+        })
         
     </script>
 </body>
