@@ -1,0 +1,10 @@
+* {
+    align-items: center;
+}
+body {
+    background-color: aliceblue;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    color: orangered;
+    font-size: 3rem;
+    text-align: center;
+}
