@@ -38,4 +38,4 @@ get '/movie_list' do
         title: title
         
     })
-
+end
