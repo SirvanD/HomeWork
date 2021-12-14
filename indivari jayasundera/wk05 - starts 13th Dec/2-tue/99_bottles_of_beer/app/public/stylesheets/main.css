@@ -1,0 +1,9 @@
+body {
+  background: linear-gradient(#f8c9c9, #9198e5);
+}
+div {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
