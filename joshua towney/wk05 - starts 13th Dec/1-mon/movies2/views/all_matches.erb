@@ -1,11 +1,16 @@
 
 
 
-<% search.each do |title,name|%>
-
-    <h3>
-        <a href="/movie_details?movie=<%= name %>">
-        <%= title %></a>
-    </h3>
+<% search.each do |movie|%>
+    <p>
+        <a href="/movie_details?movie=<%=movie["Title"]%>">
+        <%= movie["Title"] %></a>
+    </p>
 
 <% end %>
+
+<!-- https://omdbapi.com/?s=jaws&apikey=ebc931bb starts as a has with a key of SEARCH and pretty much everything else as a value
+
+We need to put the movies info from the hash - all_matches["Search"] gave us the all the movie details as an array
+
+we then need to further extrapolate a hash from this array, this time a key/vale pair being :Title and the movie name -->

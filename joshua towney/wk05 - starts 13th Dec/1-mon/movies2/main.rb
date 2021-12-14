@@ -4,6 +4,7 @@ require 'httparty'
 # require 'pry'
 
 get '/' do 
+
     "MOVIE DATABASE MAGIC"
     erb(:index)
 end
@@ -21,7 +22,7 @@ get '/all_matches' do
 
     erb(:all_matches, locals: {
         all_matches: all_matches,
-        search: search,
+        search: search
     })
 end
 
