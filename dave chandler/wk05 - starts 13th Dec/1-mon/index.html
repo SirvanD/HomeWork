@@ -12,9 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
       rel="stylesheet"
     />
-  <!-- API key restricted to domain assemblr-io.github.io/train_routes/ 
-  use: https://assemblr-io.github.io/train_routes/ to test it out
-  -->
+    
   </head>
   <body>
     <div id="container">
@@ -22,6 +20,7 @@
         <div class="top"></div>
         <div class="bottom"></div>
       </div>
+
       <div class="content-wrapper">
         <div class="content">
           <header><h1><span style="color:#2B62D5">M</span>ELBOURNE JOURNEY PLANNER</h1></header>
@@ -56,14 +55,19 @@
         <div class="top"></div>
         <div class="bottom"></div>
       </div>
+
       <div class="bg-wrapper">
         <div class="top"></div>
         <div class="bottom"></div>
       </div>
     </div>
-    <!-- load order important for accessing maps function initialize -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/openlocationcode/1.0.3/openlocationcode.min.js"></script>
+    <script type='text/javascript' src='./javascript/config.js'></script>
     <script src="./javascript/maps.js"></script>
+    <!-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBimsO-5HTfzRdKwgBin2iLWaHX5ubokuk&libraries=places&callback=initMap"></script> -->
     <script src="./javascript/melb_metro_ptv_mta.js"></script>
+    
     </script>
   </body>
 </html>

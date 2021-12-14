@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Search</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/">home</a></li>
+      <li><a href="https://www.linkedin.com/in/drdavechandler/">about</a></li>
+    </ul>
+  </nav>
+
+  <% tickers.each do |code| %>
+  
+  <p><%=code%></p>
+  
+  <% end%>
+
+
+
+  <h1>movies viewer</h1>
+
+<form action="/movie_details">
+  <input type="text" name="title">
+  <button>search</button>
+</form>
+
+</body>
+</html>
