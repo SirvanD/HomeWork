@@ -1,0 +1,19 @@
+/* DT I'm sorry but now that you've taught us how to access style sheets in public folders, I could not resist stealing your styles. Please don't fail me. */
+
+body {
+    margin: 0;
+    font-family: 'Reenie Beanie', cursive;
+    display: flex;
+    background: #ee9ca7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #fbfdfc, #95c9ac);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fbfdfc, #95c9ac); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  body p {
+    font-size: 3.5rem;
+  }
+
+  
