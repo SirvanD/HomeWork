@@ -47,7 +47,3 @@ end
   p value[:suit]
 end
 
-# key = [:value]
-# res[:data][:cards].each do |value|
-# value = [:suits]
-# p "#{key} of #{value}"
