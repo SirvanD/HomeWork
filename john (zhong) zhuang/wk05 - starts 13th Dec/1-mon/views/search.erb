@@ -1,8 +1,7 @@
 
-<% results["Search"].each do |title| %>
+<% results["Search"].each do |movie| %>
 
-<p><a href="/movie?title=<%=title["Title"]%>"><%= title["Title"] %></a></p>
-
+<p><a href="/movie?title=<%=movie["Title"]%>"><%= movie["Title"] %></a></p>
 
 <% end %>
 
