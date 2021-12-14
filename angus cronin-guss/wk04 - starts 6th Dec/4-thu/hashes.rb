@@ -39,11 +39,21 @@ res = {
 p res[:data][:cards][2][:images][:svg]
 
 # Question 2
-
-res[:data][:cards].each do |key|
+array = []
+array2 = []
+res[:data][:cards].each do |key| 
   p key[:value]
 end
- res[:data][:cards].each do |value|
-  p value[:suit]
-end
+res[:data][:cards].each do |value| 
+ p value[:suit]
+end 
+
+
+
+  
+  # res[:data][:cards].each do |value|
+  #   p value[:suit]
+  
+
+
 
