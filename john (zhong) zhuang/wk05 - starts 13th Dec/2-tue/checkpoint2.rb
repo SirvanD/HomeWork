@@ -6,13 +6,14 @@
 # Question 2 (1pt)
 # how to access the query string sent to the server inside a route in a sinatra web application? (answer with words or code)
 # in address bar, the query string is after question mark"?"
+# update15/12: using params['query_string']
 
 # ==============================================
 
 # Question 3 (1pt)
 # how can we pause a ruby program to inspect the variables? (answer with words or code)
 # using method p
-
+# update15/12: binding.pry
 # ==============================================
 
 # Question 4 (2pt)
@@ -40,7 +41,7 @@
 # print the year of birth for robby by accessing the hash
 # Add a new key and value pair to the castle hash (key :cook value "Mrs Potts")
 
-# data[:town][:castle][:num_rooms]
+# update15/12: puts(data[:town][:castle][:num_rooms])
 # data[:town][:castle][:guests].unshift("Belle")
 # puts(data[:town][:castle][:residents][0][:year_of_birth])
 # data[:town][:castle].store(:cook, "Mrs Potts")
@@ -51,13 +52,13 @@
 # Question 5 (2pt)
 # Assume the following array of hashes:
 
-lost_boys = [
-  {name: 'Tootles', age: '11'},
-  {name: 'Nibs', age: '9'},
-  {name: 'Slightly', age: '10'},
-  {name: 'Curly', age: '8'},
-  {name: 'The Twins', age: '9'}
-]
+# lost_boys = [
+#   {name: 'Tootles', age: '11'},
+#   {name: 'Nibs', age: '9'},
+#   {name: 'Slightly', age: '10'},
+#   {name: 'Curly', age: '8'},
+#   {name: 'The Twins', age: '9'}
+# ]
 # Use .each to iterate over the lost_boys array to calculate to the sum of all lost boys age. print the sum age in the terminal
 # i=0
 # x=0
@@ -67,12 +68,12 @@ lost_boys = [
 # end
 # puts x
 
-sum = 0
-lost_boys.each do |boy|
-   age = boy[:age].to_i
-   sum += age
-end
-puts sum
+# sum = 0
+# lost_boys.each do |boy|
+#    age = boy[:age].to_i
+#    sum += age
+# end
+# puts sum
 
 # ==============================================
 
@@ -131,7 +132,7 @@ puts sum
 # # => "tuP snaH kcab no eht enil"
 
 # def letter_reverse(str)
-# puts(str.reverse.split(" ").reverse.join(" "))
+#   puts(str.reverse.split(" ").reverse.join(" "))
 # end
 
 # letter_reverse("Now I know what a TV dinner feels like")
@@ -154,9 +155,9 @@ puts sum
 
 
 # def scream(num)
-# if num == 0
+#   if num == 0
 #     puts "crickets"
-# else
+#   else
 #     i = 1
 #     lol=""
 #     while i<= num 
@@ -164,7 +165,7 @@ puts sum
 #         i = i+1
 #     end
 #     puts lol
-# end
+#   end
 
 # end
 
