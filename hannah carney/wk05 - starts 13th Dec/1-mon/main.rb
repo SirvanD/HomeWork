@@ -14,10 +14,10 @@ get '/results' do
 
     input = params['search_title']
     url = "http://www.omdbapi.com/?s=#{input}&apikey=2f6435d9"
-    list = HTTParty.get(url)
+    res = HTTParty.get(url)
 
     erb :results, locals: {
-        title: list["Search"]
+        movie: res["Search"]
     }
     
 end
@@ -29,7 +29,7 @@ get '/movie_details' do
     res = HTTParty.get(url)
 
     erb :movie_details, locals: {
-        title: res["Title"], 
+        movie: res["Title"], 
         year: res["Year"],
         poster: res["Poster"],  
         plot: res["Plot"]

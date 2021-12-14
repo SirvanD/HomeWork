@@ -1,9 +1,11 @@
 <h1>Search Results</h1>
-<% title.each do |title| %>
-<% movie_title = title["Title"] %>
-<p>
-<a href="/movie_details?t=<%=movie_title%>">
-<%= title["Title"]%>
-</a>
-</p>
-<%end%>
+    <% movie.each do |movie| %>
+    <% movie_title = movie["Title"] %>
+        <p>
+            <a href="/movie_details?t=<%= movie_title %>">
+            <%= movie ["Title"] %>
+            </a>
+        </p>
+<% end %>
+
+
