@@ -98,7 +98,7 @@ counter = 0
 
 while counter < resident[:friends].length  do 
 
-  puts "#{resident[:name]} is firends with #{resident[:friends][counter][:name]}"
+  puts "#{resident[:name]} is friends with #{resident[:friends][counter][:name]}"
   
   counter = counter + 1
 

@@ -15,8 +15,6 @@ def scream (num_input)
        end
     end
     return str_array.join('');
-end
-  
-  
-  
-  
+  end
+ 
+print scream(0)
