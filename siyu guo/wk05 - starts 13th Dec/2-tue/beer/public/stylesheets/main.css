@@ -5,6 +5,7 @@ body {
     background-color: aliceblue;
     font-family: 'Baloo Bhaijaan 2', cursive;
     color: orangered;
-    font-size: 3rem;
+    font-size: 5vh;
     text-align: center;
+    margin: 47.5vh auto;
 }
