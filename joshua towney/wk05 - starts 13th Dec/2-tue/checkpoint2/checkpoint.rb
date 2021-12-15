@@ -39,19 +39,22 @@ data = {
 # Programmatically using Ruby...
 # - print the number of rooms in the castle by accessing the hash
 
-# data[:town][:castle][:num_rooms]
+ puts data[:town][:castle][:num_rooms] # replace puts with print
 
 # - Add "Belle" to the **beginning** of the `guests` array
 
-# data[:town][:castle][:guests].unshift("Belle")
+data[:town][:castle][:guests].unshift("Belle")
 
 # - print the year of birth for robby by accessing the hash
 
-# data[:town][:castle][:residents][0][:year_of_birth]
+ puts data[:town][:castle][:residents][0][:year_of_birth] # replace puts with print
 
 # - Add a new key and value pair to the `castle` hash (key `:cook` value `"Mrs Potts"`)
 
-# data[:town][:castle].store(:cook,'Mrs Potts')
+data[:town][:castle].store(:cook,'Mrs Potts')
+
+
+# binding.pry
 
 
 # # Question 5 (2pt)
@@ -68,24 +71,17 @@ lost_boys = [
 # Use `.each` to iterate over the `lost_boys` array to calculate to the sum of all lost boys age.
 # print the sum age in the terminal
 
-age = 0
+sum_age = 0
 
-lost_boys.each do
-    i = 0
-    individual_age = lost_boys[i][:age].to_i
-    age = age + individual_age
-    i+=1
+lost_boys.each do |lost_boy|
+  individual_age = lost_boy[:age].to_i # integers not needed when doing for each
+  sum_age += individual_age
 end
 
-puts age
-
-
-
-# binding.pry
-
+puts sum_age
 
 # # Question 6 (3pt)
-# Assume you have the following hash...
+
 resident = {
   name: "Belle",
   friends: [
@@ -118,33 +114,19 @@ resident = {
 
 friends_array = resident[:friends]
 i = 0
-# friends_names = resident[:friends][i][:name]
 
-while friends_array.length() <= 4 do
+while i < friends_array.length do
     friends_names = resident[:friends][i][:name]
     puts "Belle is friends with #{friends_names}"
     i += 1
 end
 
-##### this prints the names but runs into an error on line 124 at the end ####
-
-
-# binding.pry
-
-
 # # Question 7 (3pt)
 
 # Write a function `letter_reverse` that accepts a single argument, a string. The function should maintain the order of words in the string but reverse the letters in each word. Don't worry about punctuation.
 
-# ```ruby
-# letter_reverse("Now I know what a TV dinner feels like")
-# # => "woN I wonk tahw a VT rennid sleef ekil"
-# letter_reverse("Put Hans back on the line")
-# # => "tuP snaH kcab no eht enil"
-# ```
-
 def letter_reverse(string)
-    puts string.reverse
+    puts string.split.map {|word|word.reverse}.join(" ")
 end
 
 letter_reverse("Now I know My ABCs")
@@ -153,7 +135,7 @@ letter_reverse("Now I know My ABCs")
 # # Question 8 (3pt)
 
 # Define a `scream` method that accepts a single parameter and when called should as return a string as per the examples below"
-# ```ruby
+
 # scream(0) #=> "crickets"
 # scream(1) #=> "lol"
 # scream(2) #=> "lolol"
@@ -162,23 +144,27 @@ letter_reverse("Now I know My ABCs")
 # scream(5) #=> "lololololol"
 # scream(7) #=> "lololololololol"
 # scream(10) #=> "lolololololololololol"
-# ```
 
 def scream(number)
 
     ol_number = number - 1
 
     if number <= 0 
-        puts "crickets"
+        return "crickets"
     elsif number == 1
-        puts "lol"
+        return "lol"
     else 
-        puts "lol" + ("ol"*ol_number)
+        return "lol" + ("ol"*ol_number)
     end
 
 end
 
-scream(-1)
+
 scream(0)
 scream(1)
+scream(2)
+scream(3)
+scream(4)
 scream(5)
+scream(7)
+scream(10)
