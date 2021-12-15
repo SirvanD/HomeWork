@@ -2,13 +2,17 @@
 require 'sinatra'
 require 'sinatra/reloader'
 
-counter = 99
+# counter = 99
 get '/' do
-  erb :index
+  counter = 99
+  erb(:index, locals:{
+    counter:counter
+  })
 end
 
 get "/:counter" do 
- counter = counter -1
+ counter = params["counter"].to_i
+
  erb(:counter, locals: {
    counter:counter
  })
