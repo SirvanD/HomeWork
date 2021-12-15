@@ -126,7 +126,7 @@ end
 # Write a function `letter_reverse` that accepts a single argument, a string. The function should maintain the order of words in the string but reverse the letters in each word. Don't worry about punctuation.
 
 def letter_reverse(string)
-    puts string.split.map {|word|word.reverse}.join(" ")
+    return string.split.map {|word|word.reverse}.join(" ")
 end
 
 letter_reverse("Now I know My ABCs")
