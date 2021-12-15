@@ -99,27 +99,27 @@ def letter_reverse(sentence)
         i+=1
     end
 
-    puts reversed.join(" ")
+    return reversed.join(" ")
 end
 
 letter_reverse("Now I know what a TV dinner feels like")
 letter_reverse("Put Hans back on the line")
 
-# def scream(num)
-#     str = ""
-#     i = 1
-#     if num === 0
-#         p "crickets"
-#     else
-#         str += "lol"
-#         while i < num
-#             if num > 1
-#                 str += "ol"
-#             end
-#             i+=1
-#         end
-#         return str
-#     end
-# end
+def scream(num)
+    str = ""
+    i = 1
+    if num === 0
+        return "crickets"
+    else
+        str += "lol"
+        while i < num
+            if num > 1
+                str += "ol"
+            end
+            i+=1
+        end
+        return str
+    end
+end
 
-# scream(10)
+scream(10)
