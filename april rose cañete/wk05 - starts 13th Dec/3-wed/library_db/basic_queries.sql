@@ -7,13 +7,12 @@
 
 -- Get just the name and birth year of all authors
 
-  select name, birth from authors;
+  select name, birth_year from authors;
 
 -- Get all authors born in the 20th centruy or later
 
   select * from authors 
-  where birth_year 
-  between 1900 and 2000;
+  where birth_year between 1900 and 2000;
 
 -- Get all authors born in the USA
 
