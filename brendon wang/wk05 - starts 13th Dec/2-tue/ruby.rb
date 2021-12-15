@@ -108,7 +108,7 @@ def letter_reverse(string)
     array_words.each do |word|
         word.reverse!
     end
-    puts array_words.join(" ")
+    return array_words.join(" ")
 end
 
 letter_reverse("Now I know what a TV dinner feels like")
