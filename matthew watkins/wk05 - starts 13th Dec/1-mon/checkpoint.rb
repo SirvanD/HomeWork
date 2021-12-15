@@ -5,7 +5,7 @@ require 'pry'
 
 
 #how to acecss query strings in sent to the server inside a route in a sinatra web application?
-#you can use the 
+#you can use the localhost:4567/?name=(name here)
 
 #to pause a ruby program and inspect variables we can use binding.pry
 #note this will require pry!
@@ -111,4 +111,4 @@ letter_reverse("hello there, ahhh general kenobi")
 
 
 
-#binding.pry
+binding.pry
