@@ -19,7 +19,7 @@ select title from books;
   -- Cry when you realize how long it's been
 select publication_date from books where title = 'A Dance with Dragons';
 -- Get all books which have `the` somewhere in their title (hint, look up LIKE/ILIKE)
-select * from books where title LIKE '%the%';
+select * from books where title ILIKE '%the %';
 -- Add yourself as an author
 insert into authors(name, nationality, birth_year) values ('Harry', 'Australia', 1998);
 -- Add two books that you'd like to write (you can hard-code your id as the author id)
