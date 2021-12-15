@@ -5,16 +5,7 @@ require 'json'
 require 'pry'
 
 get '/' do
-  address_bar_params = params['name']
-
-  array = %w[
-    msft
-    tsla
-    aapl
-  ]
-  erb(:index, locals: {
-        tickers: array
-      })
+  erb(:index)
 end
 
 get '/q' do
