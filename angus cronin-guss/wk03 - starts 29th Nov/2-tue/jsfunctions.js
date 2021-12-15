@@ -23,11 +23,11 @@ function sum(array) {
 function lengths(arr) {
     newArray = []
     for (let i = 0; i < arr.length; i++) {
-        newArray = newArray + ', ' + arr[i].length 
+        newArray.push(arr[i].length) 
     }
     return newArray;
 }
-// test lengths(['hellohellohello', 'bye', 'test', 'test'])
+lengths(['hellohellohello', 'bye', 'test', 'test'])
 
 // Question 4
 var fruits = ['kiwi', 'apple', 'mango']
