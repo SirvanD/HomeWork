@@ -5,7 +5,7 @@ require 'json'
 require 'pry'
 
 get '/' do
-  address_bar_params = params['name', 'title']
+  address_bar_params = params['name']
 
   array = %w[
     msft
@@ -17,23 +17,36 @@ get '/' do
       })
 end
 
-get '/movie_details' do
-  movie_title = params['title']
+get '/q' do
+  search_term = params['s']
   response = nil
-  url = "http://www.omdbapi.com/?s=#{movie_title}&apikey=1e36cb2c"
+  url = "http://www.omdbapi.com/?s=#{search_term}&apikey=1e36cb2c"
   res = HTTParty.get(url, stream_body: true)
 
-  # grab the res hash of titles and return the title and info and create html
-  # add html with anchors to the page
-  # create the get for movie details using t='tile' or a better unique identifier
+  if res['totalResults'].to_i != 1
+    erb(:search_result, locals: {
+          search_result: res['Search'],
+          total_found: res['totalResults']
+        })
+  else
+    puts 'here her her here here here'
+    title = res['Search'][0]['Title']
+    url = "http://www.omdbapi.com/?t=#{title}&apikey=1e36cb2c"
+    res = HTTParty.get(url, stream_body: true)
 
-  fetched_title = res['Title']
-  year = res['Year']
-  poster = res['Poster']
-  binding.pry
+    erb(:movie_details, locals: {
+          movie: res
+        })
+  end
+end
+
+get '/movie_details' do
+  title = params['t']
+  response = nil
+  url = "http://www.omdbapi.com/?t=#{title}&apikey=1e36cb2c"
+  res = HTTParty.get(url, stream_body: true)
+
   erb(:movie_details, locals: {
-        title: fetched_title,
-        year: year,
-        poster_url: poster
+        movie: res
       })
 end
