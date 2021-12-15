@@ -1,20 +1,20 @@
 def scream(num)
     base_str = "lol"
     if num==0
-        puts "crickets"
+        return "crickets"
     elsif num == 1
-        puts base_str
+        return base_str
     else
             i=1
             while i<num
                 base_str = base_str + "ol"
             i += 1
             end
-    puts base_str
+    return base_str
     end
 end
 
-scream(0);
-scream(2);
-scream(3);
-scream(4);
+puts(scream(0));
+puts(scream(2));
+puts(scream(3));
+puts(scream(4));
