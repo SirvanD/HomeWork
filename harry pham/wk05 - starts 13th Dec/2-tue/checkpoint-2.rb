@@ -4,10 +4,10 @@
 # - form
 
 # how to access the query string sent to the server inside a route in a sinatra web application? (answer with words or code)
-#params
+#params[""] is a key value to a http request
 
 # how can we pause a ruby program to inspect the variables? (answer with words or code)
-#binding
+#binding allows you to freeze the program at a certain point depending on where the binding line is, adding binding, pry will let you use pry once it pauses, also require pry if this is the case
 
 data = {
     town: {
@@ -82,38 +82,38 @@ resident = {
 #     i+=1
 # end
 
-# def letter_reverse(sentence) 
-#     sentenceSplit = sentence.split
-#     i = 0
-#     reversed = []
-#     while i < sentenceSplit.length
-#         reversed.push(sentenceSplit[i].reverse)
-#         i+=1
-#     end
-
-#     puts reversed.join(" ")
-# end
-
-# letter_reverse("Now I know what a TV dinner feels like")
-# letter_reverse("Put Hans back on the line")
-
-def scream(num)
-    str = ""
-    i = 1
-    if num === 0
-        p "crickets"
-    else
-        str += "lol"
-        while i < num
-            if num > 1
-                str += "ol"
-
-            end
-            i+=1
-        end
-        p str
+def letter_reverse(sentence) 
+    sentenceSplit = sentence.split
+    i = 0
+    reversed = []
+    while i < sentenceSplit.length
+        reversed.push(sentenceSplit[i].reverse)
+        i+=1
     end
 
+    puts reversed.join(" ")
 end
 
-scream(10)
+letter_reverse("Now I know what a TV dinner feels like")
+letter_reverse("Put Hans back on the line")
+
+# def scream(num)
+#     str = ""
+#     i = 1
+#     if num === 0
+#         p "crickets"
+#     else
+#         str += "lol"
+#         while i < num
+#             if num > 1
+#                 str += "ol"
+
+#             end
+#             i+=1
+#         end
+#         p str
+#     end
+
+# end
+
+# scream(10)
