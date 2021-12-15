@@ -6,12 +6,12 @@
 
 # Question 2 (1pt)
 # how to access the query string sent to the server inside a route in a sinatra web application? (answer with words or code)
-get '/page here' do --> and then instructions of whats in the page or defined in the page
+by accessing the params defined
 
 
 # Question 3 (1pt)
 # how can we pause a ruby program to inspect the variables? (answer with words or code)
-Call pry to pause the program inside the terminal
+require pry 
 
 # Question 4 (2pt)
 # Assume the following hash...
@@ -34,13 +34,13 @@ data = {
 # Programmatically using Ruby...
 
 # print the number of rooms in the castle by accessing the hash
-data[:town][:castle][:num_rooms]
+print data[:town][:castle][:num_rooms]
 
 # Add "Belle" to the beginning of the guests array
 data[:town][:castle][:guests].unshift('Belle')
 
 # print the year of birth for robby by accessing the hash
-data[:town][:castle][:residents][0][:year_of_birth]
+print data[:town][:castle][:residents][0][:year_of_birth]
 
 # Add a new key and value pair to the castle hash (key :cook value "Mrs Potts")
 data[:town][:castle].merge!(cook: "Mrs Potts")
@@ -137,3 +137,13 @@ end
 # scream(5) #=> "lololololol"
 # scream(7) #=> "lololololololol"
 # scream(10) #=> "lolololololololololol"
+
+def scream(number)
+    if number == 0
+        return 'crickets'
+    else 
+        return "lol" + "ol"*(number -1)
+    end
+end
+
+
