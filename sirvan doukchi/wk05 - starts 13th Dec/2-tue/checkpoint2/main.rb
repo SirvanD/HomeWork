@@ -1,5 +1,5 @@
-     
 # require 'sinatra'
+# require 'sinatra/reloader'
 require 'pry'
 
 # get '/' do
@@ -123,7 +123,7 @@ resident = {
 counter = 0
 while counter < resident[:friends].length  do 
 
-  p "#{resident[:name]} is firends with #{resident[:friends][counter][:name]}"
+  p "#{resident[:name]} is friends with #{resident[:friends][counter][:name]}"
   
   counter += +1;
 
@@ -142,17 +142,16 @@ def letter_reverse (str_input)
   str_array_reverse = []
   str_array = str_input.split(' ')
   i = 0
-  # print str_array;
   while i < str_array.length 
     str_array_reverse.push (str_array[i].reverse())
     i = i+1;
   end
-  print "\n\n"
-  print str_array_reverse
+  str_array = str_array_reverse
+  return str_array.join(" ") # woN  I  wonk  tahw  a  VT  rennid  sleef  ekil
 
 end
 
-letter_reverse("Now I know what a TV dinner feels like") #"woN I wonk tahw a VT rennid sleef ekil"
+print letter_reverse("Now I know what a TV dinner feels like") #"woN I wonk tahw a VT rennid sleef ekil"
 
 
 
@@ -172,27 +171,34 @@ def scream (num_input)
   str_out_array = []
   if num_input == 0
       str_out_array.push("crickets")
-return str_out_array
+      return str_out_array.join('')
   elsif num_input > 0
     while j < num_input
       str_out_array.push("lol")
       j = j + 1;
     end
   end
-return str_out_array.join('');
+  if str_out_array.length > 1 
+    k = 0 
+    until k == str_out_array.length do
+      str_out_array[k].gsub!('lol','lo')
+      k += 1
+    end
+  end
+  return str_out_array.join('');
 end
-
-
-print "\n\n"
-print scream(0)
-print "\n"
-print scream(2)
-print "\n"
-print scream(5)
-print "\n"
-print scream(10)
 print "\n\n"
 
+p scream(0) #=> "crickets"
+p scream(1) #=> "lol"
+p scream(2) #=> "lolol"
+p scream(3) #=> "lololol"
+p scream(4) #=> "lolololol"
+p scream(5) #=> "lololololol"
+p scream(7) #=> "lololololololol"
+p scream(10) #=> "lolololololololololo"
+
+print "\n\n"
 
 
 # binding.pry
