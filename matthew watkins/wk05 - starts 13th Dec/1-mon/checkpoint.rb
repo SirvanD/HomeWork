@@ -5,7 +5,13 @@ require 'pry'
 
 
 #how to acecss query strings in sent to the server inside a route in a sinatra web application?
-#you can use the localhost:4567/?name=(name here)
+#you can use the localhost:4567/?name=Matthew
+
+# get '/' do
+
+# params["name"]
+
+# end
 
 #to pause a ruby program and inspect variables we can use binding.pry
 #note this will require pry!
@@ -31,17 +37,17 @@ data = {
 
 #print the number of rooms in the castle by accessing the hash:
 
-data[:town][:castle][:num_rooms]
+print data[:town][:castle][:num_rooms]
 
 #add Belle to the beginning of the guests array:
-data[:town][:castle][:guests] = ["Belle", "Birds"]
+data[:town][:castle][:guests].unshift("belle")
 
 #print the year of birth for Robby by accessing the hash
-data[:town][:castle][:residents][0][:year_of_birth]
+print data[:town][:castle][:residents][0][:year_of_birth]
 
 #add a new key and value pair to the castle hash (key :cook value "Mrs Potts")
 #object = {cook: "Mrs.Potts"}
-data.merge(cook: "mrs.potts")
+data[:town][:castle].merge!(cook: "mrs potts")
 
 
 #assume the following array of hashes:
@@ -53,13 +59,16 @@ lost_boys = [
   {name: 'The Twins', age: '9'}
 ]
 
-# lost_boys.each do |num|
-#     total = 0
-    
-#     lost_boys[num][:age]
+total = 0
 
-#     total = total + lots_boys[num][:age]
-# end
+lost_boys.each do |boy|
+    
+    age = boy[:age].to_i
+
+    total = total + age
+    
+end
+print total
 
 
 # assume you have the following hash:
@@ -104,10 +113,27 @@ while counter < 4
 end
 
 def letter_reverse(string)
-    string = string.reverse()
+    string.split.map() { |string| string.reverse}.join(" ")
 end
 
 letter_reverse("hello there, ahhh general kenobi")
+
+
+
+def scream (number)
+    if number == 0
+        return "crickets"
+    else
+        return "lol" + "ol" *(number - 1)
+    end
+end
+
+
+
+
+
+
+
 
 
 
