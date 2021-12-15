@@ -8,7 +8,12 @@
 # Question 2
 # how to access the query string sent to the server inside a route in a sinatra web application? (answer with words or code)
 
-# query_string = params["querystring"]
+# form action = "/search"
+  # input name = q
+  # button Search 
+# get "/search" do 
+# google_search = params["q"]
+
 
 
 # Question 3 (1pt)
@@ -35,11 +40,11 @@ data = {
 }
 
 # print the number of rooms in the castle by accessing the hash
-data[:town][:castle][:num_rooms]
+puts data[:town][:castle][:num_rooms]
 # Add "Belle" to the beginning of the guests array
 data[:town][:castle][:guests].unshift("Belle")
 # print the year of birth for robby by accessing the hash
-data[:town][:castle][:residents][0][:year_of_birth]
+puts data[:town][:castle][:residents][0][:year_of_birth]
 # Add a new key and value pair to the castle hash (key :cook value "Mrs Potts")
 data[:town][:castle][:cook] = "Mrs Potts"
 
@@ -98,7 +103,7 @@ puts belles_friends
 # Question 7
 # Write a function letter_reverse that accepts a single argument, a string. The function should maintain the order of words in the string but reverse the letters in each word. Don't worry about punctuation.
 
-def letter_reverser(string)
+def letter_reverse(string)
     array_words = string.split(" ")
     array_words.each do |word|
         word.reverse!
@@ -106,7 +111,7 @@ def letter_reverser(string)
     puts array_words.join(" ")
 end
 
-letter_reverser("Now I know what a TV dinner feels like")
+letter_reverse("Now I know what a TV dinner feels like")
 
 # Question 8
 # Define a scream method that accepts a single parameter and when called should as return a string as per the examples below"
@@ -121,7 +126,7 @@ def scream(num)
             output += "ol"
         end
     end
-    puts output
+    return output
 end
 
 scream(10)
