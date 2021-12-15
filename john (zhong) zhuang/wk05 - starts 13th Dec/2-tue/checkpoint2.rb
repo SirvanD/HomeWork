@@ -7,6 +7,24 @@
 # how to access the query string sent to the server inside a route in a sinatra web application? (answer with words or code)
 # in address bar, the query string is after question mark"?"
 # update15/12: using params['query_string']
+# for example, in .rb file: 
+
+    # get '/hello' do
+    #     name = params["name"]    
+    #     "hello there #{name}"
+    # end
+
+# so in address bar, if leaves the query string blanket, the page returns only 
+
+    # "hello there", 
+
+# while adding "name" like
+
+    # localhost:4567/hello?name=zz
+
+# the page will return
+
+    # hello there zz
 
 # ==============================================
 
@@ -132,11 +150,11 @@
 # # => "tuP snaH kcab no eht enil"
 
 # def letter_reverse(str)
-#   puts(str.reverse.split(" ").reverse.join(" "))
+#   return (str.reverse.split(" ").reverse.join(" "))
 # end
 
-# letter_reverse("Now I know what a TV dinner feels like")
-# letter_reverse("Put Hans back on the line")
+# puts letter_reverse("Now I know what a TV dinner feels like")
+# puts letter_reverse("Put Hans back on the line")
 
 
 # ==============================================
@@ -156,17 +174,16 @@
 
 # def scream(num)
 #   if num == 0
-#     puts "crickets"
+#     return "crickets"
 #   else
 #     i = 1
-#     lol=""
+#     lol = ""
 #     while i<= num 
 #         lol  =  "lo"*i + "l"
 #         i = i+1
 #     end
-#     puts lol
+#     return lol
 #   end
-
 # end
 
-# scream(10)
+# puts scream(10)
