@@ -4,17 +4,18 @@
 # - form
 
 # how to access the query string sent to the server inside a route in a sinatra web application? (answer with words or code)
-#params[""] is a key value to a http request, for an example:
-#                 param[key]  param[value]   
-#                         v    v  
-#https://www.omdbapi.com/?s=jaws&apikey=6010dc57
+# params[""] is a key value to a http request, for an example:
+#                 param[key]     query string 
+#                         v  |                  |
+"https://www.omdbapi.com/?s=#{title}&apikey=6010dc57"
+title = params["title"]
 
 # how can we pause a ruby program to inspect the variables? (answer with words or code)
 #binding allows you to freeze the program at a certain point depending on where the binding line is, adding binding, pry will let you use pry once it pauses, also require pry if this is the case
 #for an example:
 #puts ("yes yes yes")
-#require "pry"
-#binding, pry
+# require "pry"
+# binding pry
 
 data = {
     town: {
@@ -114,13 +115,11 @@ letter_reverse("Put Hans back on the line")
 #         while i < num
 #             if num > 1
 #                 str += "ol"
-
 #             end
 #             i+=1
 #         end
-#         p str
+#         return str
 #     end
-
 # end
 
 # scream(10)
