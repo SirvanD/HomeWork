@@ -7,11 +7,14 @@
 
 # -Question 2: how to access the query string sent to the server inside a route in a sinatra web application? (answer with words or code)
 # Use params
+set the user input as "ticker" in erb
+ticker = params["ticker"]
+url = 'http://omdbapi.com/?s='+ ticker +'&apikey=2f6435d9'
 
 
 
 # -Question 3: how can we pause a ruby program to inspect the variables? (answer with words or code)
-#  control+C
+#  Use Pry(require 'pry'; binding.pry)
 
 
 
@@ -47,12 +50,10 @@ lost_boys = [
   {name: 'The Twins', age: '9'}
 ]
 age_total = 0
-
-lost_boys.each do |key1: value1, key2: value2|
-    age_total += value2.to_i
+lost_boys.each do |age|
+  age_total += age[:age].to_i
 end
 puts age_total
-# i don't know the answer......
 
 
 # -Question 6: 
@@ -81,7 +82,7 @@ puts age_total
 
 # counter = 0
 # while counter <= 3
-#     puts "#{resident[:name]} is friend with #{resident[:friends][counter][:name]}"
+#     puts "#{resident[:name]} is friends with #{resident[:friends][counter][:name]}"
 #     counter += 1
 # end
 
