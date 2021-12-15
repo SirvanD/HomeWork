@@ -16,22 +16,22 @@ get '/1' do
 end
 
 get '/:number' do
-  num = params['number'].to_i
-  puts num
-  if num == nil || num == 99
+  number = params['number'].to_i
+  puts number
+  if number == nil || number == 99
     redirect '/'
-  elsif num == 0
+  elsif number == 0
     redirect '/0'
-  elsif num == 1
+  elsif number == 1
     redirect '/1'
   else
     erb(:number, locals: {
-      number:num
+      number:number
     })
   end
 
   erb(:number, locals: {
-    number:num
+    number:number
   })
 end
 
