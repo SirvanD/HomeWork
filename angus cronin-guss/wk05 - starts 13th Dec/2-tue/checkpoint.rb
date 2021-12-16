@@ -32,9 +32,8 @@ p data[:town][:castle][:num_rooms]
 #4.2
 data[:town][:castle][:guests].unshift('belle') 
 # 4.3
-p data[:town][:castle][:residents] #unfinished
+p data[:town][:castle][:residents][0][:year_of_birth] 
 # 4.4
-cook = {cook: 'Mrs Potts'} 
 data[:town][:castle].merge!(cook: "Ms Potts")
 
 # Question 5
@@ -45,10 +44,10 @@ lost_boys = [
   {name: 'Curly', age: '8'},
   {name: 'The Twins', age: '9'}
 ]
-# lost_boys.each do |calculate|
-#     array = []
-#     array[:name][:age].push()
-# end #unfinished
+lost_boys[:age].each [age]
+
+end
+
 
 # Question 6
 resident = {
@@ -74,11 +73,28 @@ resident = {
   ]
 }
 
-friends.each |key, value|
-    p "Belle is friends with #{value}"
+people = resident[:friends]
+i = 0 
+while i < people.length do 
+  names = resident[:friends][i][:name]
+  puts "belle is friends with #{names}"
+  i += 1
 end
 
 # Question 7
 def letter_reverse (str)
     str.split(" ").reverse().join(" ")
 end
+
+# Question 8
+
+def scream (number)
+  if number == 0 
+    p "crickets"
+  elsif number == 1
+    p 'lol'
+  else
+    p 'lol' + ('ol' * (number - 1))
+  end
+end
+    
