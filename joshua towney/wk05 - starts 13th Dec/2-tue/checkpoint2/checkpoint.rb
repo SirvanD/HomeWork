@@ -126,11 +126,10 @@ end
 # Write a function `letter_reverse` that accepts a single argument, a string. The function should maintain the order of words in the string but reverse the letters in each word. Don't worry about punctuation.
 
 def letter_reverse(string)
-    return string.split.map {|word|word.reverse}.join(" ")
+  string.split.map {|word|word.reverse}.join(" ")
 end
 
-letter_reverse("Now I know My ABCs")
-
+# if return is not input, the it will return in ruby. It is generaly implied that we should be returning in Ruby.
 
 # # Question 8 (3pt)
 

@@ -1,0 +1,15 @@
+<h1>THE SOLAR SYSTEM</h1>
+
+
+
+<section class="planets">
+
+    <% planet.each do |planet|%>
+        <h2>
+            <a href="/planet_details/<%=planet["name"]%>"><%=planet["name"]%></a>
+        </h2>
+        <img src="<%=planet["image_url"]%>" alt="">
+
+    <% end %>
+
+</section>
