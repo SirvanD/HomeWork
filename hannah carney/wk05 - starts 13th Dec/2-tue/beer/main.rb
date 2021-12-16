@@ -13,9 +13,8 @@ get '/' do
 end
 
 get '/:number' do
-    num_of_beers = params["num_of_beers"]
+    num_of_beers = params["number"].to_i
     
-
     erb(:number, locals: {
         number: num_of_beers
     })

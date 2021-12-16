@@ -7,11 +7,12 @@
 # Question 2 (1pt)
 # how to access the query string sent to the server inside a route in a sinatra web application? (answer with words or code)
 by accessing the params defined
-
+# e.g if you have params that were like: stock = StockQuote::Stock.quote(params["ticker"]),
+# you would have a URL like <localhost4567/stock?=tsla>
 
 # Question 3 (1pt)
 # how can we pause a ruby program to inspect the variables? (answer with words or code)
-require pry 
+require pry and then call pry inside the file with binding.pry 
 
 # Question 4 (2pt)
 # Assume the following hash...
