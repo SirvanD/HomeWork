@@ -180,18 +180,16 @@ letter_reverse("Now I know what a TV dinner feels like")
 # scream(10) #=> "lolololololololololol"
 # ```
 
-
 def scream (num)
+    ol = 'ol'
     if num == 0 
-        puts "crickets"
+        return "crickets"
     elsif num == 1
-        puts "lol"
+        return "lol"
     elsif num > 1
-        while 1 < num
-            total += "lol#{ol}"
-            return total
-        end
-    
+        total = "l#{ol * num}"
+        return total
+    end
 end
 
 
