@@ -43,7 +43,7 @@ Load that in so we can practice interacting with our data. Make sure to also loo
 
 ```bash
 $ psql -d library < seed.sql
-```
+```;
 
 ## Performing CRUD actions with SQL
 
