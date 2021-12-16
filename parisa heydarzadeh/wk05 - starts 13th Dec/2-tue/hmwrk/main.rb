@@ -4,8 +4,11 @@ require 'sinatra/reloader'
 
 
 get '/' do
-    erb(:index)
-    
+    erb(:index, locals: {
+
+
+    number:99
+    })
 end
 
 get '/0' do
@@ -24,12 +27,12 @@ get '/:number' do
         redirect '/0'
     else
         erb(:bottle_number, locals: {  
-          apple:num
+          bottle:num
         })
       
     end
       erb(:bottle_number, locals: {
-         apple:num
+         bottle:num
         
      })
 
