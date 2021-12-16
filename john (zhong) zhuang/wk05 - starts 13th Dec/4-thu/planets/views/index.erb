@@ -1,0 +1,16 @@
+<h1>Planets</h1>
+
+
+<% planets.each do |planet| %>
+
+<h2>
+<a href="/planets/<%=planet["id"]%>"><%=planet["name"]%></a>
+</h2>
+<img src="<%= planet["image_url"]%>" alt="<%=planet["name"]%>">
+
+<% end %>
+
+<h2>
+<a href="/user_input">Upload New Planet</a>
+
+</h2>
