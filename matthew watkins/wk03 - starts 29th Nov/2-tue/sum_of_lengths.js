@@ -18,7 +18,7 @@ function lengths(stringsArray) {
 
 }
 
-console.log(sum(lengths(fruits.join (` `))))
+console.log(sum(lengths(fruits)))
 
 
 
