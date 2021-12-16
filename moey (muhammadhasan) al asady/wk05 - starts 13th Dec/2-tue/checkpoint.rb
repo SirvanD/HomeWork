@@ -16,8 +16,8 @@
 # Name 3 ways to make a HTTP requests in a web browser.
 
 # address bar
-# get
-# post
+# form 
+# hyperlink
 
 # # Question 2 (1pt)
 
@@ -54,12 +54,13 @@ data = {
 # ```
 # Programmatically using Ruby...
 # - print the number of rooms in the castle by accessing the hash
-data[:town][:castle][:num_rooms]
+puts data[:town][:castle][:num_rooms]
 # - Add "Belle" to the **beginning** of the `guests` array
-data[:town][:residents].unshift('Belle')
+data[:town][:castle][:guests].unshift('Belle')
 # - print the year of birth for robby by accessing the hash
-data[:town][:castle][:residents][0][:year_of_birth]
+puts data[:town][:castle][:residents][0][:year_of_birth]
 # - Add a new key and value pair to the `castle` hash (key `:cook` value `"Mrs Potts"`)
+data[:town][:castle][:cook] = 'Mrs Potts'
 
 
 # # Question 5 (2pt)
@@ -81,9 +82,11 @@ lost_boys = [
 total = 0
 
 lost_boys.each do |age|
-    total += age[:age]
-    puts total
+    total += age[:age].to_i
 end
+
+puts total
+
 
 
 
@@ -122,10 +125,11 @@ resident = {
 # Belle is friends with Cogsworth
 # Belle is friends with Lumière
 # Belle is friends with Mrs. Potts
-i=0
+# resident[:friends][i][:name]
+i= 0
 while i < resident[:friends].length
-    puts "#{resident[:name]} is friends with #{name}"
-    i++
+    puts "#{resident[:name]} is friends with #{resident[:friends][i][:name]}"
+    i = i + 1
 end
 # ```
 
@@ -139,14 +143,28 @@ end
 # letter_reverse("Put Hans back on the line")
 # # => "tuP snaH kcab no eht enil"
 # ```
-str = "moey"
+str = "Now I know what a TV dinner feels like"
+empty = []
 
-def wordReverse |str|
-    reversed = str.reverse
-    puts reversed
+def letter_reverse (str)
+    str = str.split
+    empty = []
+
+
+    str.each do |each|
+        new = each.reverse
+        empty.push(new)   # could do empty.push(each.reverse)
+    
+    end
+    final = empty.join(' ')
+    return final
+
 end
 
-wordReverse(str)
+letter_reverse("Now I know what a TV dinner feels like")
+
+# (str.each{|i| puts "#{i}" }
+
 
 # # Question 8 (3pt)
 
@@ -161,6 +179,20 @@ wordReverse(str)
 # scream(7) #=> "lololololololol"
 # scream(10) #=> "lolololololololololol"
 # ```
+
+
+def scream (num)
+    if num == 0 
+        puts "crickets"
+    elsif num == 1
+        puts "lol"
+    elsif num > 1
+        while 1 < num
+            total += "lol#{ol}"
+            return total
+        end
+    
+end
 
 
 # # all done! please push your code up to github
