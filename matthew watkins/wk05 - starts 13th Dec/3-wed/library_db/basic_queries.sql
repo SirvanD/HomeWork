@@ -2,9 +2,9 @@
 -- Unless otherwise stated, all queries should return all columns
 
 -- Get all information about all authors
-library * from authors
+select * from authors
 -- Get just the name and birth year of all authors
-select name, birth year from authors
+select name, birth_year from authors
 -- Get all authors born in the 20th centruy or later
 select birth_year from authors where birth_year > 1901;
 -- Get all authors born in the USA
