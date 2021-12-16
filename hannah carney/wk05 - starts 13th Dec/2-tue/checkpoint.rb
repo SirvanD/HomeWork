@@ -7,8 +7,9 @@
 # Question 2 (1pt)
 # how to access the query string sent to the server inside a route in a sinatra web application? (answer with words or code)
 by accessing the params defined
-# e.g if you have params that were like: stock = StockQuote::Stock.quote(params["ticker"]),
-# you would have a URL like <localhost4567/stock?=tsla>
+# e.g if you have params that were like: input = params['t']
+
+# you would have a URL like http://localhost:4567/movie_details?t=Jaws and to change the result you would change t=Jaws to t=whatevertitleyoulike
 
 # Question 3 (1pt)
 # how can we pause a ruby program to inspect the variables? (answer with words or code)
