@@ -40,14 +40,16 @@ data = {
 print data[:town][:castle][:num_rooms]
 
 #add Belle to the beginning of the guests array:
-data[:town][:castle][:guests].unshift("belle")
+data[:town][:castle][:guests].unshift("Belle")
 
 #print the year of birth for Robby by accessing the hash
 print data[:town][:castle][:residents][0][:year_of_birth]
 
 #add a new key and value pair to the castle hash (key :cook value "Mrs Potts")
 #object = {cook: "Mrs.Potts"}
-data[:town][:castle].merge!(cook: "mrs potts")
+data[:town][:castle].merge!(cook: "Mrs Potts")
+
+
 
 
 #assume the following array of hashes:
