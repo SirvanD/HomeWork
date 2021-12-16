@@ -1,0 +1,19 @@
+.planetInfo img {
+  width: 200px;
+}
+.new-planet a {
+  background-color: peachpuff;
+}
+
+form {
+  display: block;
+}
+
+input {
+  display: block;
+  padding: 10px;
+}
+button {
+  padding: 10px;
+  margin-top: 10px;
+}
