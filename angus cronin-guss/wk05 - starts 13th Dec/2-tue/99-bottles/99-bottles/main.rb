@@ -2,28 +2,21 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 
-gets '/' do 
-  erb :index
+get '/' do
+  number = 99
+  erb(:index)
 end
-def bottles_of_Beer
-  gets '/98' do
-  number == 99
-  while number > 1
-    gets "/#{number}" do
-      number = number - 1
-      if number == 0
-        p "No Bottles of beer on the wall"
-        end
-      end
-    end
-    erb :index
-  end
-end
-bottles_of_Beer
 
 
-
-
+# get '/:number' do
+   number = params['number'].to_i
+   number = - 1
+   
+  
+  erb(:bottles_left, locals: {
+      
+  })
+# end
 
 
 

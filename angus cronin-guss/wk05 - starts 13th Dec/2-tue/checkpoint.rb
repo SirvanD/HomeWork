@@ -1,15 +1,17 @@
 # Question 1
-# 1. librarys and frameworks
-# 2. URL
-# 3. Link/Form
+# 1. form
+# 2. address bar
+# 3. Link
 
 # Question 2
-# get '/querystring' do
-    
+# localhost:4567/
+# get '/?string' do
+    # some_query = params['string']
+    # erb :index
 # end
 
 # Question 3
-                            #unfinished
+# binding.pry
 
 # Question 4
 data = {
@@ -30,11 +32,11 @@ data = {
 # 4.1
 p data[:town][:castle][:num_rooms]
 #4.2
-data[:town][:castle][:guests].unshift('belle') 
+data[:town][:castle][:guests].unshift('Belle') 
 # 4.3
 p data[:town][:castle][:residents][0][:year_of_birth] 
 # 4.4
-data[:town][:castle].merge!(cook: "Ms Potts")
+data[:town][:castle].store(:cook, "Mrs Potts")
 
 # Question 5
 lost_boys = [
@@ -44,9 +46,13 @@ lost_boys = [
   {name: 'Curly', age: '8'},
   {name: 'The Twins', age: '9'}
 ]
-lost_boys[:age].each [age]
 
+total_age = 0
+lost_boys.each do |boy|
+  total_age = total_age + boy[:age].to_i
+  
 end
+p total_age
 
 
 # Question 6
@@ -77,24 +83,24 @@ people = resident[:friends]
 i = 0 
 while i < people.length do 
   names = resident[:friends][i][:name]
-  puts "belle is friends with #{names}"
+  puts "Belle is friends with #{names}"
   i += 1
 end
 
 # Question 7
 def letter_reverse (str)
-    str.split(" ").reverse().join(" ")
+    str.split(" ").reverse().join(" ").reverse
 end
 
 # Question 8
 
 def scream (number)
   if number == 0 
-    p "crickets"
+    return "crickets"
   elsif number == 1
-    p 'lol'
+    return 'lol'
   else
-    p 'lol' + ('ol' * (number - 1))
+    return 'lol' + ('ol' * (number - 1))
   end
 end
     
