@@ -1,18 +1,9 @@
-<%# <% if movie_list["Search"].length == 1%> %>
-
-    <%# <% /moviedata %> %>
-    <%# <form action=""> %>
-    <%# <form action="/moviedata?movie=<%=movie_list["Search"][0]["Title"]%>"> %>
-    <%# <button>click</button> %>
-    <%# </form> %>
-
-    <%  movie_list["Search"].each do |movie|%>
-        <p>
-            <a href="/moviedata?movie=<%=movie["Title"]%>"> 
-                <%=movie["Title"]%>
-            </a>
-        </p>
-    <%# <% end %> %>
+<%  movie_list["Search"].each do |movie|%>
+    <p>
+        <a href="/moviedata?movie=<%=movie["Title"]%>"> 
+            <%=movie["Title"]%>
+        </a>
+    </p>
 <% end %>
     
    
