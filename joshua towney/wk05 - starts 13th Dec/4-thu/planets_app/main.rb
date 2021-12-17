@@ -49,6 +49,51 @@ get '/planet_details/:planet_name' do
   })
 end
 
+get '/edit/:planet_name' do
+  
+
+  planet_id = params["planet_name"]
+
+  sql = "SELECT * FROM planets WHERE name = '#{planet_id}';"
+  conn = PG.connect(dbname: 'planets_app')
+  result = conn.exec(sql)
+  conn.close
+
+  planet = result[0]
+
+
+  erb(:edit, locals: {
+  planet: planet
+})
+
+end
+
+put '/edit/:planet_name' do
+
+  sql = "UPDATE planets SET name = '#{params['name']}', image_url = '#{params['image_url']}', diameter = '#{params['diameter']}', mass = '#{params['mass']}', moon_count = '#{params['moon_count']}' WHERE id = '#{params['id']}';"
+
+  # return sql
+
+  conn = PG.connect(dbname: 'planets_app')
+  conn.exec(sql)
+  conn.close
+  redirect '/'
+
+end
+
+delete '/delete_planet' do
+
+  sql = "DELETE FROM planets WHERE id = #{params['id']}"
+
+  conn = PG.connect(dbname: 'planets_app')
+  conn.exec(sql)
+  conn.close
+
+  redirect '/'
+  # return sql
+
+end
+
 
 
 

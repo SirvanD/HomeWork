@@ -9,3 +9,14 @@
 <h3>Mass: <%=planet["mass"]%> kg</h3>
 
 <h3>Number of Moons: <%=planet["moon_count"]%></h3>
+
+
+<form action="/edit/<%=planet["name"]%>">
+    <button> Edit Details </button>
+</form>
+
+<form action="/delete_planet" method="post"> 
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="id" value="<%=planet['id']%>">
+    <button>Delete Planet</button>
+</form>
