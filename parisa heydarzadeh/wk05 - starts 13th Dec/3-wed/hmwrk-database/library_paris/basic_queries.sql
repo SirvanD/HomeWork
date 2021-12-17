@@ -21,19 +21,16 @@ select * from books where publication_date < 1989;
 select title from books;
 -- Get just the year that 'A Dance with Dragons' was published
 select publication_date from books where title = 'A Dance with Dragons';
-
--- Cry when you realize how long it's been
-
 -- Get all books which have `the` somewhere in their title (hint, look up LIKE/ILIKE)
-
+SELECT * FROM books WHERE title LIKE '%the%';
 -- Add yourself as an author
 insert into authors (name, nationality, birth_year) values ('paris', 'persian',2000);
 -- Add two books that you'd like to write (you can hard-code your id as the author id)
-insert into books (title, author_id) values ('paris', 85);
-insert into books (title, author_id) values ('heyd', 86);
+insert into books (title, publication_date, author_id) values ('dark',2021, 85);
+insert into books (title, publication_date, author_id) values ('Great Gatsby', 2002, 85);
 -- Update one of your books to have a new title
-update books set title = 'firstbook' where author_id = 85;
+update books set title = 'firstbook' where title = 'dark';
 -- Delete your books
-delete from authors where (title, author_id) values ('heyd', 86);
+delete from books where author_id = 85;
 -- Delete your author entry
-delete from authors where name = 'heyd'
+delete from books where author_id = 85;
