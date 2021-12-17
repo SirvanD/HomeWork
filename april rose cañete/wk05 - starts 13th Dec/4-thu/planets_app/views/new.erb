@@ -1,20 +1,28 @@
 <h2>Add a planet</h2>
 
-<form action="/submit_planet" method="post">
-    <label for="">name:</label>
-    <input type="text" name="name">
-
-    <label for="">image url:</label> 
-    <input type="text" name="image_url" placeholder="http://">
-
-    <label for="">diameter:</label> 
-    <input type="text" name="diameter">
-
-    <label for="">mass:</label> 
-    <input type="text" name="mass">
-
-    <label for="">moon count:</label> 
-    <input type="text" name="moon_count">
-
-    <button>add</button>
+<form action="/submit_planet" method="post" class="form-input">
+    <div>
+        <label for="">name:</label>
+        <input type="text" name="name">
+    </div>
+    <div>
+        <label for="">image url:</label> 
+        <input type="text" name="image_url" placeholder="http://....">
+    </div>
+    <div>
+        <label for="">diameter:</label> 
+        <input type="text" name="diameter">
+    </div>
+    <div>
+        <label for="">mass:</label> 
+        <input type="text" name="mass">
+    </div>
+    <div>
+        <label for="">moon count:</label> 
+        <input type="text" name="moon_count">
+    </div>
+    <div>
+        <div></div>
+        <button>add</button>
+    </div>
 </form>

@@ -1,4 +1,73 @@
+body {
+    color: #fff;
+    font-family: 'Chakra Petch', sans-serif;
+    background-image: url('../images/background.jpg');
+    background-size: auto;
+    background-repeat: cover;
+    text-align: center;
+}
+
 .planets-display img {
     width: 200px;
     height: 200px;
+}
+
+
+a {
+    color: #fff;
+}
+
+.planets-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.planets-display div {
+    padding: 40px 0;
+}
+
+form {
+    display: inline;
+}
+
+.remove-btn {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    font-family: 'Chakra Petch', sans-serif;
+    /*input has OS specific font-family*/
+    color: #fff;
+    font-size: 18px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+.link {
+font-size: 18px;
+}
+
+.form-input {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 20%;
+    text-align: left;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.form-input div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.form-input input {
+    padding: 5px;
+    width: 180px;
+}
+
+
+.form-input button {
+    font-family: 'Chakra Petch', sans-serif;
 }
