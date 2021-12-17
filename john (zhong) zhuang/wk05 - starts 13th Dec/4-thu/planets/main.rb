@@ -26,7 +26,9 @@ end
 
 
 get '/user_input' do
-erb(:new)
+
+
+  erb(:new)
 end
 
 post '/upload' do
