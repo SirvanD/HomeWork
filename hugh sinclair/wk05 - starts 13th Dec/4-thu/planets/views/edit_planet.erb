@@ -1,0 +1,27 @@
+<h1>Edit this planet</h1>
+
+<form action="/update_planet/<%= planet['id']%>" method="post">
+    <input type="hidden" name="_method"value="put">
+    <label for="">Name</label>
+    <input type="text" name="name" placeholder="Enter your planets name" value="<%= planet['name']%>">
+<br>
+<br>
+    <label for="">Image url</label>
+    <input type="url" name="image_url" placeholder = "http://..."
+    value="<%= planet['image_url']%>">
+<br>
+<br>
+    <label for="">Diameter</label>
+    <input type="text" name="diameter" placeholder = "enter a number" value="<%= planet['diameter']%>">
+<br>
+<br>
+    <label for="">Mass</label>  
+    <input type="text" name="mass" placeholder = "enter a number" value="<%= planet['mass']%>">
+<br>
+<br>
+    <label for="">Number of moons</label>
+    <input type="number" name="moon_count" placeholder = "enter a number" value="<%= planet['moon_count']%>">
+<br>
+<br>
+    <button>share</button>
+</form>

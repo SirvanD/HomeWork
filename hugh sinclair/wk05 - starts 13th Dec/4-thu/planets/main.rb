@@ -27,7 +27,7 @@ get '/planets/:planet_id' do
   planet = result[0]
 
   erb :show_planet, locals: {
-    planet_id: planet_id,
+    planet_id: planet['id'],
     planet_name: planet['name'],
     planet_image_url: planet['image_url'],
     planet_mass: planet['mass'],
@@ -60,6 +60,47 @@ post '/submit_planet_data' do
   redirect '/'
 
 end
+
+
+delete '/delete_planet' do
+
+  sql = "delete from planets where id = #{params['planet_id']};"
+
+  conn = PG.connect(dbname: 'planets_app')
+  conn.exec(sql)
+  conn.close
+  
+  redirect '/'
+
+end
+
+get '/edit_planet/:id' do
+
+  sql = "select * from planets where id = #{params['id']};"
+  
+  conn = PG.connect(dbname: 'planets_app')
+  response = conn.exec(sql)
+  conn.close
+
+  planet = response[0]
+  erb :edit_planet, locals: {
+    planet: planet
+  }
+
+end
+
+put '/update_planet/:id' do
+
+  sql = "update planets set name = '#{params['name']}', image_url = '#{params['image_url']}', diameter = '#{params['diameter']}', mass = '#{params['mass']}', moon_count = '#{params['moon_count']}';"
+
+  conn = PG.connect(dbname: 'planets_app')
+  response = conn.exec(sql)
+  conn.close
+
+  redirect "/planets/#{params['id']}"
+
+end
+
 
 
 

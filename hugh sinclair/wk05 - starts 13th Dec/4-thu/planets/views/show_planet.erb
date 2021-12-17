@@ -4,3 +4,11 @@
 <span class="big_pic">
     <img src="<%= planet_image_url %>" alt="an image of <%= planet_name %>">
 </span>
+<form action="/delete_planet" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="planet_id" value="<%= planet_id %>">
+    <button>delete</button>
+</form>
+
+<a href="/edit_planet/<%=planet_id%>">edit planet</a>
+<a href="/">Home</a>
