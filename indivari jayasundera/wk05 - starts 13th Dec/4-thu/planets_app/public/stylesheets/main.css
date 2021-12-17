@@ -1,7 +1,10 @@
 .planetInfo img {
   width: 200px;
 }
-.new-planet a {
+#new-planet {
+  margin-bottom: 50px;
+}
+#new-planet a {
   background-color: peachpuff;
 }
 
