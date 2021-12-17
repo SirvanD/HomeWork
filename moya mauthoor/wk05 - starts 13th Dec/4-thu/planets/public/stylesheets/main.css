@@ -9,3 +9,9 @@ body {
 .input {
     padding: 5px;
 }
+
+.edit-planet-url {
+    display: block;
+    margin: 10px;
+}
+
