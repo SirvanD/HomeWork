@@ -1,4 +1,7 @@
 <h1>Planet details</h1>
+<h2 class="heading"><a href="/update_planet_data/<%=planet['id']%>">Edit planet info</a>
+<span><a href="/">Home</a></span></h2>
+
 <h2>
 Name of the planet : <%= planet["name"]%>
 <p>
@@ -8,5 +11,13 @@ Mass of the planet : <%= planet["mass"]%>
 <p>
 No: of moons : <%= planet["moon_count"]%>
 </h2>
+<div class="planet-img">
+<img src = "<%=planet["image_url"]%>" alt =<%= planet['name']%>>
+</div>
 
-<img src = "<%=planet["image_url"]%>">
+<form action="/delete_planet" method ="post">
+<input type="hidden" name = "_method" value="delete">
+<input type="hidden" name = "planet_id" value = "<%= planet['id'] %>">
+    <div class="delete-btn"><button>delete</button></div>
+</form>
+
