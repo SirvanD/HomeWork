@@ -39,3 +39,35 @@ post '/input_planet_data' do
   redirect "/"
 
 end
+
+delete '/delete_data' do
+  sql = "delete from planets where id = #{params['planet_id']};"
+  conn = PG.connect(dbname: 'planets_app')
+  conn.exec(sql)
+  conn.close
+
+  redirect "/"
+end
+
+get '/edit_data/:id' do
+  sql = "select * from planets where id = #{params['id']};"
+  conn = PG.connect(dbname: 'planets_app')
+  planet = conn.exec(sql)[0]
+  conn.close
+
+  erb :edit, locals: {
+    planet: planet
+  }
+end
+
+put '/update_planet_data/:id' do
+  sql = "update planets set name = '#{params['name']}', image_url = '#{params['image_url']}', diameter = '#{params['diameter']}', mass = '#{params['mass']}', moon_count = '#{params['moon_count']}' where id = #{params['id']};"
+  conn = PG.connect(dbname: 'planets_app')
+  planet = conn.exec(sql)
+  conn.close
+
+  redirect "/planets/#{params['id']}"
+
+
+end
+
