@@ -17,4 +17,9 @@
 </p>
 
 
+<form action="/deleteplanet/<%=planet["id"] %>" method = "post">
+    <input type="hidden" name = "_method" value = "delete">
+    <button>Delete</button>
+</form>
 
+<a href="/editplanet/<%=planet["id"] %>"> Edit </a>

@@ -1,0 +1,28 @@
+<h1>Edit a planet</h1>
+
+<form action="/updateplanet/<%=planet["id"] %>" method = "post">
+    <input type="hidden" name = "_method" value = "put">
+    <p>
+        <label for="">Name</label>
+        <input type="text" name = "name" value = <%=planet["name"] %>>
+    </p>
+    <p>
+        <label for="">image</label>
+        <input type="text" name = "image_url" value = <%=planet["image_url"] %>>
+    </p>
+    <p>
+        <label for="">Diameter (KM)</label>
+        <input type="number" name = "diameter" value = <%=planet["diameter"] %>>
+    </p>
+    <p>
+        <label for="">Mass (x 10^24)</label>
+        <input type="number" name = "mass" value = <%=planet["mass"] %>>
+    </p>
+    <p>
+        <label for="">Moon count</label>
+        <input type="number" name = "moon_count" value = <%=planet["moon_count"] %>>
+    </p>
+    <p>
+        <button>UPDATE</button>
+    </p>
+</form>
