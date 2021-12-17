@@ -1,0 +1,13 @@
+<section class="show">
+<div><h2 class="detail" >Planet details</h2></div>
+<div><a href="/edit_data/<%=planet['id']%>">Edit</a></div>
+<div><h2><%= planet['name']%></h2></div>
+<div><p>Diameter: <%=planet['diameter']%> km</p></div>
+<div><p>Mass: <%=planet['mass']%> kg</p></div>
+<div><p>Moon count: <%=planet['moon_count']%></p></div>
+<div><img src="<%=planet['image_url']%>" alt="<%=planet['name']%>"></div>
+<form action="/delete_data/<%=planet['id']%>" method = "post">
+<input type="hidden" name = "_method" value = "delete">
+<button>Delete</button>
+</form>
+</section>
