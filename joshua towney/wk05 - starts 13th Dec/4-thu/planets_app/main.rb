@@ -5,7 +5,7 @@ require 'pg'
 get '/' do
 
   conn = PG.connect(dbname: 'planets_app')
-  sql = 'SELECT * FROM planets;'
+  sql = 'SELECT * FROM planets ORDER by id;'
   result = conn.exec(sql)
   conn.close
 
@@ -16,17 +16,20 @@ end
 
 get '/add_new_planet' do
 
-  conn = PG.connect(dbname: 'planets_app')
+  erb(:add_new_planet)
 
-  sql = "INSERT INTO planets (name, image_url, diameter, mass, moon_count) VALUES ('#{params['name']}', '#{params['image_url']}', '#{params['diameter']}', '#{params['mass']}', '#{params['moon_count']}');"
+end
+
+post '/add_new_planet' do
+
+  sql = "INSERT INTO planets (name, image_url, diameter, mass, moon_count) VALUES ('#{params['name']}', '#{params['img_url']}', '#{params['diameter']}', '#{params['mass']}', '#{params['moon_count']}');"
 
   conn = PG.connect(dbname: 'planets_app')
   conn.exec(sql)
   conn.close
 
+
   redirect '/'
-      
-  erb(:add_new_planet)
 
 end
 
