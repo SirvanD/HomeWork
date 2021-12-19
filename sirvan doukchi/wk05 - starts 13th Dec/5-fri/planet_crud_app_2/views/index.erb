@@ -1,0 +1,19 @@
+<h2>What a wonderful world</h2>
+<div class = "container2">
+<div>
+<% planets.each do |planet| %>
+  
+<div class="planets">
+<div>
+  <h3>
+  <a href="/planets/<%= planet['id'] %>"> <%= planet['name'] %> </a>
+  </h3>
+
+    <img src="<%= planet['image_url'] %>" alt="<%= planet['name'] %>">
+    </div>
+</div>
+<% end %>
+</div>
+
+</div>
+

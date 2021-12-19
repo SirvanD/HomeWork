@@ -1,0 +1,22 @@
+<div class = "container">
+<div>
+
+<h2> This is planet <%= planet['name'] %> </h2>
+
+<img src="<%= planet['image_url'] %>" alt="">
+<h3>Diameter: <%= planet['diameter'] %> </h3>
+<h3>Mass: <%= planet['mass'] %> </h3>
+<h3>Number of Moons: <%= planet['moon_count'] %> </h3>
+
+<form action="/delete_planet/<%= planet['id'] %>" method = "post">
+<input type="hidden" name="_method" value="delete">
+ 
+
+<button>delete</button>
+
+</form>
+<button><a href="/edit_planet/<%= planet['id'] %>"> edit</a></button>
+
+</div>
+
+</div>
