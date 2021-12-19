@@ -29,21 +29,23 @@ get '/planets/:id' do
   result = conn.exec(sql)
   planet = result[0]
   conn.close
-  
+
   erb(:display, locals: { planet: planet })
 end
 
 
+get '/add_planet' do
 
+  erb(:new)
+end
 
 
 post '/input_planet_data' do
-return params["name"]
-return params['image_url']
-sql ="insert into planets (name, image_url) values ('#{params['name']}', '#{params['image_url']}');"
-conn = PG.connect(dbname: 'planet_app')
-  result = conn.exec(sql)
-  conn.close
 
-  erb(:new)
+sql ="insert into planets (name, image_url,diameter, mass, moon_count) values ('#{params['name']}', '#{params['image_url']}', '#{params['diameter']}','#{params['mass']}','#{params['moon_count']}');"
+conn = PG.connect(dbname: 'planets_app')
+conn.exec(sql)
+conn.close
+
+  redirect '/'
 end
