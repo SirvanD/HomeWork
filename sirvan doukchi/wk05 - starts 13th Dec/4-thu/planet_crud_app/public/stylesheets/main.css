@@ -1,0 +1,28 @@
+img{
+    width: 400px;
+}
+
+nav a{
+    padding: 60px;
+    margin: 10px;
+}
+
+label, input {
+    
+    padding: 5px;
+    margin: 5px;
+
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 30px;
+}
+
+button{
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
