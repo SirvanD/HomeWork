@@ -1,0 +1,12 @@
+
+<div class='search-details'><span>Total Search Results: </span><%=total_found%></div>
+<div class='search-area'>
+    <% search_result.each do |movie| %>
+        <div class="searchresult">
+            <img src=<%=movie['Poster']%> >
+            <h2><%=movie['Title']%> (</span><%=movie['Year']%>)</h2>
+            <a href=http://localhost:4567/movie_details?t=<%=URI.encode(movie['Title'])%>>https://localhost:4567/movie_details?t=<%=movie['Title']%></a>
+        </div>
+    <% end %>
+</div>
+  
