@@ -34,11 +34,16 @@ get '/input_planet_data' do
   erb(:input_planet_data)
 end
 
-post '/post_data' do
-  sql ="insert into planets (name,image_url,diameter,mass,moon_count) values ('#{params['name']}','#{params['image_url']}','#{params['diameter']}','#{params['mass']}','#{params['moon_count']}');"
+post '/input_data' do
+  sql ="insert into planets(name, image_url, diameter, mass, moon_count) values (
+    '#{ params['name'] }',
+    '#{ params['image_url'] }', 
+    '#{ params['diameter'] }', 
+    '#{ params['mass'] }', 
+    '#{ params['moon_count'] }');"
     conn = PG.connect(dbname: 'planet_app')
     conn.exec(sql)
     conn.close
 
-    redirect '/'
+    redirect "/"
 end

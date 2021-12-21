@@ -1,0 +1,13 @@
+<h1>Planet App Completion</h1>
+<h3><a href="/input_planet_data">Add New Planet</a></h3>
+<%planets.each do |planet|%>
+
+<h1>
+<a href="/planet/<%= planet['id'] %>">
+<%= planet['name']%>
+</a>
+
+</h1>
+
+<img src="<%= planet['image_url']%>" alt="<%= planet['name']%>">
+<% end %>
