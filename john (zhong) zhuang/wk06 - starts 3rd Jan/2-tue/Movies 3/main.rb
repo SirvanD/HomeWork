@@ -35,7 +35,7 @@ get "/movie" do
     sql = "select * from movies where imdbid = '#{movie["imdbID"]}';"
 
     if conn.exec(sql).first == nil
-        conn.exec("INSERT INTO movies (title, language, year, rate, director, actors, plot, poster, imdbid) VALUES ('#{movie['Title']}','#{movie['Language']}', '#{movie['Year']}', '#{movie['Rated']}', '#{movie['Director']}', '#{movie['Actors']}', '#{movie['Plot']}', '#{movie['Poster']}','#{movie["imdbID"]}');")
+        conn.exec("INSERT INTO movies (title, language, year, rate, director, actors, plot, poster, imdbid) VALUES ('#{movie['Title'].gsub("'", "''")}','#{movie['Language']}', '#{movie['Year']}', '#{movie['Rated']}', '#{movie['Director'].gsub("'", "''")}', '#{movie['Actors'].gsub("'", "''")}', '#{movie['Plot'].gsub("'", "''")}', '#{movie['Poster']}','#{movie["imdbID"]}');")
     else 
         localMovie = conn.exec(sql)[0]
     end

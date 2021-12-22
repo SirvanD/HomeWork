@@ -11,5 +11,6 @@ CREATE TABLE movies (
     director TEXT,
     actors TEXT,
     plot TEXT,
-    poster TEXT
+    poster TEXT,
+    imdbID TEXT
 );
