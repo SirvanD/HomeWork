@@ -20,3 +20,13 @@
     <button>Update</button></div>
 </form>
 </section>
+
+<section>
+    <form action="/update_data/<%=planet['id']%>" method="post"><h1>Update planet info</h1>
+    <label for="">Name: </label>
+    <input type="text" name='name' value="<%=planet['name']%>">
+
+    <label for="">diameter</label>
+    <input type="real" name="diameter" value=<%=planet['diameter']%>>
+    </form>
+</section>

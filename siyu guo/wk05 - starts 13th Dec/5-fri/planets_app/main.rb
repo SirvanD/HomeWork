@@ -60,3 +60,11 @@ delete "/delete_data/:id" do
   conn.close
   redirect "/"
 end
+
+put 'update_data/:id' do
+  sql="update from planets set name='#{params['name']}', mass='#{params['mass']}', diameter='#{params}' where id = '#{params['id']}';"
+  conn=PG.connect(dbname: 'planets_app')
+  conn.exec(sql)
+  conn.close
+  redirect "/planets/#{params['id']}"
+end
