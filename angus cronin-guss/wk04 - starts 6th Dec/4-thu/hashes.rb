@@ -36,18 +36,26 @@ res = {
   }
 }
 # Question 1
-p res[:data][:cards][2][:images][:svg]
+# p [2][:images][:svg]
 
 # Question 2
-array = []
-array2 = []
-res[:data][:cards].each do |key| 
-  p key[:value]
-end
-res[:data][:cards].each do |value| 
- p value[:suit]
-end 
+ 
+  res[:data][:cards].each do |key, value|
+    "#{key[:value]} of #{value[:suit]}"
+    
+  end
 
+
+#   res[:data][:cards].each do |value|
+#     puts value[:suit]
+# end
+
+
+
+
+# res[:data][:cards].each { |key, value| puts "#{key} of #{value} and #{value}" }
+
+  
 
 
   

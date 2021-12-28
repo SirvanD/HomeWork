@@ -14,3 +14,4 @@ CREATE TABLE books (
   publication_date INTEGER,
   author_id INTEGER
 );
+
