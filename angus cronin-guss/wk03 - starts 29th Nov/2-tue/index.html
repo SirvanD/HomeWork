@@ -12,8 +12,11 @@
             height: 100px;
         }
         .boxes {
-            background-color: blue;
+            background-color: white;
         }
+        .boxes.clicked {
+        background: red;
+}
         
 
     </style>
@@ -24,19 +27,32 @@
     <div class="boxes" id="box2"></div>
     <div class="boxes" id="box3"></div>
     <script>
+        var boxes = document.querySelectorAll('.boxes');
+        var box1 = document.querySelector('#box1');
+        var box2 = document.querySelector('#box2');
+        var box3 = document.querySelector('#box3');
 
-        var allBoxes = document.querySelectorAll(".boxes")
-        
-        allBoxes.forEach(allBoxes => {
-            console.log(allBoxes);
-            allBoxes.addEventListener('click', allBoxes => {
-                allBoxes.style.backgroundColor = 'red';
-                console.log(allBoxes);
-                
-            })
-            
-        })
-        
+        function handleColor (box){
+            box.classList.add('clicked');
+
+            if (box1.classList.contains("clicked") && box2.classList.contains ("clicked") && box3.classList.contains("clicked")) {
+                reset();
+            }
+        }
+
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].addEventListener("click", () => handleColor(boxes[i]));    
+        }
+
+        function reset() {
+            box1.style.backgroundColor = 'green';
+            box2.style.backgroundColor = 'green';
+            box3.style.backgroundColor = 'green';
+
+            for (let i = 0; i < boxes.length; i++) {
+                boxes[i].classList.remove('clicked');    
+            }
+        }
     </script>
 </body>
 </html>
