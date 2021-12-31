@@ -91,7 +91,7 @@ end
 
 put '/update_planet/:id' do
 
-  sql = "update planets set name = '#{params['name']}', image_url = '#{params['image_url']}', diameter = '#{params['diameter']}', mass = '#{params['mass']}', moon_count = '#{params['moon_count']}';"
+  sql = "update planets set name = '#{params['name']}', image_url = '#{params['image_url']}', diameter = '#{params['diameter']}', mass = '#{params['mass']}', moon_count = '#{params['moon_count']}' where id = #{params['id']};"
 
   conn = PG.connect(dbname: 'planets_app')
   response = conn.exec(sql)
