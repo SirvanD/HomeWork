@@ -15,15 +15,9 @@ end
 
 get "/movie_data" do
     title = params["title"]
+ 
     url = "https://www.omdbapi.com/?t=#{title}&apikey=6010dc57"
     res = HTTParty.get(url)
-
-    conn = PG.connect(dbname: 'omdb_movies')
-    sql = 'select * from movies'
-    
-
-
-
 
 
 
@@ -45,4 +39,25 @@ get "/list" do
         movie_search: res,
 
     }
+end
+
+get "/test" do
+    # conn = PG.connect(dbname: 'omdb_movies')
+    # sql = "select * from movies;"
+    # movies = conn.exec(sql)[0]
+    # conn.close
+
+
+    erb :test
+
+end
+
+post "/add_movie" do
+
+    conn = PG.connect(dbname: 'omdb_movies')
+    sql = "insert into movies (title, date, plot, poster) values ('#{params["title"]}','#{params["date"]}','#{params["plot"]}','#{params["poster"]}');"
+    conn.exec(sql)
+    conn.close
+
+    redirect '/'
 end

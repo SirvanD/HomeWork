@@ -1,0 +1,19 @@
+
+<form action="/add_movie" method="post">
+
+<input type="text" placeholder="title" name="title"> 
+<input type="number" placeholder="date" name="date"> 
+<input type="text" placeholder="plot" name="plot"> 
+<input type="url" placeholder="poster" name="poster"> 
+
+
+<button>yes</button>
+<%x = 1%>
+<%if x > 2%>
+<p>x is greater than 2</p>
+<%elsif x <= 2 and x != 0%>
+<p>x is 1</p>
+<%else%>
+<p>i cant guess the number</p>
+<%end%>
+</form>
