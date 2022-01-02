@@ -1,0 +1,15 @@
+<h1>Welcome to the planets app</h1>
+<h3>Add your first planet by clicking the link below.</h3>
+
+<a href="/upload">Upload New Planet</a>
+
+<% planet_names.each do |world| %> 
+<h2>
+    <a href="/planets/<%=world['id']%>"><%=world['name']%>
+    
+    </a>
+</h2>
+
+<img src="<%= world['image_url'] %>" alt="">
+
+<%end%>

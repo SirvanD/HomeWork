@@ -39,29 +39,10 @@ res = {
 # p [2][:images][:svg]
 
 # Question 2
- 
-  res[:data][:cards].each do |key, value|
-    "#{key[:value]} of #{value[:suit]}"
-    
-  end
 
-
-#   res[:data][:cards].each do |value|
-#     puts value[:suit]
-# end
-
-
-
-
-# res[:data][:cards].each { |key, value| puts "#{key} of #{value} and #{value}" }
-
-  
-
-
-  
-  # res[:data][:cards].each do |value|
-  #   p value[:suit]
-  
+res[:data][:cards].each_with_index do |value, suit|
+  puts "#{value[:value]} of #{suit[:suit]}"
+end
 
 
 
