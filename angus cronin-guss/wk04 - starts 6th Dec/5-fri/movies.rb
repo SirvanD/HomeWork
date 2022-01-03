@@ -3,7 +3,8 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 
-url = "http://omdbapi.com/&apikey=2f6435d9"
+
+ 
 
 
 get '/' do 
@@ -16,9 +17,12 @@ get '/about' do
 end
 
 get "/movies/:title" do 
-    movie_title = params[:Title]
+    movie_title = params['Title']
+    url = "http://www.omdbapi.com/?t=#{movie_title}&apikey=2f6435d9"
     result = HTTParty.get(url)
+    title = result['Title']
+    
+
    
-   
-    erb :movie_details
+    erb :movie_details, locals: {result: result, title: title}
 end
