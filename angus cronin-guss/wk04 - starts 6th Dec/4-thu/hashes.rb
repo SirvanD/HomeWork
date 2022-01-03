@@ -39,10 +39,14 @@ res = {
 # p [2][:images][:svg]
 
 # Question 2
-
-res[:data][:cards].each_with_index do |value, suit|
-  puts "#{value[:value]} of #{suit[:suit]}"
+array1 = []
+res[:data][:cards].each do |value|
+   array1.push(value[:value]) 
 end
 
+array2 = []
+ res[:data][:cards].each do |suit|
+  array2.push(suit[:suit])
+end
 
-
+array1.each_with_index{ |values, i| puts values + " of " + array2[i] }
