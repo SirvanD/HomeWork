@@ -18,7 +18,7 @@ end
 
 get "/movies/:title" do 
     movie_title = params['movie_title']
-    url = "http://www.omdbapi.com/?t=#{movie_title}&apikey=2f6435d9"
+    url = "http://www.omdbapi.com/?s=#{movie_title}&apikey=2f6435d9"
     result = HTTParty.get(url)
     title = result['Title']
     
@@ -26,3 +26,5 @@ get "/movies/:title" do
    
     erb :movie_details, locals: {result: result, title: title}
 end
+
+
