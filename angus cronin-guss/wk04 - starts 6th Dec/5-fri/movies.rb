@@ -17,7 +17,7 @@ get '/about' do
 end
 
 get "/movies/:title" do 
-    movie_title = params['Title']
+    movie_title = params['movie_title']
     url = "http://www.omdbapi.com/?t=#{movie_title}&apikey=2f6435d9"
     result = HTTParty.get(url)
     title = result['Title']

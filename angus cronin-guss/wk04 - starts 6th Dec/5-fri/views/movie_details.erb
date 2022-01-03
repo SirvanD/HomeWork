@@ -8,9 +8,10 @@
 </head>
 <body>
 
-  <h1>You Entered <%=result%></h1>
-    <%# I had title in the crab hands but added result to see more info, i think the API key is invalid? %>
-
+  <h1>You Entered <%=result['Title']%></h1>
+    
+  <h2><%=result%></h2> 
+  <%# more details to make sure movie is correct %>
     <a href="/">Back to home</a>
 </body>
 </html>
