@@ -4,8 +4,8 @@ require 'sinatra/reloader'
 
 
 get '/' do 
-  bottles = 100
-  erb :index, locals: {bottles: bottles}
+  number = 99
+  erb :index, locals: {number: number}
 
 end
 
@@ -13,16 +13,30 @@ end
 
 
 get "/:number" do
-  bottles = 100
-  while bottles > 1
-   bottles = bottles - 1
+  number = params['number'].to_i 
+  if number == 1
+    redirect '/1'
+  elsif number == 0
+    redirect '/0'
   end
-  erb :bottles_left, locals: {bottles: bottles}
+
+  
+  erb :bottles_left, locals: {number: number}
 end
 
+get '/1' do
+  number = params['number'].to_i
 
+  erb :oneleft, locals: {number: number}
 
+end
 
+get '/0' do
+  number = params['number'].to_i
+
+  erb :noneleft, locals: {number: number}
+
+end
 
 
 
