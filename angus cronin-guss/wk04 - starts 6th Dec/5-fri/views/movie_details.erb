@@ -7,11 +7,15 @@
     <title>Movie Details</title>
 </head>
 <body>
-
+  <nav>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+  </nav>
   <h1>You Entered <%=result['Title']%></h1>
     
-  <h2><%=result%></h2> 
+  <h2><%=result['Year']%></h2> 
+  <img src="<%=result['Poster']%>" alt="">
   <%# more details to make sure movie is correct %>
-    <a href="/">Back to home</a>
+    
 </body>
 </html>
