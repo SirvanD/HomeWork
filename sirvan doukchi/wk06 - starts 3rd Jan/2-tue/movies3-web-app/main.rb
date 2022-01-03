@@ -2,17 +2,11 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'httparty' 
 require 'pg'
-
+# require 'pry'
 
 get '/' do 
 
     erb(:index)
-
-end
-
-get '/about' do
-
-    erb(:about)
 
 end
 
@@ -30,67 +24,67 @@ get '/movie_list' do
         movie_list: movie_search,
         movie_title: title,
         search: search,
-        title: title
-        
-        
+        title: title   
     })
-
-
-
 end
 
+
+
 get '/movie_details' do
-  
-  
+  # sql3 = "INSERT INTO shows(show_title,show_year,show_plot,show_poster_url,movie_name)values('test','2025','test','test','test');"
+  # conn3 = PG.connect(dbname: 'movies')
+  # conn3.exec(sql3)
+  # conn3.close
 
+
+  test = "";
   movie_input = params["movie_input"]
-  url = "https://www.omdbapi.com/?t=#{movie_input}&apikey=6139fe0d"
-  result = HTTParty.get(url)
-  title = result["Title"]
-  year = result["Year"]
-  plot = result["Plot"]
-  poster = result["Poster"]
-
-
-  sql = "SELECT show_title from shows ;"
+  sql = "SELECT * FROM shows WHERE movie_name = '#{movie_input}';"
 
     conn = PG.connect(dbname: 'movies')
-    result = conn.exec(sql)
-    shows = result
-    show_array = []
-    shows.each do |show|
-        show_array << show
-    end
+    result2 = conn.exec(sql)
     conn.close 
-
-    # show_array.include?(title) do 
-
-    #    title = show_array[title]
-      
-
-    # end
-
-  
-
-
     
+    # binding.pry
+    
+   show_array = []
+    result2.each do |show|
+        show_array << show
+   end
+   
+   
+    if show_array.length() == 0
+      test = "Data is fetched from OMDB API";
+      url2 = "https://www.omdbapi.com/?t=#{movie_input}&apikey=6139fe0d"
+      result = HTTParty.get(url2)
+      # test = result2;
+      title = result["Title"]
+      year = result["Year"]
+      plot = result["Plot"]
+      poster = result["Poster"]
 
-    sql = "INSERT INTO shows (show_title,show_year,show_plot,show_poster_url)values('#{title}','#{year}','#{plot}','#{poster}');"
+      sql2 = "INSERT INTO shows(show_title,show_year,show_plot,show_poster_url,movie_name)values('#{title}','#{year}','#{plot}','#{poster}','#{movie_input}');"
+      conn2 = PG.connect(dbname: 'movies')
+      conn2.exec(sql2)
+      conn2.close
 
-    conn = PG.connect(dbname: 'movies')
-    conn.exec(sql)
-    conn.close
+    else 
+      test = "Data is fetched from Local Database";
+      title = show_array[0]["show_title"]
+      year = show_array[0]["show_year"]
+      plot = show_array[0]["show_plot"]
+      poster = show_array[0]["show_poster_url"]
+
+    end
     
     erb(:movie_details, locals: {
         movie_title: title,
         movie_year: year,
         movie_plot: plot,
         movie_poster: poster,
-        test2: "HA HA HA",
-        show_test: show_array
-    })
-
-    
+        show_test: test
+        
+    })    
 
 end
 
