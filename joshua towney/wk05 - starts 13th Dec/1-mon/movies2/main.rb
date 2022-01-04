@@ -1,7 +1,8 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'httparty'
-# require 'pry'
+require 'pg'
+require 'pry'
 
 get '/' do 
 
@@ -29,12 +30,28 @@ end
 get '/movie_details' do
     "MOVIE DETAILS"
 
-    movie = params["movie"]
-    url = "https://omdbapi.com/?t=#{movie}&apikey=ebc931bb"
-    selected_movie = HTTParty.get(url)
-    title = selected_movie["Title"]
-    year = selected_movie["Year"]
-    poster = selected_movie["Poster"]
+    conn = PG.connect(dbname: 'searched_movies')
+
+    sql = "SELECT * from movies WHERE title = '#{params['movie']}';" # needs to be a string
+    result = conn.exec(sql)
+
+    if result.count > 0
+        p result[0]
+        title = result[0]["title"] # uses result instead of selected_movies
+        year = result[0]["year"]
+        poster = result[0]["poster"]
+    else
+        movie = params["movie"]
+        url = "https://omdbapi.com/?t=#{movie}&apikey=ebc931bb"
+        selected_movie = HTTParty.get(url)
+        title = selected_movie["Title"]
+        year = selected_movie["Year"]
+        poster = selected_movie["Poster"]
+
+        sql = "INSERT into movies (title, year, poster) VALUES ('#{title}','#{year}','#{poster}');"
+        conn.exec(sql)
+    end
+    conn.close
 
     erb(:movie_details, locals: {
         title: title,
