@@ -5,12 +5,14 @@ require 'sinatra/reloader'
 
 get '/' do
     erb(:index)
+
 end
 
     get '/movie_details' do
 
         movie_title=params["title"]
         url = "http://www.omdbapi.com/?t=#{movie_title}&apikey=890ff11d"
+        url = "http://www.omdbapi.com/?t=#jaws&apikey=890ff11d"
         res = HTTParty.get(url)
         puts res
     
@@ -30,12 +32,11 @@ get '/movie_list' do
     title = res["Title"],
     movie_search = res["Search"],
     search = movie_search
+   
 
     erb(:movie_list, locals: {
         movie_title: title,
         movie_list: movie_search,
-        search: search,
-        title: title
         
     })
 end

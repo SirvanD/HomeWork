@@ -3,12 +3,15 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'pg'
 
+
+
+
 get '/' do
   conn = PG.connect(dbname: 'planet_app')
   sql = "SELECT * FROM planets"
   result = conn.exec(sql)
   conn.close
-  
+  # erb always return a string
   erb :index, locals: {
     planets: result
   }
@@ -30,12 +33,12 @@ get '/input_planet_data' do
   erb(:input_planet_data)
 end
 
-post '/input_data/:id' do
+post '/input_data' do
   sql ="insert into planets(name, image_url, diameter, mass, moon_count) values (
     '#{ params['name'] }',
     '#{ params['image_url'] }', 
     '#{ params['diameter'] }', 
-   ' #{ params['mass'] }', 
+    '#{ params['mass'] }', 
     '#{ params['moon_count'] }');"
     conn = PG.connect(dbname: 'planet_app')
     conn.exec(sql)
@@ -77,6 +80,10 @@ get '/edit_data/:id' do
     result = conn.exec(sql)
     conn.close
   
-    redirect "/planets/#{params['id']}"
+    redirect "/planet/#{params['id']}"
   
   end
+
+
+  
+
