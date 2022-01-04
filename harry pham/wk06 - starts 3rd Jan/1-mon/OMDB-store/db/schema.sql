@@ -1,6 +1,6 @@
 CREATE DATABASE OMDB_movies;
 
-\c OMDB_movies
+\c omdb_movies
 
 CREATE TABLE movies (
     id serial primary key,

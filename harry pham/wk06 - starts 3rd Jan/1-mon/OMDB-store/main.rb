@@ -5,7 +5,7 @@ require "httparty"
 # https://www.omdbapi.com/?s=#{title}s&apikey=6010dc57
 # https://www.omdbapi.com/?t=#{title}&apikey=6010dc57
 require 'pg'
-
+require 'pry'
 
 get "/" do
     
@@ -19,14 +19,35 @@ get "/movie_data" do
     url = "https://www.omdbapi.com/?t=#{title}&apikey=6010dc57"
     res = HTTParty.get(url)
 
+    conn = PG.connect(dbname: 'omdb_movies')
+    sql_add = "insert into movies (title, date, plot, poster) values ('#{res["Title"]}','#{res["Date"]}','#{res["Plot"]}','#{res["Poster"]}');"
+    sql = "select * from movies where title = '#{title}';"
+    result = conn.exec(sql)
+    conn.close
 
 
-    erb :movie_data, locals: {
-        movie_name: res["Title"],
-        movie_plot: res["Plot"],
-        movie_date: res["Year"],
-        movie_poster: res["Poster"]
-    }
+    if result.count > 0        
+        
+        erb :our_movie_data, locals: {
+            movie_name: result[0]["title"],
+            movie_plot: result[0]["plot"],
+            movie_date: result[0]["year"],
+            movie_poster: result[0]["poster"]
+        }
+    else
+    conn = PG.connect(dbname: 'omdb_movies')
+    sql_add = "insert into movies (title, date, plot, poster) values ('#{res["Title"]}','#{res["Year"]}','#{res["Plot"]}','#{res["Poster"]}');"
+    conn.exec(sql_add)
+    conn.close
+        erb :movie_data, locals: {
+            movie_name: res["Title"],
+            movie_plot: res["Plot"],
+            movie_date: res["Year"],
+            movie_poster: res["Poster"]
+        }
+    end
+
+
 end
 
 get "/list" do
@@ -41,23 +62,4 @@ get "/list" do
     }
 end
 
-get "/test" do
-    # conn = PG.connect(dbname: 'omdb_movies')
-    # sql = "select * from movies;"
-    # movies = conn.exec(sql)[0]
-    # conn.close
-
-
-    erb :test
-
-end
-
-post "/add_movie" do
-
-    conn = PG.connect(dbname: 'omdb_movies')
-    sql = "insert into movies (title, date, plot, poster) values ('#{params["title"]}','#{params["date"]}','#{params["plot"]}','#{params["poster"]}');"
-    conn.exec(sql)
-    conn.close
-
-    redirect '/'
-end
+# <a href="/movie_data?title=<%=movie["Title"]%>"><%=p movie["Title"]%></a>
