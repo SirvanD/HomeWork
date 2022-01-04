@@ -2,7 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'httparty' 
 require 'pg'
-# require 'pry'
+require 'pry'
 
 get '/' do 
 
@@ -62,8 +62,15 @@ get '/movie_details' do
       year = result["Year"]
       plot = result["Plot"]
       poster = result["Poster"]
+      plot.gsub!("'","")
+      title.gsub!("'","")
+      
 
       sql2 = "INSERT INTO shows(show_title,show_year,show_plot,show_poster_url,movie_name)values('#{title}','#{year}','#{plot}','#{poster}','#{movie_input}');"
+
+        # binding.pry
+
+      # \' \''
       conn2 = PG.connect(dbname: 'movies')
       conn2.exec(sql2)
       conn2.close
