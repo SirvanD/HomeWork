@@ -6,12 +6,22 @@
   <link rel='stylesheet' href='/stylesheets/main.css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+<header id="header">
+	<nav class="links" style="--items: 5;">
+		<a href="/">Home</a>
+		<a href="/add_planet">Submit a Planet</a>
+		<span class="line"></span>
+	</nav>
+</header>
+
+
 <body>
 
-<nav>
+<%# <nav>
   <a href="/">Home</a>
   <a href="/add_planet">Submit a Planet</a>
-</nav>
+</nav> %>
 
   <%= yield %>
 

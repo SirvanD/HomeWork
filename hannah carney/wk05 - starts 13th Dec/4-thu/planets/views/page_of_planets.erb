@@ -11,3 +11,19 @@
     <p>Moons: <%= planet ['moon_count'] %></p> 
 
 </div>
+
+
+<div class = "edit_delete_container">
+
+    <form action="/delete_planet/<%= planet['id'] %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button class = "delete_btn">Remove from Solar System</button>
+    </form>
+
+    <button class = "edit_btn">
+        <a href="/edit_data/<%= planet['id'] %>" class = "edit_data_font">Edit the Solar System</a>
+    </button>
+
+</div>
+
+

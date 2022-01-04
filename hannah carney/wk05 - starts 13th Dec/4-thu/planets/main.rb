@@ -55,9 +55,9 @@ post '/planet_data' do
   values (
     '#{ params['name'] }',
     '#{ params['image_url'] }',
-    '#{ params ['diameter'] }',
-    '#{ params ['mass'] }',
-    '#{ params ['moon_count'] }');"
+    '#{ params['diameter'] }',
+    '#{ params['mass'] }',
+    '#{ params['moon_count'] }');"
   conn.exec(sql)
   conn.close
 
@@ -66,3 +66,34 @@ erb(:submitted)
 
 end
 
+delete '/delete_planet/:planet_id' do
+  sql = "delete from planets where id = #{ params['planet_id'] };"
+  conn = PG.connect(dbname: 'planets_app')
+  conn.exec(sql)
+  conn.close
+
+  redirect '/'
+end
+
+get '/edit_data/:id' do
+
+  sql = "select * from planets where id = #{params['id']};"
+
+  conn = PG.connect(dbname: 'planets_app')
+  result = conn.exec(sql)
+  conn.close
+
+  planet = result[0]
+  erb(:edit, locals: { planet: planet })
+end
+
+put '/update_data/:id' do
+  
+  sql = "update planets set name = '#{params['name']}', image_url = '#{params['image_url']}' where id = #{params['id']};"
+
+  conn = PG.connect(dbname: 'planets_app')
+  conn.exec(sql)
+  conn.close
+
+  redirect "/planets/#{params['id']}"
+end

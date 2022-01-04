@@ -67,8 +67,8 @@ var trainLines = [
 var alamein = trainLines[0]
 var glenWaverly = trainLines[1]
 var sandringham = trainLines[2]
-var origin = 'Glenferrie'
-var destination = 'Flagstaff'
+var origin = 'Flinders Street'
+var destination = 'Tooronga'
 
 
 
@@ -76,20 +76,16 @@ var destination = 'Flagstaff'
 function findLines(origin, destination){
     if(alamein.includes(origin)) {
         line1 = alamein
-    }
-    else if(glenWaverly.includes(origin)) {
+    } else if(glenWaverly.includes(origin)) {
         line1 = glenWaverly
-    }
-    else if(sandringham.includes(origin)) {
+    } else if(sandringham.includes(origin)) {
         line1 = sandringham
     }
     if(alamein.includes(destination)) {
         line2 = alamein
-    }
-    else if(glenWaverly.includes(destination)) {
+    } else if(glenWaverly.includes(destination)) {
         line2 = glenWaverly
-    }
-    else if(sandringham.includes(destination)) {
+    } else if(sandringham.includes(destination)) {
         line2 = sandringham
     }
     console.log(`Origin: ${origin} `)
@@ -97,52 +93,46 @@ function findLines(origin, destination){
     travelPlanner(line1, line2);
 }
 
-
 function travelPlanner(line1, line2){
     let originIndex = line1.indexOf(origin)
     let destinationIndex = line2.indexOf(destination)
 
-    if(line1 == line2){
+
+    if(line1 === line2){
         if(originIndex < destinationIndex) {
             newJourney = line1.slice(originIndex, destinationIndex +1)
             stopCount = newJourney.length; 
             newJourneyString = newJourney.join(' ----> ')
-        }
-        else if(originIndex > destinationIndex) {
+            console.log(newJourneyString)
+
+        } else if(originIndex > destinationIndex) {
             newJourney = line1.slice(destinationIndex, originIndex +1)
             stopCount = newJourney.length; 
-            newJourneyString = newJourney.join(' <---- ')
-        }
-    else if(line1 != line2){
-        let line1Richmond = line1.indexOf('Richmond')
-        let line2Richmond = line2.indexOf('Richmond')
+            newJourneyString = newJourney.join(' <---- ') 
+            console.log(newJourneyString) 
 
-        if(originIndex < line1Richmond){
-            midJourney = line1Richmond.slice(originIndex, line1Richmond +1)
-            stopCount1 = midJourney.length;
-            midJourneyString = midJourney.join(' ----> ')
-        }
-        else if(originIndex > line1Richmond){
-            midJourney = line1Richmond.slice(line1Richmond, originIndex +1)
-            stopCount1 = midJourney.length;
-            midJourneyString = midJourney.join(' <---- ')
+        } else if (line1 != line2) {
+            let crossOver1 = line1.indexOf('Richmond');
+            let crossOver2 = line2.indexOf('Richmond');
+            if (originIndex < crossOver1) {
+                crossedOverJourney = line1.slice(originIndex, crossOver1 +1);
+
+            } else if (originIndex > crossOver1) {
+                crossedOverJourney = line1.slice(crossOver1, originIndex +1);                  
             }
-        if(destinationIndex < line2Richmond){
-            midJourney2 = line2Richmond.slice(destinationIndex, line2Richmond +1)
-            stopCount2 = midJourney2.length;
-            midJourney2String = midJourney2.join(' ----> ')
-        }
-        else if(destinationIndex > line2Richmond){
-            midJourney2 = line2Richmond.slice(destinationIndex, line2Richmond +1)
-            stopCount2 = midJourney2.length;
-            midJourney2String = midJourney2.join(' ----> ')
+            if (originIndex < crossOver2) {
+                crossedOverJourney = line2.slice(originIndex, crossOver2 +1);
+
+            } else if (originIndex > crossOver2) {
+                crossedOverJourney = line2.slice(crossOver2, originIndex +1);                  
             }
-            console.log(midJourneyString)
-            console.log(midJourney2String)
-            console.log(`Stops: ${stopCount1 + stopCount2}`)
+            console.log(crossedOverJourney);         
         }
     }
 }
+
+
+
 
 
 // function travelPlanner(origin, destination) {
