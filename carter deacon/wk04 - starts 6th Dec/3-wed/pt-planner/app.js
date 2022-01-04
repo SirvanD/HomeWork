@@ -43,22 +43,21 @@ function fullTrip(line1, line2) {
     let destinationIndex =  line2.indexOf(destination);
     // If one line trip
     if (line1 === line2) {
+        var stopCount2 = 0;
         if (originIndex < destinationIndex) {
             newLine1 = line1.slice(originIndex, destinationIndex+1);
             stopCount1 = newLine1.length;
-            stopCount2 = 0;
             line1String = newLine1.join(' ----> ');
             line2String = "";
         } else if (originIndex > destinationIndex) {
             newLine1 = line1.slice(destinationIndex, originIndex+1);
             stopCount1 = newLine1.length;
-            stopCount2 = 0;
             reversedArray = newLine1.reverse();
             line1String = reversedArray.join(' ----> ');
             line2String = ""; 
         }
     // Multi-line trips    
-    } else if (line1 !== line2) {
+    } else if (line1 != line2) {
         let line1Richmond = line1.indexOf("Richmond");
         let line2Richmond = line2.indexOf("Richmond");
         if (originIndex < line1Richmond) {
