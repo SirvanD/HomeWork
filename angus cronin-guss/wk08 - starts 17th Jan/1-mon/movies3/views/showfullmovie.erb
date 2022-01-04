@@ -1,0 +1,12 @@
+
+<h1>You Entered <%=res['Title']%></h1>
+<h2>Year: <%=res['Year']%> </h2>
+<img src="<%=res['Poster']%>" alt="">
+
+<form action="/insert" method="post">
+<input type="hidden" name="title" value="<%=res['Title']%>">
+<input type="hidden" name="year" value="<%=res['Year']%>">
+<input type="hidden" name="image" value="<%=res['Poster']%>">
+<button>Back to search</button>
+</form>
+

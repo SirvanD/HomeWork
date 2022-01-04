@@ -1,0 +1,12 @@
+
+<h1>There are multiple movies with that name!</h1>
+<h2>
+Click one that best suits what you're looking for.
+</h2>
+
+ <% result['Search'].each do |movie| %> 
+ <h3> 
+    <a href="/fullmovie/<%=movie['imdbID']%>" name="fullmovie"> <%=movie['Title']%> </a> 
+ </h3>
+
+<%end%>
