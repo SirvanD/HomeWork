@@ -12,7 +12,7 @@ get '/' do
 end
 
 
-
+# show one planet
 get '/planets/:id' do 
   planet_id = params["id"]
   conn = PG.connect( dbname: 'planets_app' )
@@ -26,13 +26,15 @@ get '/planets/:id' do
 
 end
 
-get '/add_a_planet' do 
+# create new planet
+get '/planets/new' do 
   
 
   erb(:new_planet)
 end
 
-post '/input_new_planet' do 
+# insert new planet
+post '/planets' do 
   sql = "insert into planets (name, image_url,diameter,mass,moon_count) values('#{params['name']}','#{params['image_url']}','#{params['diameter']}','#{params['mass']}','#{params['moons']}')"
 
 
@@ -44,7 +46,8 @@ post '/input_new_planet' do
 
 end
 
-delete '/delete_planet' do 
+# delete one planet
+delete '/planets/:id' do 
   sql = "delete from planets where id = #{params['planet_id']};"
   conn = PG.connect( dbname: 'planets_app' )
   conn.exec(sql)
@@ -52,7 +55,8 @@ delete '/delete_planet' do
   redirect '/'
 end
 
-get '/update_planet_data/:id' do 
+# retrieve a planet for editing
+get '/planets/:id/edit' do 
   sql ="select * from planets where id = #{params['id']};"
   conn = PG.connect( dbname: 'planets_app' )
   result = conn.exec(sql)
@@ -63,7 +67,8 @@ get '/update_planet_data/:id' do
   })
 end
 
-post '/update_planet_record/:id' do 
+# update planets
+post '/planets/:id' do 
   sql ="update planets set name = '#{params['name']}', image_url = '#{params['image_url']}', diameter = '#{params['diameter']}',mass = '#{params['mass']}', moon_count ='#{params['moons']}'where id = '#{params['id']}';"
 
  conn = PG.connect( dbname: 'planets_app' )
