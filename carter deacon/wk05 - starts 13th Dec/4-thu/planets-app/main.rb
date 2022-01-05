@@ -4,6 +4,8 @@ require 'sinatra/reloader'
 require 'pg'
 require 'bcrypt'
 
+require_relative 'models/planets.rb'
+
 enable :sessions
 
 def logged_in?
@@ -18,16 +20,9 @@ def current_user()
   return OpenStruct.new(user)
 end
 
-def db_query(sql, params = [])
-  conn = PG.connect(dbname: 'planets_app')
-  result = conn.exec_params(sql, params)
-  conn.close
-  return result
-end
-
 # Homepage
 get '/' do
-  planets = db_query("SELECT * FROM planets ORDER BY name;")
+  planets = all_planets()
   erb :index, locals: {planets: planets}
 end
 
@@ -38,12 +33,7 @@ end
 
 # New planet form submission
 post '/planets' do
-  name = params["name"]
-  image_url = params["image_url"]
-  diameter = params["diameter"]
-  mass = params["mass"]
-  moon_count = params["moon_count"]
-  db_query("INSERT INTO planets (name, image_url, diameter, mass, moon_count) VALUES ($1, $2, $3, $4, $5);", [name, image_url, diameter, mass, moon_count])
+  create_planet(params["name"], params["image_url"], params["diameter"], params["mass"], params["moon_count"])
   redirect '/'
 end
 
@@ -55,7 +45,7 @@ end
 
 # Delete a planet
 delete '/planets/:id' do
-  db_query("DELETE FROM planets WHERE id = #{params['planet_id']};")
+  delete_planet(params['id'])
   redirect '/'
 end
 
@@ -67,8 +57,16 @@ end
 
 # Edit planet form submission
 put '/planets/:id' do
-  db_query("UPDATE planets SET name = '#{params['name']}', image_url = '#{params['image_url']}', diameter = #{params['diameter']}, mass = #{params['mass']}, moon_count = #{params['moon_count']} WHERE id = #{params['id']};")
-  redirect "/planets/#{params['id']}"
+  name = params['name']
+  image_url = params['image_url']
+  diameter = params['diameter']
+  mass = params['mass']
+  moon_count = params['moon_count']
+  id = params['id']
+  #  This doesn't work
+  # update_planet(name, image_url, diameter, mass, moon_count, id)
+  db_query("UPDATE planets SET name = '#{name}', image_url = '#{image_url}', diameter = #{diameter}, mass = #{mass}, moon_count = #{moon_count} WHERE id = #{id};")
+  redirect "/planets/#{id}"
 end
 
 get '/login' do
