@@ -35,7 +35,7 @@ post '/insert' do
   image = params['image']
 
   conn = PG.connect(dbname: 'omdbmovies')
-  sql = "insert into omdbmovies (title, year, image_url) values (#{title}, #{year}, #{image});"
+  sql = "insert into movies (title, year, image_url) values ('#{title}', '#{year}', '#{image}');"
   conn.exec(sql)
   conn.close
   redirect '/'
