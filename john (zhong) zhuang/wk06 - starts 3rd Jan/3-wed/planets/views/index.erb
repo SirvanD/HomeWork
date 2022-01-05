@@ -1,0 +1,14 @@
+<h1>Planets</h1>
+
+<div>
+<% planets.each do |planet| %>
+
+<section><h2>
+<a href="/planets/<%=planet["id"]%>"><%=planet["name"]%></a>
+</h2>
+<img src="<%= planet["image_url"]%>" alt="<%=planet["name"]%>">
+</section>
+<% end %>
+</div>
+
+<p><a href="/planets/new">Add New Planet</a></p>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    button {
+        color: blue;
+        background-color: #FFFFFF;
+        border: 0px none;
+        text-decoration: underline;
+        font-size: 15px;
+    }
+    button:hover{
+        color: red;
+        border: none;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    div {
+        display: inline-block;
+    }
+    
+    </style>
+</head>
+<body>
+    
+
+<h1>Planet Details</h1>
+
+<h2><%= planet["name"] %></h2>
+<img src="<%= planet["image_url"]%>" alt="<%= planet["name"] %>" class="detail">
+<p><b>Diameter: </b><%= planet["diameter"] %> km</p>
+<p><b>Mass: </b><%= planet["mass"] %> kg</p>
+<p><b>Moon: </b><%= planet["moon_count"] %></p>
+
+<a href="/planets/<%=planet['id']%>/edit">edit</a>
+
+<div>
+<form action="/planets/<%=planet['id']%>/delete" method="post">
+<input type="hidden" name="_method" value="delete">
+<button>delete</button>
+</div>
+
+</form>
+
+</body>
+</html>

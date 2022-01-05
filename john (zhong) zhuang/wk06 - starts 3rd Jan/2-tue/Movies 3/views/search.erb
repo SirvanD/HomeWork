@@ -5,7 +5,7 @@
 <% else %>
 
     <% results["Search"].each do |movie| %>
-        <p><a href="/movie?title=<%=movie["Title"]%>"><%= movie["Title"] %> (<%= movie["Year"] %>)</a></p>
+        <p><a href="/movie/<%=movie["Title"]%>"><%= movie["Title"] %> (<%= movie["Year"] %>)</a></p>
     <% end %>
 
 <% end %>

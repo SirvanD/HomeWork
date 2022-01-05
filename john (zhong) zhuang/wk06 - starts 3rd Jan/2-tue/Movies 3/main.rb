@@ -27,7 +27,7 @@ get "/search" do
     })
 end
 
-get "/movie" do
+get "/movie/:title" do
     title = params["title"].to_s
     movie = HTTParty.get("http://omdbapi.com/?t=#{title}&apikey=89b0ed0b")
 
