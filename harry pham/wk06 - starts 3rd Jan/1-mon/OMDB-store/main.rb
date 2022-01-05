@@ -13,19 +13,17 @@ get "/" do
     erb :index
 end
 
-get "/movie_data" do
+get "/movies/data" do
     title = params["title"]
  
     url = "https://www.omdbapi.com/?t=#{title}&apikey=6010dc57"
     res = HTTParty.get(url)
-
     conn = PG.connect(dbname: 'omdb_movies')
+
     sql_add = "insert into movies (title, date, plot, poster) values ('#{res["Title"]}','#{res["Date"]}','#{res["Plot"]}','#{res["Poster"]}');"
     sql = "select * from movies where title = '#{title}';"
     result = conn.exec(sql)
     conn.close
-
-
     if result.count > 0        
         
         erb :our_movie_data, locals: {
@@ -47,10 +45,9 @@ get "/movie_data" do
         }
     end
 
-
 end
 
-get "/list" do
+get "/movies" do
     title = params["s"]    
     url = "https://www.omdbapi.com/?s=#{title}&apikey=6010dc57"
     res = HTTParty.get(url)
