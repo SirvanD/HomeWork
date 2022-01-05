@@ -9,7 +9,7 @@ get '/' do
     erb :index
 end
 
-get '/movie' do
+get '/movie/:title' do
     title = params["title"]
 
     conn = PG.connect(dbname: 'goodmoviehunting')
