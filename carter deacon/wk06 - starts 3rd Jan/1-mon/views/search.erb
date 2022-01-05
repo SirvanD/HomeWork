@@ -3,6 +3,6 @@
 <% results.each do |result| %>
     <% movie_title = result["Title"] %>
     <p>
-        <a href="/movie_details?t=<%=movie_title%>"> <%= movie_title %> </a>
+        <a href="/movie?t=<%=movie_title%>"> <%= movie_title %> </a>
     </p>
 <%end%>

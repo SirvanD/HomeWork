@@ -13,7 +13,7 @@ get '/' do
     erb :index
 end
 
-get '/search' do
+get '/movies' do
     input = params['search_title']
     url = "http://www.omdbapi.com/?s=#{input}&apikey=2f6435d9"
     list = HTTParty.get(url)
@@ -22,25 +22,25 @@ get '/search' do
     }
 end
 
-get '/movie_details' do
-    input = params['t']
+get '/movie' do
+    input = params['t'].gsub("'", "")
     conn = PG.connect(dbname: 'movies')
     sql = "SELECT * FROM movies WHERE TITLE = '#{input}';"
     search_local = conn.exec(sql)
     if search_local.count > 0 
-        title = search_local[0]["title"]
+        title = search_local[0]["title"].gsub("'", "")
         year = search_local[0]["year"]
         poster = search_local[0]["poster"]
         puts "Got it locally"
     else 
         url = "http://www.omdbapi.com/?apikey=2f6435d9&t=#{input}"
         result = HTTParty.get(url)
-        push_sql = "INSERT INTO movies (title, year, poster) VALUES ('#{result["Title"]}', '#{result["Year"]}', '#{result["Poster"]}');"
-        conn.exec(push_sql)
         title = result["Title"]
         year = result["Year"]
         poster = result["Poster"]
         plot = result["Plot"]
+        push_sql = "INSERT INTO movies (title, year, poster) VALUES ('#{title}', '#{year}', '#{poster}');"
+        conn.exec(push_sql)
         puts "Got it online"
     end
     conn.close
