@@ -12,7 +12,7 @@ get '/' do
 end
 
 
-get '/results' do 
+get '/movies/results' do 
 
     input = params['search_title']
     url = "http://www.omdbapi.com/?s=#{input}&apikey=2f6435d9"
@@ -27,7 +27,7 @@ end
 
 
 
-get '/movie_details' do
+get '/movies/details' do
     input_title = params['t']
     conn = PG.connect(dbname: 'movies')
     sql = "select * from movies where name = '#{input_title}';"
