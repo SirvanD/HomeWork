@@ -12,10 +12,10 @@
 
 </section>
 
-<form action="/delete_data" method="post">
+<form action="/planets/:id" method="post">
     <input type="hidden" name="_method" value="delete">
     <input type="hidden" name="planet_id" value="<%=planet['id']%>">
     <button>delete</button>
 </form>
 
-<a href="/edit_data/<%=planet['id']%>">update planet</a>
+<a href="/planets/<%=planet['id']%>/edit">update planet</a>
