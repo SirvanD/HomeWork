@@ -2,59 +2,12 @@ require 'pg'
 require 'httparty'
 require 'sinatra'
 require 'sinatra/reloader'
+require 'pry'
 
 
 get '/' do
   erb :index
 end
-
-get '/movie_details'do
-
-movie_title=params["title"]
-url = "http://www.omdbapi.com/?t=#{movie_title}&apikey=890ff11d"
-res = HTTParty.get(url)
-title = res["Title"]
-year = res["Year"]
-poster = res["Poster"]
-puts res 
-
-erb(:movie_details, locals: {
-  movie_title: res["Title"],
-  movie_year: res["Year"],
-  movie_image: res["Poster"]
-})
-end
-
-post '/store_data' do
-  sql ="insert into movies(name, image_url, year) values (
-    '#{ movie_title }',
-    '#{ movie_image }', 
-    '#{ movie_year };" 
-    
-    conn = PG.connect(dbname: 'movies3')
-    conn.exec(sql)
-    conn.close
-
-    redirect "/"
-end
-
-
-
-get '/movies/:title' do
-  movie_title = params['title']
-  conn = PG.connect(dbname: 'movies3')
-  sql = "SELECT * FROM movies where id = #{movie_title}"
-  result = conn.exec(sql)
-  movie = result[0]
-  conn.close
-  
-  erb(:movie_details, locals: { movie: movie })
-  
-end
-
-
-
-
 
 
 get '/movie_list' do
@@ -75,4 +28,74 @@ get '/movie_list' do
       
   })
 end
+
+
+get '/movie_details' do
+
+
+
+movie_title=params["title"]
+sql = "SELECT * FROM movies WHERE title = '#{movie_title}';"
+
+
+conn = PG.connect(dbname: 'movies3')
+result2 = conn.exec(sql)
+conn.close 
+
+  
+movie_array = []
+  result2.each do |movie|
+        movie_array << movie
+   end
+   
+
+
+   if movie_array.length() == 0
+    new_url = "https://www.omdbapi.com/?t=#{movie_title}&apikey=890ff11d"
+    result = HTTParty.get(new_url)
+   
+    title = result["Title"]
+    year = result["Year"]
+    image = result["Poster"]
+    plot = result["Plot"]
+    title.gsub!("'","")
+    plot.gsub!("'","")
+
+
+    sql2 = "insert into movies(title,image_url,year, plot )values('#{title}','#{image}','#{year}','#{plot}');"
+
+    conn2 = PG.connect(dbname: 'movies3')
+    conn2.exec(sql2)
+    conn2.close
+
+
+  else 
+    title = movie_array[0]["title"]
+    year = movie_array[0]["year"]
+    plot = movie_array[0]["plot"]
+    image = movie_array[0]["image"]
+
+  end
+
+erb(:movie_details, locals: {
+  movie_title: title,
+  movie_year: year,
+  movie_image: image,
+  movie_plot: plot,
+  
+ 
+  
+})    
+
+end
+
+
+
+
+
+
+
+
+
+
 

@@ -2,6 +2,8 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'pg'
+require 'bcrypt'
+require 'pry'
 
 
 
