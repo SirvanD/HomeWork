@@ -51,7 +51,6 @@ end
 
 get '/edit/:planet_name' do
   
-
   planet_id = params["planet_name"]
 
   sql = "SELECT * FROM planets WHERE name = '#{planet_id}';"
@@ -65,7 +64,6 @@ get '/edit/:planet_name' do
   erb(:edit, locals: {
   planet: planet
 })
-
 end
 
 put '/edit/:planet_name' do
@@ -93,6 +91,18 @@ delete '/delete_planet' do
   # return sql
 
 end
+
+# get /planet
+
+# get /planet/:id
+
+# get /planet/new
+# post /planet
+
+# get /planet/:id/edit
+# put /planet/:id
+
+# delete /planet/:id
 
 
 

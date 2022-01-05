@@ -15,7 +15,7 @@ get '/about' do
     erb(:about)
 end
 
-get '/all_matches' do
+get '/movies' do
     movie = params["movie"]
     url_list = "https://omdbapi.com/?s=#{movie}&apikey=ebc931bb"
     all_matches = HTTParty.get(url_list)
@@ -27,7 +27,7 @@ get '/all_matches' do
     })
 end
 
-get '/movie_details' do
+get '/movies/:id' do
     "MOVIE DETAILS"
 
     conn = PG.connect(dbname: 'searched_movies')
@@ -70,3 +70,16 @@ end
 # pry binding
 
 #hello
+
+
+# get /movies
+
+# get /movies/:id
+
+# get /movies/new
+# post /movies
+
+# get /movies/:id/edit
+# put /movies/:id
+
+# delete /movies/:id
