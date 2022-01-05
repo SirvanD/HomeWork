@@ -8,7 +8,7 @@ get '/' do
     erb(:index, { :layout => :layout })
 end
 
-get '/movie_details' do 
+get '/movies/:movie' do 
     movie = params["movie"]
     sql = "select * from movies where title='#{movie}';"
 
@@ -50,7 +50,7 @@ get '/movie_details' do
     end
 end
 
-get '/movie_list' do 
+get '/movies' do 
     movie = params["movie"]
     url = "https://omdbapi.com/?s=#{movie}&apikey=2f6435d9"
     res = HTTParty.get(url)
