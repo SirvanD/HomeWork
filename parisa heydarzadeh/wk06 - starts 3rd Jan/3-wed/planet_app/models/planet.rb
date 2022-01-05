@@ -14,7 +14,7 @@ end
 
 def create_planet(name, image_url, diameter, mass, moon_count)
   sql = "insert into planets (name, image_url, diameter, mass, moon_count) values ($1, $2, $3, $4, $5)"
-  db_query(sql, [name, image_url])
+  db_query(sql, [name, image_url,diameter, mass, moon_count])
 end
 
 def delete_planet(id)

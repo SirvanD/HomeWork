@@ -48,11 +48,11 @@ post '/planet' do
     put '/planet/:id' do
       
       update_planet(
-        params['id']
+        params['id'],
         params['name'],
         params['image_url'],
-        params['diameter']
-        params['mass']
+        params['diameter'],
+        params['mass'],
         params['moon_count']
       )
       

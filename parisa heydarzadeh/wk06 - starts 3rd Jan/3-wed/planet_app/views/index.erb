@@ -1,16 +1,16 @@
-<h1>Planets Of Our Solar System</h1>
+<h1>The Planets and The Solar System</h1>
   <div class="planets">
    <h3><a href="/planet/new">Add New Planet</a></h3>
      <%planets.each do |planet|%>
          <div class="insidebox">
-    <h1>
-       <a href="/planet/<%= planet['id'] %>">
+
+            <h1>
+              <a class="link" href="/planet/<%= planet['id'] %>">
               <%= planet['name']%>
-        </a>
+              </a>
+            </h1>
 
-    </h1>
-
-    <img src="<%= planet['image_url']%>" alt="<%= planet['name']%>">
- </div>
-<% end %>
-</div>
+            <img src="<%= planet['image_url']%>" alt="<%= planet['name']%>">
+        </div>
+     <% end %>
+  </div>
