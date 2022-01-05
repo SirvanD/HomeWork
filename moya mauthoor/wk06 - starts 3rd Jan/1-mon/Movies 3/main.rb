@@ -1,8 +1,10 @@
-require 'httparty'
 require "sinatra"
 require "sinatra/reloader"
+require "httparty"
 require "pg"
 require "pry"
+
+require_relative "models/movie.rb"
 
 get "/" do
     erb(:index)
@@ -10,6 +12,7 @@ end
 
 get "/movies" do
     movie = params["title"]
+
     url = "https://omdbapi.com/?s=#{ movie }&apikey=8f66dc3c#"
     res = HTTParty.get(url)
     movie_list = res["Search"]
@@ -18,13 +21,10 @@ get "/movies" do
         movie = movie_list.first
 
         erb(:movie, locals: {
-        title: movie["Title"],
-        year: movie["Year"],
-        plot: movie["Plot"],
-        poster: movie["Poster"]
+        movie: movie
         })
     else 
-        erb(:search_results, locals: {
+        erb(:movies, locals: {
         movie_list: movie_list
     })
         
@@ -32,42 +32,34 @@ get "/movies" do
 
 end
 
-get "/movies/:id" do
-    
-    movie_imdb_id = params["id"]
-
-    # if already in database, use that data - search database here and return result
-    
-    conn = PG.connect( dbname: 'movies_app')
-    sql = "SELECT * FROM movies WHERE omdb_id = '#{ movie_imdb_id }';"
-    res = conn.exec(sql)
-    conn.close
-
+get "/movies/:omdb_id" do
+     
+    sql = "SELECT * FROM movies WHERE omdb_id = $1;"
+    res = db_query(sql, [params["omdb_id"]])
+  
     # if not in database, get from OMDB as below and store in database
-    # I think this should be a post route instead? But I'm not sure how to redirect to a post route from another route.
     if res.count == 0
-        url = "https://omdbapi.com/?i=#{ movie_imdb_id }&apikey=8f66dc3c#"
+        url = "https://omdbapi.com/?i=#{ params["omdb_id"] }&apikey=8f66dc3c#"
         res = HTTParty.get(url)
 
         # storing the movie's details in database
-        conn = PG.connect( dbname: 'movies_app')
-        sql = "INSERT INTO movies (name, poster_url, plot, year, omdb_id) VALUES ('#{res["Title"]}', '#{res["Poster"]}', '#{res["Plot"]}', #{res["Year"]}, '#{movie_imdb_id}');"
-        conn.exec(sql)
-        conn.close
+        sql = "INSERT INTO movies (name, poster_url, plot, year, omdb_id) VALUES ($1, $2, $3, $4, $5);"
 
+        db_query(sql, [
+            res["Title"], 
+            res["Poster"],
+            res["Plot"],
+            res["Year"],
+            params["id"]
+        ])
+       
         erb(:movie, locals: {
-            title: res["Title"],
-            year: res["Year"],
-            plot: res["Plot"],
-            poster: res["Poster"]
+            movie: res
         })
     else
         movie = res.first
         erb(:movie, locals: {
-        title: movie["name"],
-        year: movie["year"],
-        plot: movie["plot"],
-        poster: movie["poster_url"]
+            movie: movie
         })
     end
    
