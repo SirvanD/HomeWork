@@ -9,7 +9,25 @@
 <body>
 
 <h3><a href="/">HOME</a></h3>
+
+<% if logged_in? %>
+  Welcome back <%= loggedin_user()["email"]%>
+
+   <form action="/login" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <button>logout</button>
+    </form>
+
+<% else %>
+  <h3><a href="/login">Log In</a></h3>
+<% end %>  
+
+
+<h3><a href="/signup">Sign Up</a></h3>
+
+<% if logged_in? %>
 <h3><a href="/planets/new">Add New Planet</a></h3>
+<% end %>
 
   <%= yield %>
 

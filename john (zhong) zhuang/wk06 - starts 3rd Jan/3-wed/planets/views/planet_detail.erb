@@ -7,14 +7,14 @@
     <title>Document</title>
 
     <style>
-    button {
+    .del {
         color: blue;
         background-color: #FFFFFF;
         border: 0px none;
         text-decoration: underline;
         font-size: 15px;
     }
-    button:hover{
+    .del:hover{
         color: red;
         border: none;
         cursor: pointer;
@@ -38,15 +38,15 @@
 <p><b>Mass: </b><%= planet["mass"] %> kg</p>
 <p><b>Moon: </b><%= planet["moon_count"] %></p>
 
+<% if logged_in? %>
 <a href="/planets/<%=planet['id']%>/edit">edit</a>
 
 <div>
 <form action="/planets/<%=planet['id']%>/delete" method="post">
 <input type="hidden" name="_method" value="delete">
-<button>delete</button>
-</div>
-
+<button class ="del">delete</button>
 </form>
-
+</div>
+<% end %>
 </body>
 </html>
