@@ -19,6 +19,8 @@ get '/movie_list' do
     title = result["Title"],
     movie_search = result["Search"],
     search = movie_search[0]
+    
+    
 
     erb(:movie_list, locals: {
         movie_list: movie_search,
@@ -31,12 +33,6 @@ end
 
 
 get '/movie_details' do
-  # sql3 = "INSERT INTO shows(show_title,show_year,show_plot,show_poster_url,movie_name)values('test','2025','test','test','test');"
-  # conn3 = PG.connect(dbname: 'movies')
-  # conn3.exec(sql3)
-  # conn3.close
-
-
   test = "";
   movie_input = params["movie_input"]
   sql = "SELECT * FROM shows WHERE movie_name = '#{movie_input}';"
@@ -64,13 +60,10 @@ get '/movie_details' do
       poster = result["Poster"]
       plot.gsub!("'","")
       title.gsub!("'","")
-      
+      # binding.pry
 
       sql2 = "INSERT INTO shows(show_title,show_year,show_plot,show_poster_url,movie_name)values('#{title}','#{year}','#{plot}','#{poster}','#{movie_input}');"
 
-        # binding.pry
-
-      # \' \''
       conn2 = PG.connect(dbname: 'movies')
       conn2.exec(sql2)
       conn2.close
@@ -81,6 +74,7 @@ get '/movie_details' do
       year = show_array[0]["show_year"]
       plot = show_array[0]["show_plot"]
       poster = show_array[0]["show_poster_url"]
+      
 
     end
     

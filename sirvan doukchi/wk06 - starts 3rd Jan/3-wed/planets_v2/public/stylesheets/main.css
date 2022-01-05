@@ -1,0 +1,52 @@
+
+.body_container {
+    background-color: black;
+    display: grid;
+    gap: 25px;
+}
+
+img{
+    width: 400px;
+}
+
+nav a{
+    padding: 60px;
+    margin: 10px;
+}
+
+label, input {
+    
+    padding: 5px;
+    margin: 5px;
+    color: whitesmoke;
+
+}
+
+h1, p{ 
+    color: whitesmoke;
+}
+
+form{
+    
+    display: grid;
+    grid-template-columns: 20% 20%;
+    gap: 10px;
+    font-size: 15px;
+    
+}
+
+button{
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+
+
+.planets_container {
+    gap: 10px;
+    /* background-color: black; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 20px;
+}
