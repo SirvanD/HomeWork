@@ -7,12 +7,13 @@ get "/" do
     erb(:index)
 end
 
-get "/search" do
+get "/movies" do
     movie = params["title"]
     url = "https://omdbapi.com/?s=#{ movie }&apikey=8f66dc3c#"
     res = HTTParty.get(url)
     movie_list = res["Search"]
 
+    # see if you can change this to .count > 0
     if movie_list.length.to_i == 1 
         movie = movie_list[0]
 
@@ -31,7 +32,7 @@ get "/search" do
 
 end
 
-get "/movie" do
+get "/movie/:id" do
     movieID = params["id"]
     url = "https://omdbapi.com/?i=#{ movieID }&apikey=8f66dc3c#"
     res = HTTParty.get(url)
