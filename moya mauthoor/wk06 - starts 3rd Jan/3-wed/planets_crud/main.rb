@@ -61,9 +61,9 @@ post "/planets" do
 end
 
 # To delete planet from database
-delete "/planets/:planet_id" do
+delete "/planets/:id" do
 
-  db_query("DELETE FROM planets WHERE id = $1;", [params["planet_id"]])
+  db_query("DELETE FROM planets WHERE id = $1;", [params["id"]])
 
   redirect "/"  
 end
