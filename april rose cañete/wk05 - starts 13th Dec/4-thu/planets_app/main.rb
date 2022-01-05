@@ -3,111 +3,59 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'pg'
 
+require_relative 'models/planet.rb'
+
 get '/' do
 
-  sql = 'select * from planets order by id;'
-
-  conn = PG.connect(dbname: 'planets_app')
-
-  result = conn.exec(sql)
-
-  conn.close
+  result = all_planets()
 
   erb :index, locals: {
     planets: result
   }
 end
 
+get '/planets/new' do
+  erb(:new)
+end
 
 get '/planets/:id' do
   planet_id = params['id']
 
-  sql = "select * from planets where id = #{planet_id};"
+  sql = "select * from planets where id = $1;"
 
-  conn = PG.connect(dbname: 'planets_app')
-
-  result = conn.exec(sql)
-
-  conn.close
+  result = db_query(sql, [planet_id])
 
   erb :details, locals: {
     planet: result
   }
-  # return planet_id
-
 end
 
-get '/add_a_planet' do
-  erb(:new)
-end
-
-post '/submit_planet' do
-  name = params['name']
-  image_url = params['image_url']
-  diameter = params['diameter']
-  mass = params['mass']
-  moon_count = params['moon_count']
-
-  conn = PG.connect(dbname: 'planets_app')
-
-  sql = "insert into planets(name, image_url, diameter, mass, moon_count) values('#{name}', '#{image_url}', '#{diameter}', '#{mass}', '#{moon_count}');"
-
-  result = conn.exec(sql) 
-
-  conn.close
+post '/planets' do
+  result = add_planet(params['name'], params['image_url'], params['diameter'], params['mass'], params['moon_count'])
 
   redirect "/"
-
 end
 
-get '/show_update_form/:id' do
+get '/planets/:id/edit' do
+  sql = "select * from planets where id = $1;"
 
-  sql = "select * from planets where id = #{params['id']};"
-
-  conn = PG.connect(dbname: 'planets_app')
-
-  result = conn.exec(sql) 
-
-  conn.close
+  result = db_query(sql, [params['id']])
 
   erb(:update, locals: {
     planet: result
   })
-  
 end
 
-put '/update_planet/:id' do
-
-  sql = "update planets
-        set name = '#{params['name']}',
-            image_url = '#{params['image_url']}',
-            diameter = #{params['diameter']},
-            mass = #{params['mass']},
-            moon_count = #{params['moon_count']}
-        where id = #{params['id']};"
-
-  conn = PG.connect(dbname: 'planets_app')
-
-  result = conn.exec(sql) 
-
-  conn.close
+put '/planets/:id' do
+  result = update_planet(params['name'], params['image_url'], params['diameter'], params['mass'], params['moon_count'], params['id'])
 
   redirect "/planets/#{params['id']}"
-
 end
 
-delete '/remove_planet/:id' do
-  
-  sql = "delete from planets where id = #{params['id']};"
-
-  conn = PG.connect(dbname: 'planets_app')
-
-  result = conn.exec(sql) 
-
-  conn.close
+delete '/planets/:id' do
+  result = delete_planet(params['id'])
 
   redirect "/"
-
 end
 
 

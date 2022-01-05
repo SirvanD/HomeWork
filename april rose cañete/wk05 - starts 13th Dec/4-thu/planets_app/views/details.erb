@@ -6,9 +6,9 @@
 <h3>Mass: <%= planet[0]["mass"] %> M⊕</h3>
 <h3>Moon Count: <%= planet[0]["moon_count"] %> </h3>
 
-<a href="/show_update_form/<%= planet[0]["id"] %>" class="link">update</a>
+<a href="/planets/<%= planet[0]["id"] %>/edit" class="link">update</a>
 
-<form action="/remove_planet/<%= planet[0]['id'] %>" method="post">
+<form action="/planets/<%= planet[0]['id'] %>" method="post">
     <input type="hidden" name="_method" value="delete">
     <button class="remove-btn">remove</button>
 </form>
