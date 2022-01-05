@@ -1,0 +1,9 @@
+<%  movie_list["Search"].each do |movie|%>
+    <p>
+        <a href="/moviedata?movie=<%=movie["Title"]%>"> 
+            <%=movie["Title"]%>
+        </a>
+    </p>
+<% end %>
+    
+   

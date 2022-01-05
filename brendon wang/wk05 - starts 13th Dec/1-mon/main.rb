@@ -1,6 +1,7 @@
 require "sinatra"
 require "sinatra/reloader"
 require "httparty"
+require "pg"
 
 $latest_posters = []
 
@@ -46,6 +47,8 @@ get "/moviedata" do
     })
 end
 
-
-
-
+get "/moviedata" do 
+    movie_name = params["movie"]
+    conn = PG.connect(dbname: 'OMDBmovies3')
+    sql = "select * from movies where name = #{movie_name};"
+    result = conn.exec(sql).to_a()
