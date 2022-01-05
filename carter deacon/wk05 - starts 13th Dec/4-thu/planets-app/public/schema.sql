@@ -11,6 +11,12 @@ CREATE TABLE planets (
     moon_count INTEGER
 );
 
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    email TEXT,
+    password_digest TEXT
+);
+
 -- Adding our solar system as a basis
 INSERT INTO planets (name, image_url, diameter, mass, moon_count) VALUES ('Earth', 'https://i.guim.co.uk/img/media/b1ff96eca19397797793e838934075e298f03bea/0_0_1024_1024/master/1024.jpg?width=300&quality=45&auto=format&fit=max&dpr=2&s=499857dac0f89d9c37454b4c9c61147a', 12742, 5973600000000000000000000, 1);
 

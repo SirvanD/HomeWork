@@ -44,12 +44,14 @@
       border-bottom: none;
     }
     
-
     .form input {
       display: flex;
       margin: 5px;
     }
 
+    nav {
+      text-align: right;
+    }
     
   </style>
 </head>
@@ -57,8 +59,18 @@
 
 <nav>
   <span> How do you make a website? </span>
-  <h2><a href="/">You planet... </a></h2>
+    <% if logged_in? %>
+      <p> Welcome back, <%= current_user.email %> </p>
+      <form action="/session" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button> Logout </button>
+      </form>
+    <% else %>
+      <a href="/login"> Sign in </a>
+    <% end %>
+  <h2><a href="/"> You planet... </a></h2> 
 </nav>
+
   <%= yield %>
 
 </body>
