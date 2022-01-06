@@ -1,0 +1,12 @@
+<h1> Update planet form</h1>
+
+<form action = "/update_data/<%=planets['id']%>" method="post">
+
+    <input type="hidden" name="_method" value="put">
+    <label for ="">name</label>
+    <input type= "text" name= "name" value="<%=planet['name']%>">
+
+    <label for = "">image url</label>
+    <input type= "url" name="image_url" placeholder="http://...." <%=planet['img_url']%>>        <button>Update</button>
+
+    </form>
