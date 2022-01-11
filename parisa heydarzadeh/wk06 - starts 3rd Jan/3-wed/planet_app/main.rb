@@ -28,7 +28,7 @@ end
 
 
 post '/planet' do
-  create_planet(params['name'], params['image_url'], params['diameter'], params['mass'], params['moon_count'])
+  create_planet(params['name'], params['image_url'], params['diameter'], params['mass'], params['moon_count'], current_user().id)
     redirect '/'
   end
   
