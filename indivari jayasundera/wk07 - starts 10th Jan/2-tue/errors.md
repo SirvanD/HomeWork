@@ -56,5 +56,17 @@ example:
 let num = 8,000;
 
 //11. Uncaught SyntaxError: Unexpected string
+this is when we close a string with a ' , at the wrong location.
+
+    '(total=' "+ find total +"']' --> error
+
+    it should be corrected as ,
+    '[total="' +findTotal + '"]'
 
 // 12. Uncaught SyntaxError: Unexpected identifier
+
+    this is when we make a mistake in our declaration statements of variables, arrays etc.
+
+    example :
+    varr a = 10;
+    console.log(a);
