@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        Uncaught SyntaxError: Unexpected token {
+        When you put too many { or { unnecessarily
+    
+        <script>
+        // COmmented out as it ruins the formatting of the doc
+        // function double(num) {
+        //     return num*2 {
+        // }
+        </script>
+
+
+        Uncaught ReferenceError: greeting is not defined
+        When a variable is not accessible with scope or not declared at all.
+        
+        <script>
+        function double(num) {
+            return greeting*2 
+        }
+        </script>
+
+
+        GET file:///scripts.js net::ERR_FILE_NOT_FOUND
+        
+        JS could not find the resource you are trying to reference. May be a different filepath.
+        
+        <script src="./scripts.js">
+        </script>
+        
+
+        GET https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/1.0.0/js/bootstrap.min.js 404 (Not Found)
+        
+        The get request you amde to that link could not be completed? Link changed / removed?
+        
+        <script>
+        // Optional code goes here
+        </script>
+
+
+        Uncaught TypeError: "hello".push is not a function
+        Can't use that builtin function on "hello" / data type
+        
+        <script>
+        "hello".push("dt")
+        </script>
+
+        
+        Uncaught TypeError: str.join is not a function
+        
+        Can't use that builtin function on str / data type 
+        
+        <script>
+        "string".join(' ')
+        </script>
+
+
+        Uncaught TypeError: Cannot read property 'name' of undefined
+        
+        Can't access the property of a value that is undefined or null.
+        
+        <script>
+            var movie = {
+                name: 'Interstellar',
+                director: {
+                    name: 'Christopher Nolan',
+                    born: 'July 30, 1970',
+                },
+                music: 'Hans Zimmer',
+            }
+            console.log(movie[0].name)
+        </script>
+
+        Uncaught SyntaxError: missing ) after argument list
+        
+        When you don't terminate a string properly or JS is expecting more or a ) to finish
+        
+        <script>
+        console.log('3 ' Math.random);
+        </script>
+
+
+        Uncaught ReferenceError: Invalid left-hand side in assignment
+        
+        You can't assign on the left side of the =. It means you either tried to assigning or only put one = somewhere by accident.
+        
+        <script>
+        if ("String" = "String") {
+            console.log("Yes")
+        }
+        </script>
+
+
+        Uncaught SyntaxError: Unexpected number
+        
+        Trying to assign a number to something on the left side of an assignment.
+        
+        <script>
+        var 6 = "string";
+        </script>
+
+
+        Uncaught SyntaxError: Unexpected string
+        
+        Trying to assign a string to something on the left side of an assignment.
+        
+        <script>
+        var "string" = "string";
+        </script>
+
+
+        Uncaught SyntaxError: Unexpected identifier
+        
+        Seems to come from importing files with no "type". Adding a type to the script will make it work? 
+        
+        <script>
+        </script>
+
+
+        Uncaught RangeError: Maximum call stack size exceeded
+        
+        Repeatedely calling functions so if function1 calls function2 and then function2 calls function1. Recursion.
+
+        <script>
+        // Optional code goes here
+        </script>
+
+    
+</body>
+</html>
