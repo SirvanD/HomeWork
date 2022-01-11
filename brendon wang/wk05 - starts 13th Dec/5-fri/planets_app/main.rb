@@ -3,7 +3,6 @@ require 'sinatra'
 require "sinatra/reloader"
 require "pg"
 
-
 get '/' do
   conn = PG.connect(dbname: 'planets_app')
   sql = "select * FROM planets;"
@@ -51,7 +50,7 @@ delete "/deleteplanet/:id" do
 end
  
 get "/editplanet/:id" do
-  sql = "Select * from planets where id = #{params["id"]}"
+  sql = "select * from planets where id = #{params["id"]}"
   conn = PG.connect(dbname: 'planets_app')
   planet = conn.exec(sql)[0]
   conn.close

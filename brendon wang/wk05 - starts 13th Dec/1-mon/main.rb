@@ -51,4 +51,5 @@ get "/moviedata" do
     movie_name = params["movie"]
     conn = PG.connect(dbname: 'OMDBmovies3')
     sql = "select * from movies where name = #{movie_name};"
-    result = conn.exec(sql).to_a()
+    result = conn.exec(sql)
+    if result.count > 0
