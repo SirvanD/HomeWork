@@ -27,7 +27,7 @@ end
   
 
 def update_planet(name, image_url, id)
-    sql("update planets set name = $1, image_url = $2, id = $3,;")
+    sql = "update planets set name = $1, image_url = $2, id = $3,;"
     dq_query(sql(name, image_url, id))
 end
 

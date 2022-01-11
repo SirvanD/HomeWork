@@ -32,7 +32,7 @@ get '/planets' do
   erb(:add_planet)  
 end
 
-post '/planets/' do
+post '/planets' do
   
   db_query(sql [
     params['name'],
@@ -44,6 +44,7 @@ post '/planets/' do
 
   create_planet(params['name'], params['image_url'], params['diameter'], params['mass'], params['moon_count'])
   #data sent by the client will be automatically placed inside the params hash object
+  redirect to '/submitted'
 end
 
 delete '/planets/:id' do

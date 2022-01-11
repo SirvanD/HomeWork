@@ -2,6 +2,7 @@ require 'pry'
 
 def db_query(sql, params = [])
     conn = PG.connect( dbname: 'planets_app' )
+    binding.pry
     result = conn.exec_params(sql, params) #always returns an array
     conn.close
     return result 
