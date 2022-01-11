@@ -2,6 +2,7 @@ require 'sinatra/reloader'
 require 'sinatra'
 require 'httparty'
 require 'pg'
+require 'pry'
 
 get '/' do
   erb :index
@@ -15,27 +16,43 @@ get "/movies" do
   erb :show, locals: {result: result}
 end
 
+
+
 get "/fullmovie/:id" do 
-  full_movie = params["id"] 
+  full_movie = params["id"]
+
   url = "http://www.omdbapi.com/?i=#{full_movie}&apikey=2f6435d9"
   res = HTTParty.get(url)
   title = res['Title']
   year = res['Year']
   image = res['Poster']
-  
+
+  conn = PG.connect(dbname: 'omdbmovies')
+  sql = "select * from movies where imdbid = '#{full_movie}';"
+  result = conn.exec(sql)
+  conn.close
+
+erb :showfullmovie, locals: {res: res, id: full_movie}
+    
+end
+ 
   
 
-  erb :showfullmovie, locals: {res: res, id: full_movie}
- 
+
+get '/dbfullmovie' do
+
+  erb :DBfullmovie
 end
 
 post '/insert' do
+  
   title = params['title']
   year = params['year']
   image = params['image']
+  imdbid = params['imdbID']
 
   conn = PG.connect(dbname: 'omdbmovies')
-  sql = "insert into movies (title, year, image_url) values ('#{title}', '#{year}', '#{image}');"
+  sql = "insert into movies (title, year, image_url, imdbid) values ('#{title}', '#{year}', '#{image}', '#{imdbid}');"
   conn.exec(sql)
   conn.close
   redirect '/'
