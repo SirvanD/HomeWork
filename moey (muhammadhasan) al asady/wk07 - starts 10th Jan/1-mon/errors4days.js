@@ -10,7 +10,7 @@
 
 // ------------
 
-// - `Uncaught SyntaxError: Unexpected token {`
+// 1. - `Uncaught SyntaxError: Unexpected token {`
 
 //   > Explanation goes here
 // Error is self explantory, unexpected curly bracket
@@ -21,7 +21,7 @@
 //   ```
 
 
-// - `Uncaught ReferenceError: greeting is not defined`
+// 2. - `Uncaught ReferenceError: greeting is not defined`
 
 //   > Explanation goes here
 //no such variable as greeting
@@ -34,17 +34,17 @@
 //   </script>
 //   ```
 
-// - `GET file:///scripts.js net::ERR_FILE_NOT_FOUND`
+// 3. - `GET file:///scripts.js net::ERR_FILE_NOT_FOUND`
 
 //   > when file does not exist (in the path given?)
 
 //   ```html
 //   <script>
-//   // Optional code goes here
+{/* <script src = "script.js"></script> */}
 //   </script>
 //   ```
 
-// - `GET https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/1.0.0/js/bootstrap.min.js 404 (Not Found)`
+// 4. - `GET https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/1.0.0/js/bootstrap.min.js 404 (Not Found)`
 
 //   > Explanation goes here
 
@@ -54,7 +54,7 @@
 //   </script>
 //   ```
 
-// - `Uncaught TypeError: "hello".push is not a function`
+// 5. - `Uncaught TypeError: "hello".push is not a function`
 
 //   > Explanation goes here
 
@@ -66,7 +66,7 @@ str.push(function(num) {
 //   </script>
 //   ```
 
-// - `Uncaught TypeError: str.join is not a function`
+// 6. - `Uncaught TypeError: str.join is not a function`
 
 //   > Explanation goes here
 
@@ -78,17 +78,18 @@ str.join(function(num) {
 //   </script>
 //   ```
 
-// - `Uncaught TypeError: Cannot read property 'name' of undefined`
-
+// 7. - `Uncaught TypeError: Cannot read property 'name' of undefined`
 //   > Explanation goes here
+// this is when a container variable 'name' is not defined 
 
+//
 //   ```html
 //   <script>
-//   // Optional code goes here
+//for (i = 0; i < 10; i++)
 //   </script>
 //   ```
 
-// - `Uncaught SyntaxError: missing ) after argument list`
+// 8. - `Uncaught SyntaxError: missing ) after argument list`
 
 //   > Explanation goes here
 // When you dont close the parenthesis
@@ -98,7 +99,7 @@ str.join(function(num) {
 //   </script>
 //   ```
 
-// - `Uncaught ReferenceError: Invalid left-hand side in assignment`
+// 9. - `Uncaught ReferenceError: Invalid left-hand side in assignment`
 
 //   > Explanation goes here
 // When there is an unexpected assignent somewhere, using = instead of ==
@@ -108,7 +109,7 @@ str.join(function(num) {
 //   </script>
 //   ```
 
-// - `Uncaught SyntaxError: Unexpected number`
+// 10. - `Uncaught SyntaxError: Unexpected number`
 
 //   > Explanation goes here
 // When a string is expected instead of a number
@@ -118,9 +119,10 @@ str.join(function(num) {
 //   </script>
 //   ```
 
-// - `Uncaught SyntaxError: Unexpected string`
+// 11. - `Uncaught SyntaxError: Unexpected string`
+//   > Explanation goes here
 // When a number is expected instead of a string
-//   > Explanation goes here
+
 
 //   ```html
 //   <script>
@@ -128,19 +130,22 @@ str.join(function(num) {
 //   </script>
 //   ```
 
-// - `Uncaught SyntaxError: Unexpected identifier`
+// 12. - `Uncaught SyntaxError: Unexpected identifier`
 
 //   > Explanation goes here
+//Usually happenes when you misplace commas or quotation marks 
 
 //   ```html
 //   <script>
-//   // Optional code goes here
+// ("username," visitorName);
 //   </script>
 //   ```
 
-// - `Uncaught RangeError: Maximum call stack size exceeded`
+// 13. - `Uncaught RangeError: Maximum call stack size exceeded`
 
 //   > Explanation goes here
+// call stack limit is when you call a function that calls another function until and it keeps going until you hit the call stack limit
+
 
 //   ```html
 //   <script>
