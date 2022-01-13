@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/" method="get"><button>Home</button></form>
+    <form action="/compliment" method="get"><button>Compliment</button></form>
+
+
+    <form action="/game">
+
+        <input type="text" name="hand" placeholder="paper/rock/scissors">
+        <button>go!</button>
+    </form>
+
+
+    <% if (userHand) { %>
+        <h2>You: <%= userHand %>
+        </h2>
+        <h2>Computer: <%= computerHand%>
+        </h2>
+        <% } %>
+
+            <% if (userHand==computerHand) { %>
+                <h1>It is a tie!</h1>
+                <% } else { %>
+                    <% if (userHand=="paper" ) { %>
+                        <% if (computerHand=="rock" ) { %>
+                            <h1>You win!</h1>
+                            <% } else { %>
+                                <% if (computerHand=="scissors" ) { %>
+                                    <h1>You lost!</h1>
+                                    <% } %>
+                                        <% } %>
+                                            <% } %>
+                                                <% if (userHand=="scissors" ) { %>
+                                                    <% if (computerHand=="rock" ) { %>
+                                                        <h1>You lost!</h1>
+                                                        <% } else { %>
+                                                            <% if (computerHand=="paper" ) { %>
+                                                                <h1>You win!</h1>
+                                                                <% } %>
+                                                                    <% } %>
+                                                                        <% } %>
+                                                                            <% if (userHand=="rock" ) { %>
+                                                                                <% if (computerHand=="paper" ) { %>
+                                                                                    <h1>You lost!</h1>
+                                                                                    <% } else { %>
+                                                                                        <% if (computerHand=="scissors"
+                                                                                            ) { %>
+                                                                                            <h1>You win!</h1>
+                                                                                            <% } %>
+                                                                                                <% } %>
+                                                                                                    <% } %>
+                                                                                                        <% } %>
+
+</body>
+
+</html>
