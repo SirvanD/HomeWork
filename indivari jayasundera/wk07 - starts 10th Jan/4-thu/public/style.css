@@ -1,0 +1,28 @@
+nav {
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: mediumslateblue;
+  border-radius: 5px;
+  color: white;
+}
+
+div {
+  padding: 20px;
+}
+h1 {
+  /* padding-top: 20px; */
+  margin-left: 35px;
+}
