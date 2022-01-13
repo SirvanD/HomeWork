@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% if (userHand == randomHand) { %>
+        <h1>It's a draw</h1>
+        <% } else if (userHand === "scissors" && randomHand === "paper") {%>
+            <h1>You won!</h1>
+        
+        <% } else if (userHand === "scissors" && randomHand === "rock") {%>
+            <h1>You lost!</h1>
+        
+        <% } else if (userHand === "paper" && randomHand === "scissors") {%>
+            <h1>You lost!</h1>
+    
+        <% } else if (userHand === "paper" && randomHand === "rock") {%>
+            <h1>You won!</h1>
+    
+        <% } else if (userHand === "rock" && randomHand === "paper") {%>
+            <h1>You won!</h1>
+        
+        <% } else if (userHand === "rock" && randomHand === "scissors") {%>
+            <h1>You won!</h1>
+        <% } else {%>
+            <h1>Enter your choice of paper, scissors or rock</h1>
+        <% } %>
+
+</body>
+</html>
