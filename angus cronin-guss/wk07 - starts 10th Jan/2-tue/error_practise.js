@@ -15,7 +15,7 @@
 
 // Error 4: GET https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/1.0.0/js/bootstrap.min.js 404 (Not Found)
 // The files you are trying to request using the get request can't be found by the server 
-<link rel="stylesheet" href="https://www.googlewwwww.com/" className="href"/>
+
 
 // Error 5: Uncaught TypeError: "hello".push is not a function
 // 'hello' is not an array it's a string, therefore this will not work. 
