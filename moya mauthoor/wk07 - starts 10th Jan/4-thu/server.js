@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     res.send(new Date().toLocaleTimeString());
 });
 
-app.get("/game?:move", (req, res) => {
+app.get("/game", (req, res) => {
     let userMove = req.query.hand;
     let computerMoves = ["rock", "paper", "scissors"];
     let computerMove = _.sample(computerMoves);
