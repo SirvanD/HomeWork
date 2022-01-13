@@ -15,11 +15,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/compliment', (req, res) => {
-    // http.backgroundColor = lib.getRandomColor()
-    let randomColor = lib.getRandomColor()
-    let randomCompliment = lib.getRandomCompliment()
-
-    res.render('show', { randomCompliment: randomCompliment, randomColor: randomColor, name: ''})
+    res.render('show', { randomCompliment: lib.getRandomCompliment(), randomColor: lib.getRandomColor(), name: ''})
 })
 
 app.get('/game', (req, res) => {
@@ -31,10 +27,8 @@ app.get('/game', (req, res) => {
 
 app.get('/:name', (req, res) => {
     let name = req.params.name.toUpperCase()
-    let randomCompliment = lib.getRandomCompliment()
-    let randomColor = lib.getRandomColor()
 
-    res.render('show', { randomCompliment: randomCompliment, name: name, randomColor: randomColor})
+    res.render('show', { randomCompliment: lib.getRandomCompliment(), name: name, randomColor: lib.getRandomColor()})
 })
 
 app.listen(8080)

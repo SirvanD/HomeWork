@@ -12,6 +12,7 @@ const colors = ["#FFBF00", "#0080FF","#01DF3A","#FF0080"]
 
 const handShapes = ['rock', 'paper', 'scissors']
 
+
 function getRandomCompliment() {
     return _.sample(compliments)
 }
