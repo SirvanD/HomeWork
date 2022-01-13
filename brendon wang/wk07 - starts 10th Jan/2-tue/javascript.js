@@ -35,7 +35,7 @@ str.join()
 
 //7.Uncaught TypeError: Cannot read property 'name' of undefined
 
-// cannot read object name because object is not defined
+// cannot read name because the key:value pair in object is not defined
 
 console.log(blah.name)
 
