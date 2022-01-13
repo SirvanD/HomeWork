@@ -20,7 +20,7 @@ app.get('/', function(req, res) {
         "So, aside from taking my breath away, what do you do for a living?",
         "I can't tell if that was an earthquake, or if you just seriously rocked my world."
     ]
-    var compliment = compliments[Math.floor(Math.random() * 4)];
+    var compliment = compliments[Math.floor(Math.random() * 5)];
   
     res.render('show', {
       compliment: compliment
