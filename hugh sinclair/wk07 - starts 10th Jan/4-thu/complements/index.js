@@ -3,6 +3,8 @@ const express = require('express')
 
 const app = express()
 const _ = require('lodash')
+
+//this is our first example of middleware, mini-routing "lets look for a file, inside the public directory"
 app.use(express.static('public'))
 
 
@@ -12,11 +14,19 @@ app.set('view engine', 'ejs') // this will require ejs for you
 app.set('views', './templates')
 
 app.get('/', (req, res) => {
-    res.render('index')
+
+
+    var date = new Date(); 
+    var time = date.getHours() + ':' + date.getMinutes(); 
+    res.render('index', { time: time})
 })
 
 app.get('/compliment', (req, res) => {
-    var compliments = [`Don't worry, you're doing fine!`, `You got a friend in me`, `You might be bad at coding, but at least you're funny`, `Your mum would be proud of you`, `Let's go get some icecream`]
+    var compliments = [`Don't worry, you're doing fine!`, 
+    `You got a friend in me`, 
+    `You might be bad at coding, but at least you're funny`, 
+    `Your mum would be proud of you`, 
+    `Let's go get some icecream`]
 
     var colors = ["#FFBF00", "#0080FF","#01DF3A","#FF0080"]
 
