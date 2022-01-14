@@ -1,30 +1,41 @@
 const express = require('express')
 const app = express()
 const _= require('underscore')
+const bodyParser = require('body-parser')
 
-
-//express is really just 2 things
-//routing
-//middleware
-
-function randInd(item) {
-    return Math.floor(Math.random()* item.length)
-}
+// express is really just 2 things
+// routing
+// middleware
+// res = response
+// req = request
 
 app.set('view engine', 'ejs') //require ejs for you
 app.set('views', './templates')
 
+
+// functions
+function randInd(item) {
+    return Math.floor(Math.random()* item.length)
+}
+
+function logging(req, res, next) {
+    console.log(`${req.method} ${req.path} ${new Date()}`)
+    next()
+}
+
+// example of a middleware
+app.use(logging)
 app.use(express.static('public'))
+app.use(bodyParser.urlencoded({ extended: false}))
 
 
+// routes
 app.get('/', (req, res) => {
     let today = new Date()
-    let date = today.getFullYear() + '-' + (today.getMonth()+1) + '-' + today.getDate();
-    res.send(date)
+    res.send(today.toLocaleTimeString())
 })
 
-
-app.get('/compliments', (req, res) => {
+app.get('/compliment', (req, res) => {
     console.log("yes")
     const compliments = [
         "Your instructors love you",
@@ -33,32 +44,50 @@ app.get('/compliments', (req, res) => {
         "It's almost beer o'clock",
         "The Force is strong with you"
     ]
-    res.send(`hello ${compliments[randInd(compliments)]}`)
+    const colors = ["#FFBF00", "#0080FF","#01DF3A","#FF0080"]
+
+    res.render(`compliment`, { 
+        compliment: compliments[randInd(compliments)],
+        color: colors[randInd(colors)]
+    })
 })
 
-app.get('/game/:hand', (req, res) => {
-    console.log(req.params['hand'])
+
+//req.query is what is passed in the routing
+app.get('/game', (req, res) => {
+    console.log(req.query['hand'])
     let hands = ['rock', 'paper', 'scissor']
     let randomHand = hands[randInd(hands)]
-    if(req.params['hand'] == randomHand) {
+    if(req.query['hand'] == randomHand) {
         res.send("tie!")
         console.log(randomHand)
-    } else if(req.params['hand'] == 'paper' && randomHand == 'rock') {
+    } else if(req.query['hand'] == 'paper' && randomHand == 'rock') {
         res.send('you win!! paper beats rock')
         console.log(randomHand)
-    } else if(req.params['hand'] == 'rock' && randomHand == 'scissor') {
+    } else if(req.query['hand'] == 'rock' && randomHand == 'scissor') {
         res.send('you win!! rock beats scissor')
         console.log(randomHand)
-    } else if (req.params['hand'] == 'rock' && randomHand == 'paper') {
+    } else if (req.query['hand'] == 'rock' && randomHand == 'paper') {
         res.send('you lose !!')
         console.log(randomHand)
-    } else if(req.params['hand'] == 'scissor' && randomHand == 'paper') {
+    } else if(req.query['hand'] == 'scissor' && randomHand == 'paper') {
         res.send('you win!! scissor beats paper')
         console.log(randomHand)
-    } else if (req.params['scissor'] == 'scissor' && randomHand == 'rock') {
+    } else if (req.query['hand'] == 'scissor' && randomHand == 'rock') {
         res.send('you lose !!')
         console.log(randomHand)
     }
+})
+
+app.get('/welcome', (req, res) => {
+    res.render('welcome')
+})
+
+
+// form get name will be in req.query.(parameter name)
+// form post name will be in req.
+app.post('/hello', (req, res) => {
+    res.send(req.body.name)
 })
 
 app.listen(8080)
