@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color:<%= color %>;">
- <h1>Random Compliment: <%= compliment %> </h1>  
+<body>
+   
+    
+    <form action="/hello" method="post">
+
+        <input type="text" name="name">
+
+        <button>submit</button>
 
 
 
- <script src="/client.js"></script>
- </body>
+    </form>
+</body>
 </html>
