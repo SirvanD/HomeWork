@@ -3,20 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!--auto refresh to see the updates on the web page-->
-    <!-- <meta http-equiv="refresh" content="1" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- reusing the stylesheet link -->
     <%- include('includes'); %>
   </head>
-
-  <body style="background-color: <%= rndColor%>">
+  <body>
     <%- include('nav'); %>
-    <h1>Welcome <%= userName%></h1>
-
-    <h1><%= rndCompliment%></h1>
-
-    <script src="client.js"></script>
+    <h1><%= message%></h1>
   </body>
 </html>
