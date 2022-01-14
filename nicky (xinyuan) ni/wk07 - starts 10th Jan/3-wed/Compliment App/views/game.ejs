@@ -9,9 +9,9 @@
 </head>
 <body>
    
-    <h1>Hey, you!</h1>
-    <h2><%= compliment %></h2>
-    <a href="/">Another one!</a>
+    <h1>Rock! Paper! Sissors!</h1>
+    <h2>Your move is <%= userHand %>, and the computer's move is <%= computerHand %>!</h2>
+    <a href="/game?hand=<%= userHand %>">Try again!</a>
 
     <script type="text/javascript">
         var colors = ["#5F9EA0","#FF7F50","#6495ED","#8FBC8F","#FFBF00","#D8BFD8","#DB7093","#FFD700","#0080FF","#01DF3A","#FF0080"]
