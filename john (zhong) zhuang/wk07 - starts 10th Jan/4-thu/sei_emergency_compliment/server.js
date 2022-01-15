@@ -1,12 +1,22 @@
 const express = require('express')
 const _ = require('underscore')
+const bodyParser = require('body-parser')
 const app = express()
 
 app.listen(8888)
+
+// const PORT = 8080
+// app.listen(PORT, () => {
+//     console.log(`express has taken the stage at ${PORT}`)
+// })
+
+
 app.set('view engine', 'ejs')
 app.set('views', './views')
 app.use(express.static('public'))
-
+app.use(bodyParser.urlencoded({
+    extended: false
+}))
 
 // When you visit the root / path of your app. it should display the server time.
 
@@ -14,7 +24,7 @@ app.get('/', (req, res) => {
     let currentTime = new Date();
     // res.send(`${currentTime}`)
     res.render('index', {
-        currentTime: currentTime
+        currentTime
     })
 })
 
@@ -37,8 +47,8 @@ app.get('/compliment', (req, res) => {
 
     // res.send(`${currentCompliment}`)
     res.render('compliment', {
-        currentColor: currentColor,
-        currentCompliment: currentCompliment
+        currentColor,
+        currentCompliment
     })
 })
 
@@ -57,13 +67,18 @@ app.get('/game', (req, res) => {
     let userHand = req.query["hand"]
 
     res.render('game', {
-        computerHand: computerHand,
-        userHand: userHand
+        computerHand,
+        userHand
     })
 })
 
 // task 4: personalized compliment
 // When you visit /user_can_type_in_any_name (ie: /dt or /bob or /potato), the greeting should personalize itself to the provided name. There should still be a random compliment and background color.
+
+app.post('/greetings', (req, res) => {
+    res.redirect(`/${req.body.name}`)
+})
+
 app.get('/:name', (req, res) => {
 
     // console.log(req.params)
@@ -85,14 +100,18 @@ app.get('/:name', (req, res) => {
     let currentColor = _.sample(colors, 1);
 
     res.render('compliment_name', {
-        currentColor: currentColor,
-        currentCompliment: currentCompliment,
-        userName: userName
+        currentColor,
+        currentCompliment,
+        userName
     })
 
 })
 
+app.post('/:name', (req, res) => {
+    let userNewName = req.body.name
+    res.send(userNewName)
 
+})
 
 
 
@@ -127,3 +146,4 @@ app.get('/:name', (req, res) => {
 //         }
 //     }
 // }
+
