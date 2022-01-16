@@ -26,3 +26,21 @@ var option5 = document.createElement("option");
 option5.value = "ATX";
 option5.text = "ATX";
 city.appendChild(option5);
+
+function changeBackground() {
+  var selectedValue = city.options[city.selectedIndex].value;
+
+  if (selectedValue === "NYC") {
+    document.body.className = "nyc";
+  } else if (selectedValue === "SF") {
+    document.body.className = "sf";
+  } else if (selectedValue === "LA") {
+    document.body.className = "la";
+  } else if (selectedValue === "SYD") {
+    document.body.className = "sydney";
+  } else if (selectedValue === "ATX") {
+    document.body.className = "austin";
+  }
+}
+
+city.addEventListener("change", changeBackground);
