@@ -31,6 +31,8 @@ function countIntegers(numbersArr) {
     return count;
 }
 
+const countIntegers2 = () => counts.filter(num => num * 1 == 0)
+
 // lengths (map)
 var words = ['my', 'cake', 'pudding'];
 
@@ -52,7 +54,7 @@ var inventory = [
 
 console.log(
     inventory
-        .filter(item => item.type == "machine")
+        .filter(item => item.type === "machine")
         .map(item => item.value)
         .reduce((total, value) => total + value)
 )
