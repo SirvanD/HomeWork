@@ -6,9 +6,7 @@ const app = express();
 const _ = require("underscore");
 
 function logging(req, res, next) {
-  console.log(
-    `${req.method} ${req.method} ${req.path} ${req.url} ${new Date()}`
-  );
+  console.log(`${req.method} ${req.path} ${req.url} ${new Date()}`);
   next();
 }
 
