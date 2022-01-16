@@ -31,7 +31,8 @@ function countIntegers(numbersArr) {
     return count;
 }
 
-const countIntegers2 = () => counts.filter(num => num * 1 == 0)
+const countIntegers2 = () => counts.filter(num => num % 1 == 0)
+console.log(countIntegers2());
 
 // lengths (map)
 var words = ['my', 'cake', 'pudding'];
