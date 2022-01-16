@@ -30,10 +30,9 @@ function countIntegers(arr) {
 
     return numOfInt 
 }
-
-// .map() - countIntegers()
 console.log(countIntegers([4, 2.2, 5, 6, 4.2, 8.2, 4]));
 
+// .map() - countIntegers()
 function countIntegers(arr) {
     return arr.filter(item => Number.isInteger(item)).length
 }
@@ -49,7 +48,7 @@ function lengths(arr) {
 console.log(lengths(['my', 'cake', 'pudding']));
 
 
-// .map()
+// .map() - getSquares()
 function getSquares(arr) {
     return arr.map(item => item * item)
 }
@@ -75,5 +74,4 @@ console.log(
 ); 
 
 // Get an array of all the machines with value over 500
-
 console.log(inventory.filter(item => item.type === 'machine' && item.value > 500));
