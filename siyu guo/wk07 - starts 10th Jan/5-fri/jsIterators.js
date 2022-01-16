@@ -84,5 +84,5 @@ var machines = inventory.filter(
     item => item["type"] == "machine"
 )
 var values = machines.map(machine => machine["value"])
-var totalValue = values.reduce((total, number) => total + number)
+var totalValue = values.reduce((total, number) => total + number, 0)
 console.log(totalValue)
