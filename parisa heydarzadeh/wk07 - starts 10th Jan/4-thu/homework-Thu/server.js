@@ -1,15 +1,18 @@
 const express = require("express");
 const app = express();
-
+const bodyParser = require('body-parser')
 const _ = require("underscore");
 
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
+// this is an example of a middleware -function
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(logging)
 
 app.get("/", (req, res) => {
-  res.render("mainpage");
+  res.send(new Date().toLocaleTimeString());
 });
 
 app.get("/compliments", (req, res) => {
@@ -25,13 +28,16 @@ app.get("/compliments", (req, res) => {
 
   randCompliment = _.sample(compliments);
   randColor = _.sample(colors);
-  res.render("complement.ejs");
-});
+  res.render("compliments", {
+      compliment: randCompliment,
+       color: randColor
+  });
+
 
 app.get("/game", (req, res) => {
-  var game = ["paper", "rock", "scissors"];
-  hand = req.query.hand;
-  server = _.sample(game);
+  let game = ["paper", "rock", "scissors"];
+  let hand = req.query.hand;
+  let server = _.sample(game);
   var result;
   if (hand == server) {
     result = "It's a Draw!";
@@ -51,7 +57,7 @@ app.get("/game", (req, res) => {
     result = "Play Again";
   }
 
-  res.render("gamee.ejs")
+  res.render(`computer hand is ${server} & user hand is ${hand}`)
 
 
 
@@ -67,11 +73,11 @@ app.get("/game", (req, res) => {
   
     var colors = ["#FFBF00", "#0080FF", "#01DF3A", "#FF0080"];
     userName  = req.params.name;
-    
+
     randCompliment = _.sample(compliments);
     randColor = _.sample(colors);
 
-    res.render("complement2.ejs");
+    res.render("");
   });
 
 
