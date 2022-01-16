@@ -23,20 +23,28 @@ console.log(optionSelector)
 
 
 
-//document.body.style.backgroundImage = "url('images/austin.jpg')"
+//var austinBackground = document.body.style.backgroundImage = "url('images/austin.jpg')"
 
-cities.forEach(city =>  {
+
+citySection.addEventListener('change',function () {
     
-    addEventListener(`click`, () => {
-        console.log(city.indexOf(city))
-    });
-});
+    var curVal = (this.value)
+    if (curVal == `SF`){
+        document.body.style.backgroundImage = "url('images/sf.jpg')"
+    }
+    if (curVal == `NYC`) {
+        document.body.style.backgroundImage = "url('images/nyc.jpg')"
+    }
+    if (curVal == 'ATX') {
+        document.body.style.backgroundImage = "url('images/austin.jpg')"
+    }
+    if (curVal == 'LA') {
+        document.body.style.backgroundImage = "url('images/la.jpg')"
+    }
+    if (curVal == 'SYD') {
+        document.body.style.backgroundImage = "url('images/sydney.jpg')"
+    }
 
+})
 
-// addEventListener(`click`, () => {
-//     console.log(`clicked`)
-// });
-
-
-
-document.body.classList.add(`sydney`)
+//document.body.classList.add(`sydney`)
