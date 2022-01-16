@@ -9,9 +9,7 @@ var inventory = [
 function getTotalValue(inventoryArray) {
   return inventoryArray
     .filter((item) => item.type == "machine")
-    .reduce((totVal, item) => {
-      totVal + item.value;
-    }, 0);
+    .reduce((totVal, item) => totVal + item.value, 0);
 }
 
 function getExpensiveMachines(inventoryArray) {
