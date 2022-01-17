@@ -17,18 +17,17 @@ cities.forEach(city => {
     console.log(i)
 })
 
-const nycElement = document.querySelector('.nyc')
-const sfElement = document.querySelector('.sf')
-const laElement = document.querySelector('.la')
-const austinElement = document.querySelector('.austin')
-const sydneyElement = document.querySelector('.sydeny')
-
-document.querySelector("#city-type > option.sf")
 function handleBg() {
-    body.className="nyc"
+    console.log(document.getElementById('city-type').value)
+    const value = document.getElementById('city-type').value
+    let i = cities.indexOf(value)
+    console.log(i)
+    body.className= cityImg[i]
 }
 
-select1.addEventListener('click', handleBg)
+
+
+select1.addEventListener('change', handleBg)
 
 const btn = document.createElement('button')
 btn.textContent = 'select'
