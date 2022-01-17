@@ -12,8 +12,10 @@ console.log(onlyEven2)
 
 var countIntergers = [4, 2.2, 5, 6, 4.2, 8.2, 4]
 var counter = 0
-countIntergers.forEach(() => {
-    counter++
+countIntergers.forEach((num) => {
+    if (num % 1 == 0) {
+        counter++
+    }
 })
 console.log(counter)
 
@@ -22,15 +24,11 @@ countIntergers.filter(() => counter2++)
 console.log(counter2)
 
 items = ['my', 'cake', 'pudding']
-var itemLength = items.map((item) => {
-    return item.length
-})
+var itemLength = items.map((item) => { return item.length })
 console.log(itemLength)
 
 items = [1, 2, 3, 4, 5]
-var getSquares = items.map((item) => {
-    return item ** 2
-})
+var getSquares = items.map((item) => { return item ** 2 })
 console.log(getSquares)
 
 var inventory = [
