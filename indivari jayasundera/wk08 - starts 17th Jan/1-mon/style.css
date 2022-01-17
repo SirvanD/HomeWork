@@ -7,3 +7,9 @@
   float: right;
   padding: 50px;
 }
+
+#brush-box {
+  width: 100px;
+  height: 100px;
+  border: grey 1px solid;
+}

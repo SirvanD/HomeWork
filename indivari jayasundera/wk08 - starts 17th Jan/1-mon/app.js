@@ -1,4 +1,5 @@
 var btnSetColor = document.getElementById("btn-color");
+var brushbox = document.getElementById("brush-box");
 var brushBoxDivs = document.getElementsByClassName("pixel");
 var colorPicker = document.getElementById("color-picker");
 var moviePicker = document.getElementById("movie-picker");
@@ -6,9 +7,7 @@ var btnSetMovie = document.getElementById("btn-movie");
 var container = document.getElementById("container");
 
 const setColor = () => {
-  for (let i = 0; i < brushBoxDivs.length; i++) {
-    brushBoxDivs[i].style.backgroundColor = colorPicker.value;
-  }
+  brushbox.style.backgroundColor = colorPicker.value;
 };
 
 const getMoviePoster = () => {
@@ -26,9 +25,7 @@ btnSetMovie.addEventListener("click", getMoviePoster);
 
 colorPicker.addEventListener("keyup", (event) => {
   if (event.keyCode === 13) {
-    for (let i = 0; i < brushBoxDivs.length; i++) {
-      brushBoxDivs[i].style.backgroundColor = colorPicker.value;
-    }
+    brushbox.style.background = colorPicker.value;
   }
 });
 
