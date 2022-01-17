@@ -28,7 +28,7 @@ function countIntegers(numbers) {
 
 function countIntegers(numbers) {
     return numbers
-        .filter(number => Number.isInteger(number))
+        .filter(Number.isInteger)
         .length;
 }
 
