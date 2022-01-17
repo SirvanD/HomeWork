@@ -4,8 +4,12 @@
   height: 50px;
 }
 .control-panel {
-  float: right;
   padding: 50px;
+}
+
+#container {
+  display: inline-block;
+  background-size: 100%;
 }
 
 #brush-box {

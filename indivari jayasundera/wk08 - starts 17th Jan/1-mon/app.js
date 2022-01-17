@@ -1,6 +1,5 @@
 var btnSetColor = document.getElementById("btn-color");
 var brushbox = document.getElementById("brush-box");
-var brushBoxDivs = document.getElementsByClassName("pixel");
 var colorPicker = document.getElementById("color-picker");
 var moviePicker = document.getElementById("movie-picker");
 var btnSetMovie = document.getElementById("btn-movie");
@@ -11,12 +10,13 @@ const setColor = () => {
 };
 
 const getMoviePoster = () => {
-  axios.get("https://omdbapi.com/?t=jaws&apikey=2f6435d9").then((res) => {
+  var movie = moviePicker.value;
+  axios.get(`https://omdbapi.com/?t=${movie}&apikey=2f6435d9`).then((res) => {
     console.log(res);
     var imgPoster = document.createElement("img");
-    // imgPoster.src = res.data.Poster;
-    // document.body.appendChild(imgPoster);
-    document.body.style.backgroundImage = res.data.Poster;
+    document.getElementById(
+      "container"
+    ).style.backgroundImage = `url(${res.data.Poster})`;
   });
 };
 
@@ -38,15 +38,12 @@ const createBrushBoxes = () => {
     divElement.className = "pixel";
     divElement.style.float = "left";
     container.appendChild(divElement);
+    divElement.addEventListener("mouseover", setBackground);
   }
 };
 
 const setBackground = (event) => {
   event.target.style.backgroundColor = colorPicker.value;
 };
-
-for (let i = 0; i < brushBoxDivs.length; i++) {
-  brushBoxDivs[i].addEventListener("mouseover", setBackground);
-}
 
 window.onload = createBrushBoxes;
