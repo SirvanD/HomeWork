@@ -32,13 +32,10 @@ numbers.forEach(num => {
 console.log(integerCount);
 
 // FILTER //
+
 var iCount = 0;
-numbers.filter(num => {
-    if (Number.isInteger(num)) {
-        iCount++;
-    }
- });
- console.log(iCount);
+let result = numbers.filter(num => Number.isInteger(num));
+console.log(result.length);
 
  //////////////////////////////////////////////////////////////////
 
