@@ -10,20 +10,23 @@ CITIES.forEach(city => {
 
 
 
-function backgroundImage(){
-    let bodyImage = document.createElement("body").style.background
-    if(city === "NYC") {
-        bodyImage = url("../images/nyc.jpg");
-    } else if (city === "SF") {
-        bodyImage = url("../images/sf.jpg");
-    } else if (city === "LA") {
-            bodyImage = url('la.jpg');
-    } else if (city === "SYD") {
-        bodyImage = url('sydney.jpg');
-    } else if (city === "ATX") {
-        bodyImage = url('austin.jpg');
-    } else {
-        bodyImage = url("../images/citipix_skyline.jpg")
-    }
-}
+// option.addEventListener('click', () => {
+//     let bodyImage = document.body.style.backgroundImage
+//     let cityname = document.getElementById("city-type").textContent
+//     // names.textContent = city
+//     if(cityname === "NYC") {
+//         bodyImage = "url('../images/nyc.jpg')";
+//     } else if (cityname === "SF") {
+//         bodyImage = 'url("../images/sf.jpg")';
+//     } else if (cityname === "LA") {
+//         bodyImage = "url('la.jpg')";
+//     } else if (cityname === "SYD") {
+//         bodyImage = "url('la.jpg')"
+//     } else if (cityname === "ATX") {
+//         bodyImage = "url('la.jpg')"
+//     } else {
+//         bodyImage = 'url("../images/citipix_skyline.jpg")'
+//     }
+// }
+
 // This is confusing the living daylights out of me, whyyy won't it work >:(
