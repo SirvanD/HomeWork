@@ -74,7 +74,7 @@ var inventory = [
 console.log(
 inventory                           //filter by param
         .filter(item => item.type == "machine") //all loops. name each loop.
-        .map(item => item.value) // map all the values
+        .map(item => item.value) // map all the selected values to a new array
         .reduce((total, value) => total + value) // previous value + current value
 )
 
