@@ -1,0 +1,8 @@
+.pixel {
+  border: grey 1px solid;
+  width: 50px;
+  height: 50px;
+}
+.control-panel {
+  float: right;
+}
