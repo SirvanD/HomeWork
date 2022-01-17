@@ -5,9 +5,14 @@ const _ = require("underscore");
 
 app.set("view engine", "ejs");
 app.set("views", "./views");
-
-// this is an example of a middleware -function
 app.use(express.static("public"));
+
+
+function logging(req, res, next) {
+    console.log(`${req.method} ${req.path} ${req.url} ${new Date()}`);
+    next();
+  }
+// this is an example of a middleware -function
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(logging)
 
@@ -26,11 +31,20 @@ app.get("/compliments", (req, res) => {
 
   var colors = ["#FFBF00", "#0080FF", "#01DF3A", "#FF0080"];
 
-  randCompliment = _.sample(compliments);
-  randColor = _.sample(colors);
+  let randCompliment = _.sample(compliments);
+  let randColor = _.sample(colors);
+
   res.render("compliments", {
       compliment: randCompliment,
        color: randColor
+  });
+
+  app.get("/welcome", (req, res) => {
+    res.render("welcome");
+  });
+  
+  app.post("/hello", (req, res) => {
+    res.send(req.body.name);
   });
 
 
@@ -57,28 +71,36 @@ app.get("/game", (req, res) => {
     result = "Play Again";
   }
 
-  res.render(`computer hand is ${server} & user hand is ${hand}`)
-
-
-
-
-  app.get("/:name", (req, res) => {
-    var compliments = [
-      "Your instructors love you",
-      "High five = ^5",
-      "Shut up and take my money",
-      "It's almost beer o'clock",
-      "The Force is strong with you",
-    ];
-  
-    var colors = ["#FFBF00", "#0080FF", "#01DF3A", "#FF0080"];
-    userName  = req.params.name;
-
-    randCompliment = _.sample(compliments);
-    randColor = _.sample(colors);
-
-    res.render("");
+  es.render("game", {
+    hand: hand,
+    server: server,
+    result: result,
   });
+});
+
+
+app.listen(PORT, () => {
+    console.log(`express has taken the stage at ${PORT}`);
+  });
+
+
+//   app.get("/:name", (req, res) => {
+//     var compliments = [
+//       "Your instructors love you",
+//       "High five = ^5",
+//       "Shut up and take my money",
+//       "It's almost beer o'clock",
+//       "The Force is strong with you",
+//     ];
+  
+//     var colors = ["#FFBF00", "#0080FF", "#01DF3A", "#FF0080"];
+//     userName  = req.params.name;
+
+//     randCompliment = _.sample(compliments);
+//     randColor = _.sample(colors);
+
+//     res.render("");
+//   });
 
 
 
