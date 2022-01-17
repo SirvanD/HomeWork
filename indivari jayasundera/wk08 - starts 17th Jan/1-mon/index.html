@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="pixel"></div>
-    <div class="pixel"></div>
     <div class="control-panel">
       <input type="text" id="color-picker" />
-      <button>set color</button>
+      <button id="btn-color">set color</button>
+      <input type="text" class="movie-picker" />
+      <button id="btn-movie">set movie poster</button>
     </div>
+
+    <div id="container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
