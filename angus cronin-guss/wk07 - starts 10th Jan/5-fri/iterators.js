@@ -1,4 +1,4 @@
-//Write a function named onlyEven that returns evens numbers in an array. Write one version that use forEach and then write another version that uses filter
+//// Task 1
 // let evenArray = []
 // function onlyEven(array) {
 //     array.forEach(number => {
@@ -15,7 +15,7 @@
 
 // console.log(onlyEven([1, 2, 3, 4, 5, 6]))
 
-// Question 2 -  counts how many integers there are in an array
+//// Task 2 
 // let integers = []
 // function countIntegers(array) {
 //     array.forEach(number => {
@@ -30,15 +30,39 @@
 // const countIntegers = array => array.filter( number => number % 1 === 0).length
 // console.log(countIntegers([4, 2.2, 5, 6, 4.2, 8.2, 4]));
 
+//// Task 3
 // Write a function lengths that accepts a single parameter as an argument, namely an array of strings. The function should return an array of numbers where each number is the length of the corresponding string. use .map
 
-function lengths(array) {
-    let wordLengths = []
-    array.map(function(word){
-        wordLengths.push(word.length)
-    })
-    console.log(wordLengths);
+// function lengths(array) {
+//     let wordLengths = []
+//     array.map(function(word){
+//         wordLengths.push(word.length)
+//     })
+//     console.log(wordLengths);
     
-}
-lengths(['my', 'cake', 'pudding'])
+// }
+// lengths(['my', 'cake', 'pudding'])
 
+
+//// Task 4
+// function getSquares(array) {
+//    console.log(array.map(function (square) {
+//         return square * square
+//     })
+//    )}
+
+// getSquares([1, 2, 3, 4, 5])
+
+//// Task 5
+
+var inventory = [
+    {type:   "machine", value: 5000},
+    {type:   "machine", value:  650},
+    {type:      "duck", value:   10},
+    {type: "furniture", value: 1200},
+    {type:   "machine", value:   77}
+  ]
+
+console.log(inventory.filter(item => item.type === 'machine').map(item => item.value).reduce((total, accum) => total + accum))
+
+console.log(inventory.filter(item => item.value > 500 && item.type === 'machine'));
