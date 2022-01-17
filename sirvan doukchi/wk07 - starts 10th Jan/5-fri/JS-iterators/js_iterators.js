@@ -84,13 +84,9 @@ var inventory = [
   { type: "machine", value: 77 },
 ];
 
-var total = inventory.reduce((acc, current) => {
-  return acc + current["value"];
-}, 0);
+var total = inventory.reduce((acc, current) => acc + current["value"], 0);
 
-var valueOver500 = inventory.filter((obj) => {
-  return obj["value"] > 500;
-});
+var valueOver500 = inventory.filter((obj) => obj["value"] > 500);
 
 console.log(total);
 console.log(valueOver500);
