@@ -35,3 +35,13 @@ btn2.addEventListener('click', (event) => {
         console.log(poster);
         document.body.style.backgroundImage = `url(${poster})`;
 })});
+
+
+// event delegation
+// event bubbling
+
+// use parent to listen to event rather than pixels.
+// canvas.addEvemtListener('click, event => {
+//     event.target.style.backgroundColor = 'red'
+// })
+// target is for which CHILD is clicked on.

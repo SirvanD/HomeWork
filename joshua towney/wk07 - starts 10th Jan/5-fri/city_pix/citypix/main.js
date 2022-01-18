@@ -22,4 +22,5 @@ var selectedCity = '';
 form.addEventListener('change', () => {
     selectedCity = document.querySelector('#city-type').selectedOptions[0].value; //selected item in dropdown always in position 0
     document.querySelector('body').style.backgroundImage = `url("images/${cityPics[selectedCity]}")`;
+    //document.body.className = selectedCity
 });
