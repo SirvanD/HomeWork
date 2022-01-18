@@ -2,27 +2,27 @@
 let cityVals = [
   {
     name: "Select a City",
-    url: "citipix_skyline.jpg",
+    class: "",
   },
   {
-    name: "NYC",
-    url: "nyc.jpg",
+    name: "New York",
+    class: "nyc",
   },
   {
-    name: "ATX",
-    url: "austin.jpg",
+    name: "San Fran",
+    class: "sf",
   },
   {
-    name: "SYD",
-    url: "sydney.jpg",
+    name: "Los Angeles",
+    class: "la",
   },
   {
-    name: "LA",
-    url: "la.jpg",
+    name: "Austin",
+    class: "austin",
   },
   {
-    name: "SF",
-    url: "sf.jpg",
+    name: "Sydney",
+    class: "sydney",
   },
 ];
 let select = document.getElementById("city-type");
@@ -33,10 +33,10 @@ select.remove(0);
 
 //ADD OPTIONS FROM OBJ
 cityVals.forEach((city) => {
-  select.options.add(new Option(city.name, city.url));
+  select.options.add(new Option(city.name, city.class));
 });
 
 //ADD EVENT LISTENER
 select.addEventListener("change", () => {
-  document.body.style.backgroundImage = `url('./images\/${select.value}')`;
+  document.body.className = select.value;
 });
