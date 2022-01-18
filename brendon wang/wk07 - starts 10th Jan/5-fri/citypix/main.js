@@ -1,16 +1,16 @@
 cities = ["NYC", "SF", "LA", "SYD", "ATX"]
-var cityForm = document.querySelector('#city-type')
+var cityType = document.querySelector('#city-type')
 
 cities.forEach(city => {
     var option = document.createElement('option')
     option.textContent = city
-    cityForm.appendChild(option)
+    cityType.appendChild(option)
 });
 
 
-function changebackground() {
-    console.log(`clicking ${cityForm.value}`)
-    citycode = cityForm.value.toLowerCase()
+function changeBackground() {
+    console.log(`clicking ${cityType.value}`)
+    citycode = cityType.value.toLowerCase()
     if (citycode == "syd") {
         citycode = "sydney"
     } else if (citycode == "atx") {
@@ -19,4 +19,4 @@ function changebackground() {
     document.body.className = `${citycode}`
 }
 
-cityForm.addEventListener('change', changebackground)
+cityType.addEventListener('change', changeBackground)
