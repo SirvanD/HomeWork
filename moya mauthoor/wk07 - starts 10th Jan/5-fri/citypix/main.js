@@ -11,13 +11,13 @@ const select = document.querySelector("#city-type");
 cities.forEach(city => {
     let option = document.createElement("option");
     option.textContent = city;
+    // don't really need value if it's the same as textcontent. Will be the same as textcontnet by default
     option.value = city;
     select.appendChild(option);
 })
 
 // I renamed the styles in the CSS, I hope that's ok. Happy to try again if it's not a good way to do it. 
 
-const options = document.querySelectorAll("option");
 const body = document.querySelector("body");
 
 // I wouldn't use the removeAttribute class if the body already had multiple classes attached to it, but here it seems ok. 
