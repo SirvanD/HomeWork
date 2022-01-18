@@ -11,7 +11,7 @@ colorButton.addEventListener("click", (event) => {
   demoColor.style.backgroundColor = colorInput.value;
 });
 
-for (let i = 0; i <= 1331; i++) {
+for (let i = 0; i <= 1531; i++) {
   //1631;
   const div = document.createElement("div");
   div.classList.add("pixel");
