@@ -4,19 +4,6 @@ const paintBr = document.querySelector('#square')
 
 // create a loop to populate the background
 
-
-for(let i = 0; i < 2000; i++){
-    let boxes = document.createElement('div')
-    boxes.className = "boxes";
-    boxes.style.border = '1px solid black';
-    boxes.style.width = '30px';
-    boxes.style.height = '30px';
-    boxes.style.display = 'inline-block';
-    document.body.appendChild(boxes)
-}
-
-
-
 function setColour() {
     let fillColour = colourInput.value
     console.log(fillColour)
@@ -24,13 +11,19 @@ function setColour() {
     return false
 }
 
+for(let i = 0; i < 2000; i++){
+    let boxes = document.createElement('div')
+    boxes.className = "boxes";
+    document.body.appendChild(boxes)
+}
 
 const squares = document.querySelectorAll('.boxes')
-    squares.forEach(square => {
-        square.addEventListener('mouseover', () => {
-        square.style.backgroundColor = colourInput.value
-        })
+    
+squares.forEach(square => {
+    square.addEventListener('mouseover', () => {
+    square.style.backgroundColor = colourInput.value
     })
+})
 
 let btn = document.querySelector('.btn')
 
@@ -41,3 +34,10 @@ btn.addEventListener('click', () => {
     });
 })
 
+// event delegation - tell the parent to handle the event listener 
+// event bubbling 
+
+// canvas.addEventListener('click', event => {
+//     event.target.style.backgroundColor = fillColour
+// }) ---> you'd need to create a parent div for the canvas 
+// you need to write an if statement to make sure the event.target.classList.contains('.boxes')
