@@ -1,6 +1,26 @@
 var city = document.getElementById("city-type");
 
+const cities = [
+  { NYC: "nyc" },
+  { SF: "sf" },
+  { LA: "la" },
+  { SYD: "sydney" },
+  { ATX: "austin" },
+];
+
 // var city = document.querySelector("select");
+// cityName =[
+
+// ]
+
+cities.forEach((name) => {
+  var option = document.createElement("option");
+  option.text = name;
+
+  city.options.add(option1);
+});
+
+// value by default gets the text value
 
 var option1 = document.createElement("option");
 option1.value = "NYC";
@@ -29,7 +49,8 @@ city.appendChild(option5);
 
 function changeBackground() {
   var selectedValue = city.options[city.selectedIndex].value;
-
+  // could've used city.value straight away
+  // document.body.className = cityNames.value
   if (selectedValue === "NYC") {
     document.body.className = "nyc";
   } else if (selectedValue === "SF") {

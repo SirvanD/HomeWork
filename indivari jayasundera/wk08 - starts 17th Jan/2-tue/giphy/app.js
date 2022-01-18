@@ -22,4 +22,9 @@ const getImages = () => {
       }
     });
 };
+searchInput.addEventListener("keyup", (event) => {
+  if (event.keyCode == 13) {
+    getImages();
+  }
+});
 btnSearch.addEventListener("click", getImages);
