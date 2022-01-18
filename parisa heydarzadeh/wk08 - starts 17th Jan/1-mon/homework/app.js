@@ -11,7 +11,7 @@ var changebrushBox = function (event) {
 brushBtn.addEventListener("click", changebrushBox);
 
 // step 2
-var numOfPixels = 1617;
+var numOfPixels = 2000;
 var checkBox = document.querySelector("#pixel");
 
 for (var i = 0; i < numOfPixels; i++) {
@@ -36,19 +36,12 @@ pixels.addEventListener("mouseover", changePixelColor);
 var movieBtn = document.querySelector("#movie");
 var movieName = document.querySelector(".movieName");
 
-var moviePoster = function (event) {
+movieBtn.addEventListener("click", (event) => {
   event.preventDefault();
-
-  var title = movieName.value;
-
-  var options = {
-    url: `http://www.omdbapi.com/?t=${title}&apikey=2f6435d9`,
-    method: "get",
-  };
-  var handleResponse = function (res) {
-    checkBox.style.backgroundImage = `url( ${res.Poster} )`;
-  };
-
-  $.ajax(options).done(handleResponse);
-};
-movieBtn.addEventListener("click", moviePoster);
+  console.log(`aahaaha`, aahaaha);
+  // axios
+  //   .get(`https://www.omdbapi.com/?t=${movieName.value}&apikey=2f6435d9`)
+  //   .then((res) => {
+  //     checkBox.style.backgroundImage = `url(${res.Poster})`;
+  //   });
+});
