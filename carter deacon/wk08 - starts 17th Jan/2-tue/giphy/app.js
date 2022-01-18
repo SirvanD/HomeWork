@@ -10,9 +10,9 @@ function getImages(event) {
     var input = document.querySelector('input');
     axios.get(`http://api.giphy.com/v1/gifs/search?q=${input.value}&api_key=${API_KEY}&limit=10&rating=g`)
        .then(res => {
-            let results = res.data.data;
-            results.forEach(result => {
-                let image = result.images.downsized.url
+            let allGifs = res.data.data;
+            allGifs.forEach(gif => {
+                let image = gif.images.downsized.url
                 let element = document.createElement('img')
                 element.src = image
                 WRAPPER.appendChild(element)
