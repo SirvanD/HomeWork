@@ -1,38 +1,34 @@
+// addeventlistener to parent instead of children 
+// can create event listener in the for loop function instead of using memory to define pixels after
+// worst
+// var allPixels = document.querySelectorAll('.pixel')
+// allPixels.forEach(pixel => {
+//     pixel.addEventListener('click', changeColor)
+// })
+// Bad
+// div.addEventListener('click', changeColor)
+
+
 var btn = document.querySelector('button')
 var inputColor = document.querySelector('.inputColor')
-var pixel1 = document.querySelector('.pixel')
-
-function changeColor() {
-    pixel1.style.backgroundColor = inputColor.value
-}
-
-// btn.addEventListener('click', changeColor)
-btn.addEventListener('click', event => {
-    event.preventDefault()
-    changeColor()
-    console.log('clicked')
-})
-
+var primaryPixel = document.querySelector('.pixel')
+var movieBtn = document.querySelector('.movieBtn')
+var inputMovie = document.querySelector('.inputMovie')
+var canvas = document.querySelector('.canvas')
 
 for (let i = 0; i < 2000; i++) {
     var div = document.createElement('div')
     div.className = "pixel"
-    document.body.appendChild(div)
+    canvas.appendChild(div)
 }
 
-var allPixels = document.querySelectorAll('.pixel')
+function primaryColor() {
+    primaryPixel.style.backgroundColor = inputColor.value
+}
 
-function turnGreen(event) {
+function changeColor(event) {
     event.target.style.backgroundColor = inputColor.value
 }
-
-allPixels.forEach(pixel => {
-    pixel.addEventListener('click', turnGreen)
-})
-
-var movieBtn = document.querySelector('.movieBtn')
-var inputMovie = document.querySelector('.inputMovie')
-
 
 function movieBackground() {
     movie = inputMovie.value
@@ -43,9 +39,32 @@ function movieBackground() {
     })
 }
 
+canvas.addEventListener('click', event => {
+    if (event.target.classList.contains('pixel')) { // prevent changing color of parent/canvas
+        event.target.style.backgroundColor = inputColor.value
+    }
+})
+
 // movieBtn.addEventListener('click', movieBackground)
 movieBtn.addEventListener('click', event => {
     event.preventDefault()
     movieBackground()
     console.log('clicked')
 })
+
+
+// btn.addEventListener('click', primaryColor)
+btn.addEventListener('click', event => {
+    event.preventDefault()
+    primaryColor()
+    console.log('clicked')
+})
+
+
+
+
+
+
+
+
+
