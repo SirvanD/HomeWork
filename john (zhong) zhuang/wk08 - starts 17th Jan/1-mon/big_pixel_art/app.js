@@ -26,6 +26,10 @@ document.getElementById('brushcolor').addEventListener('keypress', function (eve
     }
 });
 
+// document.querySelector('.myform').addEventListener('submit', event => {
+//     event.preventDefault()
+// })
+
 // Step 3
 // Create 2000 divs with the "pixel" class and append them to the body. The pixel class should be styled as a square around 50px by 50px. (you can make the square a little bit bigger or smaller if you want)
 
