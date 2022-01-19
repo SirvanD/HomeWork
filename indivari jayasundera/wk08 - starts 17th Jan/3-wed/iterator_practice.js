@@ -9,18 +9,18 @@ var users = [
 
 // // write code to get an array of all users that have the username "Ear"
 
-// console.log(users.filter((user) => user.username == "Ear"));
+console.log(users.filter((user) => user.username == "Ear"));
 
-// // write code to get an array of all users with an age of 60 or over
+// write code to get an array of all users with an age of 60 or over
 
-// console.log(users.filter((user) => user.age >= 60));
+console.log(users.filter((user) => user.age >= 60));
 
 // // write code to get an array of all ids in users
-// let ids = [];
-// for (let i = 0; i < users.length; i++) {
-//   ids.push(users[i].id);
-// }
-// console.log(ids);
+let ids = [];
+for (let i = 0; i < users.length; i++) {
+  ids.push(users[i].id);
+}
+console.log(ids);
 
 // write a function that calculate the average age of all users
 
