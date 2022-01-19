@@ -6,6 +6,8 @@ function handleRespose(res) {
         let img = document.createElement('img')
         img.src = gif.images.downsized.url
         document.body.appendChild(img)
+        img.style.margin = '0px;'
+        img.style.display = 'block;'
     })
     
 }
