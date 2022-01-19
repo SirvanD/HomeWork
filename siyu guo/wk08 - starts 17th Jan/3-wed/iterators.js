@@ -42,5 +42,10 @@ words.map(word => {
     }
     return temp
 })
-
+// below works too
+words.map(word => {
+    var temp = word.split("")
+    temp.shift()
+    return temp.reduce((accum, letter) => accum + letter, word[0].toUpperCase())
+})
 
