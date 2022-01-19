@@ -7,7 +7,7 @@ const form = document.querySelector('form')
 
 
 function handleResponse(res) {
-    // console.log(res.data.data);
+    console.log(res.data.data);
     let div = document.createElement('div')
 
     document.body.appendChild(div)
@@ -18,7 +18,7 @@ function handleResponse(res) {
         let img = document.createElement('img')
         
         img.style.display = 'block'
-        img.src = item.embed_url
+        img.src = item.images.original.url
 
         div.appendChild(img)
 
