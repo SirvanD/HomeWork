@@ -12,15 +12,15 @@ form.addEventListener("submit", event => {
     if (giphyDiv.children.length > 0) {
         giphyDiv.innerHTML = "";
     }
-    
+
     let searchTerm = input.value;
 
     axios.get(`https://api.giphy.com/v1/gifs/search?api_key=${giphyApiKey}&q=${searchTerm}&limit=10`).then(res => {
         let gifs = res.data.data;
         for (let i = 0; i < gifs.length; i++) {
-            let gif_url = gifs[i].images.fixed_height_small.url
+            let gifUrl = gifs[i].images.fixed_height_small.url
             let gifImg = document.createElement("img");
-            gifImg.src = gif_url;
+            gifImg.src = gifUrl;
             gifImg.style.display = "block";
             gifImg.style.margin = "0 auto";
             gifImg.style.padding = "10px";
