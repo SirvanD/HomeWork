@@ -1,3 +1,5 @@
+window.axios = require('axios');
+
 var input = document.querySelector('input')
 
 // Step 1 & 2
@@ -30,14 +32,35 @@ canvas.addEventListener('mouseover', clickColor => {
 
 
 // Step 7
-//http://www.omdbapi.com/?t=jaws&apikey=2f6435d9
+// function handleRespose(res) {
+//     console.log(res.data.Search[0]);
+    
+//     let movie = res.data.Search[0]
+//     let body = document.querySelector('body')
+//     let img = document.createElement('img')
+//     img.src = movie.Poster
+//     body.appendChild(img)
+    
+// }
+// axios.get('http://www.omdbapi.com/?s=jaws&apikey=2f6435d9').then(handleRespose)
 
-var movieBackground = document.createElement('img')
-var movie = document.getElementById('movie')
-var url = `http://www.omdbapi.com/?t=${movie}&apikey=2f6435d9`
-movieBackground.source = url.poster
-body.appendChild(movieBackground)
-
-body.addEventListener('click', bgi => {
-    bgi.style.backgoundImage = movieBackground
+let btn = document.getElementById('movie-btn')
+btn.addEventListener('click', () => {
+    event.preventDefault()
+    axios.get('http://www.omdbapi.com/?s=jaws&apikey=2f6435d9').then(res => {
+        let img = document.createElement('img')
+        img.src = res.data.Search.Poster
+        document.body.appendChild(img)
+    })
 })
+
+
+// var movieBackground = document.createElement('img')
+// var movie = document.getElementById('movie')
+// var url = `http://www.omdbapi.com/?t=${movie}&apikey=2f6435d9`
+// movieBackground.source = url.poster
+// body.appendChild(movieBackground)
+
+// body.addEventListener('click', bgi => {
+//     bgi.style.backgoundImage = movieBackground
+// })
