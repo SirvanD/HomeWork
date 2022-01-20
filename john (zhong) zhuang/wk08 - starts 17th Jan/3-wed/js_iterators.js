@@ -11,11 +11,12 @@ var users = [
 
 // write code to get an array of all users that have the username "Ear"
 console.log(users
-    .filter(user => { if (user.username.includes("Ear")) { return user } }))
+    .filter(user => user.username.includes("Ear")))
 
 // write code to get an array of all users with an age of 60 or over
-console.log(users.
-    filter(user => { if (user.age >= 60) { return user } }))
+console.log(users.filter(user => user.age >= 60))
+// filter(user => { if (user.age >= 60) { return user } }))
+
 
 // write code to get an array of all ids in users
 console.log(users.map(user => user.id))
@@ -29,7 +30,6 @@ console.log(averageAge(users))
 // sort the users by username in ascending order
 console.log(users
     .sort((userA, userB) => (userA.username > userB.username) ? 1 : ((userA.username < userB.username) ? -1 : 0)))
-
 
 var words = [
     "apple", "banana", "cat", "cake pudding", "Dog", "ear", "flower", "flower", "goat", "Halloween", "cakepudding", "penapplepineapplepen"
