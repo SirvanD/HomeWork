@@ -69,9 +69,9 @@ var items = [
   // sort items by full price from cheapest to most expensive
 console.log(items.sort((a,b) => {
     if(a.full_price < b.full_price) {
-    return -1
+        return -1
     } else if(a.full_price > b.full_price) {
-    return 1
+        return 1
     } else {
         return 0
     }
