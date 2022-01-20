@@ -34,7 +34,12 @@ console.log( array );
   console.log(averageAge);
 
   // sort the users by username in ascending order
-
+users.sort((a,b) => {
+  if (a.username < b.username ) {
+    return -1
+  }
+  
+})
 
 
   var words = [
