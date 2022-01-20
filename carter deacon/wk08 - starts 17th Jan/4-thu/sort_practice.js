@@ -1,7 +1,6 @@
 // HEY SIRVAN!
 
 // authorized by the department of celebrating gambling, alcohol abuse and animal cruelty all in one day.
-
 var horses = [
     {
       name: 'maythehorsebewithu',
@@ -56,7 +55,6 @@ var horses = [
 // sort the horses by year of birth from youngest to oldest
 horses.sort((horse1, horse2) => horse1.yearOfBirth - horse2.yearOfBirth)
 
-
 var items = [
     { name: 'apple', type: 'fruit', full_price: 2, discount: 0 },
     { name: 'potato', type: 'vegie', full_price: 5, discount: 0 },  
@@ -71,7 +69,6 @@ items.sort((item1, item2) => item2.full_price - item1.full_price)
 // sort items by name in the ascending
 items.sort((item1, item2) => item1.name.localeCompare(item2.name))
 
-
 var products = [
     [5, 'kiwi'],
     [3, 'potato'],
@@ -79,4 +76,6 @@ var products = [
 ]
 
 // sort products by name in descending order
-products.sort((product1, product2) => product1[1].localeCompare(product2[1]))
+console.log(
+    products.sort((product1, product2) => product1[1].localeCompare(product2[1]))
+)
