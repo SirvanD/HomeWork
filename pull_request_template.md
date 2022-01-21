@@ -6,7 +6,7 @@ _If you had no problems you can just leave it empty_
 ##### Was there anything that you struggled with?
 
 
-##### Is there any particular code you want me to look into?
+##### Is there any particular code you want us to look into?
 
 
 ##### Is there anything that you'd like some further information on?
