@@ -1,0 +1,142 @@
+h1,h2,h3,h4 {
+    margin:0;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;;
+}
+a {
+    text-decoration:none;
+}
+img {
+    width: 100%;
+}
+/* specific */
+.top a {
+   color: white;
+   padding: 10px;
+   background-color: rgb(31, 31, 31);
+}
+
+
+
+body {
+    width:80%;
+    margin: 0 auto;
+}
+header {
+    color: orangered;
+    font-size: 34px;
+    margin: 20px auto;
+}
+header span{
+    color: gray;
+    font-size: 17px;
+    padding-left: 10px;
+}
+.top {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    gap: 2px;
+    text-align: center;
+    color:white;
+}
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap:20px;
+    margin-top: 30px;
+}
+h2 {
+    margin: 10px auto;
+}
+.date {
+    color: lightgray;
+    margin top: 30px;
+}
+.align-right {
+    text-align: right;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+.align-right a{
+    color: orangered;
+    font-size: 14px;
+    font-weight: bold;    
+}
+.box {
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 25vw;
+    position: relative;
+    background-color: lightgray;
+    color: darkgray;
+    font-size: 36px;
+    margin: 20px auto;
+}
+
+.bottom, .side li {
+    color: orangered;
+}
+/* .side {
+    visibility: hidden;
+    visible is the opposite display: none 
+    then the whole thing gone
+} */
+.side {
+    margin-top: 20px;
+    font-size: 14px;
+}
+h4 {
+    font-weight: bold;
+    font-size:18px;
+    line-height: 120%;
+}
+.side ul {
+    list-style: none
+}
+.side li::before {
+    content: "\2022";
+    color: darkslategray;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.3em;
+    margin-left: -1.32em;
+}
+.bottom {
+    margin: 25px auto;
+}
+.bottom ul{
+    list-style: none;
+    padding: 0;
+}
+.bottom li{
+    display: inline;
+    border-right: 1px solid darkgray;
+    padding: 0 5px;
+}
+.bottom li:last-child {
+    border: none;
+}
+/* relative units - % fr em rem */
+/* absolute units - px pt */
+/* 1em = 1 x base font size */
+/* 2em = 2 x base font size */
+.first-letter {
+    color: lightgray;
+    font-size: 4em;
+    float: left;
+    margin-right: 10px;
+}
+
+@media (max-width: 400px){
+    body {
+        background-color:aliceblue;
+    }
+    main {
+        grid-template-columns: 1fr;
+    }
+}

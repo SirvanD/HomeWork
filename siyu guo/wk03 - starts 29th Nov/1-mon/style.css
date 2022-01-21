@@ -1,0 +1,65 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Chakra Petch', sans-serif;
+    border: 1rem solid black;
+    text-align: center;
+    
+}
+.ATM {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas:
+        'one two three'
+        'four five six'
+        'seven seven seven';
+    text-align: center;
+    align-items: center;
+
+}
+.ATM:nth-child(1){
+    grid-area: one;
+}
+.ATM:nth-child(2){
+    grid-area: two;
+}
+.ATM:nth-child(3){
+    grid-area: three;
+}
+.ATM:nth-child(4){
+    grid-area: four;
+}
+.ATM:nth-child(5){
+    grid-area: five;
+}
+.ATM:nth-child(6){
+    grid-area: six;
+}
+.ATM:nth-child(7){
+    grid-area: seven;  
+}
+.deposit, .withdraw, .cancel-btn, .balance-btn {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 3rem;
+}
+
+.middle {
+    font-size: 7rem;
+    color:limegreen;
+}
+
+.userInput {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size:3rem;
+    border:0.5rem solid black;
+}
+
+
+
+.cash {
+    width: 10rem;
+    height: 3rem;
+    background-color:lightgreen;
+    text-align: center;
+    border-bottom: 1rem solid black;
+    width: 100%;
+}

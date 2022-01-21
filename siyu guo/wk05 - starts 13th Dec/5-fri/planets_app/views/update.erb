@@ -1,0 +1,32 @@
+<section class="show">
+<div><h2 class="detail" >Edit planet details</h2></div>
+<form action="/update_data/<%=planet['id']%>" method="post">
+    <input type="hidden" name="_method" value="put">
+    
+    <div><label for="">name: </label>
+    <input type="text" name = "name" value = <%=planet['name']%>></div>
+    
+    <div><label for="">diameter: </label>
+    <input type="real" name = "diameter" value = <%=planet['diameter']%>></div>
+
+    <div><label for="">mass: </label>
+    <input type="real" name = "mass" value = <%=planet['mass']%>></div>
+
+    <div><label for="">moon count: </label>
+    <input type="integer" name="moon_count" value = <%= planet['moon_count']%>></div>
+
+    <div><label for="">image url: </label>
+    <input type="text" name="image_url" value = <%=planet['image_url']%>></div>
+    <button>Update</button></div>
+</form>
+</section>
+
+<section>
+    <form action="/update_data/<%=planet['id']%>" method="post"><h1>Update planet info</h1>
+    <label for="">Name: </label>
+    <input type="text" name='name' value="<%=planet['name']%>">
+
+    <label for="">diameter</label>
+    <input type="real" name="diameter" value=<%=planet['diameter']%>>
+    </form>
+</section>

@@ -1,0 +1,125 @@
+Uncaught SyntaxError: Unexpected token {
+
+Explanation goes here: used "{" when it is supposed to be something else in the code.
+
+<script>
+    // Optional code goes here
+    function haha{ } {
+    }
+</script>
+Uncaught ReferenceError: greeting is not defined
+
+Explanation goes here: the function "greeting" is not declared before being called
+
+<script>
+    greeting(dt)
+    // Optional code goes here
+</script>
+GET file:///scripts.js net::ERR_FILE_NOT_FOUND
+
+Explanation goes here: the file scripts.js is not at the location.
+<script src="file:///scripts.js"></script>
+<script>
+        // Optional code goes here --see above
+
+</script>
+GET https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/1.0.0/js/bootstrap.min.js 404 (Not Found)
+
+Explanation goes here
+there is no such route for the file...the correct url is
+https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap-wizard/1.0.0/js/bootstrap.min.js
+<script>
+    // Optional code goes here
+</script>
+Uncaught TypeError: "hello".push is not a function
+
+Explanation goes here: "hello" is not an array therefore does not have the push function.
+
+<script>
+    // Optional code goes here
+
+    "hello".push()
+</script>
+Uncaught TypeError: str.join is not a function
+
+Explanation goes here: str is a string which does not have join() function. An array has join function.
+
+<script>
+    str = "abc"
+    str.join()
+    // Optional code goes here
+</script>
+Uncaught TypeError: Cannot read property 'name' of undefined
+
+Explanation goes here: reading property of non-existing item, e.g. an item that does not exist in an array
+
+<script>
+    // Optional code goes here
+    // var arr = [{ name: 'a' }, { name: 'b' }, { name: 'c' }]
+    // var arr = [{}, {}, {}]
+    var object = { age: 10 }
+    console.log(arr[4].name)
+
+</script>
+Uncaught SyntaxError: missing ) after argument list
+
+Explanation goes here: missing a ) when there should have been one, for example calling a
+function and passed in a variable without the closing bracket.
+
+<script>
+    // Optional code goes here
+    function test(a) {
+        return a
+    }
+
+    test(a  
+</script>
+Uncaught ReferenceError: Invalid left-hand side in assignment
+
+Explanation goes here: when suppose to use "==" to compare value, but used "=" to asign instead.
+
+<script>
+    // Optional code goes here
+    var toss = function (one, two) {
+        if (one = "rock" && two = "rock") {
+            console.log("Tie! Try again!");
+        }
+    }
+</script>
+Uncaught SyntaxError: Unexpected number
+
+Explanation goes here: it happens when using a number as a variable name
+
+<script>
+    // Optional code goes here
+    var 5 = 3
+</script>
+Uncaught SyntaxError: Unexpected string
+
+Explanation goes here: var "a" = 3 which should have been a = 3
+
+<script>
+    // Optional code goes here
+    var "a" = 3
+</script>
+Uncaught SyntaxError: Unexpected identifier
+
+Explanation goes here: variable is not declared or not declared properly before being used.
+
+<script>
+    // Optional code goes here
+    greeting = 123
+    print greeting
+</script>
+Uncaught RangeError: Maximum call stack size exceeded
+
+Explanation goes here: a recursive loop somewhere in the code (i.e. a function that eventually calls itself again and
+again until the stack is full).
+
+<script>
+    function test(a) {
+        test(a)
+        console.log('hi')
+    }
+    test("b")
+</script>
