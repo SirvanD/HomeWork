@@ -1,0 +1,15 @@
+<h1>Planets app</h1>
+<h2>Enjoy the beauty of the cosmos without the hindrance of attractive CSS</h2>
+
+<a href="/add_planet">Add a planet! (Pluto does not count.)</a>
+
+<section class="planets">
+
+    <% planets.each do |planet| %>
+        <h3>
+            <a href="/planets/<%= planet["id"] %>"><%= planet["name"]%></a>
+        </h3>
+        <img src="<%= planet["image_url"]%>" alt="<%= planet["name"]%>">
+    <% end %>
+
+</section>

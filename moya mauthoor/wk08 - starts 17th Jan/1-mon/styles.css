@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+.brush-box {
+    padding: 50px;
+    background: mistyrose;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.pixel {
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgba(220, 220, 220, 0.7);
+    border-radius: 5px;
+    display: inline-block;
+}
+

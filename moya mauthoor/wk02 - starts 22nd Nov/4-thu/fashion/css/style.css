@@ -1,0 +1,173 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+/* Site-specific CSS */
+
+body {
+    background-color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 11pt;
+    color: grey;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32pt;
+    color: red;
+    margin-top: 20px;
+}
+
+h2, .date, .subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20pt;
+    color: grey;
+    padding: 6px 0;
+ }
+
+ .subtitle {
+     padding: 0 15px;
+ }
+
+.navbar ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar li {
+    background-color: #000;
+    text-align: center;
+    padding: 14px 2px;
+}
+
+.navbar a {
+    color: white;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+}
+
+article {
+    padding-top: 20px; 
+}
+
+.date {
+    color: #dddddd;
+}
+
+article img {
+    width: 100%;
+}
+
+.dropcap {
+    color: #dddddd;
+    font-size: 40pt;
+    float: left;
+    margin-right: 10px;
+}
+
+article footer, .about footer {
+    border-bottom: 1px solid #DCDCDC;
+    text-align: right;
+    padding-bottom: 18px;
+}
+
+.largeLink {
+    color: red;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    color: #ff4040;
+    text-decoration: none;
+}
+
+aside {
+    padding-top: 50px;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    color: grey;
+    padding: 15px 0;
+}
+
+.ad {
+    border-bottom: 1px solid #DCDCDC;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.ad img {
+    width: 100%;
+}
+
+.footer-menu {
+    width: 70%;
+    padding: 25px 0 14px;
+    font-size: 10pt;
+}
+
+.footer-menu ul {
+    padding-left: 0;
+}
+
+.footer-menu li {
+    display: inline;
+    list-style-type: none;
+    border-right: 1px solid #DCDCDC;
+    padding: 0 5px;
+}
+
+.footer-menu li:last-child {
+    border: none;
+}
+
+footer {
+    font-size: 10pt;
+    padding-bottom: 40px;
+}
+
+/* Media queries */
+@media (max-width: 500px) {
+    .subtitle {
+        display: block;
+        padding: 0;
+    }
+    .navbar ul {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-menu ul {
+        border-top: 1px solid #DCDCDC;
+        padding-top: 15px;
+    }
+
+    .footer-menu li {
+        display: block;
+        border: none;
+    }
+
+
+}
+

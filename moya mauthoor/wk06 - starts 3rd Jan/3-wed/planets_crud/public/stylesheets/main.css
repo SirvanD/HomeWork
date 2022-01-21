@@ -1,0 +1,17 @@
+body {
+    background-color: aliceblue;
+}
+
+.planets img {
+    width: 250px;
+}
+
+.input {
+    padding: 5px;
+}
+
+.edit-planet-url {
+    display: block;
+    margin: 10px;
+}
+

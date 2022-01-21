@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://pixabay.com/get/g0a5f24d451b7c401d57ce18564cd125674cdbfce8d973a12ae18bf8873a222cf53f8df17824127553fbefa851c722ce5_1280.jpg");
+    background-size: cover;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.atm-body {
+    background-image: linear-gradient(to bottom left, #396EB0, #DADDFC);
+    /* background-color: #396EB0; */
+    max-width: 600px;
+    height: 700px;
+    margin: 100px auto;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 10px 10px #050A30;
+}
+
+.atm-screen {
+    margin: 30px;
+    min-height: 200px;
+    padding: 25px;
+    background-color: #f2f3fe;
+    border-radius: 10px;
+    border: 7px inset #2E4C6D;
+}
+
+h1 {
+    color: #FC997C;
+    font-size: 40pt;
+}
+
+h2 {
+    color: #050A30;
+    font-size: 22pt;
+}
+
+.input-currency {
+    font-size: 14pt;
+}
+
+.funds-input {
+    cursor: text;
+    padding: 10px;
+    margin: 10px 5px;
+    font-size: 11pt;
+    border: none;
+    border-radius: 1px;
+}
+
+.transaction-fee {
+    font-size: 8pt;
+    display: block;
+}
+
+button {
+    padding: 12px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #DADDFC;
+    font-size: 13pt;
+    color: #050A30;
+    border: 2px solid #2E4C6D;
+    transition-duration: 0.3s;
+}
+
+button:hover {
+    background-color: #FC997C;
+    color: #FAF9F6;
+}
+
+
+
