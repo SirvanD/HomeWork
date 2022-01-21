@@ -1,0 +1,47 @@
+* { 
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.atm-container {
+    width: 50%;
+    margin: auto;
+}
+
+.atm {
+    background-color: darkgray;
+    width: 325px;
+    height: 750px;
+    padding: 10%;
+    border-radius: 30px;
+    border-color: black;
+}
+
+.balance, input, button, .error-msg {
+    width: 100%;
+    display: block;
+    padding: 10%;
+    margin: 5px;
+    border-radius: 30px;
+    border-color: black;
+}
+
+.balance {
+    text-align: center;
+    background-color: #fff;
+}
+
+.error-msg{
+    background-color: white;
+}
+
+h1, .error-msg{
+    text-align: center;
+}
+.error-msg {
+    visibility: hidden;
+    transition: all 100ms;
+}

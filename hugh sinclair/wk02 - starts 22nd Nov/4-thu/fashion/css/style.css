@@ -1,0 +1,129 @@
+@media (max-width: 400px) {
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+h1{
+    color: #DD0000;
+}
+.slogan{
+    color: #8888A5;
+    font-size: 65%;
+    margin-left: 10px;
+    font-weight: lighter;
+}
+
+.container{
+    width: 70%;
+    margin: auto;
+    font-family: 'Quicksand', sans-serif;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2%;
+}
+.navTop{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1px;
+}
+.navTop a{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+}
+/* .footGridWrapper{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1px;
+} */
+
+.special{
+    font-size: 4em;
+    color: grey;
+    float: left;
+    padding: 0 3px 0 0;
+}
+
+article > img{
+    width: 100%;
+    display: block;
+}
+
+.nav > span{
+    background-color: black;
+    width: 100%;
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+
+}
+p{
+    margin: 0;
+}
+.date{
+    margin: 5% 0 0 0;
+    color: darkgray;
+}
+h3{
+    margin: 0;
+}
+aside{
+    /* margin: 15% auto auto auto; */
+    margin: 20% 0 auto 0;
+}
+.more{
+    text-align: right;
+    padding: 5%;
+    border-bottom: 1px solid #8888A5;
+
+}
+.more a{
+    font-weight: bolder;
+}
+
+.more>a, .footGridWrapper a, li a{
+    text-decoration: none;
+    color: tomato;
+    
+}
+.ad{
+    background-color: #8888A5;
+    border-bottom: 1px solid #8888A5;
+    text-align: center;
+    height: 100px;
+    display: grid;
+    align-items: center;
+    padding: 10px 0;
+    background-clip: content-box;
+}
+main h3{
+    color: grey;
+    margin-bottom: 10px;
+}
+.bottomNav ul{
+    list-style: none;
+    padding: 0;
+
+}
+.bottomNav li{
+    display: inline;
+    border-right: 1px solid black;
+    padding: 0 5px;
+}
+.footGridWrapper{
+    padding-bottom: 10px;
+}
+
+.bottomNav li:last-child{
+    border:none;
+}
+
+article p {
+    padding: 5px;
+}

@@ -1,0 +1,42 @@
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+.images img{
+    width: 100%;
+}
+h1{
+    color: #CCCCCC;
+}
+h3{
+    color: #656565;
+}
+p{
+    color: #6E6E6E;
+    margin: 0 0 20px 0;
+}
+.date{
+    color: blue;
+    margin-bottom: 0;
+}
+.brands{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+.brands > a{
+    margin: 0 0;
+    border: 3px solid #CCCCCC;
+}
+.brands > a > img{
+    width: 100%;
+    display: block;
+}
+footer{
+    margin: 10px 0 15px 0;
+}
+p a{
+    text-decoration: none;
+    color: blue;
+}

@@ -1,0 +1,69 @@
+
+body{
+    background-image: url('images/pattern1.png');
+    margin: 0 0;
+}
+
+header, footer{
+    background-color: #F0776F;
+    color: white;
+    margin: 0 0;
+    padding: 1% 0 1% 2%;
+}
+
+header h1{
+    margin: 0 0;
+}
+
+header p{
+    margin: 0 0;
+    font-family: 'Dancing Script', cursive;
+    color: black;
+}
+
+.container > img{
+    display: block;
+}
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.text{
+    background-color: white;
+    padding: 3%;
+}
+
+.photos{
+    margin: 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+img{
+    border: white;
+    width: 100%;
+}
+
+.title{
+    margin: 0 0;
+    font-family: 'Dancing Script', cursive;
+    text-decoration: underline;
+}
+
+footer{
+    text-align: right;
+    margin: 0 0;
+
+}
+
+.photos > img{
+    width: 93%;
+    padding: 1%;
+    margin: 5%;
+    border: 3px solid gray;
+}
+
+/* do i need to have margin on all of them, or can i use body div make the rules for all it's kids */
+

@@ -1,0 +1,16 @@
+section{
+    margin-bottom: 20px;
+}
+.msg{
+    visibility: hidden;
+}
+.congrats{
+    background-color: darkmagenta;
+    color: cornsilk;
+    visibility: visible;
+}
+.guess-again{
+    background-color: black;
+    color: whitesmoke;
+    visibility: visible;
+}
