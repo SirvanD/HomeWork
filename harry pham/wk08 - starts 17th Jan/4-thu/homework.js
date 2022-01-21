@@ -84,16 +84,16 @@ var items = [
 // console.log(items)
 
 // sort items by name in the ascending
-// items.sort((first, second) => {
-//     if(first.name < second.name) {
-//     return -1;
-//   } else if(first.name > second.name) {
-//     return 1;
-//   } else {
-//     return 0;
-//   }
-// })
-// console.log(items)
+items.sort((first, second) => {
+    if(first.name < second.name) {
+    return -1;
+  } else if(first.name > second.name) {
+    return 1;
+  } else {
+    return 0;
+  }
+})
+console.log(items)
 
 var products = [
   [5, 'kiwi'],
@@ -104,12 +104,12 @@ var products = [
  // sort products by name in descending order
 
 items.sort((first, second) => {
-    if(first.name < second.name) {
+    if(first.name > second.name) {
     return -1;
-  } else if(first.name > second.name) {
+  } else if(first.name < second.name) {
     return 1;
   } else {
     return 0;
   }
 })
-console.log(items.reverse())
+console.log(items)

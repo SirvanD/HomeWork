@@ -27,25 +27,14 @@
 // countIntegers([4, 2.2, 5, 6, 4.2, 8.2, 4]) // => 4
 // Hint: Google how you can check if a number is an integer in JavaScript
 
-// function countIntegers(nums) {
-//     let integers = []
-//     console.log(nums)    
-//     nums.forEach(num => {
-//         if(Number.isInteger(num)) {
-//             integers.push(num)      
-//         }
-//     })
-//     return integers
-// }
+function countIntegers(nums) {
+    console.log(nums)
+    const integers = nums.filter(num => Number.isInteger(num))
+    console.log(integers.length)
+    return integers.length
+}
 
-// function countIntegers(nums) {
-//     console.log(nums)
-//     const integers = nums.filter(num => Number.isInteger(num))
-//     console.log(integers)
-//     return integers
-// }
-
-// countIntegers([4, 2.2, 5, 6, 4.2, 8.2, 4])
+countIntegers([4, 2.2, 5, 6, 4.2, 8.2, 4])
 
 // .map() oldie but goodie
 // Write a function lengths that accepts a single parameter as an argument, namely an array of strings. The function should return an array of numbers where each number is the length of the corresponding string. use .map
@@ -66,12 +55,12 @@
 // getSquares – takes in an array of numbers and returns an array of their squares. If you want more practice write one version using .forEach and then write another version using .map
 // getSquares([1, 2, 3, 4, 5]) // => [1, 4, 9, 16, 25]
 
-    function getSquares(nums) {
-        console.log(nums.map(num => num * num))
-        return nums.map(num => num * num)
-    }
+    // function getSquares(nums) {
+    //     console.log(nums.map(num => num * num))
+    //     return nums.map(num => num * num)
+    // }
 
-    getSquares([1, 2, 3, 4, 5])
+    // getSquares([1, 2, 3, 4, 5])
 
 // .map(), .filter() & .reduce()
 // Write an expression using array iterator methods (like filter and reduce) to compute the total value of the machines in the inventory array. Use arrow functions.

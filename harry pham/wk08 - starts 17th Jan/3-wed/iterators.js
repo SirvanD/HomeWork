@@ -36,16 +36,19 @@ var words = [
 ];
 
 // console log each word in words in uppercase excluding the first word
-// words.forEach(word => {
-//     let wordSplit = word.split(' ')
-//     if(wordSplit[1] !== undefined) {
-//         wordSplit[0] = wordSplit[0].toLowerCase()
-//         wordSplit[1] =  wordSplit[1].toUpperCase()
-//     } else {
-//         wordSplit[0] = wordSplit[0].toLowerCase()
-//     }
-//     console.log(wordSplit.join(' '))
-// })
+words.forEach(word => {
+    let wordSplit = word.split(' ')
+    if(wordSplit[1] !== undefined) {
+        wordSplit[0] = wordSplit[0].toLowerCase()
+        wordSplit[1] =  wordSplit[1].toUpperCase()
+    } else {
+        wordSplit[0] = wordSplit[0].toLowerCase()
+    }
+    console.log(wordSplit.join(' '))
+    
+})
+// const newArr = words.map(word => )
+// console.log(newArr)
 
 // write code to count the number of words with more than 5 letters 
 // let counter = 0
@@ -58,5 +61,5 @@ var words = [
 
 
 // get an array of words with each word's first character capitalize (just the first character of each string)
-// const firstLetterOfWords = words.map(word => word[0].toUpperCase())
+// const firstLetterOfWords = words.map(word => word[0].toUpperCase() + word.slice(1))
 // console.log(firstLetterOfWords)
