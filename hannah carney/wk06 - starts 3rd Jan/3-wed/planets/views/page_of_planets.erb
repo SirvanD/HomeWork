@@ -1,0 +1,29 @@
+<h1>Ze Solar System </h1>
+
+<h2><%=planet['name']%></h2>
+
+<img src="<%= planet['image_url']%>" alt="<%= planet['name']%>" srcset="">
+
+<div>
+
+    <p>Diameter: <%= planet ['diameter'] %> km</p> 
+    <p>Mass: <%= planet ['mass'] %> 10^14kg</p> 
+    <p>Moons: <%= planet ['moon_count'] %></p> 
+
+</div>
+
+
+<div class = "edit_delete_container">
+
+    <form action="/planets/<%= planet['id'] %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button class = "delete_btn">Remove from Solar System</button>
+    </form>
+
+    <button class = "edit_btn">
+        <a href="/planets/<%= planet['id'] %>/edit" class = "edit_data_font">Edit the Solar System</a>
+    </button>
+
+</div>
+
+

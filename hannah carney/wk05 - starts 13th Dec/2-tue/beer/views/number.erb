@@ -1,0 +1,7 @@
+<% if number == 0 %>
+    <h1><a href="/99">Put em back</a></h1>
+<% else %>
+    <h1><%= number %> bottles of beer on the wall.  
+        <a href="/<%= number-1 %>">Take one down</a>
+    </h1>
+<%end%>

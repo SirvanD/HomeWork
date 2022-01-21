@@ -1,0 +1,22 @@
+#square {
+    width: 30px;
+    height: 30px;
+    border: solid 1px black;
+    display: inline-block;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-position: center;
+    background-size: contain;
+  }
+
+.boxes {
+    border: solid 1px black;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
