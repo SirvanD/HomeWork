@@ -7,7 +7,7 @@ require_relative 'phone'
 class PhoneTest < MiniTest::Test
 
   def test_cleans_number
-    skip
+   
     number = Phone.new("(123) 456-7890").number
     assert_equal "1234567890", number
   end
