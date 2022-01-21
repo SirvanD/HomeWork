@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* dev only */
+        * {
+            border: 1px solid red;
+        }
+        html, body {
+            border: none;
+        }
+
+        /* reset / normailize -separite file */
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin:0;
+        }
+        
+
+        /* test borders etc */
+
+        /* site specfic rules */
+
+        /* .hero instead of div > header > p > hero */
+
+        .images-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr fr 1fr;;
+        }
+        .images-wrapper img {
+            border: 1px solid blue;
+            width: 100%;
+        }
+        /* img selects all images inside the .images-wrapper  */
+        /* border needs a definer before the clor eg solid, dotted, dash */
+
+    </style>
+</head>
+<body>
+    
+<header>header</header>
+<section>section</section>
+<aside>aside</aside>
+<a href="">links</a>
+<span>span</span>
+<div>div</div>
+<p>paragraph</p>
+<main>main</main>
+<article>article</article>
+<footer>footer</footer>
+
+
+
+</body>
+</html>
