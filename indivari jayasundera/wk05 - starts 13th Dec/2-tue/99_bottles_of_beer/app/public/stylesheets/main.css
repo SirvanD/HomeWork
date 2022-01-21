@@ -1,0 +1,9 @@
+body {
+  background: linear-gradient(mistyrose, lightpink);
+}
+div {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}

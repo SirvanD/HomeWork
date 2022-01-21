@@ -1,0 +1,19 @@
+<h1>Update Planet Details</h1>
+<form action="/planets/<%=planet['id']%>" method="post">
+  <label for="">Name</label>
+  <input type="text" name="name" value ="<%=planet['name']%>"/>
+
+  <label for="">Image url</label>
+  <input type="url" placeholder="http://...." name="image_url" value="<%= planet['image_url']%>"/>
+
+  <label for="">Diameter</label>
+  <input type="text" name="diameter" value ="<%= planet['diameter']%>"/>
+
+  <label for="">Mass of the planet</label>
+  <input type="text" name="mass" value ="<%=planet['mass']%>"/>
+
+  <label for="">No: of moons</label>
+  <input type="text" name="moons" value="<%=planet['moon_count']%> "/>
+
+  <button>update</button>
+</form>

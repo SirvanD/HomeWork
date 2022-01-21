@@ -1,0 +1,66 @@
+.container {
+  width: 70%;
+  margin: 0 auto;
+  border: 5px solid tomato;
+  /* //box-shadow: 5px 10px rgb(219, 216, 216); */
+  background-color: white;
+  margin-top: 50px;
+}
+body {
+  background-color: rgb(63, 61, 61);
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  justify-content: center;
+  background-color: rgb(115, 117, 117);
+  color: white;
+}
+h1 {
+  font-size: 40px;
+}
+
+.main {
+  padding: 30px;
+  display: block;
+}
+.amt-label,
+.amt-input,
+.balance-label,
+.acc-balance,
+.charge-display,
+.withdraw-fee-label {
+  padding: 20px;
+  font-size: 20px;
+}
+
+.deposit-btn,
+.withdraw-btn {
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+p {
+  background-color: tomato;
+  text-align: center;
+  margin-top: 70px;
+  padding: 20px;
+}
+
+.info {
+  text-align: center;
+  background-color: rgb(250, 229, 189);
+  font-size: 30px;
+  padding: 10px;
+}
+.amt-input,
+.acc-balance,
+.charge-display {
+  border: none;
+}
+
+.deposit-btn,
+.withdraw-btn {
+  border: none;
+}

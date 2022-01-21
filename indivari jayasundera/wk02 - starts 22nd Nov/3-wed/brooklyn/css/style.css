@@ -1,0 +1,39 @@
+main {
+  margin: 0 auto;
+  padding: 10px;
+  margin-left: 100px;
+  margin-top: 50px;
+  padding-right: 100px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.image-grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  gap: 15px;
+}
+
+footer {
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+header {
+  margin-left: 100px;
+
+  padding-top: 20px;
+}
+
+.hero-image {
+  width: 100%;
+}
+
+.image-grid-wrapper img {
+  display: block;
+  width: 100%;
+  border: 5px solid lightgray;
+}

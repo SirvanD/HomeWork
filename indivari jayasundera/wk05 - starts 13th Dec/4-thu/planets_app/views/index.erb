@@ -1,0 +1,19 @@
+ <h1>Planets Info</h1>
+<div id="new-planet"><h2><a href="/planets/new" >Add new planet</a></h2>
+</div>   
+
+
+
+<section class="planetInfo">
+   
+
+    <% result.each do |planet|%>
+        <h2>
+            <a href="/planets/<%=planet["id"]%>">
+                <%= planet['name']%>
+            </a>
+        </h2>
+        <img src =<%= planet['image_url']%> alt = "<%= planet['name']%>">
+    <%end%>
+</section>
+

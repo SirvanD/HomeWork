@@ -1,0 +1,7 @@
+.box-one,
+.box-two,
+.box-three {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
