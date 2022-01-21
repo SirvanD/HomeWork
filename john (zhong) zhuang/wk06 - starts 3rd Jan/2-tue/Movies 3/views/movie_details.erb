@@ -1,0 +1,24 @@
+<% if localMovie == nil %>
+    <h1><%= movie["Title"] %></h1>
+    <p><b>Language: </b> <%= movie["Language"] %></p>
+    <p><b>Year: </b> <%= movie["Year"] %></p>
+    <p><b>Rate: </b> <%= movie["Rate"] %></p>
+    <p><b>imdbID:</b> <%= movie["imdbID"] %></p>
+    <p><b>Director: </b> <%= movie["Director"] %></p>
+    <p><b>Actors: </b> <%= movie["Actors"] %></p>
+    <p><b>Story: </b> <%= movie["Plot"] %></p>
+
+    <img src="<%= movie["Poster"] %>" alt="">
+
+<% else %>
+    <h1 class="localdata" ><%= localMovie["title"] %></h1>
+    <p class="localdata" ><b>Language: </b> <%= localMovie["language"] %></p>
+    <p class="localdata" ><b>Year: </b> <%=  localMovie["year"]%></p>
+    <p class="localdata" ><b>Rate: </b> <%= localMovie["rated"]%></p>
+    <p class="localdata" ><b>Director: </b> <%= localMovie["director"] %></p>
+    <p class="localdata" ><b>Actors: </b> <%= localMovie["actors"] %></p>
+    <p class="localdata"><b>Story: </b> <%= localMovie["plot"] %></p>
+
+    <img src="<%=localMovie["poster"]%>" alt="">
+
+<% end %>

@@ -1,0 +1,29 @@
+body {
+    background-color: bisque;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+form{
+    display: inline-block;
+}
+
+.search {
+margin: auto;
+}
+
+.search-result{
+    display: inline-block;
+    background-color: blue;
+}
+.result-area {
+display:grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+padding: 3px;
+}
+img {
+    width: 300px;
+    display: inline;
+    border:brown
+
+}

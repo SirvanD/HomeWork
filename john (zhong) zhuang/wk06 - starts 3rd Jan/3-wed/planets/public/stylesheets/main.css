@@ -1,0 +1,21 @@
+img {
+    width: 300px;
+}
+
+.detail {
+    width: 400px;
+}
+
+div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+}
+
+div section {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    display: block;
+}

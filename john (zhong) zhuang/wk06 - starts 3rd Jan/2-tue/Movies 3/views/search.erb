@@ -1,0 +1,11 @@
+<% if results["Response"] == "False"%>
+
+    <p><%= error %></p>
+
+<% else %>
+
+    <% results["Search"].each do |movie| %>
+        <p><a href="/movie/<%=movie["Title"]%>"><%= movie["Title"] %> (<%= movie["Year"] %>)</a></p>
+    <% end %>
+
+<% end %>

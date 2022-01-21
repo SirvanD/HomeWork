@@ -1,0 +1,41 @@
+h1,
+h2,
+p {
+    color: rgb(130, 130, 130);
+
+}
+
+header {
+    display: grid;
+    /* grid-template-rows: 1pr 5pr 5pr; */
+}
+
+header img {
+    width: 100%;
+    border: 0.5px solid white;
+}
+
+body {
+    width: 80%;
+    margin: 0 auto;
+}
+
+article {
+    margin: 0 auto;
+}
+
+h3 {
+    color: rgb(169, 202, 227);
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+section img {
+    border: 2px solid grey;
+    width: 100%;
+    display: block;
+}
