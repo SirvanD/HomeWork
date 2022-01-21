@@ -1,0 +1,7 @@
+
+.pixel {
+    height: 50px;
+    width: 50px;
+    border: solid black; 
+    display: inline-block;
+}

@@ -1,0 +1,15 @@
+<h1>Welcome to Sad Planetarium</h1>
+
+<a href="/share_planet"> Help build some planets</a>
+
+
+<% planets.each do |planet|%>
+
+    <p>
+        <a href="/planetdetails/<%=planet["id"]%>">
+            <%= planet["name"]%>
+        </a>
+        <img src="<%= planet["image_url"]%>" alt="">
+    </p>
+
+<%end %>
