@@ -1,0 +1,53 @@
+*{ 
+    box-sizing: border-box;
+}
+body {
+    background-color: #F4F3EE;
+    font-family: 'Spartan', sans-serif;
+}
+
+main {
+    margin: 0 200px 0 200px;
+    padding: 25px;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 50px 0 10px 0;
+    color: grey;
+}
+
+h2 {
+    font-size: 24px;
+    color: grey;
+}
+
+p {
+    font-size: 15px;
+    color: darkgrey;
+    
+}
+
+a {
+    color:lightskyblue;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.image-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.journalists {
+    border: 5px solid darkgrey;
+}
+
+footer {
+    margin: 10px 0 0 0;
+    color: dimgrey;
+}

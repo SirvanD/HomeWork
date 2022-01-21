@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>You planet...</title>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&display=swap');
+
+    body {
+      font-family: 'Readex Pro', sans-serif;
+      background-color: #343434;
+      color: white;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .all-planets {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      text-align: center;
+      margin: 25px;
+    }
+
+    div {
+      border-bottom: 2px solid lightgrey;
+      padding: 10px 0 0 0;
+    }
+
+    section img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .wrapper {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      border-bottom: none;
+    }
+    
+    .form input {
+      display: flex;
+      margin: 5px;
+    }
+
+    nav {
+      text-align: right;
+    }
+    
+  </style>
+</head>
+<body>
+
+<nav>
+  <span> How do you make a website? </span>
+    <% if logged_in? %>
+      <p> Welcome back, <%= current_user.email %> </p>
+      <form action="/session" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button> Logout </button>
+      </form>
+    <% else %>
+      <a href="/login"> Sign in </a>
+    <% end %>
+  <h2><a href="/"> You planet... </a></h2> 
+</nav>
+
+  <%= yield %>
+
+</body>
+</html>
