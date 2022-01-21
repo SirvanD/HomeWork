@@ -43,7 +43,7 @@ class PhoneTest < MiniTest::Test
   end
 
   def test_pretty_print
-    
+
     number = Phone.new("1234567890")
     assert_equal "(123) 456-7890", number.to_s
   end
