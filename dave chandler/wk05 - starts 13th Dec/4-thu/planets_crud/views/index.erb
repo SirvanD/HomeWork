@@ -1,0 +1,10 @@
+<h3>PLANETS OF OUR SOLAR SYSTEM</h3>
+<ul style='list-style-type:none; line-height:1.5rem; padding-left:10px;'>
+<% planets.each { |planet| %>
+<li>
+<a href='/planet_details/<%=planet['name']%>'><%=planet['name']%></a>
+</li>
+<%}%>
+</ul>
+<br/><br />
+ADD a new planet <a href="/add_planet">here</a>

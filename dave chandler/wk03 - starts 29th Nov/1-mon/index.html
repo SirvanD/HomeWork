@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grid-wrapper">
+      <div class="screen-grid">
+        <div class="screen-transactions">
+          <div>
+            <h2>ACCOUNT BALANCE</h2>
+            <h1><span>$</span><span id="balance">100</span></h1>
+          </div>
+          <div id="trans-type">
+            <h2>THIS TRANSACTION IS</h2>
+            <h1><span id="transact-type">?</span></h1>
+          </div>
+          <div id="trans-amount">
+            <h2>YOU ARE <span id="transaction"></span>?</h2>
+            <h1>
+              <span id="dollar-symbol">$</span><span id="transValue"></span>
+            </h1>
+          </div>
+        </div>
+        <div class="welcome-screen">
+          <img src="images/monop_man.jpeg" />
+          <div>
+            <h1>WELCOME</h1>
+            <p>click on the card slot to begin</p>
+          </div>
+        </div>
+      </div>
+      <div id="money-slot">
+        <h3 class="blink status">INSERT CARD HERE</h3>
+        <div class="money-slot"></div>
+      </div>
+      <div class="keyboard-grid">
+        <button id="button1">1</button>
+        <button id="button2">2</button>
+        <button id="button3">3</button>
+        <button id="button4">4</button>
+        <button id="button5">5</button>
+        <button id="button6">6</button>
+        <button id="button7">7</button>
+        <button id="button8">8</button>
+        <button id="button9">9</button>
+        <button id="depositBtn">DEPOSIT</button>
+        <button id="button0">0</button>
+        <button id="withdrwBtn">WITHDRAWL</button>
+        <button id="cancelBtn">CANCEL</button>
+        <button id="enterBtn">ENTER</button>
+      </div>
+      <div id="cardSlot">
+        <div class="card-slot"></div>
+      </div>
+      <div id="logo">
+        <img src="images/monopoly-man.png" />
+        <div class="bank-logo">ATM</div>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
