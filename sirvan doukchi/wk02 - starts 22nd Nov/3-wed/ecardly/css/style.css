@@ -1,0 +1,84 @@
+h2 h5 li {
+    
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    
+    background-image: url(/ecardly/images/background.jpg);
+    background-repeat: repeat-x;    
+    background-color:#D6D6D6;
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 45% 15%;
+    /* background-color: whitesmoke;  */
+    justify-content:center;  
+    /* grid-column-gap: 25px;  */
+    gap: 25px;     
+}
+.right-pane {
+    background-color:whitesmoke; 
+    height:fit-content
+    /* width: auto; */
+    /* margin-left: 25px; */
+}
+.right-pane ul {
+   list-style-type: none; 
+}
+
+.blog {
+    background-color:rgb(255, 255, 255);
+}
+
+.blog img {
+    display: block;
+    width: 90%;
+    margin-left: 30px;
+}
+
+
+.ads{
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 30px auto;
+    
+}
+
+.socials {
+    text-align: center;
+}
+h5{
+    margin-left: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+h2 {
+    margin-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+article {
+    margin: 30px
+    
+}
+
+.blog-footer {
+   margin: 30px; 
+   border-top: dotted black 1px;
+   border-bottom: solid black 1px;
+   
+
+}
+a:visited {
+    color: rgb(218, 38, 6);
+    font-weight: bold;
+}

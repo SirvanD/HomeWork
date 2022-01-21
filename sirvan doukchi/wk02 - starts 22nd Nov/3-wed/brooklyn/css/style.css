@@ -1,0 +1,52 @@
+.body {
+
+}
+
+.container {
+    /* border: 25px solid red; */
+    /* display: grid;     */
+    /* text-align: center; */
+    /* justify-content: center;
+    width: fit-content; */
+    /* position: relative; */
+    width: 80%;
+    margin: auto;
+}
+.logo {
+    /* position:absolute; top: 10px; bottom: 10px; left: 500px; */
+    /* margin: 25px auto;   */
+    /* margin-left: 15vw; */
+    /* display: inline; */
+    /* text-align: left; */
+
+    /* justify-content:start; */
+    /* align-self:stretch; */
+    /* position: fixed;
+    top: 10px; 
+    left: 500px;
+    width: 10%; 
+    border: 3px solid #73AD21; */
+}
+
+
+.image-holder img {
+    /* display: grid; */
+    width: 100%;
+    /* gap: 6px; */
+    /* justify-content: center; */    
+}
+
+
+.blog{
+    text-align: left;
+}
+
+.photos-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:5px;
+}
+
+.photos-wrapper img {
+    width: 100%;
+}
