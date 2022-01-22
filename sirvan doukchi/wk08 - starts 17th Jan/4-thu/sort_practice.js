@@ -71,7 +71,7 @@ console.log(cheapestItems);
 const nameAsc = [...items].sort((a, b) => (a.name < b.name ? -1 : 1));
 console.log(nameAsc);
 
-console.log(items);
+console.log(nameAsc);
 //=============================
 
 var products = [
