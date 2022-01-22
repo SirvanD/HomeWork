@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank of GA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <style>
+       
+        body {
+            text-align: center;
+            font-family: 'Sawarabi Mincho', sans-serif;
+        }
+        .container {
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            width: 70%;
+            /* height: 500px; */
+            padding: none;
+            margin: auto;
+            text-align: center;
+            box-sizing: border-box;
+            width: fit-content;
+            background: linear-gradient(white, aliceblue);
+            color: black;
+            /* background-color: rgb(78, 116, 187); */
+           
+        }
+        .number-input {
+            padding: 14px 25px;
+            border: 1px solid lightgray;
+            color: gray;
+        }
+        button {
+            background: linear-gradient(white, lightblue);
+            padding: 30px 50px;
+            border: 1px solid lightgray;
+            /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
+        
+        }
+        button:hover {
+            box-shadow: 0 5px 10px 0 rgba(189, 186, 186, 0.19), 0 6px 10px 0 rgba(143, 142, 142, 0.19);
+            font-weight: bold;
+        }
+        .btn-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 30px;
+        }
+        .input-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 30px 20px;
+            text-align: left;
+        }
+        .alert-msg-box {
+            /* border: 1px solid gray; */
+            padding: 10px;
+            text-align: center;
+            color: salmon;
+            font-size: small;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>BANK OF GA</h1>
+    <div class="container">
+        <div class="input-wrapper">
+            <h4>Balance: $<span class="bal-span"></span></h4> 
+            <input class="number-input" type="number" placeholder="$ enter amount">
+        </div>
+        <p class="alert-msg-box"></p>
+        <div class="btn-wrapper">
+            <button class="withdraw-btn">withdraw</button>
+            <button class="deposit-btn">deposit</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

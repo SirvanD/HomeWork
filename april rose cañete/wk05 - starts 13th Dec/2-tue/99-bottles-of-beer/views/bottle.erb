@@ -1,0 +1,11 @@
+<!--<p><%= num_of_bottle %></p>-->
+
+<% if num_of_bottle == 0  %>
+    <h1>No Bottles of beer on the wall. 
+        <a href="/">Start Over</a> 
+    </h1>
+<% else %>
+    <h1><%= num_of_bottle %> bottles of warm water on the wall. 
+        <a href="/<%= take_one_bottle %>">Take one down</a> 
+    </h1>
+<% end %>

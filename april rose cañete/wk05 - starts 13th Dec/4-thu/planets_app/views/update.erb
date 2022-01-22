@@ -1,0 +1,31 @@
+<h2>Update details for <%= planet[0]["name"] %></h2>
+
+<form action="/planets/<%= planet[0]["id"] %>" method="post" class="form-input">
+        <input type="hidden" name="_method" value="put">
+        <div>
+            <label for="">name:</label>
+            <input type="text" name="name" value="<%= planet[0]["name"] %>">
+        </div>
+        <div>
+            <label for="">image url:</label> 
+            <input type="text" name="image_url" placeholder="http://....">
+        </div>
+        <div>
+            <label for="">diameter:</label> 
+            <input type="text" name="diameter">
+        </div>
+        <div>
+            <label for="">mass:</label> 
+            <input type="text" name="mass">
+        </div>  
+        <div>
+            <label for="">moon count:</label> 
+            <input type="text" name="moon_count">
+        </div>
+        <div>
+            <div></div>
+            <button>update</button>
+        </div>
+        
+    
+</form>

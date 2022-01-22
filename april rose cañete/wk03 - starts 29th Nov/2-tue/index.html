@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unit1 homework</title>
+    <style>
+        section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 40%;
+        }
+        div {
+            border: 1px solid black;
+            border-radius: 5px;
+            height: 100px;
+            width: 100px;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>first box</div>
+        <div>second box</div>
+        <div>third box</div>
+    </section>
+    
+    <script>
+        // 5. Make Them Green
+
+        var divBoxes = document.querySelectorAll('div');
+       // var clicked = 0;
+
+        function handleClick(event) {
+            var userClicked = event.target;
+
+            userClicked.style.backgroundColor = 'red';
+            userClicked.style.color = 'white';
+
+            // clicked = clicked + 1;
+
+            // if (clicked == divBoxes.length) {
+            //     for (let i = 0; i < divBoxes.length; i++) {
+            //         var box = divBoxes[i];
+                    
+            //         box.style.backgroundColor = 'green';
+            //     }
+            // }
+            var boxColors = [];
+
+            for (let i = 0; i < divBoxes.length; i++) {
+                var boxColor = divBoxes[i].style.backgroundColor;
+
+                    boxColors.push(boxColor);
+            }
+
+            var redColors = boxColors.filter(color => color == 'red').length;
+
+            if (redColors == boxColors.length) {
+                for (let i = 0; i < divBoxes.length; i++) {
+                    var box = divBoxes[i];
+                    
+                    box.style.backgroundColor = 'green';
+                 }
+                
+            }
+        }
+        
+        for (let i = 0; i < divBoxes.length; i++) {
+            var box = divBoxes[i];
+            
+            box.addEventListener('click', handleClick);
+        }
+   
+    </script>
+    <script src="unit1_hw.js"></script>
+</body>
+</html>
