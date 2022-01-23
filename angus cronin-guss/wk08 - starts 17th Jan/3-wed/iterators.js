@@ -47,8 +47,9 @@ users.sort((a,b) => {
   ];
   
   // console log each word in words in uppercase excluding the first word
-  let upsizeWords = words.forEach( word => {
+  words.forEach( word => {
       word.toUpperCase()
+      return word
   })
   // write code to count the number of words with more than 5 letters 
   
