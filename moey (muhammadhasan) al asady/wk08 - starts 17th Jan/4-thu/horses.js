@@ -1,5 +1,8 @@
 // authorized by the department of celebrating gambling, alcohol abuse and animal cruelty all in one day.
 
+
+//    This isn't complete, i need help with keeping the entire object/array while sorting them. Thanks
+
 var horses = [
     {
       name: 'maythehorsebewithu',
@@ -73,7 +76,13 @@ var horses = [
   
   // sort items by full price from cheapest to most expensive
 
+
+
   // sort items by name in the ascending
+
+   // sort products by name in descending order
+   const fruits = products.map(fruit => fruit[1]);
+   fruits.sort()
   
   var products = [
     [5, 'kiwi'],
@@ -82,3 +91,5 @@ var horses = [
    ]
    
    // sort products by name in descending order
+   const fruits = products.map(fruit => fruit[1]);
+   fruits.sort().reverse()
