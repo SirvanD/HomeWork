@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+   
+    <h1>Rock! Paper! Sissors!</h1>
+    <h2>Your move is <%= userHand %>, and the computer's move is <%= computerHand %>!</h2>
+    <a href="/game?hand=<%= userHand %>">Try again!</a>
+
+    <script type="text/javascript">
+        var colors = ["#5F9EA0","#FF7F50","#6495ED","#8FBC8F","#FFBF00","#D8BFD8","#DB7093","#FFD700","#0080FF","#01DF3A","#FF0080"]
+        document.body.style.backgroundColor = colors[Math.floor(Math.random() * 9)];
+     </script>
+</body>
+</html>

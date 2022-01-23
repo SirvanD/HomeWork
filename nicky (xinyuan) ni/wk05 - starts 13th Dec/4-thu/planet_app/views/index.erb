@@ -1,0 +1,9 @@
+<h1>8 PLANETS IN SOLAR SYSTEM</h1>
+<a href="/add_planet">Add your planet</a>
+
+<section class="planets-list">
+    <% planets.each do |planet| %>
+        <h2><a href="/planets/<%= planet['id']%>"><%= planet['name']%></h2>
+        <img src="<%= planet['image_url']%>" alt="">
+    <% end %>
+</section>

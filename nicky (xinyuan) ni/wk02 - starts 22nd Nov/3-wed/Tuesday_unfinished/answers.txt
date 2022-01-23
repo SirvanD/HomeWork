@@ -1,0 +1,111 @@
+typeof 15
+// Prediction:15
+// Actual:15
+
+typeof 5.5
+// Prediction:5.5
+// Actual:5.5
+
+typeof NaN
+// Prediction:NaN
+// Actual:NaN
+
+typeof "hello"
+// Prediction:'hello'
+// Actual:'hello'
+
+typeof true
+// Prediction:true
+// Actual:true
+
+typeof 1 != 2
+// Prediction:true
+// Actual:true
+
+
+"hamburger" + "s"
+// Prediction:'hamburgers'
+// Actual:'hamburgers'
+
+"hamburgers" - "s"
+// Prediction:NaN
+// Actual:NaN
+
+"1" + "3"
+// Prediction:'13'
+// Actual:'13'
+
+    "1" - "3"
+    // Prediction:NaN
+    // Actual:-2
+
+"johnny" + 5
+// Prediction:'johnny5'
+// Actual:'johnny5'
+
+"johnny" - 5
+// Prediction:NaN
+// Actual:NaN
+
+99 * "luftbaloons"
+// Prediction:NaN
+// Actual:NaN
+
+
+
+Add an element to the back of an array=> .push()
+Remove an element from the back of an array=> .pop()
+Add an element to the front of an array=> .unshift()
+Remove an element from the front of an array=> .shift()
+Concatenates all the elements in an array into a string=> .join()
+Separates the characters of a string into an array. This one is a string method=> .split()
+
+
+
+var numbers = [2, 4, 6, 8]
+numbers.pop()  =>8
+numbers.push(10)  =>5(which means we have five numbers in the array with 10 at the end) 
+numbers.unshift(3)  =>5(which means we have five numbers in the array with 3 at the beginning)
+(if in order, answer will be 8 4 5)
+
+
+
+var morse = ["dot", "pause", "dot"]
+var moreMorse = morse.join(" dash ")  =>'dot dash pause dash dot'
+moreMorse.split(" ") =>['dot', 'dash', 'pause', 'dash', 'dot']
+
+
+
+var bands = []
+var beatles = ["Paul", "John", "George", "Pete"]
+var stones = ["Brian", "Mick", "Keith", "Ronnie", "Charlie"]
+bands.push(beatles)   =>1 
+bands.unshift(stones)   =>2 
+bands[bands.length - 1].pop()  =>'Pete' 
+bands[0].shift()   =>'Brian'
+bands[1][3] = "Ringo"   =>'Ringo'
+
+
+
+a	b	a AND b
+true	true	true
+true	false	false
+false	true	false
+false	false	false
+
+a	b	a OR b
+true	true	true
+true	false	true
+false	true	true
+false	false	false
+
+a	b	a != b
+3	3	false
+1	5	true
+2	"2"	false
+
+a	b	!a AND (a OR b)
+true	true	false
+true	false	false
+false	true	true
+false	false	false

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+   
+    body{
+        background-color: mistyrose;
+        color: black;
+        margin:50px;
+        font-family: 'Special Elite', cursive;
+    }
+    a{
+        color: darkred;
+        font-size: 20px;
+    }
+</style>
+<body>
+  <a href="/">Home</a>
+  <a href="/about">About us</a>
+  <br>
+  <h1><%= title %></h1>
+  <h3>Year: <%= year %></h3>
+  <h3>Genre: <%= genre %></h3>
+  <h3>Director: <%= director %></h3>
+  <h3>Plot: </h3>
+  <h4><%= plot %></h4>
+  <img src="<%= poster %>">
+</body>
