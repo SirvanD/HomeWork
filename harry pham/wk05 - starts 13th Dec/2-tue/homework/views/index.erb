@@ -1,0 +1,8 @@
+
+<%if number.to_i !=0%>
+    <p><%=number%> Bottles of beer on the wall</p>
+    <a href="/bottle/<%=number.to_i - 1%>">down a bottle</a>
+<%else%>
+    <p>No Bottles of beer on the wall</p>
+    <a href="/bottle/99">Back to 99 bottles of beer</a>
+<%end%>

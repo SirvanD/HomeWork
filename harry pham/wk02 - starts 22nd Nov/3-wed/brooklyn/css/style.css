@@ -1,0 +1,60 @@
+/* * {
+    border: 1px solid blue;
+} */
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.bloghero,
+.homerings {
+    width: 100%;
+}
+
+h1 {
+    margin-bottom:10px;
+    color: rgb(165, 160, 160);
+}
+
+h3 {
+    margin-bottom: 5px;
+    color:rgb(131, 130, 130)
+}
+
+.date {
+    color:rgb(62, 130, 231);
+    font-size: 13px;
+}
+
+span {
+    color:rgb(62, 130, 231)
+}
+
+.image-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.first-pic,
+.second-pic,
+.third-pic,
+.fourth-pic {
+    width:100%;
+    border:3px solid rgb(165, 160, 160);
+}
+
+.first-p,
+.second-p {
+    color: rgb(165, 160, 160);
+}
+
+footer {
+    color: rgb(165, 160, 160);
+}
+
+/* .first-p,
+.second-p {
+    font-family:
+} */
