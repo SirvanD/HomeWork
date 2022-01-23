@@ -1,0 +1,53 @@
+header {
+  color: slategray;
+  font-size: 30px;
+  margin: 0 auto;
+  /* padding: 30px 500px 20px; */
+}
+.grid.wrapper {
+  padding: 0 500px;
+}
+
+.img1 {
+  margin: 0 auto;
+  width: 900px;
+  padding: 0 20px 0 20px;
+}
+
+h1 {
+  color: slategray;
+  font-size: 20px;
+}
+.content1 {
+  padding: 0 500px;
+  margin: 0 auto;
+  width: 900px;
+}
+.content2 {
+  padding: 0 0 10px;
+  margin: 0 auto;
+  width: 900px;
+}
+
+h2 {
+  color: steelblue;
+  font-size: small;
+}
+
+p {
+  color: slategray;
+  font-size: smaller;
+  padding-bottom: 10px;
+}
+.Image {
+  margin: 0 0 0 500px;
+}
+.Img2 .img3 .img4 .img5 {
+  border: 3px solid gray;
+}
+
+footer {
+  color: slategray;
+  font-size: x-small;
+  margin: 0 0 0 500px;
+}

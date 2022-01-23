@@ -1,0 +1,40 @@
+<h1>If you wish to Edit please fill in this form.</p></h1>
+
+<form action="/update_data/<%= planet['id']%>" method="post">
+<input type="hidden" name="_method" value="put">
+
+<div class="edit-box">
+<label for="">name</label>
+<input type="text" name = "name" value="<%= planet['name']%>">
+ </div>
+
+ <div class="edit-box">
+<label for="image_url">Image URL</label>
+<input type="text" name = "image_url" placeholder = "http://..." value="<%= planet['image_url']%>">
+</div>
+
+ 
+ <div class="edit-box">
+<label for="diameter">Diameter</label>
+<input type="real" name = "diameter" value="<%= planet['diameter']%>">
+</div>
+
+ <div class="edit-box">
+<label for="mass">Mass</label>
+<input type="real" name = "mass" value="<%= planet['mass']%>">
+</div>
+
+<div class="edit-box">
+<label for="moon_count">Moon_count</label>
+<input type="integer" name = "moon_count" value="<%= planet['moon_count']%>">
+ </div>
+
+<div class="edit-button">
+<button>Update</button>
+</div>
+
+<div>
+<a class="anchors" href="/">HOME</a> 
+</div>
+
+</form>

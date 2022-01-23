@@ -1,0 +1,19 @@
+body {
+  background-color: mistyrose;
+}
+
+h1 {
+  font-size: 30px;
+  color: black;
+}
+
+input {
+  background-color: white;
+  width: 40%;
+  color: gray;
+  border: 1px solid black;
+}
+button {
+  background-color: gray;
+  border: 1px solid black;
+}
