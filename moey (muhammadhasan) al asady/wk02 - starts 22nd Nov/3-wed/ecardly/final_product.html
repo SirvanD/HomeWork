@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* * {
+            border: 1px solid red;
+            
+        } */
+
+        
+        .grid-wrapper{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 20px;
+            /* background-color: white; */
+
+        }
+
+    body {
+        background-image: url(../ecardly/images/background.jpg);
+        background-repeat: repeat-x;
+        background-color: rgb(212, 209, 209);
+        font-family: "Lucida Console", "Courier New", monospace;
+        width: 90%;
+        position: center;
+        /* text-align: center; */
+
+
+    }
+
+    .under-image {
+        border-top: 1px dotted black;
+        border-bottom: 1px solid black;
+
+    }
+
+    .span1 {
+        color: red; 
+    font-weight: bold;    }
+    
+    header {
+        text-align: center;
+    }
+
+    .sidebox {
+        background-color: white;
+        text-align: center;
+        /* width: 80%; */
+    }
+
+    .nav {
+        list-style-type: none;
+        text-align: left;
+    }
+
+    article footer {
+        border-top: 1px dotted black;
+        border-bottom: 1px solid black;
+        padding: 5px 0;
+    }
+    
+    .footer1 {
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="">
+    </header>
+    <main class="grid-wrapper">
+        <div class= "sidebox">
+            <h2>Ecard of the day</h2>
+            <img src="images/ecard-nycstartups.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium voluptates ipsum ad nemo, suscipit quisquam dolore quam architecto beatae enim facilis, blanditiis nostrum debitis possimus, asperiores dolorem unde? Ea, nam. <span class="span1">DOWNLOAD</span></p>
+            <p2 class="under-image"> 
+                Posted by <span class="span1">Steve smith</span> on August 2,2012 / Comments(3)
+            </p2>
+
+            <h2>Doing the big work</h2>
+            <img src="images/ecard-courage.jpg" alt="">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates corporis, nulla minus possimus dignissimos doloribus nihil ducimus a? Reiciendis dolorem cum fugiat ratione debitis, blanditiis dolore sint laudantium aliquid perferendis. <span class="span1">DOWNLOAD</span></p>
+            <p2 class="under-image"> 
+                Posted by <span class="span1">Steve smith</span> on August 2,2012 / Comments(3)
+            </p2>
+        </div>
+        <!-- <article>
+            <h2>article two</h2>
+            <footer>Footer</footer>
+        </article> -->
+        <div>
+            <aside> 
+                <div class= "sidebox">
+                    <main>Archive</main>
+
+
+                <ul class="nav">
+                    <li>Jan</li>
+                    <li>Feb</li>
+                    <li>Mar</li>
+                    <li>April</li>
+                    <li>May</li>
+                    <li>June</li>
+                    <li>July</li>
+                </ul>
+                
+                <ul class="nav">
+                    <h3>BLOGROLL</h3>
+                    <li>Mallchimp</li>
+                    <li>Shopify</li>
+                    <li>The Next Web</li>
+                    <li>Mint.com</li>
+                    <li>Mashable</li>
+                    <li></li>
+                </ul>
+            
+                <img src="images/ad-cut-and-paste.gif" alt="">
+                <img src="images/ad-postcard-tee.png" alt="">
+                <img src="images/ad-submit-your-own.png" alt="">
+          
+                </div>
+            </aside>
+         </div>
+
+    </main>
+    <header></header>
+    <!-- <div>
+        <main>main content</main>
+        <aside> ads</aside>
+     </div> -->
+     <footer class="footer1">
+         <img src="images/social-icon-twitter.png" alt="">
+         <img src="images/social-icon-facebook.png" alt="">
+         <img src="images/social-icon-pinterest.png" alt="">
+     </footer>
+
+</body>
+</html>

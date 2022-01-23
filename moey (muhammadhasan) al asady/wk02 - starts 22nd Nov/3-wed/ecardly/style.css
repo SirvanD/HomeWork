@@ -1,0 +1,28 @@
+body {
+    background-image: url(../ecardly/images/background.jpg);
+    background-repeat: repeat-x;
+}
+
+main  {   
+     width: 30%;
+    padding: 100px;
+    }
+
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+p {
+  width: 100%;
+  margin: auto;
+
+}

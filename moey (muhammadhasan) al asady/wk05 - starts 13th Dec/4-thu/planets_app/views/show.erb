@@ -1,0 +1,15 @@
+<h1>planet details for <%= planet['name'] %></h1>
+
+<p>more details coming soon!</p>
+
+<%= planet['name'] %>
+<img src="<%= planet['image_url'] %>" alt="">
+
+
+
+<form action="/planets/<%= planet['id'] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>delete</button>
+</form>
+
+<a href="/planets/<%= planet['id'] %>/edit">edit</a>

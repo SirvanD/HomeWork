@@ -1,0 +1,1 @@
+INSERT INTO  planets (name, image_url, diameter, mass, moon_count) VALUES ('earth', 'https://cdn.vox-cdn.com/thumbor/8CTj6vM5nJ1NH0-LsIY1TJZqQuE=/36x0:983x631/1400x788/filters:focal(36x0:983x631):format(jpeg)/cdn.vox-cdn.com/assets/1114614/earth-russia.jpg','600','601', '1');
