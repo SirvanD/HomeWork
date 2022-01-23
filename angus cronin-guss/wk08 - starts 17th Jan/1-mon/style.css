@@ -1,0 +1,25 @@
+body {
+    background-color: #fff;
+}
+
+form {
+    background-color:mistyrose;
+    display: block;
+    width: fit-content;
+   
+    
+
+}
+
+.pixel {
+  float: left;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 3px;
+  opacity: 1.0;
+}
+
+body {
+    
+}

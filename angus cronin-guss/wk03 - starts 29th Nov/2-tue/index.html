@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+        .boxes {
+            background-color: white;
+        }
+        .boxes.clicked {
+        background: red;
+}
+        
+
+    </style>
+</head>
+<body>
+    
+    <div class="boxes" id="box1"></div>
+    <div class="boxes" id="box2"></div>
+    <div class="boxes" id="box3"></div>
+    <script>
+        var boxes = document.querySelectorAll('.boxes');
+        var box1 = document.querySelector('#box1');
+        var box2 = document.querySelector('#box2');
+        var box3 = document.querySelector('#box3');
+
+        function handleColor (box){
+            box.classList.add('clicked');
+
+            if (box1.classList.contains("clicked") && box2.classList.contains ("clicked") && box3.classList.contains("clicked")) {
+                reset();
+            }
+        }
+
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].addEventListener("click", () => handleColor(boxes[i]));    
+        }
+
+        function reset() {
+            box1.style.backgroundColor = 'green';
+            box2.style.backgroundColor = 'green';
+            box3.style.backgroundColor = 'green';
+
+            for (let i = 0; i < boxes.length; i++) {
+                boxes[i].classList.remove('clicked');    
+            }
+        }
+    </script>
+</body>
+</html>

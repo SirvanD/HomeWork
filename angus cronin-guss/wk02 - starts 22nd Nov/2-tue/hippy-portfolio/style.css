@@ -1,0 +1,64 @@
+body {
+    background-image: url("images/pattern1.png");
+}
+
+h1{
+    padding: 10px 0px 0px 10px;
+    margin: 0%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+h2 {
+    padding: 0px 10px 10px 10px;
+    margin: 0px;
+    font-size: 15px;
+    font-family: cursive;
+}
+h3 {
+    text-decoration: underline;
+    font-family: cursive;
+}
+header {
+    background-color: #F0786E;
+    position: relative;
+}
+
+.container {
+        width: 80%;
+        margin: 0 auto;
+        
+}
+
+.mainimg {
+    width: 100%;
+    display: block;
+}
+
+  main {
+    padding: 10px;
+    background-color: #fff;
+  }
+
+.image-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2%;
+    padding: 1px 10px 1px 1px;
+
+
+}
+
+.image-wrapper img {
+    width: 100%;
+    border: 5px solid lightgray;
+    
+}
+footer {
+    background-color: #F0786E;
+    padding: 15px;
+    text-align: right ;
+    font-size: 12px;
+    color: white;
+}

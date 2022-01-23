@@ -1,0 +1,69 @@
+header {
+    border: 3px solid purple;
+}
+.headerbg {
+    grid: 1fr 1fr;
+    display: inline;
+    width: 100%;
+}
+#logo {
+    position: absolute;
+      top: 20px;
+      left: 300px;
+    
+}
+
+article {
+    border: 3px solid yellow;
+    display: block;
+    margin-top: 100px;
+    padding: 10px 10px 0px 10px;
+    background-color: white;
+}
+article img {
+    width: 100%;
+}
+aside{
+    border: 2px solid black;
+    align-self: start;
+    width: 75%;
+    margin-top: 100px;
+    background-color: white;
+    text-align: left;
+}
+.ads {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    border: 3px solid green;
+}
+body {
+    border: 3px solid red;
+    background-color: lightgrey;
+    width: 75%;
+} 
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border: 3px solid blue;
+    gap: 3%;
+}
+.ecard1 {
+    max-width:100%;
+    max-height:100%;
+
+}
+a {
+    color: red;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+.caption {
+    padding: 10px;
+    border-bottom: 2px dotted black;
+}
+
