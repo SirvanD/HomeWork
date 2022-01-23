@@ -10,7 +10,7 @@ imageBtn.addEventListener('click', () => {
         axios.get(imageChosen).then(res => {
             console.log(res.data.data.images.original.url)
             let img = document.createElement('img')
-            img.scr = res.data.data.images.original.url
+            img.src = res.data.data.images.original.url
             section.appendChild(img)
        
         })  
