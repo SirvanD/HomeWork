@@ -1,0 +1,57 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OOP Clocks!!</h1>
+
+    <script src="app.js"></script>
+    
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mocha Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+  </head>
+  <body>
+    
+
+    
+    <script src="https://unpkg.com/mocha/mocha.js"></script>
+    <!-- <script src="node_modules/chai/chai.js"></script> -->
+
+    <script class="mocha-init">
+      mocha.setup('bdd');
+      mocha.checkLeaks();
+    </script>
+    <!-- <script>
+      function assert(expr, msg) {
+        if (!expr) throw new Error(msg || 'failed');
+      }
+    </script> -->
+
+    
+    <!-- <script src="clock.js"></script> -->
+    <script src="./test.js"></script>
+    
+    
+    <script class="mocha-exec">
+      window.onload = () => {
+        mocha.run();
+      };
+    </script>
+
+  <div id="mocha"></div>
+
+  </body>
+</html>
