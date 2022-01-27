@@ -31,7 +31,6 @@
 class School {
     constructor() {
         this.database = {};
-        this.names = [];
     }
     add(name, grade) {
         let newName = [];
@@ -51,7 +50,7 @@ class School {
 
 }
 
-// let school = new School("Haleakala Hippy School")
+let school = new School("Haleakala Hippy School")
 
 
 
