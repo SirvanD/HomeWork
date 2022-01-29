@@ -29,19 +29,18 @@
 class School {
     constructor(name) {
         this.name = name;
-        this.database = { 1: [], 2: [], 3: [] }
+        this.db = {}
     }
-    db() {
-        if (Object.values(this.database).join('') == '') {
-            return {}
-        } else
-            return this.database
-    }
+
     add(studentName, grade) {
-        return this.database[grade].push(studentName)
+        if (grade in this.db) {
+            this.db[grade].push(studentName)
+        } else {
+            this.db[grade] = [studentName]
+        }
     }
     grade(grade) {
-        return this.database[grade]
+        return this.db[grade]
     }
 }
 
@@ -51,4 +50,5 @@ school.add("Phil", 1)
 school.add("Blair", 1)
 school.add("Jennifer", 2)
 school.add("Little Billy drop tables", 3)
-return school.db()
+school.grade(1)
+return school.db
