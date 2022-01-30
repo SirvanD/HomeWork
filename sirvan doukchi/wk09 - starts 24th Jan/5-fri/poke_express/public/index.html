@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Express</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="title">
+        <h2>This is Pokemon Express</h2>
+      </section>
+
+      <section class="links">
+        <button id="btn-Show">show cards</button>
+        <button id="btn-Hide">hide cards</button>
+        <!-- <button id="btn-Post">Post card</button> -->
+        <!-- <a href="/api/pokemon">click</a> for all cards -->
+        <a href="./new.html">Post a card</a>
+      </section>
+
+      <section class="content">
+        <!-- <div class="titles"></div>
+        <div class="images"></div> -->
+      </section>
+
+      <form action="/api/pokemon" method="post">
+        <label for="">name</label>
+        <input type="text" name="name" />
+        <label for="">image url</label>
+        <input type="text" name="img_url" />
+        <button type="submit">post</button>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
