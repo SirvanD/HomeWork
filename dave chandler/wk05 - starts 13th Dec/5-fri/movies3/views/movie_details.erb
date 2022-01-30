@@ -1,0 +1,40 @@
+<div class='movie-details'>
+    <%# <img src=<%=movie['Poster']%> 
+    <div class="image" >
+        <img src=<%=movie['Poster']%>/>
+    </div>
+    <div class='wrapper'>
+        <h1><%=movie['Title']%></h1>
+
+        <div class='minor-details'>
+        <span><%=movie['Released']%></span>
+        <span> &bull; </span>
+        <span><%=movie['Runtime']%></span>
+        <span> &bull; </span>
+        <span><%=movie['Rated']%></span>
+        </div>
+        <div class='movie-wrap'>
+        <%if movie['Genre'] != nil 
+            movie['Genre'].split(',').each do |genre|%>
+        <span class='sub-header'><%=genre.to_s%></span>
+            <%end%>
+        <%end%>
+        
+        </div>
+        <br/>
+        <div class='movie-wrap'> <%=movie['Plot']%> </div>
+        <br/>
+        <div class='movie-wrap credits'> <span style="color:#F5C519">Director: </span><%=movie['Director']%> <span></div>
+        <div class='movie-wrap credits'> <span style="color:#F5C519">Written by: </span><%=movie['Writer']%> <span></div>
+        <div class='movie-wrap credits'> <span style="color:#F5C519">Written by: </span><%=movie['Writer']%> <span></div>
+        <div class='movie-wrap credits'> <span style="color:#F5C519">Starring: </span><%=movie['Actors']%> <span></div>
+        <div class='movie-wrap credits'> <span style="color:#F5C519">Data Source: </span><%=source%> <span></div>
+    </div>
+
+
+
+
+
+</div>
+
+  

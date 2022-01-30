@@ -1,0 +1,74 @@
+/* * {
+    border: 1px solid red;
+} */
+h2 {
+    display: block;
+}
+.topNav {
+    background-size: 50px;
+    font-size : 20px;
+    color: white;
+    background-color: black;
+    grid-template-columns:1fr 1fr;
+    margin: 20px;
+}
+h1 {
+    color: red;
+    font-size: 50px;
+    padding: 0px;
+    margin-bottom: 5px;
+}
+.bottom {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    
+}
+.topbar {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border-bottom: 1px solid lightgray;
+    /* width: 80%; */
+}
+.second-header {
+    color: silver;
+    font-size: 30px;
+}
+a {
+    color: red;
+}
+.copyFooter {
+    color: silver;
+}
+.contSpan {
+    display: block;
+    text-align: right;
+    border-bottom: 1px solid lightgray;
+    margin-top: 20px;
+}
+li {
+    color: red;
+}
+.date {
+    color: lightgray;
+    font-size: 30px;
+}
+.placeholder {
+    
+    border-bottom: 1px solid lightgray;
+}
+.firstImage {
+    width: 100%;
+}
+.middleGraph {
+    font-size: 30px;
+}
+.popPosts {
+    font-size: 20px;
+    color: grey;
+    border-top: 1px solid lightgray;
+}
+

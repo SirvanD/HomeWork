@@ -1,0 +1,26 @@
+<h1>Edit Planet Details</h1>
+
+
+<form action="/edit/<%=planet['name']%>" method="post">
+
+    <input type="hidden" name="_method" value="put">
+    <input type="hidden" name='id' value= <%=planet['id']%>> <!--need to specify id so we can call the plaenet we need to edit with it -->
+
+    <label>Name</label>
+    <input type="text" name= "name" value= <%=planet['name']%>>
+
+    <label>Image URL</label>
+    <input type="text" name= "image_url" value= <%=planet['image_url']%>>
+
+    <label>Diameter</label>
+    <input type="text" name= "diameter" value= <%=planet['diameter']%>>
+
+    <label>Mass</label>
+    <input type="text" name= "mass" value= <%=planet['mass']%>>
+
+    <label>Number of Moons</label>
+    <input type="text" name= "moon_count" value= <%=planet['moon_count']%>>
+
+    <button>Update</button>
+
+</form>

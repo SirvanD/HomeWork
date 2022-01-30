@@ -1,0 +1,21 @@
+
+<a href="/">home</a>
+<h1>planet</h1>
+
+<section class="planets">
+
+    <h1><%=planet['name']%></h1>
+    <img src=<%=planet['image_url']%> alt="">
+    <p>diameter: <%=planet['diameter']%></p>
+    <p>mass (x10^24 kg): <%=planet['mass']%></p>
+    <p>moon count: <%=planet['moon_count']%></p>
+
+</section>
+
+<form action="/planets/:id" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="planet_id" value="<%=planet['id']%>">
+    <button>delete</button>
+</form>
+
+<a href="/planets/<%=planet['id']%>/edit">update planet</a>

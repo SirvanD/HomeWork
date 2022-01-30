@@ -1,0 +1,33 @@
+/* * {border: 1px solid red;
+box-sizing: border-box;
+
+} */
+header {
+    
+    padding: 50px;
+}
+grid-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+main {
+    padding-right: 10%;
+    padding-left: 5%;
+}
+a {
+    color: blue;
+}
+.mainHeader {
+    color: gray;
+    margin-bottom: 5px;
+    font-size: 30px;
+   
+}
+.header {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.mainText {
+    color: gray;
+}

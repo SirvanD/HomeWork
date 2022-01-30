@@ -1,0 +1,21 @@
+
+h1, h2{
+    text-align: center;
+}
+
+section {
+    text-align: center;
+}
+
+.reset-button {
+    width: 60px;
+    height: 45px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: tomato;
+    color: whitesmoke;
+    font-size: larger;
+}
+
+

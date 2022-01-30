@@ -1,0 +1,13 @@
+img {
+    width: 200px;
+    height: 170px;
+    gap: 10px;
+}
+h1{ 
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace
+}
+.form {
+    text-align: center;
+}
+

@@ -1,0 +1,52 @@
+* {
+    /* / border: 1px solid black;  */
+    box-sizing: border-box;
+}
+body {
+    font-family: 'IBM Plex Serif', serif;
+    color: grey;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+#logo {
+    margin: 10px 0;
+}
+.banner {
+    width: 100%;
+}
+.image-wrapper {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px; 
+  display: inline-block;
+    display: inline-flex;  */
+    text-align: center;
+
+} 
+p {
+    font-size: 90%;
+}
+.display-img {
+    display: inline-flex;
+    border: 2px solid grey;
+}
+details > summary {
+    color: skyblue;
+    list-style: none;
+  }
+details summary::-webkit-details-marker {
+    display:none;
+  }
+
+footer {
+    margin-top: 10px;
+}
+
+.p-one {
+    float: left;
+  }
+  .p-two {
+    float: right;
+  }

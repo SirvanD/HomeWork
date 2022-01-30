@@ -1,0 +1,8 @@
+.box1, .box2, .box3 {
+    border: solid 1px black;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    padding-right: 0;
+    margin: 0 auto;
+}

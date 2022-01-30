@@ -1,0 +1,71 @@
+.title-center {
+    text-align: left;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 40px;
+    background-color:salmon;
+    color: white;
+    min-width: 1050px;
+    font-family: cursive;
+}
+
+.owner {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: auto;
+    font-size: 20px;
+    background-color: salmon;
+    min-width: 1050px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.title-center,
+.owner {
+    margin-left:25%;
+    margin-right:25%
+}
+
+body {
+    background-image:url("images/pattern1.png");
+}
+
+.orchids {
+    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.about {
+    text-align: left;
+    font-size: 25px;
+    margin-bottom: auto;
+    text-decoration: underline;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div {
+    margin-left: 25%;
+    margin-right: 413px;
+    background-color: white;
+    min-width: 1050px;
+}
+
+.photos-title {
+    text-align:left;
+    font-size: 25px;
+    margin-bottom: auto;
+    margin-top: auto;
+    text-decoration: underline;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sunflowers {
+    width: 275px;
+    margin-left: 5px;
+}
+
+.copyright {
+    text-align:right;
+    background-color: salmon;
+}

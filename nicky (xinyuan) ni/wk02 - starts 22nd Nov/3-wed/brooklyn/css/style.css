@@ -1,0 +1,28 @@
+body{
+    margin: 100px 100px;
+    color: grey;
+    width: 960px;
+}
+
+h4{
+    color: royalblue;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+a{
+    color: royalblue;
+}
+
+div.content{
+    font-family: 'Roboto Mono', monospace;
+}
+
+div.img{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px; 
+}
+
+
+

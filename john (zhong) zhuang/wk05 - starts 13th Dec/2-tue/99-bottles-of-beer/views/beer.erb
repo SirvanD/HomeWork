@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99 Bottles of beer</title>
+    <style>
+        body {
+            background-color:bisque;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <p>
+
+    <% if count.to_i > 0%>
+    <%= count %> bottles of warm water on the wall. <a href='/<%= count.to_i-1 %>'>Take one down.</a>
+
+    <% elsif count.to_i == 0 %>
+    No bottles of warm water on the wall. <a href='/99'>Start Over.</a>
+    <%end %>
+    
+    </p>
+
+</body>
+</html>

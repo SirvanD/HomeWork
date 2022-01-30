@@ -1,0 +1,21 @@
+
+<form action="/search">
+    <input type="text" name = "movie_name" placeholder = "search for movie">
+    <button> Search! </button>
+</form>
+
+<footer>
+
+<h3>Most Recently Viewed Movies</h3>
+
+
+<%latest_posters.each do |poster|%>
+
+    <img src="<%=poster %>" alt="">
+
+<%end%>
+
+
+</footer>
+
+

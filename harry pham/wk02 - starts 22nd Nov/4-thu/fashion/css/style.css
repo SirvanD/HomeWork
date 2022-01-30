@@ -1,0 +1,173 @@
+*{
+    /* border: 1px solid blue; */
+}
+
+.container {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .title-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+} */
+.title-1 {
+    display: inline-block;
+    width: 100%;
+    color:rgb(185, 54, 54);
+    font-weight: normal;
+}
+
+.title-2 {
+    margin-left: 10px;
+    color: silver;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.nav-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    list-style: none;
+    margin-top: 0px;
+    gap:1px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
+
+.li-1 {
+    color: white;
+    text-align: center;
+    background-color: black;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.main-wrapper {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    gap: 5%;
+}
+
+.date-1 {
+    margin-bottom:auto;
+    color: silver;
+    font-weight: normal;
+}
+
+.first-ptitle {
+    margin-top: 0px;
+    font-weight: normal;
+    color: rgb(49, 47, 47);
+    font-size: 22px;
+}
+
+.firstpic,
+.secondpic {
+    width: 100%;
+    margin-top: 0px;
+}
+
+.span-1,
+.span-2 {
+    font-size: 40px;
+    color: silver;
+    float: left;
+    margin-right: 10px;
+}
+
+.footer-1,
+.footer-2,
+.footer-3 {
+    text-align: right;
+    color: rgb(185, 54, 54);
+    font-weight:bold;
+}
+
+.footer-1,
+.footer-2,
+.footer-3 {
+    border-bottom: 1px solid silver;
+    padding-bottom: 20px;
+}
+
+.li-3 {
+    color: red;
+}
+
+.nav-wrapper-2 {
+    /* display: grid;
+    grid-template-columns: repeat(8, 1fr); */
+    width:80%;
+    list-style: none;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-align: left;
+    /* border-top:1px solid grey;
+    padding-top: 30px */
+
+}
+
+.li-2 {
+    color: red;
+    font-size: 15px;
+    border-right: 1px red solid;
+    text-align: center;
+    display: inline;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.nav-wrapper-2 :last-child {
+    border-right: none;
+}
+
+.nav-wrapper-2 :first-child {
+    padding-left: 0px;
+}
+
+.copyright {
+    color: silver;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.aside {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.aside-title2 {
+    padding-top: 20px;
+    border-top: 1px solid silver;
+}
+
+
+.ad {
+    border: 1px solid silver;
+    padding: 50px 50px 50px 50px;
+    color: grey;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    background-color: silver;
+    margin-top: 20px;
+}
+
+.main-1 {
+    margin-top:20px;
+}
+
+.main-2 {
+    margin-top:20px;
+}
+
+@media (max-width: 1000px){
+    .aside{
+        display:none;
+    }
+    .main-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

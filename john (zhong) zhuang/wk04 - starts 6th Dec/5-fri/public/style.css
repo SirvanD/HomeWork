@@ -1,0 +1,15 @@
+body {
+    background-color:bisque;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.img-about {
+    width: 30%;
+    height: 30%;
+}
+.note {
+    font-size: 12px;
+    color: grey;
+    font-style: italic;
+}

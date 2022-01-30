@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(images/pattern1.png);
+}
+
+.container {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.header, footer {
+    background-color: #e57d75;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 7px 15px 15px;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 50pt;
+}
+
+.tagline {
+    margin-top: -15px;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: cursive;
+    font-size: 19pt;
+    text-decoration: underline;
+    margin: 7px 0 4px;
+}
+
+.about {
+    background-color: #fff;
+    padding: 15px;
+}
+
+p {
+    font-size: 14pt;
+    font-family: serif;
+    margin: 3px 0 12px;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 0 15px 10px 0;
+}
+
+.photos img {
+    border: 3px solid #c0c0c0;
+}
+
+footer p {
+    color: #fff;
+    text-align: right;
+}
+
+

@@ -1,0 +1,14 @@
+<h1><%= planet_name %></h1>
+<p><%= planet_name %> is a fascanating planet! With a mass of <%= planet_mass %> x 10^24 kg and a diameter of <%= planet_diameter %> kilometers, it sure is a planet!</p>
+<p>It's even got <%= planet_moon_count %> moons!</p>
+<span class="big_pic">
+    <img src="<%= planet_image_url %>" alt="an image of <%= planet_name %>">
+</span>
+<form action="/delete_planet" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="planet_id" value="<%= planet_id %>">
+    <button>delete</button>
+</form>
+
+<a href="/edit_planet/<%=planet_id%>">edit planet</a>
+<a href="/">Home</a>

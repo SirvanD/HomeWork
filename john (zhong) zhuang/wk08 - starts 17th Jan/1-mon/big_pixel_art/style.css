@@ -1,0 +1,19 @@
+.brush{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.pixel {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-style: dotted;
+    border-width: 1px;
+    border-radius: 20%;
+}
+
+form {
+    display: inline-block;
+
+}

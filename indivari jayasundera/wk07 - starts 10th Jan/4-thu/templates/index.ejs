@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta http-equiv="refresh" content="1" /> -->
+    <!-- automatically refreshes the page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nice compliments</title>
+    <%- include('includes'); %>
+  </head>
+  <body>
+    <div>
+      <!--reusing the nav ejs-->
+      <%- include('nav'); %>
+
+      <h1><%= new Date().toLocaleTimeString() %></h1>
+    </div>
+
+    <!-- include is used for reusing templates -->
+  </body>
+</html>

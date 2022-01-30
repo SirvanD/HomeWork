@@ -1,0 +1,12 @@
+<% if logged_in? %>
+    <h2><a href="/planets/new">Add a planet</a></h2>
+<% else %>
+    <h2><a href="/users/new">Register</a></h2>
+<% end %>
+<section class="planets">
+    <% planets.each do |planet| %>
+        <div><h2><a href="/planets/<%=planet['id']%>"><%=planet['name']%></a>
+        </h2></div>
+        <div><img src="<%=planet['image_url']%>" alt=""></div>
+    <% end %>
+</section>

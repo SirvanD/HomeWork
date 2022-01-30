@@ -1,0 +1,122 @@
+Uncaught SyntaxError: Unexpected token {
+
+Explanation goes here----Something extra in the expected structure,such as a comma
+<script>
+    for (let i = 0; i < 5,; ++i) {
+    console.log(i);
+    }
+</script>
+
+
+Uncaught ReferenceError: greeting is not defined
+
+Explanation goes here----A variable called greeting doesn't exist (or hasn't yet been initialized) in the current scope is referenced.
+<script>
+   function hello(name){
+        var greeting = "hello, ${name}";
+    }; 
+    console.log(greeting)
+</script>
+
+
+GET file:///scripts.js net::ERR_FILE_NOT_FOUND
+
+Explanation goes here----The file or directory could not be found. 
+<script src="file:///scripts.js"></script>
+
+
+GET https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/1.0.0/js/bootstrap.min.js 404 (Not Found)
+
+Explanation goes here----The browser was able to communicate with a given server, but the server could not find what was requested.
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/1.0.0/js/bootstrap.min.js"></script>
+
+
+Uncaught TypeError: "hello".push is not a function
+
+Explanation goes here----Write the push function in a wrong way
+<script>
+    function hello(name){
+        var greeting = "hello";
+        "hello".push(name);
+    }; 
+    console.log(hello("49"));
+</script>
+
+
+Uncaught TypeError: str.join is not a function
+
+Explanation goes here----Write the join function in a wrong way or use the function when it can not be used?
+<script>
+   var str = "hello";
+   str.join("");
+</script>
+
+
+Uncaught TypeError: Cannot read property 'name' of undefined
+
+Explanation goes here----A property is read or a function is called on an undefined variable.
+<script>
+   var obj = {};
+   console.log(obj.obj.name);
+</script>
+
+
+Uncaught SyntaxError: missing ) after argument list
+
+Explanation goes here----Something missing but sometimes not exactly ")". Could be something in other parts of the line
+<script>
+   console.log('HELLO' 'NAME');
+</script>
+
+
+Uncaught ReferenceError: Invalid left-hand side in assignment
+
+Explanation goes here----There was an unexpected assignment somewhere
+<script>
+    var a = 1;
+    var b = 1;
+    if (a = 1 && b = 1) {
+        console.log(a);
+    }
+</script>
+
+
+Uncaught SyntaxError: Unexpected number
+
+Explanation goes here----a typo when you type something wrong to a number
+<script>
+   var a = ['a','b','c'];
+   for ( var 1 = 0; i < a.length; i++) {
+      console.log(a[i]);
+    }
+</script>
+
+
+Uncaught SyntaxError: Unexpected string
+
+Explanation goes here----Typing mistake that makes something a string but shouldn't
+<script>
+    var obj = ["apple"];
+    console.log(obj.'0');
+</script>
+
+
+Uncaught SyntaxError: Unexpected identifier
+
+Explanation goes here----Trying to change a const variable
+<script>
+  const a = 1
+  let a = 2
+  console.log(a)
+</script>
+
+
+Uncaught RangeError: Maximum call stack size exceeded
+
+Explanation goes here---There are too many function calls, or a function is missing a base case.
+<script>
+function loop(x) {
+  loop(x + 1);
+}
+loop(0);
+</script> 

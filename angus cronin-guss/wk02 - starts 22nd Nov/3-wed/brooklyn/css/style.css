@@ -1,0 +1,41 @@
+body{ 
+    padding: 20px;
+}
+main {
+    width: 80%;
+}
+h1 {
+    color: gray;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+article { 
+    width: 100%;
+    
+}
+#heroimages {
+    position: relative;
+    width: 100%;
+}
+h4 {
+    color: rgb(89, 88, 88);
+}
+p {
+    color: gray;
+}
+.tile-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2px;
+}
+.tileborders {
+    border: 5px solid darkgray;
+}
+a {
+    color: blue;
+    font-size: 10px;
+    padding: 2px;
+}
+.copyright {
+    font-size: 8px;
+    color: gray;
+}

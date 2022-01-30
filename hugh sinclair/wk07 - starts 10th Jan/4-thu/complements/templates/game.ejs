@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <% if (userPlayed === serverPlayed) {%>
+        <h1>It's a draw!</h1>
+    <% } else if (userPlayed === "scissors" && serverPlayed === "paper") {%>
+        <h1>You won! You played <%= userPlayed %> and the server played <%= serverPlayed%></h1>
+    
+    <% } else if (userPlayed === "scissors" && serverPlayed === "rock") {%>
+        <h1>You lost! You played <%= userPlayed %> and the server played <%= serverPlayed %></h1>
+    
+    <% } else if (userPlayed === "paper" && serverPlayed === "scissors") {%>
+        <h1>You lost! You played <%= userPlayed %> and the server played <%= serverPlayed %></h1>
+
+    <% } else if (userPlayed === "paper" && serverPlayed === "rock") {%>
+        <h1>You won! You played <%= userPlayed %> and the server played <%= serverPlayed %></h1>
+
+    <% } else if (userPlayed === "rock" && serverPlayed === "paper") {%>
+        <h1>You won! You played <%= userPlayed %> and the server played <%= serverPlayed %></h1>
+    
+    <% } else if (userPlayed === "rock" && serverPlayed === "scissors") {%>
+        <h1>You won! You played <%= userPlayed %> and the server played <%= serverPlayed %></h1>
+    <% } else {%>
+        <h1>Please enter paper, scissors or rock!</h1>
+    <% } %>
+
+</body>
+</html>

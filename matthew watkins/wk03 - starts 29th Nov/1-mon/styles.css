@@ -1,0 +1,24 @@
+* {
+    /* border: 1px solid red; */
+    text-align: center;
+    margin-top: 70px;
+    ;
+}
+
+
+
+h2 {
+    border: solid 1px gainsboro;
+    border-radius: 5px;
+}
+
+header {
+    border: solid 2px gainsboro;
+    border-radius: 3px;
+    background-color: gainsboro;
+    text-shadow: 3px 2px 2px black;
+    color: salmon;
+}
+
+
+

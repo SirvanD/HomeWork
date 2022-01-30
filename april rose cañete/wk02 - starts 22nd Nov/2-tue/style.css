@@ -1,0 +1,71 @@
+body {
+    background-image: url('images/pattern1.png');
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    align-items: center;
+    margin: 0 auto;
+    width: 70%;
+    height: 90%;
+    padding: 0;
+}
+header {
+    text-align: left;
+    background-color: lightcoral;
+    position: relative;
+    margin: 0 auto;
+    padding: 5px;
+}
+.title {
+    font-family: 'Outfit', sans-serif;
+    margin: 0 auto;
+    color:  #fff;
+    font-size: 40px;
+}
+.subtitle {
+    font-family: 'Satisfy', cursive;
+    margin: 0 auto 2% auto;
+    font-size: 14px;
+}
+#banner {
+    width: 100%;
+}
+.contents {
+    margin: 20px;
+}
+.contents .desc {
+    font-size: 85%;
+    margin: 8px auto;
+}
+.subheading {
+    font-family: 'Satisfy', cursive;
+    text-decoration: underline;
+    font-size: 85%;
+    margin: 5px auto;
+}
+#display-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    padding: 0;
+}
+.imgs {
+    margin: 0 5px 0 0;
+    padding: 2px;
+    border: 1px solid grey;
+    border-radius: 2px;
+    width: 96%;
+}
+footer {
+    position: relative;
+    height: 35px;
+    text-align: right;
+    background-color: lightcoral;
+    margin: auto 0;
+    padding: 8px;
+    color: #fff;
+    font-size: 12px;
+}

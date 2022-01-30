@@ -1,0 +1,13 @@
+Question 1
+
+1. by typing the request in the address bar
+2. using a form
+3. using a link
+
+
+Question 2
+ we can access the query string sent to the server using params. 
+ eg : params["title"]
+
+ Question 3
+ By typing binding.irb in the code.

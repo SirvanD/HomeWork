@@ -1,0 +1,22 @@
+
+
+<h1>Planet details for <%=planet["name"]%></h1>
+
+<img src="<%=planet["image_url"]%>">
+
+<h3>Diameter: <%=planet["diameter"]%> kms</h3>
+
+<h3>Mass: <%=planet["mass"]%> kg</h3>
+
+<h3>Number of Moons: <%=planet["moon_count"]%></h3>
+
+
+<form action="/planets/<%=planet["name"]%>/edit">
+    <button> Edit Details </button>
+</form>
+
+<form action="/delete_planet" method="post"> 
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="id" value="<%=planet['id']%>">
+    <button>Delete Planet</button>
+</form>

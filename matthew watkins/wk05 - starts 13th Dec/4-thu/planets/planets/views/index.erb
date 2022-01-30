@@ -1,0 +1,18 @@
+<h1>Solar System</h1>
+
+<a href="/add_planet">discovered a new planet?.. click here!</a>
+
+
+
+<% planets.each do |planet| %>
+
+    <h2> 
+        <a href="/planets/<%=planet['id']%>">
+        <%= planet['name'] %> 
+        </a>
+    </h2>
+
+  <img src="<%= planet['image_url']%>" alt="<%=planet['name']%>" srcset="">
+  
+
+<% end %>

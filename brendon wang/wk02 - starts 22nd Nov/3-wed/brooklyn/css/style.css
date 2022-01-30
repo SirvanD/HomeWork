@@ -1,0 +1,33 @@
+/* dev only
+* {
+    border: 1px solid red;
+} */
+
+/* site speicifc */
+*{
+    color: grey;
+}
+body {
+    margin: 5% 10% 5% 10%
+}
+.bluedate {
+    color: blue;
+}
+a {
+    color:blue;
+    text-decoration: none;
+}
+img {
+    width: 100%
+}
+section {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px; 
+}
+.logos {
+    border: 3px solid grey;
+}
+footer {
+    margin: 5px;
+}
