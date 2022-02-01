@@ -1,0 +1,19 @@
+.container {
+  padding: 20px;
+  display: grid;
+  border: 1px solid grey;
+  border-radius: 15px;
+  width: 300px;
+  height: 400px;
+  margin: 100px;
+  justify-content: space-evenly;
+}
+
+.container label {
+  padding: 5px;
+  font-size: 12px;
+}
+
+.container button {
+  margin: 10px;
+}
