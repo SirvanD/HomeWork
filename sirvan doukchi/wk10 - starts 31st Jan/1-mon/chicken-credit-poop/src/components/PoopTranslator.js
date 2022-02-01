@@ -2,16 +2,14 @@ import { Component } from "react";
 import "./PoopTranslator.css";
 
 export default class PoopTranslator extends Component {
-  constructor() {
-    super();
-    this.state = {
-      content: "",
-    };
+  //class properties
+  state = {
+    content: "",
+  };
 
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(e) {
+  // arrow methods
+  //event handlers - purpose function
+  handleChange = (e) => {
     this.setState({
       content: e.target.value,
     });
@@ -22,7 +20,7 @@ export default class PoopTranslator extends Component {
       });
     }
     // console.log(content);
-  }
+  };
 
   render() {
     return (
