@@ -37,6 +37,7 @@ test("transaction history includes opening amount", () => {
   account.deposit(40);
   account.withdraw(30);
   account.deposit(50);
+  console.log(account.transactionHistory);
   expect(account.transactionHistory).toEqual([
     ["credit", 10],
     ["credit", 40],

@@ -1,10 +1,7 @@
 class BankAccount {
   constructor(balance = 0) {
     this.balance = balance;
-  }
-
-  balance() {
-    return this.balance;
+    this.transactionHistory = [["credit", this.balance]];
   }
 
   deposit(amount) {
@@ -12,6 +9,7 @@ class BankAccount {
       throw new Error("cannot be negative");
     } else {
       this.balance += amount;
+      this.transactionHistory.push(["credit", amount]);
     }
   }
 
@@ -19,19 +17,9 @@ class BankAccount {
     if (amount > this.balance) {
       throw new Error("not enough money in your account");
     } else {
+      this.transactionHistory.push(["debit", amount * -1]);
       return (this.balance -= amount);
     }
-  }
-
-  get transactionHistory() {
-    let output = [
-      ["credit", 10],
-      ["credit", 40],
-      ["debit", -30],
-      ["credit", 50],
-    ];
-    console.log(output);
-    return output;
   }
 }
 module.exports = BankAccount;
