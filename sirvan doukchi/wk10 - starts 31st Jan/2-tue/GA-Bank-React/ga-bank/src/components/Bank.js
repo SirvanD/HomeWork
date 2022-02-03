@@ -31,13 +31,13 @@ export default function Bank() {
     <div className="container">
       <h4 htmlFor="">GA Bank of Australia</h4>
       <span className="display-wrapper">
-        <label htmlFor="">AU$ </label>
+        <label>AU$ </label>
         <span type="string">{balance}</span>
       </span>
 
       <section className="input-wrapper">
-        <label htmlFor="">Enter Amount </label>
-        <input type="string" onChange={handleAmountChange} value={amount} />
+        <label>Enter Amount </label>
+        <input type="number" onChange={handleAmountChange} value={amount} />
       </section>
 
       <span className="buttons">
